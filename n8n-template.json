@@ -16,7 +16,7 @@
     {
       "parameters": {
         "method": "POST",
-        "url": "https://industrial-doc-rag.mj-deving.workers.dev/query",
+        "url": "https://industrial-doc-rag.mariusdeving.workers.dev/query",
         "sendBody": true,
         "contentType": "json",
         "jsonBody": "={ \"question\": $json.body.question }"

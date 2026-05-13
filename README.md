@@ -78,10 +78,10 @@ bunx wrangler secret put ANTHROPIC_MODEL
 bunx wrangler deploy
 ```
 
-Expected Worker URL:
+Live Worker URL:
 
 ```text
-https://industrial-doc-rag.mj-deving.workers.dev
+https://industrial-doc-rag.mariusdeving.workers.dev
 ```
 
 ## API
