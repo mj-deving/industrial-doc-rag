@@ -1,0 +1,75 @@
+{
+  "name": "Industrial Datasheet RAG alert",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "industrial-datasheet-query",
+        "responseMode": "lastNode"
+      },
+      "id": "Webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://industrial-doc-rag.mj-deving.workers.dev/query",
+        "sendBody": true,
+        "contentType": "json",
+        "jsonBody": "={ \"question\": $json.body.question }"
+      },
+      "id": "QueryWorker",
+      "name": "POST /query",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [260, 0]
+    },
+    {
+      "parameters": {
+        "channel": "#engineering-alerts",
+        "text": "=Datasheet RAG answer (confidence: {{$json.confidence}})\\n{{$json.answer}}\\n\\nTop source: {{$json.sources[0].partNumber}} - {{$json.sources[0].sourceUrl}}"
+      },
+      "id": "Slack",
+      "name": "Slack notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.3,
+      "position": [520, 0]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "POST /query",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "POST /query": {
+      "main": [
+        [
+          {
+            "node": "Slack notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {
+    "Webhook": [
+      {
+        "body": {
+          "question": "What is the maximum RDS(on) for IPB017N10N5?"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+name = "industrial-doc-rag"
+main = "src/index.ts"
+compatibility_date = "2026-05-13"
+workers_dev = true
+
+[observability]
+enabled = true
