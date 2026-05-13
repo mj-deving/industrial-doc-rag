@@ -46,7 +46,8 @@ export async function answerQuestion(env: Env, question: string, retrievals: Ret
       excerpt: item.text.slice(0, 420)
     })),
     confidence: confidenceFromRetrievals(retrievals),
-    retrievals
+    retrievals,
+    mode: "provider-backed"
   };
 }
 

@@ -32,4 +32,5 @@ export type QueryResponse = {
   }>;
   confidence: "low" | "medium" | "high";
   retrievals: Retrieval[];
+  mode?: "provider-backed" | "local-corpus";
 };

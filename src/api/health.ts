@@ -9,13 +9,16 @@ export function inspectHealth(env: Env) {
   const missingSecrets = REQUIRED_SECRETS.filter((name) => !env[name]);
 
   return {
-    ok: missingSecrets.length === 0,
+    ok: true,
+    providerReady: missingSecrets.length === 0,
+    mode: missingSecrets.length === 0 ? "provider-backed" : "local-corpus",
     missingSecrets,
     configured: {
       anthropic: Boolean(env.ANTHROPIC_API_KEY),
       cohere: Boolean(env.COHERE_API_KEY),
       qdrantUrl: Boolean(env.QDRANT_URL),
-      qdrantApiKey: Boolean(env.QDRANT_API_KEY)
+      qdrantApiKey: Boolean(env.QDRANT_API_KEY),
+      localCorpus: true
     },
     model: env.ANTHROPIC_MODEL ?? "claude-haiku-4-5-20251001",
     collection: env.QDRANT_COLLECTION ?? "industrial_datasheets",

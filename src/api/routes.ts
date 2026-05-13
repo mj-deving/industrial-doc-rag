@@ -57,6 +57,6 @@ api.get("/report", (c) => {
       sourceUrl: doc.sourceUrl
     })),
     questions: consoleQuestions,
-    eval: health.ok ? { endpoint: "/eval", status: "ready" } : { endpoint: "/eval", status: "blocked", missingSecrets: health.missingSecrets }
+    eval: { endpoint: "/eval", status: "ready", mode: health.mode }
   });
 });

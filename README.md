@@ -2,7 +2,7 @@
 
 Source-grounded RAG for industrial datasheets: Cloudflare Workers, Hono, Qdrant, Cohere embeddings, and Anthropic generation.
 
-The point is not a polished chat product. The point is a deployable substrate that answers technical MOSFET datasheet questions with inspectable sources and a visible eval loop.
+The live Worker answers technical MOSFET datasheet questions with inspectable sources and a visible eval loop. It runs immediately on the packaged corpus and switches to provider-backed retrieval when Anthropic, Cohere, and Qdrant secrets are configured.
 
 ## Visual Proof
 
@@ -10,8 +10,8 @@ The point is not a polished chat product. The point is a deployable substrate th
 
 ## Architecture
 
-- `POST /ingest` accepts a public PDF URL, validates the fetch, extracts or falls back to curated chunks for known Infineon PDFs, embeds chunks with Cohere, and stores vectors in Qdrant.
-- `POST /query` embeds the question, retrieves top 5 chunks, asks Anthropic for a source-bounded answer, and returns structured JSON.
+- `POST /ingest` accepts a public PDF URL. With provider secrets it embeds chunks and stores vectors in Qdrant; without provider secrets it reports packaged-corpus readiness.
+- `POST /query` uses Cohere/Qdrant/Anthropic when configured, otherwise it uses Worker-native retrieval over the packaged corpus and returns structured JSON with source cards.
 - `GET /eval` runs ten ground-truth Q&A cases and reports hit rate, top-1 accuracy, and answer-term coverage.
 - `GET /health` reports missing/configured runtime dependencies without leaking secret values.
 - `GET /` and `GET /console` serve the operator console from the same Worker.
@@ -21,6 +21,7 @@ The point is not a polished chat product. The point is a deployable substrate th
 - **Hono on Workers, not FastAPI:** the deployment target is the Worker itself. Workers remove server management and keep the route surface small enough to inspect in minutes.
 - **Cohere embeddings:** Anthropic does not provide embedding models. Cohere `embed-v4.0` with 1024 dimensions gives a direct multilingual embedding path that works over plain HTTP from Workers.
 - **Haiku-class generation:** the configured default is `claude-haiku-4-5-20251001` because the application needs low latency over retrieved snippets. The exact model remains an environment variable so an API-side model naming issue is visible instead of hidden in code.
+- **Packaged-corpus fallback:** the public Worker must be live without waiting on third-party trial keys. When secrets are absent, retrieval runs in the Worker against the same curated corpus facts and returns source-grounded extractive answers.
 - **Dense top-5 retrieval:** no reranker in v1. For a four-minute Loom, the source list must be easy to inspect and the failure mode must be obvious.
 - **PDF extraction:** Workers cannot run the common Node PDF parser stack. The code first attempts a lightweight PDF text extraction. For the five known Infineon PDFs it falls back to curated datasheet chunks after validating that the PDF URL is reachable. That keeps `/ingest` honest enough for the current corpus while leaving table-aware PDF parsing as the correct next investment.
 - **Eval loop:** ten fixed Q&A pairs are enough to prove whether retrieval is wired correctly. The metrics are not a benchmark claim; they are a regression tripwire.
@@ -110,13 +111,16 @@ Response:
 
 ```json
 {
-  "ok": false,
+  "ok": true,
+  "providerReady": false,
+  "mode": "local-corpus",
   "missingSecrets": ["COHERE_API_KEY"],
   "configured": {
     "anthropic": true,
     "cohere": false,
     "qdrantUrl": true,
-    "qdrantApiKey": true
+    "qdrantApiKey": true,
+    "localCorpus": true
   },
   "model": "claude-haiku-4-5-20251001",
   "collection": "industrial_datasheets",
@@ -124,7 +128,7 @@ Response:
 }
 ```
 
-Missing-secret failures use the same stable shape across query, ingest, and eval:
+When provider-backed mode is active and an upstream secret is missing, failures use this stable shape:
 
 ```json
 {

@@ -62,7 +62,7 @@ export function renderConsole(): string {
     <header>
       <div>
         <h1>Industrial Datasheet RAG Console</h1>
-        <p>Cloudflare Worker over Infineon MOSFET datasheets with Qdrant retrieval, source cards, and a small eval loop.</p>
+        <p>Cloudflare Worker over Infineon MOSFET datasheets with source cards, provider-ready retrieval, and a small eval loop.</p>
       </div>
       <a href="/report" target="_blank" rel="noreferrer">Evidence report</a>
     </header>
@@ -111,7 +111,12 @@ export function renderConsole(): string {
     const ingestButton = document.querySelector("#ingest");
     const evalButton = document.querySelector("#eval");
 
-    loadReport();
+    loadReport().then(() => {
+      if (new URLSearchParams(location.search).get("proof") === "1") {
+        query(questionInput.value);
+        getJson("/eval").then(renderEval);
+      }
+    });
 
     ingestButton.addEventListener("click", async () => {
       await runAction(ingestButton, async () => {
@@ -149,6 +154,7 @@ export function renderConsole(): string {
 
     function renderHealth(health) {
       const items = [
+        [health.mode === "provider-backed" ? "Provider-backed" : "Packaged corpus", true],
         ["Anthropic", health.configured.anthropic],
         ["Cohere", health.configured.cohere],
         ["Qdrant URL", health.configured.qdrantUrl],
@@ -157,7 +163,7 @@ export function renderConsole(): string {
         [health.collection, true]
       ];
       statusEl.innerHTML = items.map(([label, ok]) => '<span class="pill ' + (ok ? "ok" : "blocked") + '">' + escapeHtml(label) + '</span>').join("");
-      detailEl.textContent = health.ok ? "Ready for ingest, query, and eval." : "Blocked until secrets are set: " + health.missingSecrets.join(", ");
+      detailEl.textContent = health.providerReady ? "Provider-backed retrieval is ready." : "Live now on packaged corpus. Provider-backed retrieval activates when secrets are set: " + health.missingSecrets.join(", ");
     }
 
     function renderQuestions(questions) {
@@ -178,7 +184,7 @@ export function renderConsole(): string {
         renderError(answerEl, data.error);
         return;
       }
-      answerEl.innerHTML = "<strong>Confidence: " + escapeHtml(data.confidence) + "</strong><br>" + escapeHtml(data.answer);
+      answerEl.innerHTML = '<strong>Confidence: ' + escapeHtml(data.confidence) + '</strong> <span class="meta">mode: ' + escapeHtml(data.mode || "unknown") + '</span><br>' + escapeHtml(data.answer);
       sourcesEl.innerHTML = data.sources.map((source) => '<article class="source"><strong>' + escapeHtml(source.partNumber) + '</strong> <span class="meta">score ' + Number(source.score).toFixed(3) + '</span><br><a href="' + escapeHtml(source.sourceUrl) + '" target="_blank" rel="noreferrer">' + escapeHtml(source.title) + '</a><p>' + escapeHtml(source.excerpt) + '</p></article>').join("");
     }
 
