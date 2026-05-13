@@ -37,6 +37,19 @@
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.3,
       "position": [520, 0]
+    },
+    {
+      "parameters": {
+        "fromEmail": "rag-demo@example.com",
+        "toEmail": "engineering@example.com",
+        "subject": "=Datasheet RAG answer: {{$json.confidence}} confidence",
+        "text": "=Question answered by Industrial Datasheet RAG\\n\\n{{$json.answer}}\\n\\nTop source: {{$json.sources[0].partNumber}} - {{$json.sources[0].sourceUrl}}"
+      },
+      "id": "Email",
+      "name": "Email notification",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [520, 180]
     }
   ],
   "connections": {
@@ -56,6 +69,11 @@
         [
           {
             "node": "Slack notification",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Email notification",
             "type": "main",
             "index": 0
           }
