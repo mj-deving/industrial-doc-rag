@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { api } from "./api/routes";
 import { jsonError } from "./api/errors";
-import { renderDemoCockpit } from "./demo/page";
+import { renderConsole } from "./console/page";
 import type { Env } from "./types";
 
 const app = new Hono<{ Bindings: Env }>();
@@ -9,11 +9,11 @@ const app = new Hono<{ Bindings: Env }>();
 app.route("/", api);
 
 app.get("/", (c) => {
-  return c.html(renderDemoCockpit());
+  return c.html(renderConsole());
 });
 
-app.get("/demo", (c) => {
-  return c.html(renderDemoCockpit());
+app.get("/console", (c) => {
+  return c.html(renderConsole());
 });
 
 app.onError((error, c) => {

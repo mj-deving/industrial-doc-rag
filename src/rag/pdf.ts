@@ -30,7 +30,7 @@ export async function chunksFromPdfUrl(pdfUrl: string, documentId?: string): Pro
   }
 
   if (known) {
-    // ADR: Cloudflare Workers cannot run common Node PDF parsers. For the demo corpus,
+    // ADR: Cloudflare Workers cannot run common Node PDF parsers. For the packaged corpus,
     // fetching the public PDF proves the URL path and these curated chunks keep ingestion
     // deterministic when the PDF stream is compressed or font-encoded.
     return chunksFromCorpusFacts(known);

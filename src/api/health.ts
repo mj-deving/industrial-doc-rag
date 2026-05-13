@@ -21,10 +21,10 @@ export function inspectHealth(env: Env) {
     collection: env.QDRANT_COLLECTION ?? "industrial_datasheets",
     corpusCount: corpus.length,
     endpoints: {
-      ingestDemo: "/ingest/demo",
+      ingestCorpus: "/ingest/corpus",
       query: "/query",
       eval: "/eval",
-      report: "/demo/report"
+      report: "/report"
     }
   };
 }

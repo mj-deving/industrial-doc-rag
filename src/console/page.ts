@@ -1,10 +1,10 @@
-export function renderDemoCockpit(): string {
+export function renderConsole(): string {
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Industrial Datasheet RAG Demo</title>
+  <title>Industrial Datasheet RAG Console</title>
   <style>
     :root { color-scheme: light dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #f5f7fb; color: #172033; }
     * { box-sizing: border-box; }
@@ -61,17 +61,17 @@ export function renderDemoCockpit(): string {
   <main>
     <header>
       <div>
-        <h1>Industrial Datasheet RAG Demo</h1>
+        <h1>Industrial Datasheet RAG Console</h1>
         <p>Cloudflare Worker over Infineon MOSFET datasheets with Qdrant retrieval, source cards, and a small eval loop.</p>
       </div>
-      <a href="/demo/report" target="_blank" rel="noreferrer">JSON report</a>
+      <a href="/report" target="_blank" rel="noreferrer">Evidence report</a>
     </header>
 
     <section class="panel">
       <h2>Runtime Status</h2>
       <div id="status" class="status"><span class="pill">Loading health...</span></div>
       <div class="actions">
-        <button id="ingest">Ingest demo corpus</button>
+        <button id="ingest">Ingest corpus</button>
         <button id="eval" class="secondary">Run eval</button>
       </div>
       <p class="meta" id="status-detail"></p>
@@ -115,8 +115,8 @@ export function renderDemoCockpit(): string {
 
     ingestButton.addEventListener("click", async () => {
       await runAction(ingestButton, async () => {
-        answerEl.textContent = "Ingesting five demo datasheets...";
-        const data = await postJson("/ingest/demo", {});
+        answerEl.textContent = "Ingesting five datasheets...";
+        const data = await postJson("/ingest/corpus", {});
         if (data.error) {
           renderError(answerEl, data.error);
           sourcesEl.innerHTML = "";
@@ -141,10 +141,10 @@ export function renderDemoCockpit(): string {
     });
 
     async function loadReport() {
-      const report = await getJson("/demo/report");
+      const report = await getJson("/report");
       state.report = report;
       renderHealth(report.health);
-      renderQuestions(report.demoQuestions);
+      renderQuestions(report.questions);
     }
 
     function renderHealth(health) {

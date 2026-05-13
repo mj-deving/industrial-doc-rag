@@ -15,7 +15,7 @@ export async function answerQuestion(env: Env, question: string, retrievals: Ret
     })
     .join("\n\n");
 
-  // ADR: Haiku-class generation keeps the demo latency bounded. The answer is forced
+  // ADR: Haiku-class generation keeps the query latency bounded. The answer is forced
   // to stay inside retrieved snippets so the Loom can inspect sources instead of trust prose.
   const message = await anthropic.messages.create({
     model: env.ANTHROPIC_MODEL ?? "claude-haiku-4-5-20251001",

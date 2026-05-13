@@ -40,7 +40,7 @@
     },
     {
       "parameters": {
-        "fromEmail": "rag-demo@example.com",
+        "fromEmail": "rag-console@example.com",
         "toEmail": "engineering@example.com",
         "subject": "=Datasheet RAG answer: {{$json.confidence}} confidence",
         "text": "=Question answered by Industrial Datasheet RAG\\n\\n{{$json.answer}}\\n\\nTop source: {{$json.sources[0].partNumber}} - {{$json.sources[0].sourceUrl}}"

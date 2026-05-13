@@ -33,7 +33,7 @@ export const corpus: CorpusDocument[] = [
       "The IPT007N06N datasheet identifies the package family as HSOF / TO-Leadless style for high-current low-resistance power stages.",
       "IPT007N06N is selected for low-voltage high-current switching applications where low RDS(on), high current handling, and thermal package performance are central design constraints.",
       "The part is an N-channel MOSFET intended for synchronous rectification and compact power conversion designs.",
-      "For demo retrieval, IPT007N06N should answer questions about 60 V class MOSFET selection and HSOF / TO-Leadless packaging."
+      "For retrieval, IPT007N06N should answer questions about 60 V class MOSFET selection and HSOF / TO-Leadless packaging."
     ]
   },
   {

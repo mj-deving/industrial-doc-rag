@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 import { corpus } from "../corpus/manifest";
-import { demoQuestions } from "../demo/questions";
+import { consoleQuestions } from "../console/questions";
 import { runEval } from "../eval/scoring";
 import { ingestPdf, queryRag } from "../rag/pipeline";
 import { badRequest } from "./errors";
@@ -18,7 +18,7 @@ api.post("/ingest", async (c) => {
   return c.json(result);
 });
 
-api.post("/ingest/demo", async (c) => {
+api.post("/ingest/corpus", async (c) => {
   const results = [];
   for (const doc of corpus) {
     results.push(await ingestPdf(c.env, { pdfUrl: doc.pdfUrl, documentId: doc.documentId }));
@@ -44,7 +44,7 @@ api.get("/health", (c) => {
   return c.json(inspectHealth(c.env));
 });
 
-api.get("/demo/report", (c) => {
+api.get("/report", (c) => {
   const health = inspectHealth(c.env);
   return c.json({
     name: "Industrial Datasheet RAG",
@@ -56,7 +56,7 @@ api.get("/demo/report", (c) => {
       partNumber: doc.partNumber,
       sourceUrl: doc.sourceUrl
     })),
-    demoQuestions,
+    questions: consoleQuestions,
     eval: health.ok ? { endpoint: "/eval", status: "ready" } : { endpoint: "/eval", status: "blocked", missingSecrets: health.missingSecrets }
   });
 });

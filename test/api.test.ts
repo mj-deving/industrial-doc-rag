@@ -1,20 +1,20 @@
 import { describe, expect, it } from "bun:test";
 import { badRequest, missingSecretError, toApiError } from "../src/api/errors";
 import { inspectHealth } from "../src/api/health";
-import { demoQuestions } from "../src/demo/questions";
+import { consoleQuestions } from "../src/console/questions";
 
 describe("health", () => {
   it("reports missing secrets without exposing configured values", () => {
     const health = inspectHealth({
       ANTHROPIC_API_KEY: "secret",
       COHERE_API_KEY: "secret",
-      QDRANT_COLLECTION: "demo_collection"
+      QDRANT_COLLECTION: "industrial_collection"
     });
 
     expect(health.ok).toBe(false);
     expect(health.missingSecrets).toEqual(["QDRANT_URL", "QDRANT_API_KEY"]);
     expect(JSON.stringify(health)).not.toContain("secret");
-    expect(health.collection).toBe("demo_collection");
+    expect(health.collection).toBe("industrial_collection");
   });
 
   it("reports ready state when required secrets are present", () => {
@@ -55,9 +55,9 @@ describe("api errors", () => {
   });
 });
 
-describe("demo questions", () => {
-  it("exports five canned questions for the cockpit", () => {
-    expect(demoQuestions).toHaveLength(5);
-    expect(demoQuestions.map((item) => item.expectedPartNumber)).toContain("IPB017N10N5");
+describe("console questions", () => {
+  it("exports five canned questions for the console", () => {
+    expect(consoleQuestions).toHaveLength(5);
+    expect(consoleQuestions.map((item) => item.expectedPartNumber)).toContain("IPB017N10N5");
   });
 });

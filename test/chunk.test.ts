@@ -6,15 +6,15 @@ import { uuidFromString } from "../src/rag/qdrant";
 describe("chunking", () => {
   it("creates stable datasheet chunks with metadata", () => {
     const chunks = chunkText({
-      documentId: "demo",
-      title: "Demo",
+      documentId: "sample",
+      title: "Sample",
       partNumber: "DEMO",
-      sourceUrl: "https://example.com/demo.pdf",
+      sourceUrl: "https://example.com/sample.pdf",
       text: "A ".repeat(700) + "\n\n" + "B ".repeat(700)
     });
 
     expect(chunks.length).toBeGreaterThan(1);
-    expect(chunks[0].id).toBe("demo-0");
+    expect(chunks[0].id).toBe("sample-0");
     expect(chunks[0].partNumber).toBe("DEMO");
   });
 });
