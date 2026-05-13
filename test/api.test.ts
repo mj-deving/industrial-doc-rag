@@ -3,13 +3,14 @@ import { badRequest, missingSecretError, toApiError } from "../src/api/errors";
 import { inspectHealth } from "../src/api/health";
 import { consoleQuestions } from "../src/console/questions";
 import { runEval } from "../src/eval/scoring";
+import { rerankForDatasheetIdentifiers } from "../src/rag/local";
 import { queryRag } from "../src/rag/pipeline";
+import type { Retrieval } from "../src/types";
 
 describe("health", () => {
   it("reports missing secrets without exposing configured values", () => {
     const health = inspectHealth({
       ANTHROPIC_API_KEY: "secret",
-      COHERE_API_KEY: "secret",
       QDRANT_COLLECTION: "industrial_collection"
     });
 
@@ -23,17 +24,25 @@ describe("health", () => {
 
   it("reports ready state when required secrets are present", () => {
     const health = inspectHealth({
-      ANTHROPIC_API_KEY: "a",
-      COHERE_API_KEY: "c",
       QDRANT_URL: "https://qdrant.example",
       QDRANT_API_KEY: "q"
     });
 
     expect(health.ok).toBe(true);
     expect(health.providerReady).toBe(true);
-    expect(health.mode).toBe("provider-backed");
+    expect(health.mode).toBe("qdrant-inference");
     expect(health.missingSecrets).toEqual([]);
     expect(health.corpusCount).toBe(5);
+  });
+
+  it("reports anthropic-enhanced qdrant mode when Anthropic is also present", () => {
+    const health = inspectHealth({
+      ANTHROPIC_API_KEY: "a",
+      QDRANT_URL: "https://qdrant.example",
+      QDRANT_API_KEY: "q"
+    });
+
+    expect(health.mode).toBe("anthropic-qdrant");
   });
 });
 
@@ -55,12 +64,43 @@ describe("live local corpus mode", () => {
   });
 });
 
+describe("retrieval ranking", () => {
+  it("boosts exact part-number matches above semantically similar hits", () => {
+    const retrievals: Retrieval[] = [
+      {
+        id: "neighbor",
+        documentId: "neighbor",
+        title: "Neighbor MOSFET",
+        sourceUrl: "https://example.test/neighbor.pdf",
+        partNumber: "IPB044N15N5",
+        text: "IPB044N15N5 has typical RDS(on) of 4.4 mOhm.",
+        chunkIndex: 0,
+        score: 0.58
+      },
+      {
+        id: "target",
+        documentId: "target",
+        title: "Target MOSFET",
+        sourceUrl: "https://example.test/target.pdf",
+        partNumber: "IPB017N10N5",
+        text: "IPB017N10N5 has maximum RDS(on) of 1.7 mOhm.",
+        chunkIndex: 0,
+        score: 0.54
+      }
+    ];
+
+    const [top] = rerankForDatasheetIdentifiers("What is the maximum RDS(on) for IPB017N10N5?", retrievals);
+
+    expect(top.partNumber).toBe("IPB017N10N5");
+  });
+});
+
 describe("api errors", () => {
   it("normalizes missing secret errors", () => {
-    const error = toApiError(new Error("Missing COHERE_API_KEY"));
+    const error = toApiError(new Error("Missing QDRANT_API_KEY"));
 
     expect(error.code).toBe("missing_secret");
-    expect(error.missingSecrets).toEqual(["COHERE_API_KEY"]);
+    expect(error.missingSecrets).toEqual(["QDRANT_API_KEY"]);
   });
 
   it("keeps explicit bad request errors", () => {
@@ -71,10 +111,10 @@ describe("api errors", () => {
   });
 
   it("builds multi-secret missing errors", () => {
-    const error = missingSecretError(["COHERE_API_KEY", "QDRANT_URL"]);
+    const error = missingSecretError(["QDRANT_API_KEY", "QDRANT_URL"]);
 
     expect(error.code).toBe("missing_secret");
-    expect(error.message).toContain("COHERE_API_KEY");
+    expect(error.message).toContain("QDRANT_API_KEY");
     expect(error.message).toContain("QDRANT_URL");
   });
 });

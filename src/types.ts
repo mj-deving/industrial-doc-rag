@@ -1,10 +1,10 @@
 export type Env = {
   ANTHROPIC_API_KEY?: string;
   ANTHROPIC_MODEL?: string;
-  COHERE_API_KEY?: string;
   QDRANT_URL?: string;
   QDRANT_API_KEY?: string;
   QDRANT_COLLECTION?: string;
+  QDRANT_INFERENCE_MODEL?: string;
 };
 
 export type DatasheetChunk = {
@@ -32,5 +32,5 @@ export type QueryResponse = {
   }>;
   confidence: "low" | "medium" | "high";
   retrievals: Retrieval[];
-  mode?: "provider-backed" | "local-corpus";
+  mode?: "qdrant-inference" | "anthropic-qdrant" | "local-corpus";
 };

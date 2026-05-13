@@ -62,7 +62,7 @@ export function renderConsole(): string {
     <header>
       <div>
         <h1>Industrial Datasheet RAG Console</h1>
-        <p>Cloudflare Worker over Infineon MOSFET datasheets with source cards, provider-ready retrieval, and a small eval loop.</p>
+        <p>Cloudflare Worker over Infineon MOSFET datasheets with source cards, Qdrant-backed retrieval, and a small eval loop.</p>
       </div>
       <a href="/report" target="_blank" rel="noreferrer">Evidence report</a>
     </header>
@@ -154,16 +154,15 @@ export function renderConsole(): string {
 
     function renderHealth(health) {
       const items = [
-        [health.mode === "provider-backed" ? "Provider-backed" : "Packaged corpus", true],
+        [health.mode === "anthropic-qdrant" ? "Anthropic + Qdrant" : health.mode === "qdrant-inference" ? "Qdrant inference" : "Packaged corpus", true],
         ["Anthropic", health.configured.anthropic],
-        ["Cohere", health.configured.cohere],
         ["Qdrant URL", health.configured.qdrantUrl],
         ["Qdrant key", health.configured.qdrantApiKey],
         ["Corpus " + health.corpusCount, true],
         [health.collection, true]
       ];
       statusEl.innerHTML = items.map(([label, ok]) => '<span class="pill ' + (ok ? "ok" : "blocked") + '">' + escapeHtml(label) + '</span>').join("");
-      detailEl.textContent = health.providerReady ? "Provider-backed retrieval is ready." : "Live now on packaged corpus. Provider-backed retrieval activates when secrets are set: " + health.missingSecrets.join(", ");
+      detailEl.textContent = health.providerReady ? "Qdrant Cloud Inference retrieval is ready." : "Live now on packaged corpus. Qdrant retrieval activates when secrets are set: " + health.missingSecrets.join(", ");
     }
 
     function renderQuestions(questions) {

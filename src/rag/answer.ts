@@ -47,7 +47,7 @@ export async function answerQuestion(env: Env, question: string, retrievals: Ret
     })),
     confidence: confidenceFromRetrievals(retrievals),
     retrievals,
-    mode: "provider-backed"
+    mode: "anthropic-qdrant"
   };
 }
 

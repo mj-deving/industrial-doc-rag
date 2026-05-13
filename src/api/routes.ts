@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { corpus } from "../corpus/manifest";
 import { consoleQuestions } from "../console/questions";
 import { runEval } from "../eval/scoring";
-import { ingestPdf, queryRag } from "../rag/pipeline";
+import { ingestPackagedCorpus, ingestPdf, queryRag } from "../rag/pipeline";
 import { badRequest } from "./errors";
 import { inspectHealth } from "./health";
 import type { Env } from "../types";
@@ -19,11 +19,8 @@ api.post("/ingest", async (c) => {
 });
 
 api.post("/ingest/corpus", async (c) => {
-  const results = [];
-  for (const doc of corpus) {
-    results.push(await ingestPdf(c.env, { pdfUrl: doc.pdfUrl, documentId: doc.documentId }));
-  }
-  return c.json({ ingested: results.length, results });
+  const result = await ingestPackagedCorpus(c.env);
+  return c.json({ ingested: corpus.length, result });
 });
 
 api.post("/query", async (c) => {

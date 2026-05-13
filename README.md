@@ -1,8 +1,8 @@
 # Industrial Datasheet RAG
 
-Source-grounded RAG for industrial datasheets: Cloudflare Workers, Hono, Qdrant, Cohere embeddings, and Anthropic generation.
+Source-grounded RAG for industrial datasheets: Cloudflare Workers, Hono, Qdrant Cloud Inference, and optional Anthropic generation.
 
-The live Worker answers technical MOSFET datasheet questions with inspectable sources and a visible eval loop. It runs immediately on the packaged corpus and switches to provider-backed retrieval when Anthropic, Cohere, and Qdrant secrets are configured.
+The live Worker answers technical MOSFET datasheet questions with inspectable sources and a visible eval loop. Production retrieval uses Qdrant Cloud Inference when Qdrant secrets are configured; the packaged corpus keeps local and public fallback behavior usable.
 
 ## Visual Proof
 
@@ -10,8 +10,8 @@ The live Worker answers technical MOSFET datasheet questions with inspectable so
 
 ## Architecture
 
-- `POST /ingest` accepts a public PDF URL. With provider secrets it embeds chunks and stores vectors in Qdrant; without provider secrets it reports packaged-corpus readiness.
-- `POST /query` uses Cohere/Qdrant/Anthropic when configured, otherwise it uses Worker-native retrieval over the packaged corpus and returns structured JSON with source cards.
+- `POST /ingest` accepts a public PDF URL. With Qdrant secrets it stores chunks using Qdrant Cloud Inference; without Qdrant secrets it reports packaged-corpus readiness.
+- `POST /query` uses Qdrant Cloud Inference when configured, otherwise it uses Worker-native retrieval over the packaged corpus and returns structured JSON with source cards.
 - `GET /eval` runs ten ground-truth Q&A cases and reports hit rate, top-1 accuracy, and answer-term coverage.
 - `GET /health` reports missing/configured runtime dependencies without leaking secret values.
 - `GET /` and `GET /console` serve the operator console from the same Worker.
@@ -19,10 +19,10 @@ The live Worker answers technical MOSFET datasheet questions with inspectable so
 ## Tradeoffs
 
 - **Hono on Workers, not FastAPI:** the deployment target is the Worker itself. Workers remove server management and keep the route surface small enough to inspect in minutes.
-- **Cohere embeddings:** Anthropic does not provide embedding models. Cohere `embed-v4.0` with 1024 dimensions gives a direct multilingual embedding path that works over plain HTTP from Workers.
-- **Haiku-class generation:** the configured default is `claude-haiku-4-5-20251001` because the application needs low latency over retrieved snippets. The exact model remains an environment variable so an API-side model naming issue is visible instead of hidden in code.
+- **Qdrant Cloud Inference:** Qdrant generates embeddings during upsert and query using `sentence-transformers/all-minilm-l6-v2`, so no separate embedding provider key is needed.
+- **Optional Haiku-class generation:** if `ANTHROPIC_API_KEY` is configured, the Worker uses `claude-haiku-4-5-20251001` over retrieved snippets. Without Anthropic, it returns extractive source-grounded answers.
 - **Packaged-corpus fallback:** the public Worker must be live without waiting on third-party trial keys. When secrets are absent, retrieval runs in the Worker against the same curated corpus facts and returns source-grounded extractive answers.
-- **Dense top-5 retrieval:** no reranker in v1. For a four-minute Loom, the source list must be easy to inspect and the failure mode must be obvious.
+- **Dense top-5 plus identifier rerank:** Qdrant supplies semantic recall. A narrow part-number boost handles the industrial reality that exact component IDs should beat semantically similar neighbors.
 - **PDF extraction:** Workers cannot run the common Node PDF parser stack. The code first attempts a lightweight PDF text extraction. For the five known Infineon PDFs it falls back to curated datasheet chunks after validating that the PDF URL is reachable. That keeps `/ingest` honest enough for the current corpus while leaving table-aware PDF parsing as the correct next investment.
 - **Eval loop:** ten fixed Q&A pairs are enough to prove whether retrieval is wired correctly. The metrics are not a benchmark claim; they are a regression tripwire.
 
@@ -36,12 +36,12 @@ cp .dev.vars.example .dev.vars
 Fill `.dev.vars`:
 
 ```bash
-ANTHROPIC_API_KEY=...
+ANTHROPIC_API_KEY=... # optional
 ANTHROPIC_MODEL=claude-haiku-4-5-20251001
-COHERE_API_KEY=...
 QDRANT_URL=https://your-qdrant-cluster
 QDRANT_API_KEY=...
 QDRANT_COLLECTION=industrial_datasheets
+QDRANT_INFERENCE_MODEL=sentence-transformers/all-minilm-l6-v2
 ```
 
 Run locally:
@@ -88,11 +88,11 @@ curl -s http://localhost:8787/eval | jq
 Deploy:
 
 ```bash
-bunx wrangler secret put ANTHROPIC_API_KEY
-bunx wrangler secret put COHERE_API_KEY
 bunx wrangler secret put QDRANT_URL
 bunx wrangler secret put QDRANT_API_KEY
 bunx wrangler secret put QDRANT_COLLECTION
+bunx wrangler secret put QDRANT_INFERENCE_MODEL
+bunx wrangler secret put ANTHROPIC_API_KEY # optional
 bunx wrangler secret put ANTHROPIC_MODEL
 bunx wrangler deploy
 ```
@@ -114,29 +114,29 @@ Response:
   "ok": true,
   "providerReady": false,
   "mode": "local-corpus",
-  "missingSecrets": ["COHERE_API_KEY"],
+  "missingSecrets": ["QDRANT_API_KEY"],
   "configured": {
     "anthropic": true,
-    "cohere": false,
     "qdrantUrl": true,
     "qdrantApiKey": true,
     "localCorpus": true
   },
   "model": "claude-haiku-4-5-20251001",
+  "inferenceModel": "sentence-transformers/all-minilm-l6-v2",
   "collection": "industrial_datasheets",
   "corpusCount": 5
 }
 ```
 
-When provider-backed mode is active and an upstream secret is missing, failures use this stable shape:
+When a required secret is missing, failures use this stable shape:
 
 ```json
 {
   "error": {
     "code": "missing_secret",
-    "message": "Missing required secret: COHERE_API_KEY",
-    "missingSecrets": ["COHERE_API_KEY"],
-    "nextStep": "Set Worker secret COHERE_API_KEY and redeploy."
+    "message": "Missing required secret: QDRANT_API_KEY",
+    "missingSecrets": ["QDRANT_API_KEY"],
+    "nextStep": "Set Worker secret QDRANT_API_KEY and redeploy."
   }
 }
 ```

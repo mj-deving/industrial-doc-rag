@@ -1,12 +1,11 @@
-import { embedDocuments, embedQuery } from "./embed";
 import { chunksFromPdfUrl } from "./pdf";
-import { allLocalChunks, queryLocalCorpus } from "./local";
-import { searchChunks, upsertChunks } from "./qdrant";
+import { allLocalChunks, queryLocalCorpus, rerankForDatasheetIdentifiers, responseFromRetrievals } from "./local";
+import { hasQdrantConfig, searchChunksWithInference, upsertChunksWithInference } from "./qdrant";
 import { answerQuestion } from "./answer";
 import type { Env, QueryResponse } from "../types";
 
 export async function ingestPdf(env: Env, input: { pdfUrl: string; documentId?: string }) {
-  if (!hasProviderConfig(env)) {
+  if (!hasQdrantConfig(env)) {
     const chunks = allLocalChunks().filter((chunk) => !input.documentId || chunk.documentId === input.documentId);
     return {
       documentId: input.documentId ?? "packaged-corpus",
@@ -17,13 +16,30 @@ export async function ingestPdf(env: Env, input: { pdfUrl: string; documentId?: 
   }
 
   const chunks = await chunksFromPdfUrl(input.pdfUrl, input.documentId);
-  const embeddings = await embedDocuments(env, chunks.map((chunk) => chunk.text));
-  await upsertChunks(env, chunks, embeddings);
+  await upsertChunksWithInference(env, chunks);
   return {
     documentId: chunks[0]?.documentId,
     chunks: chunks.length,
     sourceUrl: input.pdfUrl,
-    mode: "provider-backed" as const
+    mode: "qdrant-inference" as const
+  };
+}
+
+export async function ingestPackagedCorpus(env: Env) {
+  const chunks = allLocalChunks();
+  if (!hasQdrantConfig(env)) {
+    return {
+      documentId: "packaged-corpus",
+      chunks: chunks.length,
+      mode: "local-corpus" as const
+    };
+  }
+
+  await upsertChunksWithInference(env, chunks);
+  return {
+    documentId: "packaged-corpus",
+    chunks: chunks.length,
+    mode: "qdrant-inference" as const
   };
 }
 
@@ -32,15 +48,16 @@ export async function queryRag(env: Env, question: string): Promise<QueryRespons
     throw new Error("question must not be empty");
   }
 
-  if (!hasProviderConfig(env)) {
+  if (!hasQdrantConfig(env)) {
     return queryLocalCorpus(question);
   }
 
-  const queryVector = await embedQuery(env, question);
-  const retrievals = await searchChunks(env, queryVector, 5);
-  return answerQuestion(env, question, retrievals);
-}
+  await upsertChunksWithInference(env, allLocalChunks());
+  const retrievals = await searchChunksWithInference(env, question, 5);
 
-export function hasProviderConfig(env: Env): boolean {
-  return Boolean(env.ANTHROPIC_API_KEY && env.COHERE_API_KEY && env.QDRANT_URL && env.QDRANT_API_KEY);
+  if (!env.ANTHROPIC_API_KEY) {
+    return responseFromRetrievals(question, retrievals, "qdrant-inference");
+  }
+
+  return answerQuestion(env, question, rerankForDatasheetIdentifiers(question, retrievals));
 }

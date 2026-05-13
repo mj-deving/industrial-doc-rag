@@ -1,7 +1,7 @@
 import { corpus } from "../corpus/manifest";
 import type { Env } from "../types";
 
-const REQUIRED_SECRETS = ["ANTHROPIC_API_KEY", "COHERE_API_KEY", "QDRANT_URL", "QDRANT_API_KEY"] as const;
+const REQUIRED_SECRETS = ["QDRANT_URL", "QDRANT_API_KEY"] as const;
 
 export type RequiredSecret = (typeof REQUIRED_SECRETS)[number];
 
@@ -11,16 +11,16 @@ export function inspectHealth(env: Env) {
   return {
     ok: true,
     providerReady: missingSecrets.length === 0,
-    mode: missingSecrets.length === 0 ? "provider-backed" : "local-corpus",
+    mode: missingSecrets.length === 0 ? (env.ANTHROPIC_API_KEY ? "anthropic-qdrant" : "qdrant-inference") : "local-corpus",
     missingSecrets,
     configured: {
       anthropic: Boolean(env.ANTHROPIC_API_KEY),
-      cohere: Boolean(env.COHERE_API_KEY),
       qdrantUrl: Boolean(env.QDRANT_URL),
       qdrantApiKey: Boolean(env.QDRANT_API_KEY),
       localCorpus: true
     },
     model: env.ANTHROPIC_MODEL ?? "claude-haiku-4-5-20251001",
+    inferenceModel: env.QDRANT_INFERENCE_MODEL ?? "sentence-transformers/all-minilm-l6-v2",
     collection: env.QDRANT_COLLECTION ?? "industrial_datasheets",
     corpusCount: corpus.length,
     endpoints: {

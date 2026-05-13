@@ -45,6 +45,45 @@ export function queryLocalCorpus(question: string): QueryResponse {
   };
 }
 
+export function responseFromRetrievals(question: string, retrievals: Retrieval[], mode: "qdrant-inference" | "local-corpus"): QueryResponse {
+  const rankedRetrievals = rerankForDatasheetIdentifiers(question, retrievals);
+
+  return {
+    answer: answerFromRetrievals(question, rankedRetrievals),
+    sources: rankedRetrievals.map((item) => ({
+      title: item.title,
+      sourceUrl: item.sourceUrl,
+      partNumber: item.partNumber,
+      score: item.score,
+      excerpt: item.text.slice(0, 420)
+    })),
+    confidence: confidenceFromRetrievals(rankedRetrievals),
+    retrievals: rankedRetrievals,
+    mode
+  };
+}
+
+export function rerankForDatasheetIdentifiers(question: string, retrievals: Retrieval[]): Retrieval[] {
+  const queryParts = new Set(extractPartNumbers(question));
+  if (queryParts.size === 0) {
+    return retrievals;
+  }
+
+  // ADR: industrial datasheet queries often include exact part numbers. Dense retrieval
+  // remains the broad recall layer, but exact identifiers deserve a deterministic boost
+  // so questions about a named component do not land on a semantically similar neighbor.
+  return retrievals
+    .map((item) => {
+      const partNumber = normalizePartNumber(item.partNumber);
+      const exactPartBoost = queryParts.has(partNumber) ? 0.3 : 0;
+      return {
+        ...item,
+        score: Math.min(0.99, item.score + exactPartBoost)
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+}
+
 export function retrieveLocal(question: string, limit: number): Retrieval[] {
   const queryTokens = tokenize(question);
   const queryParts = new Set(extractPartNumbers(question));
