@@ -9,7 +9,8 @@ The point is not a polished chat product. The point is a deployable substrate th
 - `POST /ingest` accepts a public PDF URL, validates the fetch, extracts or falls back to curated demo chunks for known Infineon PDFs, embeds chunks with Cohere, and stores vectors in Qdrant.
 - `POST /query` embeds the question, retrieves top 5 chunks, asks Anthropic for a source-bounded answer, and returns structured JSON.
 - `GET /eval` runs ten ground-truth Q&A cases and reports hit rate, top-1 accuracy, and answer-term coverage.
-- `GET /` serves a minimal HTML interface from the same Worker.
+- `GET /health` reports missing/configured runtime dependencies without leaking secret values.
+- `GET /` and `GET /demo` serve a guided demo cockpit from the same Worker.
 
 ## Tradeoffs
 
@@ -44,6 +45,19 @@ Run locally:
 bun run typecheck
 bun test
 bunx wrangler dev
+```
+
+Open the demo cockpit:
+
+```bash
+open http://localhost:8787/
+```
+
+Check runtime status:
+
+```bash
+curl -s http://localhost:8787/health | jq
+curl -s http://localhost:8787/demo/report | jq
 ```
 
 Ingest the demo corpus:
@@ -85,6 +99,39 @@ https://industrial-doc-rag.mariusdeving.workers.dev
 ```
 
 ## API
+
+### `GET /health`
+
+Response:
+
+```json
+{
+  "ok": false,
+  "missingSecrets": ["COHERE_API_KEY"],
+  "configured": {
+    "anthropic": true,
+    "cohere": false,
+    "qdrantUrl": true,
+    "qdrantApiKey": true
+  },
+  "model": "claude-haiku-4-5-20251001",
+  "collection": "industrial_datasheets",
+  "corpusCount": 5
+}
+```
+
+Missing-secret failures use the same stable shape across query, ingest, and eval:
+
+```json
+{
+  "error": {
+    "code": "missing_secret",
+    "message": "Missing required secret: COHERE_API_KEY",
+    "missingSecrets": ["COHERE_API_KEY"],
+    "nextStep": "Set Worker secret COHERE_API_KEY and redeploy."
+  }
+}
+```
 
 ### `POST /ingest`
 
@@ -147,7 +194,7 @@ The demo uses five public Infineon MOSFET datasheets:
 `n8n-template.json` shows the reference workflow:
 
 ```text
-Webhook -> POST /query -> Slack notification
+Webhook -> POST /query -> Slack notification + Email notification
 ```
 
 Use `DEMO_SCRIPT.md` for the Loom recording flow.
