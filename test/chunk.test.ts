@@ -1,6 +1,7 @@
 import { describe, expect, it } from "bun:test";
 import { chunkText } from "../src/rag/chunk";
 import { confidenceFromRetrievals } from "../src/rag/answer";
+import { uuidFromString } from "../src/rag/qdrant";
 
 describe("chunking", () => {
   it("creates stable datasheet chunks with metadata", () => {
@@ -15,6 +16,13 @@ describe("chunking", () => {
     expect(chunks.length).toBeGreaterThan(1);
     expect(chunks[0].id).toBe("demo-0");
     expect(chunks[0].partNumber).toBe("DEMO");
+  });
+});
+
+describe("qdrant ids", () => {
+  it("turns stable chunk ids into qdrant-compatible UUIDs", () => {
+    expect(uuidFromString("ipb017n10n5-0")).toMatch(/^[0-9a-f]{8}-[0-9a-f]{4}-5[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+    expect(uuidFromString("ipb017n10n5-0")).toBe(uuidFromString("ipb017n10n5-0"));
   });
 });
 

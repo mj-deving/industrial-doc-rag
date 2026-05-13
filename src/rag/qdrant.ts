@@ -38,7 +38,7 @@ export async function upsertChunks(env: Env, chunks: DatasheetChunk[], embedding
 
   await ensureCollection(env);
   const points: QdrantPoint[] = chunks.map((chunk, index) => ({
-    id: chunk.id,
+    id: uuidFromString(chunk.id),
     vector: embeddings[index],
     payload: chunk
   }));
@@ -50,6 +50,22 @@ export async function upsertChunks(env: Env, chunks: DatasheetChunk[], embedding
   if (!response.ok) {
     throw new Error(`Qdrant upsert failed: ${response.status} ${await response.text()}`);
   }
+}
+
+export function uuidFromString(value: string): string {
+  const bytes = new Uint8Array(16);
+  let hash = 2166136261;
+  for (let i = 0; i < value.length; i++) {
+    hash ^= value.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+    bytes[i % 16] ^= hash & 0xff;
+    bytes[(i * 7) % 16] ^= (hash >>> 8) & 0xff;
+  }
+
+  bytes[6] = (bytes[6] & 0x0f) | 0x50;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, (byte) => byte.toString(16).padStart(2, "0")).join("");
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
 
 export async function searchChunks(env: Env, vector: number[], limit = 5): Promise<Retrieval[]> {
