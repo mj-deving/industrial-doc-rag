@@ -23,6 +23,8 @@ Source-grounded RAG for industrial datasheets on Cloudflare Workers. Hono serves
 
 ## Architecture
 
+![RAG pipeline — data-flow from datasheet PDFs through Qdrant Cloud Inference to structured JSON output and source cards](docs/diagrams/rag-pipeline.png)
+
 - `POST /ingest` accepts a public PDF URL. With Qdrant secrets it stores chunks using Qdrant Cloud Inference; without Qdrant secrets it reports packaged-corpus readiness.
 - `POST /ingest/corpus` upserts the packaged five-datasheet corpus into Qdrant.
 - `POST /query` retrieves top-5 chunks from Qdrant when configured, applies a narrow part-number rerank, and returns structured JSON with source cards.
