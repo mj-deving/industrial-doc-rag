@@ -1,237 +1,353 @@
+// Console, built against the shared mjdeving-lab design lock.
+// Lock + tokens: MJ-OS references/design-system/lab/{reference-lock.md,design.md,tokens.css}
+// Archetype A (console). Project accent: cyan #45c7e0 (measurement / instrument panel).
+// Accent role = signal only: the one action, the live badge, the score bar. Never a wash.
+// Mono role = technical metadata only. Prose stays sans.
+// UI language is English because the corpus and the embedding model are English-only;
+// a German question would retrieve badly. Honesty beats consistency here.
 export function renderConsole(): string {
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Industrial Datasheet RAG Console</title>
+  <title>industrial-doc-rag / datasheet console</title>
   <style>
-    :root { color-scheme: light dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #f5f7fb; color: #172033; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: #f5f7fb; color: #172033; }
-    main { max-width: 1180px; margin: 0 auto; padding: 28px 20px 44px; }
-    header { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; margin-bottom: 18px; }
-    h1 { font-size: 30px; line-height: 1.15; margin: 0 0 6px; }
-    h2 { font-size: 17px; margin: 0 0 12px; }
-    p { color: #526173; margin: 0; }
-    a { color: #205cc8; }
-    .grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr); gap: 16px; }
-    .panel { background: white; border: 1px solid #dce4ee; border-radius: 8px; padding: 16px; min-width: 0; }
-    .status { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .pill { border: 1px solid #cdd7e5; border-radius: 999px; padding: 6px 10px; font-size: 13px; background: #f9fbfd; color: #27364a; }
-    .pill.ok { border-color: #8fc6a2; background: #edf8f1; color: #176334; }
-    .pill.blocked { border-color: #e2a5a5; background: #fff2f2; color: #9b1c1c; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
-    button { min-height: 40px; padding: 0 14px; border: 0; border-radius: 6px; background: #205cc8; color: white; font-weight: 650; cursor: pointer; }
-    button.secondary { background: #34465f; }
-    button.ghost { background: #edf1f7; color: #27364a; border: 1px solid #cdd7e5; }
-    button:disabled { opacity: 0.6; cursor: progress; }
-    form { display: grid; gap: 10px; grid-template-columns: minmax(0, 1fr) auto; margin: 12px 0; }
-    input { min-height: 42px; width: 100%; padding: 0 12px; border: 1px solid #c8d0dc; border-radius: 6px; font-size: 15px; background: white; color: #172033; }
-    pre { margin: 0; overflow: auto; white-space: pre-wrap; word-break: break-word; }
-    .answer { min-height: 120px; }
-    .sources, .cases { display: grid; gap: 10px; margin-top: 12px; }
-    .source, .case { border: 1px solid #dce4ee; border-radius: 8px; padding: 12px; background: #fbfcfe; }
-    .meta { color: #526173; font-size: 13px; }
-    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0; }
-    .metric { border: 1px solid #dce4ee; border-radius: 8px; padding: 12px; background: #fbfcfe; }
-    .metric strong { display: block; font-size: 24px; margin-top: 4px; }
-    .error { color: #9b1c1c; }
-    @media (max-width: 860px) {
-      header, .grid { display: block; }
-      .panel { margin-bottom: 14px; }
-      form { grid-template-columns: 1fr; }
-      .metrics { grid-template-columns: 1fr; }
-    }
-    @media (prefers-color-scheme: dark) {
-      :root, body { background: #0d1117; color: #e6edf3; }
-      p, .meta { color: #9fb0c3; }
-      .panel { background: #151b23; border-color: #303b4a; }
-      .source, .case, .metric { background: #101720; border-color: #303b4a; }
-      input { background: #0d1117; color: #e6edf3; border-color: #303b4a; }
-      button.ghost { background: #182231; color: #e6edf3; border-color: #303b4a; }
-      .pill { background: #101720; color: #d7e1ec; border-color: #303b4a; }
-      .pill.ok { background: #0f2c1a; color: #9ee3b2; border-color: #2e8c4b; }
-      .pill.blocked { background: #341616; color: #ffb8b8; border-color: #8a3030; }
-      a { color: #80adff; }
-    }
+:root{
+  --canvas:#0a0b0d; --surface:#121417; --surface-2:#171a1e;
+  --border:#23272d; --border-bright:#2e343b;
+  --text:#e7e9ec; --text-muted:#9aa1a8; --text-dim:#656b72;
+  --accent:#45c7e0; --accent-dim:#2b8ea3; --accent-faint:rgba(69,199,224,.12);
+  --danger:#e5674c;
+  --font-sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;
+  --radius:8px; --radius-sm:6px; --maxw:820px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--canvas);color:var(--text);font-family:var(--font-sans);
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+header{border-bottom:1px solid var(--border);padding:22px 0 18px;margin-bottom:32px}
+.headrow{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.mark{font-weight:700;font-size:19px;letter-spacing:-.01em}
+.mark .dim{color:var(--text-dim);font-weight:400}
+.tag{color:var(--text-muted);font-size:13.5px;margin-top:4px;max-width:62ch}
+.stack{display:flex;gap:6px;flex-wrap:wrap}
+.prim{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);
+  border:1px solid var(--border);border-radius:5px;padding:2px 7px;white-space:nowrap}
+
+.health{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.badge{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);
+  border:1px solid var(--border);border-radius:5px;padding:2px 7px}
+.badge.live{color:var(--accent);border-color:var(--accent-dim)}
+.badge.off{color:var(--text-dim);border-color:var(--border)}
+
+.field{display:flex;gap:10px;align-items:stretch}
+#q{flex:1;min-width:0;background:var(--surface);color:var(--text);border:1px solid var(--border);
+  border-radius:var(--radius);padding:14px 16px;font-family:var(--font-sans);font-size:15px;
+  outline:none;transition:border-color .12s ease}
+#q::placeholder{color:var(--text-dim)}
+#q:focus{border-color:var(--accent)}
+#ask{background:var(--accent);color:#04171c;border:0;border-radius:var(--radius);
+  padding:0 20px;font-weight:600;font-size:14px;cursor:pointer;font-family:var(--font-sans);
+  transition:background .12s ease;white-space:nowrap}
+#ask:hover{background:#63d4e9}
+#ask:disabled{background:var(--accent-dim);opacity:.55;cursor:not-allowed}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chip{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);background:transparent;
+  border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 10px;cursor:pointer;
+  transition:border-color .12s ease,color .12s ease}
+.chip:hover{border-color:var(--border-bright);color:var(--text)}
+.hint{margin-top:12px;color:var(--text-dim);font-size:12.5px}
+
+.answer-region{margin-top:34px;min-height:4px}
+.meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;min-height:18px;flex-wrap:wrap}
+#answer{font-size:15.5px;color:var(--text);white-space:pre-wrap;word-break:break-word}
+#answer.noanswer{color:var(--danger)}
+
+.cites{margin-top:24px;display:grid;gap:8px}
+.cite{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:11px 13px}
+.cite-top{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-family:var(--font-mono);font-size:12.5px}
+.cite-src{color:var(--text)}
+.cite-src a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
+.cite-idx{color:var(--text-dim)}
+.bar{margin-top:8px;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.excerpt{color:var(--text-muted);font-size:13px;margin-top:8px}
+
+.panel{margin-top:40px;border-top:1px solid var(--border);padding-top:18px}
+.panel summary{cursor:pointer;color:var(--text-muted);font-size:13.5px;list-style:none;
+  display:flex;align-items:center;gap:8px}
+.panel summary::-webkit-details-marker{display:none}
+.panel summary .n{font-family:var(--font-mono);color:var(--text-dim);font-size:12px}
+.evalbar{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
+#run-eval{background:transparent;color:var(--text-muted);border:1px solid var(--border);
+  border-radius:var(--radius-sm);padding:6px 12px;font-size:12px;font-family:var(--font-mono);
+  cursor:pointer;transition:border-color .12s ease,color .12s ease}
+#run-eval:hover{border-color:var(--border-bright);color:var(--text)}
+#run-eval:disabled{opacity:.5;cursor:not-allowed}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.metric{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);
+  padding:11px 13px;font-family:var(--font-mono);font-size:12px;color:var(--text-dim)}
+.metric b{display:block;font-size:20px;color:var(--text);font-weight:600;margin-top:4px}
+.cases{margin-top:12px;display:grid;gap:1px;font-family:var(--font-mono);font-size:12.5px;
+  max-height:280px;overflow:auto}
+.case{display:flex;justify-content:space-between;gap:12px;padding:6px 2px;
+  border-bottom:1px solid var(--border);color:var(--text-muted)}
+.case .c{color:var(--text-dim)}
+.case.miss .c{color:var(--danger)}
+.err{color:var(--danger);font-family:var(--font-mono);font-size:12.5px}
+
+footer{margin:48px 0 40px;color:var(--text-dim);font-size:12px;font-family:var(--font-mono)}
+footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid var(--border)}
+
+@media (max-width:520px){
+  .metrics{grid-template-columns:1fr}
+  .field{flex-direction:column}
+  #ask{padding:12px 20px}
+}
   </style>
 </head>
 <body>
-  <main>
-    <header>
+<div class="wrap">
+  <header>
+    <div class="headrow">
       <div>
-        <h1>Industrial Datasheet RAG Console</h1>
-        <p>Cloudflare Worker over Infineon MOSFET datasheets with source cards, Qdrant-backed retrieval, and a small eval loop.</p>
+        <div class="mark">industrial-doc-rag<span class="dim">/</span></div>
+        <div class="tag">Questions about five public Infineon MOSFET datasheets, answered from the datasheet text. Every answer carries the source it came from.</div>
       </div>
-      <a href="/report" target="_blank" rel="noreferrer">Evidence report</a>
-    </header>
-
-    <section class="panel">
-      <h2>Runtime Status</h2>
-      <div id="status" class="status"><span class="pill">Loading health...</span></div>
-      <div class="actions">
-        <button id="ingest">Ingest corpus</button>
-        <button id="eval" class="secondary">Run eval</button>
+      <div class="stack" aria-label="pipeline primitives">
+        <span class="prim">Workers</span><span class="prim">Qdrant</span><span class="prim">Rerank</span>
+        <span class="prim">Eval</span>
       </div>
-      <p class="meta" id="status-detail"></p>
-    </section>
-
-    <div class="grid">
-      <section class="panel">
-        <h2>Ask A Datasheet Question</h2>
-        <div id="questions" class="actions"></div>
-        <form id="query-form">
-          <input id="question" name="question" value="What is the maximum RDS(on) for IPB017N10N5?" autocomplete="off">
-          <button type="submit">Query</button>
-        </form>
-        <div class="panel answer" id="answer">No query yet.</div>
-        <div class="sources" id="sources"></div>
-      </section>
-
-      <section class="panel">
-        <h2>Eval Loop</h2>
-        <p class="meta">Ten ground-truth checks: retrieval hit, top-1 part match, and answer-term coverage.</p>
-        <div class="metrics" id="metrics"></div>
-        <div class="cases" id="cases"></div>
-      </section>
     </div>
-  </main>
-  <script>
-    const state = { report: null };
-    const statusEl = document.querySelector("#status");
-    const detailEl = document.querySelector("#status-detail");
-    const questionsEl = document.querySelector("#questions");
-    const answerEl = document.querySelector("#answer");
-    const sourcesEl = document.querySelector("#sources");
-    const metricsEl = document.querySelector("#metrics");
-    const casesEl = document.querySelector("#cases");
-    const form = document.querySelector("#query-form");
-    const questionInput = document.querySelector("#question");
-    const ingestButton = document.querySelector("#ingest");
-    const evalButton = document.querySelector("#eval");
+  </header>
 
-    loadReport().then(() => {
-      if (new URLSearchParams(location.search).get("proof") === "1") {
-        query(questionInput.value);
-        getJson("/eval").then(renderEval);
-      }
+  <div class="health" id="health"><span class="badge">reading health ...</span></div>
+
+  <div class="console">
+    <div class="field">
+      <input id="q" type="text" autocomplete="off" value="What is the maximum RDS(on) for IPB017N10N5?">
+      <button id="ask">Ask</button>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="hint">Retrieval is dense top-5 plus a part-number rerank. Answers are extracted from the datasheet, not generated.</div>
+  </div>
+
+  <div class="answer-region" id="region">
+    <div class="meta" id="meta"></div>
+    <div id="answer"></div>
+    <div class="cites" id="cites"></div>
+  </div>
+
+  <details class="panel">
+    <summary>Eval loop <span class="n" id="evalcount">10 ground-truth cases</span></summary>
+    <div class="evalbar">
+      <button id="run-eval">run eval</button>
+      <span class="badge" id="evalnote">retrieval hit, top-1 part match, answer-term coverage</span>
+    </div>
+    <div class="metrics" id="metrics" hidden></div>
+    <div class="cases" id="cases"></div>
+  </details>
+
+  <footer>
+    edge-deployed datasheet RAG &middot; <a href="https://github.com/mj-deving/industrial-doc-rag" target="_blank" rel="noreferrer">github.com/mj-deving/industrial-doc-rag</a> &middot; <a href="/report" target="_blank" rel="noreferrer">evidence report</a>
+  </footer>
+</div>
+
+<script>
+  var healthEl = document.getElementById("health");
+  var chipsEl = document.getElementById("chips");
+  var metaEl = document.getElementById("meta");
+  var answerEl = document.getElementById("answer");
+  var citesEl = document.getElementById("cites");
+  var metricsEl = document.getElementById("metrics");
+  var casesEl = document.getElementById("cases");
+  var qEl = document.getElementById("q");
+  var askEl = document.getElementById("ask");
+  var evalEl = document.getElementById("run-eval");
+
+  function esc(v) {
+    return String(v).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[c];
     });
+  }
 
-    ingestButton.addEventListener("click", async () => {
-      await runAction(ingestButton, async () => {
-        answerEl.textContent = "Ingesting five datasheets...";
-        const data = await postJson("/ingest/corpus", {});
-        if (data.error) {
-          renderError(answerEl, data.error);
-          sourcesEl.innerHTML = "";
-          return;
-        }
-        answerEl.innerHTML = "<strong>Ingest complete</strong><pre>" + escapeHtml(JSON.stringify(data, null, 2)) + "</pre>";
-        sourcesEl.innerHTML = "";
-      });
-    });
+  function badge(label, live) {
+    var b = document.createElement("span");
+    b.className = "badge " + (live ? "live" : "off");
+    b.textContent = label;
+    return b;
+  }
 
-    evalButton.addEventListener("click", async () => {
-      await runAction(evalButton, async () => {
-        metricsEl.innerHTML = '<div class="metric">Running eval...</div>';
-        const data = await getJson("/eval");
-        renderEval(data);
-      });
-    });
+  function getJson(url) {
+    return fetch(url).then(function (r) { return r.json(); });
+  }
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      await query(questionInput.value);
-    });
+  function postJson(url, body) {
+    return fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(body)
+    }).then(function (r) { return r.json(); });
+  }
 
-    async function loadReport() {
-      const report = await getJson("/report");
-      state.report = report;
-      renderHealth(report.health);
-      renderQuestions(report.questions);
+  function renderError(target, error) {
+    target.innerHTML = "";
+    var d = document.createElement("div");
+    d.className = "err";
+    d.textContent = (error.code || "error") + ": " + (error.message || JSON.stringify(error));
+    target.appendChild(d);
+  }
+
+  getJson("/report").then(function (report) {
+    var h = report.health;
+    // Upstream reachability, not config presence. A dead Qdrant cluster leaves
+    // the secrets set, so providerReady would still say "ready" while every
+    // query degrades to the packaged corpus.
+    var reachable = h.upstream && h.upstream.reachable;
+    healthEl.innerHTML = "";
+    healthEl.appendChild(badge(reachable ? "qdrant live" : "packaged corpus", reachable));
+    healthEl.appendChild(badge(reachable ? h.mode : "local-corpus", true));
+    healthEl.appendChild(badge("corpus " + h.corpusCount, true));
+    if (!reachable && h.upstream) {
+      healthEl.appendChild(badge(h.upstream.detail, false));
     }
 
-    function renderHealth(health) {
-      const items = [
-        [health.mode === "anthropic-qdrant" ? "Anthropic + Qdrant" : health.mode === "qdrant-inference" ? "Qdrant inference" : "Packaged corpus", true],
-        ["Anthropic", health.configured.anthropic],
-        ["Qdrant URL", health.configured.qdrantUrl],
-        ["Qdrant key", health.configured.qdrantApiKey],
-        ["Corpus " + health.corpusCount, true],
-        [health.collection, true]
-      ];
-      statusEl.innerHTML = items.map(([label, ok]) => '<span class="pill ' + (ok ? "ok" : "blocked") + '">' + escapeHtml(label) + '</span>').join("");
-      detailEl.textContent = health.providerReady ? "Qdrant Cloud Inference retrieval is ready." : "Live now on packaged corpus. Qdrant retrieval activates when secrets are set: " + health.missingSecrets.join(", ");
-    }
-
-    function renderQuestions(questions) {
-      questionsEl.innerHTML = questions.map((item) => '<button class="ghost" data-question="' + escapeHtml(item.question) + '">' + escapeHtml(item.expectedPartNumber) + '</button>').join("");
-      questionsEl.querySelectorAll("button").forEach((button) => {
-        button.addEventListener("click", () => {
-          questionInput.value = button.dataset.question;
-          query(button.dataset.question);
-        });
+    chipsEl.innerHTML = "";
+    (report.questions || []).forEach(function (item) {
+      var c = document.createElement("button");
+      c.className = "chip";
+      c.textContent = item.expectedPartNumber;
+      c.title = item.question;
+      c.addEventListener("click", function () {
+        qEl.value = item.question;
+        ask();
       });
-    }
+      chipsEl.appendChild(c);
+    });
 
-    async function query(question) {
-      answerEl.textContent = "Querying...";
-      sourcesEl.innerHTML = "";
-      const data = await postJson("/query", { question });
+    if (new URLSearchParams(location.search).get("proof") === "1") {
+      ask();
+      getJson("/eval").then(renderEval);
+    }
+  });
+
+  function ask() {
+    var question = qEl.value.trim();
+    if (!question) return;
+    askEl.disabled = true;
+    metaEl.innerHTML = "";
+    metaEl.appendChild(badge("querying ...", true));
+    answerEl.className = "";
+    answerEl.textContent = "";
+    citesEl.innerHTML = "";
+
+    postJson("/query", { question: question }).then(function (data) {
+      askEl.disabled = false;
       if (data.error) {
+        metaEl.innerHTML = "";
         renderError(answerEl, data.error);
         return;
       }
-      answerEl.innerHTML = '<strong>Confidence: ' + escapeHtml(data.confidence) + '</strong> <span class="meta">mode: ' + escapeHtml(data.mode || "unknown") + '</span><br>' + escapeHtml(data.answer);
-      sourcesEl.innerHTML = data.sources.map((source) => '<article class="source"><strong>' + escapeHtml(source.partNumber) + '</strong> <span class="meta">score ' + Number(source.score).toFixed(3) + '</span><br><a href="' + escapeHtml(source.sourceUrl) + '" target="_blank" rel="noreferrer">' + escapeHtml(source.title) + '</a><p>' + escapeHtml(source.excerpt) + '</p></article>').join("");
-    }
+      metaEl.innerHTML = "";
+      metaEl.appendChild(badge("confidence " + data.confidence, true));
+      metaEl.appendChild(badge(data.mode || "unknown", false));
+      answerEl.textContent = data.answer;
 
-    function renderEval(data) {
-      if (data.error) {
-        renderError(metricsEl, data.error);
-        casesEl.innerHTML = "";
-        return;
-      }
-      metricsEl.innerHTML = [
-        ["Hit rate", data.hitRate],
-        ["Top-1", data.top1Accuracy],
-        ["Answer terms", data.answerTermAccuracy]
-      ].map(([label, value]) => '<div class="metric"><span class="meta">' + label + '</span><strong>' + Math.round(value * 100) + '%</strong></div>').join("");
-      casesEl.innerHTML = data.cases.map((item) => '<article class="case"><strong>' + escapeHtml(item.id) + '</strong><br><span class="meta">expected ' + escapeHtml(item.expectedPartNumber) + ', top ' + escapeHtml(item.topPart || "none") + ', confidence ' + escapeHtml(item.confidence) + '</span><br>' + escapeHtml(item.question) + '</article>').join("");
-    }
+      citesEl.innerHTML = "";
+      (data.sources || []).forEach(function (s) {
+        var card = document.createElement("div");
+        card.className = "cite";
 
-    async function getJson(url) {
-      const response = await fetch(url);
-      return response.json();
-    }
+        var top = document.createElement("div");
+        top.className = "cite-top";
+        var src = document.createElement("span");
+        src.className = "cite-src";
+        var a = document.createElement("a");
+        a.href = s.sourceUrl;
+        a.target = "_blank";
+        a.rel = "noreferrer";
+        a.textContent = s.partNumber;
+        src.appendChild(a);
+        var idx = document.createElement("span");
+        idx.className = "cite-idx";
+        idx.textContent = Number(s.score).toFixed(3);
+        top.appendChild(src);
+        top.appendChild(idx);
 
-    async function postJson(url, body) {
-      const response = await fetch(url, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(body)
+        var bar = document.createElement("div");
+        bar.className = "bar";
+        var fill = document.createElement("i");
+        fill.style.width = Math.max(2, Math.min(100, Number(s.score) * 100)) + "%";
+        bar.appendChild(fill);
+
+        var ex = document.createElement("div");
+        ex.className = "excerpt";
+        ex.textContent = s.excerpt;
+
+        card.appendChild(top);
+        card.appendChild(bar);
+        card.appendChild(ex);
+        citesEl.appendChild(card);
       });
-      return response.json();
-    }
+    }).catch(function (e) {
+      askEl.disabled = false;
+      renderError(answerEl, { code: "network", message: String(e) });
+    });
+  }
 
-    async function runAction(button, fn) {
-      button.disabled = true;
-      try {
-        await fn();
-      } finally {
-        button.disabled = false;
-      }
+  function renderEval(data) {
+    evalEl.disabled = false;
+    if (data.error) {
+      renderError(casesEl, data.error);
+      return;
     }
+    metricsEl.hidden = false;
+    metricsEl.innerHTML = "";
+    [["hit rate", data.hitRate], ["top-1", data.top1Accuracy], ["answer terms", data.answerTermAccuracy]]
+      .forEach(function (pair) {
+        var m = document.createElement("div");
+        m.className = "metric";
+        m.textContent = pair[0];
+        var b = document.createElement("b");
+        b.textContent = Math.round(pair[1] * 100) + "%";
+        m.appendChild(b);
+        metricsEl.appendChild(m);
+      });
 
-    function renderError(target, error) {
-      target.innerHTML = '<div class="error"><strong>' + escapeHtml(error.code || "error") + '</strong><br>' + escapeHtml(error.message || JSON.stringify(error)) + '<br><span class="meta">' + escapeHtml(error.nextStep || "") + '</span></div>';
-    }
+    casesEl.innerHTML = "";
+    (data.cases || []).forEach(function (item) {
+      var hit = item.topPart === item.expectedPartNumber;
+      var row = document.createElement("div");
+      row.className = "case" + (hit ? "" : " miss");
+      var left = document.createElement("span");
+      left.textContent = item.expectedPartNumber;
+      var right = document.createElement("span");
+      right.className = "c";
+      right.textContent = (item.topPart || "none") + " / " + item.confidence;
+      row.appendChild(left);
+      row.appendChild(right);
+      casesEl.appendChild(row);
+    });
+  }
 
-    function escapeHtml(value) {
-      return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[char]));
-    }
-  </script>
+  askEl.addEventListener("click", ask);
+  qEl.addEventListener("keydown", function (e) { if (e.key === "Enter") ask(); });
+  evalEl.addEventListener("click", function () {
+    evalEl.disabled = true;
+    casesEl.innerHTML = "";
+    metricsEl.hidden = true;
+    getJson("/eval").then(renderEval).catch(function (e) {
+      evalEl.disabled = false;
+      renderError(casesEl, { code: "network", message: String(e) });
+    });
+  });
+</script>
 </body>
 </html>`;
 }

@@ -52,12 +52,21 @@ export async function queryRag(env: Env, question: string): Promise<QueryRespons
     return queryLocalCorpus(question);
   }
 
-  await upsertChunksWithInference(env, allLocalChunks());
-  const retrievals = await searchChunksWithInference(env, question, 5);
+  // The Qdrant path is the configured one, but a dead cluster must not take the
+  // demo down with it. Config presence is not upstream health: a deleted or
+  // expired Qdrant Cloud cluster still leaves QDRANT_URL and QDRANT_API_KEY set,
+  // and every call then 404s. Degrade to the packaged corpus instead of 500ing.
+  // The response carries mode "local-corpus", so the caller sees the degrade.
+  try {
+    await upsertChunksWithInference(env, allLocalChunks());
+    const retrievals = await searchChunksWithInference(env, question, 5);
 
-  if (!env.ANTHROPIC_API_KEY) {
-    return responseFromRetrievals(question, retrievals, "qdrant-inference");
+    if (!env.ANTHROPIC_API_KEY) {
+      return responseFromRetrievals(question, retrievals, "qdrant-inference");
+    }
+
+    return answerQuestion(env, question, rerankForDatasheetIdentifiers(question, retrievals));
+  } catch {
+    return queryLocalCorpus(question);
   }
-
-  return answerQuestion(env, question, rerankForDatasheetIdentifiers(question, retrievals));
 }

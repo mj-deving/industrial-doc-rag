@@ -4,7 +4,7 @@ import { consoleQuestions } from "../console/questions";
 import { runEval } from "../eval/scoring";
 import { ingestPackagedCorpus, ingestPdf, queryRag } from "../rag/pipeline";
 import { badRequest } from "./errors";
-import { inspectHealth } from "./health";
+import { inspectHealth, probeUpstream } from "./health";
 import type { Env } from "../types";
 
 export const api = new Hono<{ Bindings: Env }>();
@@ -37,12 +37,19 @@ api.get("/eval", async (c) => {
   return c.json(result);
 });
 
-api.get("/health", (c) => {
-  return c.json(inspectHealth(c.env));
+api.get("/health", async (c) => {
+  const health = inspectHealth(c.env);
+  const upstream = await probeUpstream(c.env);
+  return c.json({
+    ...health,
+    upstream,
+    // The mode the next query will actually run in, not the one the config implies.
+    effectiveMode: upstream.reachable ? health.mode : "local-corpus"
+  });
 });
 
-api.get("/report", (c) => {
-  const health = inspectHealth(c.env);
+api.get("/report", async (c) => {
+  const health = { ...inspectHealth(c.env), upstream: await probeUpstream(c.env) };
   return c.json({
     name: "Industrial Datasheet RAG",
     liveUrl: "https://industrial-doc-rag.mariusdeving.workers.dev",

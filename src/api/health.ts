@@ -5,6 +5,31 @@ const REQUIRED_SECRETS = ["QDRANT_URL", "QDRANT_API_KEY"] as const;
 
 export type RequiredSecret = (typeof REQUIRED_SECRETS)[number];
 
+// Config presence is not upstream health. `providerReady` says only that the
+// secrets exist; it does NOT say the Qdrant cluster answers. A deleted or
+// expired Qdrant Cloud cluster leaves both secrets set and 404s every call,
+// which is exactly how this endpoint reported "ready" while /query returned 500.
+// probeUpstream() is the honest check: it asks the cluster and reports the answer.
+export async function probeUpstream(env: Env): Promise<{ reachable: boolean; detail: string }> {
+  if (!env.QDRANT_URL || !env.QDRANT_API_KEY) {
+    return { reachable: false, detail: "not configured" };
+  }
+  const collection = env.QDRANT_COLLECTION ?? "industrial_datasheets";
+  const url = `${env.QDRANT_URL.replace(/\/$/, "")}/collections/${collection}`;
+  try {
+    const response = await fetch(url, {
+      method: "GET",
+      headers: { "api-key": env.QDRANT_API_KEY }
+    });
+    if (response.ok) {
+      return { reachable: true, detail: "collection reachable" };
+    }
+    return { reachable: false, detail: `qdrant ${response.status}` };
+  } catch (error) {
+    return { reachable: false, detail: `qdrant unreachable: ${String(error)}` };
+  }
+}
+
 export function inspectHealth(env: Env) {
   const missingSecrets = REQUIRED_SECRETS.filter((name) => !env[name]);
 
