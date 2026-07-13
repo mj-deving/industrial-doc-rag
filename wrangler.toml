@@ -16,6 +16,19 @@ binding = "AI"
 binding = "VECTORIZE"
 index_name = "idr-datasheets"
 
+# Two smaller indices, for the scaling curve only. They hold the first 5 and the
+# first 100 datasheets, so latency and cost can be measured against real indices
+# of each size. A metadata filter over the big index would measure a different
+# thing: Vectorize prices queries against the number of vectors STORED, and a
+# filtered search over 36k vectors is not a search over 400.
+[[vectorize]]
+binding = "VECTORIZE_S"
+index_name = "idr-scale-s"
+
+[[vectorize]]
+binding = "VECTORIZE_M"
+index_name = "idr-scale-m"
+
 # No blob store. The PDFs are Nexperia's documents, and their asset host serves
 # them at a deterministic URL keyed on the part number, so a citation links to the
 # vendor's own copy. Mirroring them into R2 would mean republishing someone else's

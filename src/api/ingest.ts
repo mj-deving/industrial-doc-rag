@@ -11,7 +11,7 @@
  */
 
 import { Hono } from "hono";
-import { embed, type VectorMeta } from "../engine/cloudflare";
+import { bindingFor, embed, type IndexSize, type VectorMeta } from "../engine/cloudflare";
 import type { Env } from "../types";
 
 /** Workers AI takes batches; 32 keeps a request well inside the CPU budget. */
@@ -41,6 +41,10 @@ ingest.post("/ingest/chunks", async (c) => {
     return c.json({ error: "expected a non-empty array of chunks" }, 400);
   }
 
+  const size = (c.req.query("index") ?? "l") as IndexSize;
+  if (!["s", "m", "l"].includes(size)) return c.json({ error: `unknown index "${size}"` }, 400);
+  const target = bindingFor(c.env, size);
+
   let upserted = 0;
   for (let offset = 0; offset < chunks.length; offset += EMBED_BATCH) {
     const batch = chunks.slice(offset, offset + EMBED_BATCH);
@@ -49,7 +53,7 @@ ingest.post("/ingest/chunks", async (c) => {
       batch.map((chunk) => chunk.text)
     );
 
-    await c.env.VECTORIZE.upsert(
+    await target.upsert(
       batch.map((chunk, i) => ({
         id: chunk.id,
         values: vectors[i],

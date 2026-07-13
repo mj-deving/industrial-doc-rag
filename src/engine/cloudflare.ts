@@ -50,10 +50,19 @@ function toRetrieved(matches: VectorizeMatches["matches"]): Retrieved[] {
     });
 }
 
-export function vectorizeIndex(env: Env): Index {
+/** "l" is the corpus. "s" and "m" exist only so the scaling curve has real indices to measure. */
+export type IndexSize = "s" | "m" | "l";
+
+export function bindingFor(env: Env, size: IndexSize = "l"): VectorizeIndex {
+  return { s: env.VECTORIZE_S, m: env.VECTORIZE_M, l: env.VECTORIZE }[size];
+}
+
+export function vectorizeIndex(env: Env, size: IndexSize = "l"): Index {
+  const binding = bindingFor(env, size);
+
   return {
     async search(vector, k) {
-      const result = await env.VECTORIZE.query(vector, { topK: k, returnMetadata: "all" });
+      const result = await binding.query(vector, { topK: k, returnMetadata: "all" });
       return toRetrieved(result.matches);
     },
 
@@ -61,7 +70,7 @@ export function vectorizeIndex(env: Env): Index {
       // A metadata filter, not a local part list. The symbol arm therefore cannot
       // drift out of step with what was actually ingested: ask for a held-out
       // part and Vectorize returns nothing, which is precisely the right answer.
-      const result = await env.VECTORIZE.query(vector, {
+      const result = await binding.query(vector, {
         topK: k,
         returnMetadata: "all",
         filter: { part: documentId }
@@ -71,9 +80,9 @@ export function vectorizeIndex(env: Env): Index {
   };
 }
 
-export function retriever(env: Env) {
+export function retriever(env: Env, size: IndexSize = "l") {
   return {
-    index: vectorizeIndex(env),
+    index: vectorizeIndex(env, size),
     embed: async (text: string) => (await embed(env, [text]))[0],
     symbolsOf: partNumbersIn
   };

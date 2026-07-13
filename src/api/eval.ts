@@ -14,7 +14,7 @@
 import { Hono } from "hono";
 import { answer } from "../../packages/doc-rag/src/answer";
 import { retrieve, type Strategy } from "../../packages/doc-rag/src/retrieve";
-import { retriever } from "../engine/cloudflare";
+import { retriever, type IndexSize } from "../engine/cloudflare";
 import type { Env } from "../types";
 
 const GENERATOR = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
@@ -33,16 +33,18 @@ type Ask = { id: string; question: string };
 
 /** Retrieval only. No generation, so this is cheap enough to run over all 2510 questions. */
 evalApi.post("/eval/retrieve", async (c) => {
-  const { questions, strategy, k } = (await c.req.json()) as {
+  const { questions, strategy, k, index } = (await c.req.json()) as {
     questions: Ask[];
     strategy: Strategy;
     k?: number;
+    index?: IndexSize;
   };
 
+  const search = retriever(c.env, index ?? "l");
   const results = [];
   for (const ask of questions) {
     const started = performance.now();
-    const ranking = await retrieve(retriever(c.env), ask.question, strategy, k ?? 10);
+    const ranking = await retrieve(search, ask.question, strategy, k ?? 10);
     results.push({
       id: ask.id,
       documents: ranking.documents,
@@ -51,7 +53,7 @@ evalApi.post("/eval/retrieve", async (c) => {
     });
   }
 
-  return c.json({ strategy, results });
+  return c.json({ strategy, index: index ?? "l", results });
 });
 
 /** Retrieval plus generation. Run on a sample: this one costs a model call per question. */

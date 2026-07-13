@@ -22,6 +22,9 @@ export type Env = Config & {
   // The PDFs are not stored at all: citations link to the vendor's own asset host.
   AI: Ai;
   VECTORIZE: VectorizeIndex;
+  /** Scaling-curve indices: the first 5 and the first 100 datasheets. */
+  VECTORIZE_S: VectorizeIndex;
+  VECTORIZE_M: VectorizeIndex;
   EMBEDDING_MODEL: string;
   /** Secret. Guards the write path; without it, /ingest is an open door onto the index. */
   INGEST_TOKEN?: string;
