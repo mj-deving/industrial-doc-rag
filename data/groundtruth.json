@@ -57,9 +57,9 @@
     "part": "PMV100XPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 2.4,
+      "value": -2.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -173,9 +173,9 @@
     "part": "PMV27UPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.6,
+      "value": -5.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -330,9 +330,9 @@
     "part": "BUK6Y19-30P",
     "channel": "P",
     "package": "LFPAK56",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 45,
+      "value": -45,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tmb = 25 °C"
@@ -348,9 +348,9 @@
     "part": "PMV48XPA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.5,
+      "value": -3.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -397,9 +397,9 @@
     "part": "PMV50UPE",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.7,
+      "value": -3.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -451,9 +451,9 @@
     "part": "PMPB12R7EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 12.3,
+      "value": -12.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -559,9 +559,9 @@
     "part": "PMV33UPE",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.3,
+      "value": -5.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -706,9 +706,9 @@
     "part": "BUK6Y24-40P",
     "channel": "P",
     "package": "LFPAK56",
-    "vds_v": 40,
+    "vds_v": -40,
     "id_a": {
-      "value": 39,
+      "value": -39,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tmb = 25 °C"
@@ -920,9 +920,9 @@
     "part": "PMPB47XP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 5,
+      "value": -5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1136,9 +1136,9 @@
     "part": "PMV48XPA2",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4,
+      "value": -4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1167,9 +1167,9 @@
     "part": "PMV75UP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.2,
+      "value": -3.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1504,9 +1504,9 @@
     "part": "BUK4D110-20P",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 6.7,
+      "value": -6.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tsp = 25 °C"
@@ -1589,9 +1589,9 @@
     "part": "PMV48XP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.5,
+      "value": -3.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1638,9 +1638,9 @@
     "part": "PMPB15XPA",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 8.2,
+      "value": -8.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1795,9 +1795,9 @@
     "part": "PMV65XPE",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.3,
+      "value": -3.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1916,9 +1916,9 @@
     "part": "PMN48XP",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.1,
+      "value": -4.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -2037,9 +2037,9 @@
     "part": "PMPB14XP",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 12.7,
+      "value": -12.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -2055,9 +2055,9 @@
     "part": "PMV74EPE",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 3.4,
+      "value": -3.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -2140,9 +2140,9 @@
     "part": "PMV100EPA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 60,
+    "vds_v": -60,
     "id_a": {
-      "value": 2.2,
+      "value": -2.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -2225,9 +2225,9 @@
     "part": "PMV28XPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5,
+      "value": -5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -2485,9 +2485,9 @@
     "part": "PMPB12R5UPE",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 13,
+      "value": -13,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -2593,9 +2593,9 @@
     "part": "PMN70EPE",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 4.4,
+      "value": -4.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -3105,9 +3105,9 @@
     "part": "PMV50XP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.4,
+      "value": -4.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -3494,9 +3494,9 @@
     "part": "PMPB16EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 10.6,
+      "value": -10.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -3512,9 +3512,9 @@
     "part": "BUK6Y10-30P",
     "channel": "P",
     "package": "LFPAK56",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 80,
+      "value": -80,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tmb = 25 °C"
@@ -3692,9 +3692,9 @@
     "part": "PMN42XPEA",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.7,
+      "value": -5.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -3849,9 +3849,9 @@
     "part": "BUK4D38-20P",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 18,
+      "value": -18,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tsp = 25 °C"
@@ -3903,9 +3903,9 @@
     "part": "BUK6Y61-60P",
     "channel": "P",
     "package": "LFPAK56",
-    "vds_v": 60,
+    "vds_v": -60,
     "id_a": {
-      "value": 25,
+      "value": -25,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tmb = 25 °C"
@@ -4042,9 +4042,9 @@
     "part": "PMPB19R0UPE",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 11,
+      "value": -11,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -4132,9 +4132,9 @@
     "part": "PMN50EPE",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 6,
+      "value": -6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -4168,9 +4168,9 @@
     "part": "BUK6D43-40P",
     "channel": "P",
     "package": null,
-    "vds_v": 40,
+    "vds_v": -40,
     "id_a": {
-      "value": 14,
+      "value": -14,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tsp = 25 °C"
@@ -4217,9 +4217,9 @@
     "part": "PMN48XPA2",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.4,
+      "value": -4.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -4812,9 +4812,9 @@
     "part": "PMV160UP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 1.2,
+      "value": -1.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V"
@@ -4861,9 +4861,9 @@
     "part": "PMV65XPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.3,
+      "value": -3.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -4946,9 +4946,9 @@
     "part": "PMN52XP",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.7,
+      "value": -4.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5026,9 +5026,9 @@
     "part": "PMPB19XP",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 10.3,
+      "value": -10.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5111,9 +5111,9 @@
     "part": "PMV35EPE",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 5.3,
+      "value": -5.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -5232,9 +5232,9 @@
     "part": "PMN70XP",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 3.9,
+      "value": -3.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5286,9 +5286,9 @@
     "part": "PMPB29XPE",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5,
+      "value": -5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5304,9 +5304,9 @@
     "part": "PMPB20XPE",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 10.3,
+      "value": -10.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5412,9 +5412,9 @@
     "part": "PMPB27EPA",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 6.1,
+      "value": -6.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -5443,9 +5443,9 @@
     "part": "PMV65XP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.3,
+      "value": -4.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tsp = 25 °C"
@@ -5461,9 +5461,9 @@
     "part": "PMPB33XP",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 7.9,
+      "value": -7.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5811,9 +5811,9 @@
     "part": "PMN48XPA",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.1,
+      "value": -4.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -6107,9 +6107,9 @@
     "part": "PMV32UP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4,
+      "value": -4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -6457,9 +6457,9 @@
     "part": "PMV30XPA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.9,
+      "value": -4.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -6655,9 +6655,9 @@
     "part": "PMPB11R2VP",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 14,
+      "value": -14,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -6745,9 +6745,9 @@
     "part": "PMPB17EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 11,
+      "value": -11,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -6781,9 +6781,9 @@
     "part": "PMPB48EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 6.8,
+      "value": -6.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -7028,9 +7028,9 @@
     "part": "PMV30XPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.3,
+      "value": -5.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -7646,9 +7646,9 @@
     "part": "PMV50EPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 4.2,
+      "value": -4.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -7893,9 +7893,9 @@
     "part": "PMPB12R5EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 12.5,
+      "value": -12.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -8135,9 +8135,9 @@
     "part": "PMPB29XPEA",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5,
+      "value": -5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -8238,9 +8238,9 @@
     "part": "PMPB14R0EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 12,
+      "value": -12,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -8282,9 +8282,9 @@
     "part": "PMPB07R3VP",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 17.5,
+      "value": -17.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -8697,9 +8697,9 @@
     "part": "PMV27UPE",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.6,
+      "value": -5.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -8751,9 +8751,9 @@
     "part": "BUK6Y33-60P",
     "channel": "P",
     "package": "LFPAK56",
-    "vds_v": 60,
+    "vds_v": -60,
     "id_a": {
-      "value": 30,
+      "value": -30,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tmb = 25 °C"
@@ -9240,9 +9240,9 @@
     "part": "PMPB43XPEA",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5,
+      "value": -5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -9330,9 +9330,9 @@
     "part": "PMPB20XPEA",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 7.2,
+      "value": -7.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10280,9 +10280,9 @@
     "part": "PMPB08R4VP",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 16.7,
+      "value": -16.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10388,9 +10388,9 @@
     "part": "PMPB09R5VP",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 15,
+      "value": -15,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10473,9 +10473,9 @@
     "part": "PMPB14R7EP",
     "channel": "P",
     "package": null,
-    "vds_v": 30,
+    "vds_v": -30,
     "id_a": {
-      "value": 11.2,
+      "value": -11.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -10563,9 +10563,9 @@
     "part": "PMPB30XPE",
     "channel": "P",
     "package": null,
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 8.5,
+      "value": -8.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10653,9 +10653,9 @@
     "part": "PMPB13UP",
     "channel": "P",
     "package": null,
-    "vds_v": 12,
+    "vds_v": -12,
     "id_a": {
-      "value": 13,
+      "value": -13,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10743,9 +10743,9 @@
     "part": "PMN30XPA",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.2,
+      "value": -5.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10797,9 +10797,9 @@
     "part": "PMN30XP",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 6.8,
+      "value": -6.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10846,9 +10846,9 @@
     "part": "PMN30XPEA",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 5.4,
+      "value": -5.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -11003,9 +11003,9 @@
     "part": "PMN30XPE",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 7,
+      "value": -7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -11425,9 +11425,9 @@
     "part": "PMN100EPA",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 60,
+    "vds_v": -60,
     "id_a": {
-      "value": 2.5,
+      "value": -2.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -11474,9 +11474,9 @@
     "part": "BUK6Y14-40P",
     "channel": "P",
     "package": "LFPAK56",
-    "vds_v": 40,
+    "vds_v": -40,
     "id_a": {
-      "value": 64,
+      "value": -64,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tmb = 25 °C"
@@ -11492,9 +11492,9 @@
     "part": "PMV250EPEA",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 40,
+    "vds_v": -40,
     "id_a": {
-      "value": 1.5,
+      "value": -1.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -11685,9 +11685,9 @@
     "part": "BUK6D120-60P",
     "channel": "P",
     "package": null,
-    "vds_v": 60,
+    "vds_v": -60,
     "id_a": {
-      "value": 8,
+      "value": -8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tsp = 25 °C"
@@ -11757,9 +11757,9 @@
     "part": "PMV240SP",
     "channel": "P",
     "package": "SOT23",
-    "vds_v": 100,
+    "vds_v": -100,
     "id_a": {
-      "value": 1.2,
+      "value": -1.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -11775,9 +11775,9 @@
     "part": "PMN40XPEA",
     "channel": "P",
     "package": "TSOP6",
-    "vds_v": 20,
+    "vds_v": -20,
     "id_a": {
-      "value": 4.7,
+      "value": -4.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"

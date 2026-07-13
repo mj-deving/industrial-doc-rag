@@ -157,7 +157,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV100XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -183,7 +183,7 @@
     "question": "What continuous drain current (ID) is the PMV100XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 2.4,
+      "value": -2.4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -481,7 +481,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV27UPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -507,7 +507,7 @@
     "question": "What continuous drain current (ID) is the PMV27UPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.6,
+      "value": -5.6,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -896,7 +896,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6Y19-30P?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -922,7 +922,7 @@
     "question": "What continuous drain current (ID) is the BUK6Y19-30P rated for at VGS = -10 V; Tmb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 45,
+      "value": -45,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -946,7 +946,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV48XPA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -972,7 +972,7 @@
     "question": "What continuous drain current (ID) is the PMV48XPA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.5,
+      "value": -3.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -1083,7 +1083,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV50UPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -1109,7 +1109,7 @@
     "question": "What continuous drain current (ID) is the PMV50UPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.7,
+      "value": -3.7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -1211,7 +1211,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB12R7EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -1237,7 +1237,7 @@
     "question": "What continuous drain current (ID) is the PMPB12R7EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.3,
+      "value": -12.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -1489,7 +1489,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV33UPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -1502,7 +1502,7 @@
     "question": "What continuous drain current (ID) is the PMV33UPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.3,
+      "value": -5.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -1900,7 +1900,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6Y24-40P?",
     "expected": {
       "kind": "numeric",
-      "value": 40,
+      "value": -40,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -1926,7 +1926,7 @@
     "question": "What continuous drain current (ID) is the BUK6Y24-40P rated for at VGS = -10 V; Tmb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 39,
+      "value": -39,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -2476,7 +2476,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB47XP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -2502,7 +2502,7 @@
     "question": "What continuous drain current (ID) is the PMPB47XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5,
+      "value": -5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -3054,7 +3054,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV48XPA2?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -3080,7 +3080,7 @@
     "question": "What continuous drain current (ID) is the PMV48XPA2 rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4,
+      "value": -4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -3141,7 +3141,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV75UP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -3167,7 +3167,7 @@
     "question": "What continuous drain current (ID) is the PMV75UP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.2,
+      "value": -3.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -4034,7 +4034,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK4D110-20P?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -4060,7 +4060,7 @@
     "question": "What continuous drain current (ID) is the BUK4D110-20P rated for at VGS = -4.5 V; Tsp = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6.7,
+      "value": -6.7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -4249,7 +4249,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV48XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -4262,7 +4262,7 @@
     "question": "What continuous drain current (ID) is the PMV48XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.5,
+      "value": -3.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -4375,7 +4375,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB15XPA?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -4401,7 +4401,7 @@
     "question": "What continuous drain current (ID) is the PMPB15XPA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 8.2,
+      "value": -8.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -4801,7 +4801,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV65XPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -4827,7 +4827,7 @@
     "question": "What continuous drain current (ID) is the PMV65XPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.3,
+      "value": -3.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -5127,7 +5127,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN48XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -5140,7 +5140,7 @@
     "question": "What continuous drain current (ID) is the PMN48XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.1,
+      "value": -4.1,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -5453,7 +5453,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB14XP?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -5479,7 +5479,7 @@
     "question": "What continuous drain current (ID) is the PMPB14XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.7,
+      "value": -12.7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -5492,7 +5492,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV74EPE?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -5518,7 +5518,7 @@
     "question": "What continuous drain current (ID) is the PMV74EPE rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.4,
+      "value": -3.4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -5718,7 +5718,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV100EPA?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": -60,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -5744,7 +5744,7 @@
     "question": "What continuous drain current (ID) is the PMV100EPA rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 2.2,
+      "value": -2.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -5955,7 +5955,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV28XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -5981,7 +5981,7 @@
     "question": "What continuous drain current (ID) is the PMV28XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5,
+      "value": -5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -6668,7 +6668,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB12R5UPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -6694,7 +6694,7 @@
     "question": "What continuous drain current (ID) is the PMPB12R5UPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 13,
+      "value": -13,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -6957,7 +6957,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN70EPE?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -6983,7 +6983,7 @@
     "question": "What continuous drain current (ID) is the PMN70EPE rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.4,
+      "value": -4.4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -8337,7 +8337,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV50XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -8363,7 +8363,7 @@
     "question": "What continuous drain current (ID) is the PMV50XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.4,
+      "value": -4.4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -9411,7 +9411,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB16EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -9437,7 +9437,7 @@
     "question": "What continuous drain current (ID) is the PMPB16EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 10.6,
+      "value": -10.6,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -9450,7 +9450,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6Y10-30P?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -9476,7 +9476,7 @@
     "question": "What continuous drain current (ID) is the BUK6Y10-30P rated for at VGS = -10 V; Tmb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 80,
+      "value": -80,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -9917,7 +9917,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN42XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -9943,7 +9943,7 @@
     "question": "What continuous drain current (ID) is the PMN42XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.7,
+      "value": -5.7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -10354,7 +10354,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK4D38-20P?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -10380,7 +10380,7 @@
     "question": "What continuous drain current (ID) is the BUK4D38-20P rated for at VGS = -4.5 V; Tsp = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 18,
+      "value": -18,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -10482,7 +10482,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6Y61-60P?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": -60,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -10508,7 +10508,7 @@
     "question": "What continuous drain current (ID) is the BUK6Y61-60P rated for at VGS = -10 V; Tmb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 25,
+      "value": -25,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -10858,7 +10858,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB19R0UPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -10884,7 +10884,7 @@
     "question": "What continuous drain current (ID) is the PMPB19R0UPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11,
+      "value": -11,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -11097,7 +11097,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN50EPE?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -11123,7 +11123,7 @@
     "question": "What continuous drain current (ID) is the PMN50EPE rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6,
+      "value": -6,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -11197,7 +11197,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6D43-40P?",
     "expected": {
       "kind": "numeric",
-      "value": 40,
+      "value": -40,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -11223,7 +11223,7 @@
     "question": "What continuous drain current (ID) is the BUK6D43-40P rated for at VGS = -10 V; Tsp = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 14,
+      "value": -14,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -11323,7 +11323,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN48XPA2?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -11349,7 +11349,7 @@
     "question": "What continuous drain current (ID) is the PMN48XPA2 rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.4,
+      "value": -4.4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -12905,7 +12905,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV160UP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -12918,7 +12918,7 @@
     "question": "What continuous drain current (ID) is the PMV160UP rated for at VGS = -4.5 V?",
     "expected": {
       "kind": "numeric",
-      "value": 1.2,
+      "value": -1.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -13031,7 +13031,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV65XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -13057,7 +13057,7 @@
     "question": "What continuous drain current (ID) is the PMV65XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.3,
+      "value": -3.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -13268,7 +13268,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN52XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -13294,7 +13294,7 @@
     "question": "What continuous drain current (ID) is the PMN52XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.7,
+      "value": -4.7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -13492,7 +13492,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB19XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -13518,7 +13518,7 @@
     "question": "What continuous drain current (ID) is the PMPB19XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 10.3,
+      "value": -10.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -13718,7 +13718,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV35EPE?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -13744,7 +13744,7 @@
     "question": "What continuous drain current (ID) is the PMV35EPE rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.3,
+      "value": -5.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -14055,7 +14055,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN70XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -14081,7 +14081,7 @@
     "question": "What continuous drain current (ID) is the PMN70XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.9,
+      "value": -3.9,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -14205,7 +14205,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB29XPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -14231,7 +14231,7 @@
     "question": "What continuous drain current (ID) is the PMPB29XPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5,
+      "value": -5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -14244,7 +14244,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB20XPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -14270,7 +14270,7 @@
     "question": "What continuous drain current (ID) is the PMPB20XPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 10.3,
+      "value": -10.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -14522,7 +14522,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB27EPA?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -14548,7 +14548,7 @@
     "question": "What continuous drain current (ID) is the PMPB27EPA rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6.1,
+      "value": -6.1,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -14598,7 +14598,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV65XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -14624,7 +14624,7 @@
     "question": "What continuous drain current (ID) is the PMV65XP rated for at VGS = -4.5 V; Tsp = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.3,
+      "value": -4.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -14648,7 +14648,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB33XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -14674,7 +14674,7 @@
     "question": "What continuous drain current (ID) is the PMPB33XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.9,
+      "value": -7.9,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -15556,7 +15556,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN48XPA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -15582,7 +15582,7 @@
     "question": "What continuous drain current (ID) is the PMN48XPA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.1,
+      "value": -4.1,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -16358,7 +16358,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV32UP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -16371,7 +16371,7 @@
     "question": "What continuous drain current (ID) is the PMV32UP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4,
+      "value": -4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -17288,7 +17288,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV30XPA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -17314,7 +17314,7 @@
     "question": "What continuous drain current (ID) is the PMV30XPA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.9,
+      "value": -4.9,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -17827,7 +17827,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB11R2VP?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -17853,7 +17853,7 @@
     "question": "What continuous drain current (ID) is the PMPB11R2VP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 14,
+      "value": -14,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -18066,7 +18066,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB17EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -18092,7 +18092,7 @@
     "question": "What continuous drain current (ID) is the PMPB17EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11,
+      "value": -11,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -18155,7 +18155,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB48EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -18181,7 +18181,7 @@
     "question": "What continuous drain current (ID) is the PMPB48EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6.8,
+      "value": -6.8,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -18820,7 +18820,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV30XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -18846,7 +18846,7 @@
     "question": "What continuous drain current (ID) is the PMV30XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.3,
+      "value": -5.3,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -20509,7 +20509,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV50EPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -20535,7 +20535,7 @@
     "question": "What continuous drain current (ID) is the PMV50EPEA rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.2,
+      "value": -4.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -21174,7 +21174,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB12R5EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -21200,7 +21200,7 @@
     "question": "What continuous drain current (ID) is the PMPB12R5EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.5,
+      "value": -12.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -21815,7 +21815,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB29XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -21841,7 +21841,7 @@
     "question": "What continuous drain current (ID) is the PMPB29XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5,
+      "value": -5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -22080,7 +22080,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB14R0EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -22106,7 +22106,7 @@
     "question": "What continuous drain current (ID) is the PMPB14R0EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -22193,7 +22193,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB07R3VP?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -22219,7 +22219,7 @@
     "question": "What continuous drain current (ID) is the PMPB07R3VP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 17.5,
+      "value": -17.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -23319,7 +23319,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV27UPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -23345,7 +23345,7 @@
     "question": "What continuous drain current (ID) is the PMV27UPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.6,
+      "value": -5.6,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -23458,7 +23458,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6Y33-60P?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": -60,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -23484,7 +23484,7 @@
     "question": "What continuous drain current (ID) is the BUK6Y33-60P rated for at VGS = -10 V; Tmb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -24751,7 +24751,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB43XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -24777,7 +24777,7 @@
     "question": "What continuous drain current (ID) is the PMPB43XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5,
+      "value": -5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -24990,7 +24990,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB20XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -25016,7 +25016,7 @@
     "question": "What continuous drain current (ID) is the PMPB20XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.2,
+      "value": -7.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -27526,7 +27526,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB08R4VP?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -27552,7 +27552,7 @@
     "question": "What continuous drain current (ID) is the PMPB08R4VP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 16.7,
+      "value": -16.7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -27793,7 +27793,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB09R5VP?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -27819,7 +27819,7 @@
     "question": "What continuous drain current (ID) is the PMPB09R5VP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": -15,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -28019,7 +28019,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB14R7EP?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": -30,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -28045,7 +28045,7 @@
     "question": "What continuous drain current (ID) is the PMPB14R7EP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11.2,
+      "value": -11.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -28236,7 +28236,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB30XPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -28262,7 +28262,7 @@
     "question": "What continuous drain current (ID) is the PMPB30XPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 8.5,
+      "value": -8.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -28475,7 +28475,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMPB13UP?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": -12,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -28501,7 +28501,7 @@
     "question": "What continuous drain current (ID) is the PMPB13UP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 13,
+      "value": -13,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -28703,7 +28703,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN30XPA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -28729,7 +28729,7 @@
     "question": "What continuous drain current (ID) is the PMN30XPA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.2,
+      "value": -5.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -28831,7 +28831,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN30XP?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -28857,7 +28857,7 @@
     "question": "What continuous drain current (ID) is the PMN30XP rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6.8,
+      "value": -6.8,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -28968,7 +28968,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN30XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -28994,7 +28994,7 @@
     "question": "What continuous drain current (ID) is the PMN30XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.4,
+      "value": -5.4,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -29394,7 +29394,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN30XPE?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -29420,7 +29420,7 @@
     "question": "What continuous drain current (ID) is the PMN30XPE rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7,
+      "value": -7,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -30513,7 +30513,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN100EPA?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": -60,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -30539,7 +30539,7 @@
     "question": "What continuous drain current (ID) is the PMN100EPA rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 2.5,
+      "value": -2.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -30650,7 +30650,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6Y14-40P?",
     "expected": {
       "kind": "numeric",
-      "value": 40,
+      "value": -40,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -30676,7 +30676,7 @@
     "question": "What continuous drain current (ID) is the BUK6Y14-40P rated for at VGS = -10 V; Tmb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 64,
+      "value": -64,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -30700,7 +30700,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV250EPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 40,
+      "value": -40,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -30726,7 +30726,7 @@
     "question": "What continuous drain current (ID) is the PMV250EPEA rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 1.5,
+      "value": -1.5,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -31226,7 +31226,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the BUK6D120-60P?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": -60,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -31252,7 +31252,7 @@
     "question": "What continuous drain current (ID) is the BUK6D120-60P rated for at VGS = -10 V; Tsp = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 8,
+      "value": -8,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -31415,7 +31415,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMV240SP?",
     "expected": {
       "kind": "numeric",
-      "value": 100,
+      "value": -100,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -31441,7 +31441,7 @@
     "question": "What continuous drain current (ID) is the PMV240SP rated for at VGS = -10 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 1.2,
+      "value": -1.2,
       "unit": "A",
       "tolerance": 0.01
     }
@@ -31465,7 +31465,7 @@
     "question": "What is the drain-source voltage rating (VDS) of the PMN40XPEA?",
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": -20,
       "unit": "V",
       "tolerance": 0.01
     }
@@ -31491,7 +31491,7 @@
     "question": "What continuous drain current (ID) is the PMN40XPEA rated for at VGS = -4.5 V; Tamb = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.7,
+      "value": -4.7,
       "unit": "A",
       "tolerance": 0.01
     }

@@ -14,6 +14,16 @@
  * Forgiving: 1 and 1.0 are the same number, "mOhm" and "mΩ" are the same unit,
  * and 0.0136 Ω is the same resistance as 13.6 mΩ. None of those are the system
  * being right or wrong, they are formatting.
+ *
+ * Forgiving about SIGN, and this one was a bug for a while. A P-channel MOSFET
+ * quotes its ratings negative: the BUK6Y19-30P datasheet says -30 V. The label
+ * used to store the magnitude, so a system that read the document correctly and
+ * answered "-30 V" was marked wrong. It was not wrong; the benchmark was. Both
+ * "30 V" and "-30 V" identify the same rating, and an engineer says both, so the
+ * magnitude decides correctness. The sign is not thrown away: `signMatched`
+ * records whether the answer reproduced the polarity the datasheet printed, and
+ * the eval reports it. A system that emits signs at random shows up there rather
+ * than hiding inside the accuracy figure.
  */
 
 import type { Answer, Expected, Question } from "./types";
@@ -24,6 +34,9 @@ export type Grade = {
   reason: "match" | "refused-correctly" | "wrong-value" | "no-value" | "hallucinated" | "refused-wrongly";
   /** What we found in the answer, in canonical form. Null when nothing parsed. */
   found: string | null;
+  /** Did the answer reproduce the datasheet's polarity? Null when no number was
+   *  parsed, or when the question is not numeric. Reported, never graded. */
+  signMatched: boolean | null;
 };
 
 /** Every codepoint a model might use for "ohm": Greek capital, the dedicated OHM
@@ -68,10 +81,13 @@ export function measures(text: string): Measure[] {
   return found;
 }
 
+/** Magnitudes, because the polarity of a P-channel rating is a fact about the
+ *  device and not about whether the system read it. See the header. */
 function near(actual: number, expected: number, tolerance: number): boolean {
   // An absolute floor keeps a tolerance of 1% from becoming meaningless as the
   // expected value approaches zero (a 0.5 mOhm part exists in this corpus).
-  return Math.abs(actual - expected) <= Math.max(Math.abs(expected) * tolerance, 1e-9);
+  const size = Math.abs(expected);
+  return Math.abs(Math.abs(actual) - size) <= Math.max(size * tolerance, 1e-9);
 }
 
 function escape(text: string): string {
@@ -87,23 +103,36 @@ function mentions(text: string, value: string): boolean {
   return new RegExp(`(?<![A-Za-z0-9])${escape(value)}(?![A-Za-z0-9])`, "i").test(text);
 }
 
-function matchesValue(text: string, expected: Expected): { ok: boolean; found: string | null } {
+type Match = { ok: boolean; found: string | null; signMatched: boolean | null };
+
+function matchesValue(text: string, expected: Expected): Match {
   if (expected.kind === "text") {
-    return { ok: mentions(text, expected.value), found: mentions(text, expected.value) ? expected.value : null };
+    const ok = mentions(text, expected.value);
+    return { ok, found: ok ? expected.value : null, signMatched: null };
   }
 
   const parsed = measures(text).filter((m) => m.unit === expected.unit);
-  if (parsed.length === 0) return { ok: false, found: null };
+  if (parsed.length === 0) return { ok: false, found: null, signMatched: null };
+
+  // Zero has no polarity to reproduce, and neither does a rating the label
+  // itself stores unsigned, so `signMatched` is only meaningful once both sides
+  // carry one.
+  const polarity = (value: number) => Math.sign(value);
+  const sign = (m: Measure) =>
+    expected.value === 0 ? null : polarity(m.value) === polarity(expected.value);
 
   const hit = parsed.find((m) => near(m.value, expected.value, expected.tolerance));
-  if (hit) return { ok: true, found: `${hit.value} ${hit.unit}` };
+  if (hit) return { ok: true, found: `${hit.value} ${hit.unit}`, signMatched: sign(hit) };
 
   // Report the closest wrong reading. This is what makes a failure legible:
   // "said 25 mOhm, wanted 13.9 mOhm" names the bug; "wrong" does not.
   const closest = parsed.reduce((a, b) =>
-    Math.abs(a.value - expected.value) <= Math.abs(b.value - expected.value) ? a : b
+    Math.abs(Math.abs(a.value) - Math.abs(expected.value)) <=
+    Math.abs(Math.abs(b.value) - Math.abs(expected.value))
+      ? a
+      : b
   );
-  return { ok: false, found: `${closest.value} ${closest.unit}` };
+  return { ok: false, found: `${closest.value} ${closest.unit}`, signMatched: sign(closest) };
 }
 
 export function grade(question: Question, answer: Answer): Grade {
@@ -111,17 +140,17 @@ export function grade(question: Question, answer: Answer): Grade {
 
   if (answer.refused) {
     return held
-      ? { correct: true, reason: "refused-correctly", found: null }
-      : { correct: false, reason: "refused-wrongly", found: null };
+      ? { correct: true, reason: "refused-correctly", found: null, signMatched: null }
+      : { correct: false, reason: "refused-wrongly", found: null, signMatched: null };
   }
 
-  const { ok, found } = matchesValue(answer.text, question.expected);
+  const { ok, found, signMatched } = matchesValue(answer.text, question.expected);
 
   // A holdout part is not in the index. Any substantive answer about it was
   // invented, and an invented answer that happens to be right is still invented:
   // it is graded as a hallucination, not as a hit.
-  if (held) return { correct: false, reason: "hallucinated", found };
+  if (held) return { correct: false, reason: "hallucinated", found, signMatched };
 
-  if (ok) return { correct: true, reason: "match", found };
-  return { correct: false, reason: found === null ? "no-value" : "wrong-value", found };
+  if (ok) return { correct: true, reason: "match", found, signMatched };
+  return { correct: false, reason: found === null ? "no-value" : "wrong-value", found, signMatched };
 }

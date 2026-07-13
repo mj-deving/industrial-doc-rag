@@ -19,6 +19,26 @@ import type { Env } from "../types";
 
 const GENERATOR = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 
+/**
+ * A ceiling, and it has to clear the reasoning models' scratchpad.
+ *
+ * This was 300, which is generous for an answer ("13 A at VGS = 10 V") and
+ * invisible until a candidate that thinks before it speaks meets it. Qwen spent
+ * all 300 tokens reasoning about a datasheet, returned `finish_reason: "length"`
+ * with `content: null`, and the harness recorded an empty answer. Empty answers
+ * grade as "no value" on the indexed half and as a refusal on the holdout half,
+ * so the model would have scored a PERFECT refusal rate while producing nothing
+ * at all, and the bake-off would have reported it as commendably cautious.
+ *
+ * Raising the ceiling costs the incumbent nothing: it stops at its stop token
+ * after about twenty tokens either way.
+ */
+const MAX_TOKENS = 2000;
+
+/** What a response the harness could not read is called, so that it can be
+ *  counted instead of quietly scoring as caution. See `generate` below. */
+export const UNREADABLE = "__UNREADABLE_RESPONSE__";
+
 export const evalApi = new Hono<{ Bindings: Env }>();
 
 evalApi.use("/harness/*", async (c, next) => {
@@ -30,6 +50,19 @@ evalApi.use("/harness/*", async (c, next) => {
 });
 
 type Ask = { id: string; question: string };
+
+/** Temporary. What does a given model ACTUALLY return? The shipped types say one
+ *  thing and four candidates returned an empty string, which is the shape of a
+ *  refusal and would have won the refusal test outright. */
+evalApi.post("/harness/raw", async (c) => {
+  const { model, prompt } = (await c.req.json()) as { model: string; prompt?: string };
+  const raw = await c.env.AI.run(model as keyof AiModels, {
+    messages: [{ role: "user", content: prompt ?? "What is 2 + 2? Answer with the number only." }],
+    max_tokens: MAX_TOKENS,
+    temperature: 0
+  } as never);
+  return c.json({ model, keys: Object.keys(raw as object), raw });
+});
 
 /** Retrieval only. No generation, so this is cheap enough to run over all 2510 questions. */
 evalApi.post("/harness/retrieve", async (c) => {
@@ -62,23 +95,43 @@ evalApi.post("/harness/retrieve", async (c) => {
   return c.json({ strategy, index: index ?? "l", results });
 });
 
-/** Retrieval plus generation. Run on a sample: this one costs a model call per question. */
+/**
+ * Retrieval plus generation. Run on a sample: this one costs a model call per question.
+ *
+ * `model` overrides the generator for this request only. A candidate then meets
+ * the same questions, the same retrieved evidence, and the same prompt as the
+ * incumbent, and production keeps serving its default the whole time. Without
+ * this the only way to compare two generators is to deploy one, which means the
+ * comparison is a sequence of two different systems rather than one experiment.
+ */
 evalApi.post("/harness/answer", async (c) => {
-  const { questions, strategy, k } = (await c.req.json()) as {
+  const { questions, strategy, k, model } = (await c.req.json()) as {
     questions: Ask[];
     strategy: Strategy;
     k?: number;
+    model?: string;
   };
 
+  const generator = model ?? GENERATOR;
+
   const generate = async (prompt: string): Promise<string> => {
-    const response = (await c.env.AI.run(GENERATOR as keyof AiModels, {
+    const response = (await c.env.AI.run(generator as keyof AiModels, {
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 300,
+      max_tokens: MAX_TOKENS,
       // Deterministic decoding. A benchmark that samples is a benchmark whose
       // number moves when nothing changed.
       temperature: 0
-    } as never)) as unknown as { response: string };
-    return response.response ?? "";
+    } as never)) as unknown;
+
+    const text = textOf(response);
+
+    // An unreadable response must never travel as an empty answer. Empty grades
+    // as "no value" on the indexed half and as a refusal on the holdout half, so
+    // a model the harness cannot read would post a perfect refusal rate and look
+    // careful rather than mute. Two of the seven candidates did exactly this.
+    // The sentinel is not a refusal and not a value, so it can only ever be
+    // counted, and a candidate that emits it is disqualified rather than ranked.
+    return text || UNREADABLE;
   };
 
   const results = [];
@@ -96,5 +149,36 @@ evalApi.post("/harness/answer", async (c) => {
     });
   }
 
-  return c.json({ strategy, generator: GENERATOR, results });
+  return c.json({ strategy, generator, results });
 });
+
+/**
+ * Workers AI does not have one response shape, it has two, and the shipped types
+ * describe the first.
+ *
+ *   { response: "…" }                            llama, mistral
+ *   { choices: [{ message: { content: "…" } }] } qwen, nemotron, glm — and these
+ *                                                also carry a `response` key that
+ *                                                is EMPTY, so reading `response`
+ *                                                and stopping there returns ""
+ *
+ * An empty string is not a neutral failure here. It parses as "no value", the
+ * grader files it beside honest misses on the indexed half, and on the holdout
+ * half it looks like a refusal, so a model this function cannot read would score
+ * a perfect refusal rate and lose only a little accuracy. It would look like a
+ * cautious model rather than an unread one. I found this by dumping the raw
+ * object, having first shipped a version of this function I had guessed.
+ */
+function textOf(raw: unknown): string {
+  const shaped = raw as {
+    response?: unknown;
+    choices?: { message?: { content?: unknown } }[];
+  };
+
+  if (typeof shaped.response === "string" && shaped.response.trim()) return shaped.response;
+
+  const content = shaped.choices?.[0]?.message?.content;
+  if (typeof content === "string") return content.trim();
+
+  return "";
+}

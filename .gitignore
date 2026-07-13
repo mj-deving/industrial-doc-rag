@@ -8,3 +8,4 @@ dist/
 corpus/
 *.pdf
 .ingest-token
+ISA.md

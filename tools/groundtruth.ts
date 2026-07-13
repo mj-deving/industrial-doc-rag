@@ -45,9 +45,19 @@ export type GroundTruth = {
   part: string;
   channel: "N" | "P";
   package: string | null;
-  /** Drain-source voltage, absolute value in V (P-channel parts quote it negative). */
+  /**
+   * Drain-source voltage in V, SIGNED as the datasheet prints it. A P-channel
+   * part quotes -30 V and the label says -30.
+   *
+   * This used to be `Math.abs(...)`, and the magnitude looked like the tidier
+   * choice: the spec people quote out loud is "a 30 V part". It cost three
+   * questions in the first eval, where the system read the document correctly,
+   * answered "-30 V", and was marked wrong. A label that disagrees with the
+   * document it was parsed from is not a label. The grader compares magnitudes
+   * and reports polarity separately, so nothing is lost by telling the truth here.
+   */
   vds_v: number | null;
-  /** Continuous drain current, absolute value in A. */
+  /** Continuous drain current in A, signed as printed. Same story as vds_v. */
   id_a: Measurement | null;
   /** Max on-state resistance in mOhm at the standard Tj = 25 C reference condition. */
   rdson_mohm: Measurement | null;
@@ -191,13 +201,13 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
     part,
     channel,
     package: PACKAGES.find((name) => head.includes(name)) ?? null,
-    // P-channel parts quote both figures negative. The magnitude is the spec.
-    vds_v: vdsMax === null ? null : Math.abs(vdsMax),
+    // Signed, as printed. A P-channel part reads -30 V and the label says so.
+    vds_v: vdsMax,
     id_a:
       idMax === null || !idRows[0]
         ? null
         : {
-            value: Math.abs(idMax),
+            value: idMax,
             typ: null,
             unit: "A",
             conditions: conditions(idRows[0].text)
@@ -222,6 +232,15 @@ export function decodeName(part: string): { rdson_mohm: number; vds_v: number } 
       rdson_mohm: Number(`${decimal[1]}.${decimal[2]}`),
       vds_v: Number(decimal[3])
     };
+  }
+  // R90-80, R58-30: sub-milliohm parts drop the leading zero, so the R sits
+  // directly against the family prefix and R90 means 0.90 mOhm. The integer rule
+  // below reads that same string as 90 mOhm, and the cross-check then reported a
+  // 100x disagreement (PSMNR90-80CSF: "name 90 mΩ · table 0.9 mΩ") as if the
+  // table parser had failed. It had not. The check was wrong about the name.
+  const subMilli = /R(\d+)-(\d+)/.exec(part);
+  if (subMilli && !/\dR\d/.test(part)) {
+    return { rdson_mohm: Number(`0.${subMilli[1]}`), vds_v: Number(subMilli[2]) };
   }
   // 013-100: an integer milliohm figure. No \b after the voltage — a trailing
   // package suffix (PSMN013-100BS) is a word character, so \b never matches and
@@ -286,7 +305,10 @@ if (import.meta.main) {
       if (!named || !row.rdson_mohm || row.vds_v === null) continue;
       checked++;
 
-      if (row.vds_v === named.vds_v) vdsAgree++;
+      // Magnitudes: the part number encodes "30 V" for a part whose table prints
+      // -30 V. The name has no polarity to carry, so comparing signed values here
+      // would report every P-channel part as a parser disagreement.
+      if (Math.abs(row.vds_v) === named.vds_v) vdsAgree++;
 
       const max = row.rdson_mohm.value;
       const ok = Math.abs(max - named.rdson_mohm) / named.rdson_mohm <= 0.1;

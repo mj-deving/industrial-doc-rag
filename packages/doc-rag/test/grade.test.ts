@@ -105,4 +105,43 @@ describe("grade: refusal", () => {
       found: "13.9 mΩ"
     });
   });
+
+  /**
+   * The P-channel case, which the first eval got wrong in the label rather than
+   * in the system. BUK6Y19-30P prints -30 V in its quick-reference table. The
+   * system read it, answered "-30 V", and the grader called that a miss because
+   * the label stored the magnitude. Three questions were scored against a label
+   * that disagreed with the document it came from.
+   */
+  const pChannel = q({
+    id: "BUK6Y19-30P:vds",
+    part: "BUK6Y19-30P",
+    dimension: "vds",
+    question: "What is the drain-source voltage rating (VDS) of the BUK6Y19-30P?",
+    expected: { kind: "numeric", value: -30, unit: "V", tolerance: 0.01 }
+  });
+
+  test("reading a P-channel rating as the datasheet prints it is correct", () => {
+    expect(grade(pChannel, a("-30 V, measured at Tj = 25 °C."))).toMatchObject({
+      correct: true,
+      reason: "match",
+      signMatched: true
+    });
+  });
+
+  test("quoting the same rating unsigned is correct, and the polarity is recorded", () => {
+    // Engineers say "a 30 V P-channel part" out loud. Both readings identify the
+    // same rating, so magnitude decides the grade. The dropped sign is not lost,
+    // it lands in signMatched, where a system that emits polarity at random shows
+    // up instead of hiding inside the accuracy figure.
+    expect(grade(pChannel, a("30 V."))).toMatchObject({
+      correct: true,
+      reason: "match",
+      signMatched: false
+    });
+  });
+
+  test("the sign is not a licence to be wrong about the magnitude", () => {
+    expect(grade(pChannel, a("-20 V."))).toMatchObject({ correct: false, reason: "wrong-value" });
+  });
 });

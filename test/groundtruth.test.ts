@@ -94,9 +94,16 @@ describe("parseDatasheet", () => {
     expect(parseDatasheet("X", "N-channel something\nNo table here.")).toBeNull();
   });
 
-  test("normalises P-channel figures to their magnitude", () => {
+  /**
+   * This test used to assert `toBe(30)`, and it was the reason the bug survived:
+   * the suite agreed with the parser, and the two of them agreed with each other
+   * rather than with the datasheet. A P-channel part prints -30 V. Three eval
+   * questions were then scored against a label that contradicted the document it
+   * was parsed from, and the system was marked wrong for reading correctly.
+   */
+  test("keeps a P-channel figure signed, as the datasheet prints it", () => {
     const p = PMV45EN.replace("N-channel", "P-channel").replace("30    V", "-30   V");
-    expect(parseDatasheet("PMV48XP", p)!.vds_v).toBe(30);
+    expect(parseDatasheet("PMV48XP", p)!.vds_v).toBe(-30);
   });
 });
 
@@ -115,5 +122,23 @@ describe("decodeName", () => {
 
   test("declines part numbers that do not carry the convention", () => {
     expect(decodeName("PMV45EN")).toBeNull();
+  });
+});
+
+describe("decodeName: sub-milliohm parts", () => {
+  /**
+   * PSMNR90-80CSF is a 0.90 mΩ part, not a 90 mΩ one: below one milliohm the
+   * leading zero is dropped and the R sits against the family prefix. The
+   * cross-check read it as 90 and printed "name 90 mΩ · table max 0.9 mΩ" as a
+   * parser disagreement, so an instrument built to catch a 100x error was
+   * reporting one of its own.
+   */
+  test("R against the prefix means sub-milliohm", () => {
+    expect(decodeName("PSMNR90-80CSF")).toEqual({ rdson_mohm: 0.9, vds_v: 80 });
+    expect(decodeName("PSMNR58-30YLH")).toEqual({ rdson_mohm: 0.58, vds_v: 30 });
+  });
+
+  test("a digit in front of the R still wins", () => {
+    expect(decodeName("PSMN1R0-30YLD")).toEqual({ rdson_mohm: 1.0, vds_v: 30 });
   });
 });

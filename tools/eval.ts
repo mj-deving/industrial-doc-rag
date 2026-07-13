@@ -20,6 +20,7 @@
  * Usage: INGEST_TOKEN=... bun tools/eval.ts <worker-url> [--sample N] [--reuse-retrieval]
  */
 
+import { isDegenerate } from "../packages/doc-rag/src/degenerate";
 import { grade } from "../packages/doc-rag/src/grade";
 import { retrievalMetrics } from "../packages/doc-rag/src/metrics";
 import { STRATEGIES, type Strategy } from "../packages/doc-rag/src/retrieve";
@@ -29,6 +30,17 @@ const workerUrl = process.argv[2];
 const token = process.env.INGEST_TOKEN;
 const sampleArg = process.argv.indexOf("--sample");
 const SAMPLE = sampleArg > -1 ? Number(process.argv[sampleArg + 1]) : 150;
+
+/**
+ * Which generator answers. Omitted, the Worker uses its production default.
+ *
+ * The override exists so a candidate model can be measured against the same
+ * questions, the same evidence, and the same prompt as the incumbent, without
+ * a deploy and without touching what production serves. Picking a generator by
+ * reputation is how the current one got here.
+ */
+const modelArg = process.argv.indexOf("--model");
+const GENERATOR: string | null = modelArg > -1 ? process.argv[modelArg + 1] : null;
 
 /**
  * Reuse the retrieval block of a previous run.
@@ -184,7 +196,11 @@ const answers = await pipeline<Question, AnswerResult>(
   answerSet,
   ANSWER_BATCH,
   async (batch) => {
-    const body = { strategy: best, questions: batch.map((q) => ({ id: q.id, question: q.question })) };
+    const body = {
+      strategy: best,
+      model: GENERATOR ?? undefined,
+      questions: batch.map((q) => ({ id: q.id, question: q.question }))
+    };
     const { results } = await post<{ results: AnswerResult[] }>("/harness/answer", body);
     return results;
   },
@@ -203,6 +219,41 @@ const rate = (subset: typeof graded, predicate: (g: (typeof graded)[number]) => 
 const answered = on("indexed");
 const held = on("holdout");
 
+/**
+ * The number a customer decides on is not accuracy.
+ *
+ * Accuracy folds two failures a user experiences completely differently into one
+ * figure. A system that hands an engineer a wrong resistance is worse than useless,
+ * because he now has to check every value it gives him and might as well have read
+ * the datasheet himself. A system that says "not in the excerpts, here is the page"
+ * costs him one lookup and keeps his trust. Both read as a miss.
+ *
+ * So the bar is stated as two numbers that pull against each other:
+ *
+ *   precision  of the answers that carried a figure, how many were right.
+ *              This is the trust number. It is the one that has to approach 1.
+ *   coverage   how often a figure came back at all, rather than a refusal or a hedge.
+ *              This is the usefulness number, and refusing everything is how a
+ *              system games precision.
+ *
+ * Accuracy is still reported, because it is what was asked for and because a pair
+ * of numbers invites picking the flattering one.
+ */
+const withFigure = answered.filter((g) => g.reason === "match" || g.reason === "wrong-value");
+const precision = withFigure.length
+  ? Number((withFigure.filter((g) => g.correct).length / withFigure.length).toFixed(3))
+  : 0;
+const coverage = answered.length ? Number((withFigure.length / answered.length).toFixed(3)) : 0;
+
+/** A collapsed decode is a broken response, not a wrong one, and it is graded
+ *  "no value" beside honest misses unless it is counted separately. */
+const degenerate = graded.filter((g) => isDegenerate(g.answer.text));
+
+/** Did the answer reproduce the polarity the datasheet printed? Graded nowhere,
+ *  reported here, so a system that emits signs at random cannot hide inside the
+ *  magnitude comparison the grader does. */
+const signed = answered.filter((g) => g.signMatched !== null);
+
 const summary = {
   generatedAt: new Date().toISOString(),
   corpus: {
@@ -212,12 +263,19 @@ const summary = {
   },
   retrieval,
   best,
+  generator: GENERATOR,
   answer: {
     sample: answered.length,
+    precision,
+    coverage,
     correct: rate(answered, (g) => g.correct),
     wrongValue: rate(answered, (g) => g.reason === "wrong-value"),
     noValue: rate(answered, (g) => g.reason === "no-value"),
     refusedWrongly: rate(answered, (g) => g.reason === "refused-wrongly"),
+    degenerate: Number((degenerate.length / graded.length).toFixed(4)),
+    signAgreement: signed.length
+      ? Number((signed.filter((g) => g.signMatched).length / signed.length).toFixed(3))
+      : null,
     byDimension: Object.fromEntries(
       ["vds", "rdson", "id", "package"].map((dimension) => {
         const subset = answered.filter((g) => g.dimension === dimension);
@@ -267,6 +325,8 @@ await Bun.write(
       correct: g.correct,
       reason: g.reason,
       found: g.found,
+      signMatched: g.signMatched,
+      degenerate: isDegenerate(g.answer.text),
       expected: byId.get(g.id)!.expected,
       text: g.answer.text.slice(0, 400)
     })),
@@ -275,6 +335,9 @@ await Bun.write(
   )
 );
 
-console.error(`\nanswer   correct ${summary.answer.correct} (n=${summary.answer.sample})`);
+const a = summary.answer;
+console.error(`\ngenerator ${GENERATOR ?? "(worker default)"}`);
+console.error(`answer   precision ${a.precision} · coverage ${a.coverage} · accuracy ${a.correct} (n=${a.sample})`);
+console.error(`         degenerate ${a.degenerate} · sign agreement ${a.signAgreement}`);
 console.error(`refusal  refused ${summary.refusal.refused} · hallucinated ${summary.refusal.hallucinated} (n=${summary.refusal.sample})`);
 console.error(`\nwrote ${OUT} and ${CASES_OUT}`);
