@@ -49,7 +49,18 @@ tools/              groundtruth · split · questions · ingest · eval · scale
 
 Two defects the eval found and the test suite did not.
 
-**Evidence was one chunk per document.** The fused strategy ranked documents perfectly, then handed the generator a single chunk of each. A datasheet is about 74 chunks; V<sub>DS</sub> is on page one and R<sub>DS(on)</sub> is in a table several pages in. Document recall read 1.000 while answer accuracy read 0.36, and the model was right to refuse, because the figure genuinely was not in the excerpt it was given. The test fixture returned one chunk per document too, so the fake was simpler than the corpus and the suite stayed green. Fixed: 0.36 to 0.84.
+**Evidence was one chunk per document.** The fused strategy ranked documents perfectly, then handed the generator a single chunk of each. A datasheet is about 74 chunks; V<sub>DS</sub> is on page one and R<sub>DS(on)</sub> is in a table several pages in. Document recall read 1.000 while answer accuracy read 0.353, and the model was right to refuse, because the figure genuinely was not in the excerpt it was given. It refused 53% of questions it should have answered. The test fixture returned one chunk per document too, so the fake was simpler than the corpus and the suite stayed green.
+
+| | before | after |
+|---|---|---|
+| correct | 0.353 | **0.840** |
+| refused wrongly | 0.533 | 0.053 |
+| R<sub>DS(on)</sub> | 0.111 | **0.944** |
+| V<sub>DS</sub> | 0.541 | 0.892 |
+
+The pre-fix run is committed as `data/eval-results-before-fix.json`, measured against the old code on a preview deployment rather than quoted from memory. Reproduce it: `git checkout 7b71e9f -- packages/doc-rag/src/retrieve.ts`, redeploy, rerun.
+
+**The benchmark's noise floor is about one question.** That before-number first came out 0.360 and reproduced at 0.353: same questions, same code, same `temperature: 0`, one answer of 150 different. Decoding on this platform is not bit-exact, so a gap of under a point is noise, not a result.
 
 **I<sub>D</sub> gets read as a condition.** The symbol I<sub>D</sub> appears twice in a datasheet: once as the rated parameter, once as a test condition for R<sub>DS(on)</sub>. The PMV20XNE is rated I<sub>D</sub> = 7.2 A, and its R<sub>DS(on)</sub> row is measured at I<sub>D</sub> = 5.7 A. The model returns 5.7 A. This is still broken. It is why I<sub>D</sub> scores 0.64 against 0.94 for R<sub>DS(on)</sub>, and it is left in the number rather than prompted away until the test goes green.
 

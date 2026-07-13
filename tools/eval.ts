@@ -41,6 +41,12 @@ const SAMPLE = sampleArg > -1 ? Number(process.argv[sampleArg + 1]) : 150;
  */
 const REUSE_RETRIEVAL = process.argv.includes("--reuse-retrieval");
 
+/** Where the summary lands. Overridable so a run against an older build of the
+ *  engine can be kept beside the current one instead of overwriting it. */
+const outArg = process.argv.indexOf("--out");
+const OUT = outArg > -1 ? process.argv[outArg + 1] : "data/eval-results.json";
+const CASES_OUT = OUT.replace(/\.json$/, "-cases.json");
+
 if (!workerUrl || !token) {
   console.error("usage: INGEST_TOKEN=... bun tools/eval.ts <worker-url> [--sample N] [--reuse-retrieval]");
   process.exit(1);
@@ -250,9 +256,9 @@ function percentile(values: number[], p: number): number {
   return Math.round(sorted[Math.floor(sorted.length * p)] ?? 0);
 }
 
-await Bun.write("data/eval-results.json", JSON.stringify(summary, null, 2));
+await Bun.write(OUT, JSON.stringify(summary, null, 2));
 await Bun.write(
-  "data/eval-cases.json",
+  CASES_OUT,
   JSON.stringify(
     graded.map((g) => ({
       id: g.id,
@@ -271,4 +277,4 @@ await Bun.write(
 
 console.error(`\nanswer   correct ${summary.answer.correct} (n=${summary.answer.sample})`);
 console.error(`refusal  refused ${summary.refusal.refused} · hallucinated ${summary.refusal.hallucinated} (n=${summary.refusal.sample})`);
-console.error(`\nwrote data/eval-results.json and data/eval-cases.json`);
+console.error(`\nwrote ${OUT} and ${CASES_OUT}`);

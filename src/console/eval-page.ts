@@ -230,6 +230,18 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
       </div>
     </div>
 
+    <p class="note"><strong>This column read 0.353 until this eval found out why.</strong> The fused
+    strategy ranked documents perfectly and then handed the model one chunk of each. A datasheet is
+    about 74 chunks, so it got the right datasheet opened to the wrong page, and refused 53% of the
+    questions it should have answered. The model was right to refuse: the figure was genuinely not in
+    the excerpt. R<sub>DS(on)</sub> went from 0.111 to 0.944 when the evidence was assembled from
+    within the named document instead. The pre-fix run is committed next to this one, measured against
+    the old code rather than quoted from memory.</p>
+
+    <p>The noise floor is about one question. That before-number first came out 0.360 and reproduced
+    at 0.353: same questions, same code, same temperature 0, one answer of 150 different. Decoding
+    here is not bit-exact, so a gap under a point is noise rather than a result.</p>
+
     <p class="note"><strong>I<sub>D</sub> is the weak column, and the reason is worth naming.</strong>
     In a datasheet the symbol I<sub>D</sub> appears twice: once as the parameter being rated, and
     once as a test condition for a different parameter. The PMV20XNE is rated
