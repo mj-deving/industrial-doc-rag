@@ -19,6 +19,20 @@ Five documents is not a retrieval problem: the answer is one of five. 497 lookal
 
 The 1.000 is a primary-key lookup, not a triumph, and [/eval](https://industrial-doc-rag.mariusdeving.workers.dev/eval) says so. The number worth reading is the 0.495. On questions that spell the document's name out in full, vector search alone puts the right datasheet first in half of cases and fails to return it at all in one in five. Part numbers are exactly the tokens an embedding model is worst at, and 497 lookalike datasheets sit almost on top of one another in that space.
 
+## What corpus size costs
+
+Three real indices, same questions, same model. The dense column is the one that moves.
+
+| datasheets | dense recall@1 | fused recall@1 | p50 |
+|---|---|---|---|
+| 5 | **1.000** | 1.000 | 498 ms |
+| 100 | 0.538 | 1.000 | 546 ms |
+| 497 | 0.495 | 1.000 | 567 ms |
+
+At five datasheets vector search is perfect, and it is perfect for a boring reason: the answer is one of five. By a hundred it has halved. The collapse happens almost entirely between 5 and 100, so a five-document demo does not measure a weak version of this problem, it measures a different one that does not contain it.
+
+Latency is flat, which is the expected result rather than an achievement: an approximate nearest-neighbour index is built so that query time barely tracks corpus size. Storage for all 497 is $0.014 a month.
+
 ## Where the questions come from
 
 Nobody wrote them. A deterministic parser reads the "Quick reference data" table out of each PDF and emits four labelled facts per part: the V<sub>DS</sub> rating, the maximum R<sub>DS(on)</sub> with the conditions it was measured at, the continuous I<sub>D</sub>, and the package. The question is generated from the label.
@@ -47,7 +61,7 @@ tools/              groundtruth · split · questions · ingest · eval · scale
 
 ## What it got wrong
 
-Two defects the eval found and the test suite did not.
+Three defects the eval found and the test suite did not. The third one was mine.
 
 **Evidence was one chunk per document.** The fused strategy ranked documents perfectly, then handed the generator a single chunk of each. A datasheet is about 74 chunks; V<sub>DS</sub> is on page one and R<sub>DS(on)</sub> is in a table several pages in. Document recall read 1.000 while answer accuracy read 0.353, and the model was right to refuse, because the figure genuinely was not in the excerpt it was given. It refused 53% of questions it should have answered. The test fixture returned one chunk per document too, so the fake was simpler than the corpus and the suite stayed green.
 
@@ -60,7 +74,7 @@ Two defects the eval found and the test suite did not.
 
 The pre-fix run is committed as `data/eval-results-before-fix.json`, measured against the old code on a preview deployment rather than quoted from memory. Reproduce it: `git checkout 7b71e9f -- packages/doc-rag/src/retrieve.ts`, redeploy, rerun.
 
-**The benchmark's noise floor is about one question.** That before-number first came out 0.360 and reproduced at 0.353: same questions, same code, same `temperature: 0`, one answer of 150 different. Decoding on this platform is not bit-exact, so a gap of under a point is noise, not a result.
+**The third defect was in this README.** I first wrote that before-number down as 0.36, from a run I had already overwritten, so the strongest claim in the repo was the one a reader could not check. Reproducing it against the old code returned **0.353**: same questions, same code, same `temperature: 0`, exactly one answer of 150 different. Decoding on this platform is not bit-exact, so the benchmark has a noise floor of about one question at n=150 and a gap under a point is noise, not a result.
 
 **I<sub>D</sub> gets read as a condition.** The symbol I<sub>D</sub> appears twice in a datasheet: once as the rated parameter, once as a test condition for R<sub>DS(on)</sub>. The PMV20XNE is rated I<sub>D</sub> = 7.2 A, and its R<sub>DS(on)</sub> row is measured at I<sub>D</sub> = 5.7 A. The model returns 5.7 A. This is still broken. It is why I<sub>D</sub> scores 0.64 against 0.94 for R<sub>DS(on)</sub>, and it is left in the number rather than prompted away until the test goes green.
 
