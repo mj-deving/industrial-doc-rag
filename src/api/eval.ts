@@ -21,7 +21,7 @@ const GENERATOR = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 
 export const evalApi = new Hono<{ Bindings: Env }>();
 
-evalApi.use("/eval/*", async (c, next) => {
+evalApi.use("/harness/*", async (c, next) => {
   const expected = c.env.INGEST_TOKEN;
   if (!expected) return c.json({ error: "eval is not configured" }, 503);
   const presented = c.req.header("authorization")?.replace(/^Bearer\s+/i, "");
@@ -32,7 +32,7 @@ evalApi.use("/eval/*", async (c, next) => {
 type Ask = { id: string; question: string };
 
 /** Retrieval only. No generation, so this is cheap enough to run over all 2510 questions. */
-evalApi.post("/eval/retrieve", async (c) => {
+evalApi.post("/harness/retrieve", async (c) => {
   const { questions, strategy, k, index } = (await c.req.json()) as {
     questions: Ask[];
     strategy: Strategy;
@@ -63,7 +63,7 @@ evalApi.post("/eval/retrieve", async (c) => {
 });
 
 /** Retrieval plus generation. Run on a sample: this one costs a model call per question. */
-evalApi.post("/eval/answer", async (c) => {
+evalApi.post("/harness/answer", async (c) => {
   const { questions, strategy, k } = (await c.req.json()) as {
     questions: Ask[];
     strategy: Strategy;

@@ -113,6 +113,38 @@ if (doIngest) {
 // ── Measure ──────────────────────────────────────────────────────────────────
 type RetrieveResult = { id: string; documents: string[]; ms: number };
 
+/**
+ * Both strategies, at every size, and the comparison IS the finding.
+ *
+ * The first version of this tool measured hybrid-rrf alone and produced a
+ * perfectly flat 1.000 across all three sizes. That is not a scaling curve, it is
+ * the same tautology printed three times: the symbol arm looks the part number up
+ * by key, and a key lookup does not care how many neighbours it has.
+ *
+ * Dense is the arm that feels the corpus. At five datasheets there is nothing to
+ * confuse; at 497 the distractors are documents that differ from the target in two
+ * digits of a part number, which is exactly the token an embedding is worst at.
+ * Running both shows what corpus growth costs a vector index and what it costs a
+ * fused one.
+ */
+const MEASURED = ["dense", "hybrid-rrf"] as const;
+
+async function measure(sizeKey: string, strategy: string, asks: Question[]) {
+  const results: RetrieveResult[] = [];
+  for (let at = 0; at < asks.length; at += 20) {
+    const batch = asks.slice(at, at + 20);
+    const { results: got } = await post<{ results: RetrieveResult[] }>("/harness/retrieve", {
+      strategy,
+      index: sizeKey,
+      questions: batch.map((q) => ({ id: q.id, question: q.question }))
+    });
+    results.push(...got);
+  }
+  const gold = new Map(asks.map((q) => [q.id, q.part]));
+  const metrics = retrievalMetrics(results.map((r) => ({ ranked: r.documents, gold: gold.get(r.id)! })));
+  return { questions: results.length, recallAt1: metrics.recall[1], recallAt5: metrics.recall[5], mrr: metrics.mrr };
+}
+
 const curve = [];
 
 for (const size of SIZES) {
@@ -125,19 +157,8 @@ for (const size of SIZES) {
   const chunkCount = size.parts.reduce((sum, part) => sum + chunksFor(part).length, 0);
   const storedDims = chunkCount * DIMENSIONS;
 
-  const results: RetrieveResult[] = [];
-  for (let at = 0; at < asks.length; at += 20) {
-    const batch = asks.slice(at, at + 20);
-    const { results: got } = await post<{ results: RetrieveResult[] }>("/eval/retrieve", {
-      strategy: "hybrid-rrf",
-      index: size.key,
-      questions: batch.map((q) => ({ id: q.id, question: q.question }))
-    });
-    results.push(...got);
-  }
-
-  const gold = new Map(asks.map((q) => [q.id, q.part]));
-  const metrics = retrievalMetrics(results.map((r) => ({ ranked: r.documents, gold: gold.get(r.id)! })));
+  const byStrategy: Record<string, Awaited<ReturnType<typeof measure>>> = {};
+  for (const strategy of MEASURED) byStrategy[strategy] = await measure(size.key, strategy, asks);
 
   // Latency is measured separately, one question per request, and timed from the
   // CLIENT. The `ms` the batched calls report is wall time under twenty parallel
@@ -147,7 +168,7 @@ for (const size of SIZES) {
   const times: number[] = [];
   for (const ask of sample(asks, LATENCY_SAMPLE)) {
     const started = performance.now();
-    await post("/eval/retrieve", {
+    await post("/harness/retrieve", {
       strategy: "hybrid-rrf",
       index: size.key,
       questions: [{ id: ask.id, question: ask.question }]
@@ -160,12 +181,13 @@ for (const size of SIZES) {
   const entry = {
     documents: size.parts.length,
     chunks: chunkCount,
-    questions: results.length,
+    questions: byStrategy["dense"].questions,
     storedDimensions: storedDims,
     storageUsdPerMonth: Number(((billableDims / 100_000_000) * STORED_PER_100M).toFixed(4)),
-    recallAt1: metrics.recall[1],
-    recallAt5: metrics.recall[5],
-    mrr: metrics.mrr,
+    denseRecallAt1: byStrategy["dense"].recallAt1,
+    denseRecallAt5: byStrategy["dense"].recallAt5,
+    denseMrr: byStrategy["dense"].mrr,
+    fusedRecallAt1: byStrategy["hybrid-rrf"].recallAt1,
     p50Ms: times[Math.floor(times.length * 0.5)] ?? 0,
     p95Ms: times[Math.floor(times.length * 0.95)] ?? 0
   };
@@ -173,7 +195,7 @@ for (const size of SIZES) {
 
   console.error(
     `${String(entry.documents).padStart(3)} docs · ${String(entry.questions).padStart(4)} q · ` +
-      `recall@1 ${entry.recallAt1.toFixed(3)} · MRR ${entry.mrr.toFixed(3)} · ` +
+      `dense recall@1 ${entry.denseRecallAt1.toFixed(3)} · fused ${entry.fusedRecallAt1.toFixed(3)} · ` +
       `p50 ${entry.p50Ms}ms p95 ${entry.p95Ms}ms · storage $${entry.storageUsdPerMonth}/mo`
   );
 }
@@ -183,7 +205,7 @@ await Bun.write(
   JSON.stringify(
     {
       generatedAt: new Date().toISOString(),
-      strategy: "hybrid-rrf",
+      strategies: MEASURED,
       pricing: {
         note: "Vectorize storage: $0.05 per 100M stored dimensions/month, first 10M free on Workers Paid.",
         source: "https://developers.cloudflare.com/vectorize/platform/pricing/"

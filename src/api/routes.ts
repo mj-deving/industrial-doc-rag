@@ -63,13 +63,20 @@ api.post("/query", async (c) => {
 });
 
 api.get("/health", async (c) => {
-  const index = await c.env.VECTORIZE.describe();
+  // The V2 index reports `{ dimensions, vectorCount, processedUpTo* }` flat, which is
+  // what `wrangler vectorize info` prints and what the binding actually returns. The
+  // shipped TYPE says `{ config: {...}, vectorsCount }`, with the plural in the wrong
+  // place. It typechecks and throws. Trusting the type over the runtime is how this
+  // endpoint went out returning a 500 that the compiler had signed off on.
+  const details = (await c.env.VECTORIZE.describe()) as unknown as {
+    dimensions: number;
+    vectorCount: number;
+  };
+
   return c.json({
     ok: true,
-    vectors: index.vectorsCount,
-    // The config is a union: an index made from a preset reports the preset name
-    // instead of its dimensions. Ours is explicit, but the type does not know that.
-    dimensions: "dimensions" in index.config ? index.config.dimensions : null,
+    vectors: details.vectorCount,
+    dimensions: details.dimensions,
     embeddingModel: c.env.EMBEDDING_MODEL,
     generator: GENERATOR,
     strategy: STRATEGY

@@ -58,10 +58,11 @@ function scaleRows(scale: Scale): string {
       (s) => `<tr>
         <td class="s">${s.documents}</td>
         <td>${s.chunks.toLocaleString("en")}</td>
-        <td>${num(s.recallAt1)}</td>
+        <td>${num(s.denseRecallAt1)}</td>
+        <td>${num(s.fusedRecallAt1)}</td>
         <td>${s.p50Ms} ms</td>
         <td>${s.p95Ms} ms</td>
-        <td>$${s.storageUsdPerMonth.toFixed(2)}</td>
+        <td>$${s.storageUsdPerMonth.toFixed(3)}</td>
       </tr>`
     )
     .join("");
@@ -164,7 +165,7 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     <div class="stat">datasheets indexed<b>${c.documents}</b></div>
     <div class="stat">held out<b>${c.heldOut}</b></div>
     <div class="stat">questions<b>${c.questions.toLocaleString("en")}</b></div>
-    <div class="stat">generator<b>0 shot</b></div>
+    <div class="stat">chunks indexed<b>${scale.curve[scale.curve.length - 1].chunks.toLocaleString("en")}</b></div>
   </div>
 
   <section>
@@ -225,9 +226,18 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
       <div class="card">
         <div class="k">wrong value</div>
         <div class="v${results.answer.wrongValue > 0.1 ? " warn" : ""}">${pct(results.answer.wrongValue)}%</div>
-        <div class="d">Answered with a figure the datasheet does not carry.</div>
+        <div class="d">Answered with a figure the datasheet does not carry at that condition.</div>
       </div>
     </div>
+
+    <p class="note"><strong>I<sub>D</sub> is the weak column, and the reason is worth naming.</strong>
+    In a datasheet the symbol I<sub>D</sub> appears twice: once as the parameter being rated, and
+    once as a test condition for a different parameter. The PMV20XNE is rated
+    <span style="font-family:var(--font-mono)">I<sub>D</sub> = 7.2 A</span>, and its R<sub>DS(on)</sub>
+    row is measured <span style="font-family:var(--font-mono)">at I<sub>D</sub> = 5.7 A</span>. The
+    model returns 5.7 A. It is reading a condition as if it were a rating. That is a real defect of
+    this system, it is left in the number, and it is not fixed by rewriting the prompt until the test
+    goes green.</p>
   </section>
 
   <section>
@@ -256,18 +266,30 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
 
   <section>
     <h2>Scale</h2>
-    <p class="lede">The same questions against three real indices. Latency is timed one request at a
-    time from outside Cloudflare, so it includes the network; storage is Vectorize's published rate
-    on stored dimensions.</p>
+    <p class="lede">Three real indices, built from the same datasheets, scored on the questions each
+    one could actually answer. Latency is timed one request at a time from outside Cloudflare, so it
+    includes the network. Storage is Vectorize's published rate on stored dimensions.</p>
     <table>
       <thead><tr>
-        <th>datasheets</th><th>chunks</th><th>recall@1</th><th>p50</th><th>p95</th><th>storage/mo</th>
+        <th>datasheets</th><th>chunks</th><th>dense r@1</th><th>fused r@1</th>
+        <th>p50</th><th>p95</th><th>storage/mo</th>
       </tr></thead>
       <tbody>${scaleRows(scale)}</tbody>
     </table>
-    <p class="note">Query cost is not on this table. Vectorize's published formula bills queried and
-    stored dimensions together and does not say plainly how a single query is counted, so any figure
-    here would be a guess with a dollar sign in front of it.</p>
+
+    <p class="note"><strong>The dense column is the one that moves.</strong> Five datasheets is not a
+    retrieval problem: the answer is one of five and the vector model gets it every time. At
+    ${c.documents} the distractors are documents that differ from the target in two digits of a part
+    number, which is precisely the token an embedding is worst at, and dense recall@1 falls to
+    ${num(scale.curve[scale.curve.length - 1].denseRecallAt1)}. The fused column does not move,
+    because a key lookup is indifferent to how many neighbours it has. That is the whole argument for
+    building one.</p>
+
+    <p>Latency is flat, and that is the expected result rather than an achievement: an approximate
+    nearest-neighbour index is built so that query time barely tracks corpus size. Reporting it flat
+    is more honest than dressing it up. Query cost is not on this table at all: Vectorize's published
+    formula bills queried and stored dimensions together and does not say plainly how a single query
+    is counted, so any figure here would be a guess with a dollar sign in front of it.</p>
   </section>
 
   <section>

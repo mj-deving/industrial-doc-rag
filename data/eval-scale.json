@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-07-13T15:14:16.845Z",
+  "strategies": [
+    "dense",
+    "hybrid-rrf"
+  ],
+  "pricing": {
+    "note": "Vectorize storage: $0.05 per 100M stored dimensions/month, first 10M free on Workers Paid.",
+    "source": "https://developers.cloudflare.com/vectorize/platform/pricing/"
+  },
+  "curve": [
+    {
+      "documents": 5,
+      "chunks": 373,
+      "questions": 15,
+      "storedDimensions": 381952,
+      "storageUsdPerMonth": 0,
+      "denseRecallAt1": 1,
+      "denseRecallAt5": 1,
+      "denseMrr": 1,
+      "fusedRecallAt1": 1,
+      "p50Ms": 498,
+      "p95Ms": 678
+    },
+    {
+      "documents": 100,
+      "chunks": 7278,
+      "questions": 381,
+      "storedDimensions": 7452672,
+      "storageUsdPerMonth": 0,
+      "denseRecallAt1": 0.5381,
+      "denseRecallAt5": 0.8163,
+      "denseMrr": 0.6457,
+      "fusedRecallAt1": 1,
+      "p50Ms": 546,
+      "p95Ms": 786
+    },
+    {
+      "documents": 497,
+      "chunks": 36704,
+      "questions": 1825,
+      "storedDimensions": 37584896,
+      "storageUsdPerMonth": 0.0138,
+      "denseRecallAt1": 0.4948,
+      "denseRecallAt5": 0.7134,
+      "denseMrr": 0.5892,
+      "fusedRecallAt1": 1,
+      "p50Ms": 567,
+      "p95Ms": 805
+    }
+  ]
+}

@@ -152,7 +152,7 @@ for (const strategy of REUSE_RETRIEVAL ? [] : STRATEGIES) {
     RETRIEVE_BATCH,
     async (batch) => {
       const body = { strategy, questions: batch.map((q) => ({ id: q.id, question: q.question })) };
-      const { results } = await post<{ results: RetrieveResult[] }>("/eval/retrieve", body);
+      const { results } = await post<{ results: RetrieveResult[] }>("/harness/retrieve", body);
       return results;
     },
     strategy
@@ -179,7 +179,7 @@ const answers = await pipeline<Question, AnswerResult>(
   ANSWER_BATCH,
   async (batch) => {
     const body = { strategy: best, questions: batch.map((q) => ({ id: q.id, question: q.question })) };
-    const { results } = await post<{ results: AnswerResult[] }>("/eval/answer", body);
+    const { results } = await post<{ results: AnswerResult[] }>("/harness/answer", body);
     return results;
   },
   "answer"

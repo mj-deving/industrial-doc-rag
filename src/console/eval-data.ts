@@ -35,16 +35,19 @@ export type Results = {
 
 export type Scale = {
   generatedAt: string;
-  strategy: string;
+  strategies: readonly string[];
   curve: {
     documents: number;
     chunks: number;
     questions: number;
     storedDimensions: number;
     storageUsdPerMonth: number;
-    recallAt1: number;
-    recallAt5: number;
-    mrr: number;
+    /** The arm that feels the corpus. This is the column that moves. */
+    denseRecallAt1: number;
+    denseRecallAt5: number;
+    denseMrr: number;
+    /** The arm that does not: a key lookup is indifferent to how many neighbours it has. */
+    fusedRecallAt1: number;
     p50Ms: number;
     p95Ms: number;
   }[];

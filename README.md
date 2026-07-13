@@ -1,64 +1,84 @@
 # industrial-doc-rag
 
-Ask a question about five public Infineon MOSFET datasheets and get the answer together with the passage it came from. Runs on a Cloudflare Worker, no origin server.
+A document RAG engine, and a measurement of what it is worth on 497 near-identical MOSFET datasheets.
 
-**Live:** <https://industrial-doc-rag.mariusdeving.workers.dev> · **Stack:** Workers · Hono · Qdrant · part-number rerank · eval loop
+**Live:** <https://industrial-doc-rag.mariusdeving.workers.dev> · **Numbers:** [/eval](https://industrial-doc-rag.mariusdeving.workers.dev/eval) · **Stack:** Workers · Vectorize · bge-m3 · llama-3.3-70b
 
-![industrial-doc-rag console](docs/screenshot.png)
+Five documents is not a retrieval problem: the answer is one of five. 497 lookalike datasheets are, because the distractors now differ from the target in two digits of a part number. The 2,510 questions below measure what that costs.
 
-## What it does
+## What the numbers say
 
-A question is embedded and the top five chunks come back from vector search. A part-number rerank then pushes exact matches (`IPB017N10N5`, `BSC010N04LS`) to the top, because in datasheet work the part number is most of the question. The answer is extracted from the retrieved text rather than generated, so every sentence traces to a passage you can open. Each source card carries its retrieval score.
+| | |
+|---|---|
+| Dense retrieval alone, recall@1 | **0.495** |
+| Same, plus a part-number rerank | 0.794 |
+| Same, fused with a part-number lookup | 1.000 |
+| Answers correct (150 questions, 1% tolerance) | **0.840** |
+| Held-out parts correctly refused (150 questions) | **0.973** |
+| Held-out parts answered anyway | 0.027 |
 
-Retrieval runs one of two ways. With a Qdrant Cloud cluster configured, embedding and search happen there (`all-minilm-l6-v2`, no separate embedding key needed). Without one, the same query runs against the corpus packaged in the repo. The Worker picks the path at query time and reports which one it used.
+The 1.000 is a primary-key lookup, not a triumph, and [/eval](https://industrial-doc-rag.mariusdeving.workers.dev/eval) says so. The number worth reading is the 0.495. On questions that spell the document's name out in full, vector search alone puts the right datasheet first in half of cases and fails to return it at all in one in five. Part numbers are exactly the tokens an embedding model is worst at, and 497 lookalike datasheets sit almost on top of one another in that space.
 
-## Architecture
+## Where the questions come from
 
-![RAG pipeline: datasheet PDFs through retrieval to structured JSON and source cards](docs/diagrams/rag-pipeline.png)
+Nobody wrote them. A deterministic parser reads the "Quick reference data" table out of each PDF and emits four labelled facts per part: the V<sub>DS</sub> rating, the maximum R<sub>DS(on)</sub> with the conditions it was measured at, the continuous I<sub>D</sub>, and the package. The question is generated from the label.
+
+The system under test never sees that parse. It embeds the document, retrieves across 497 lookalikes, and a model reads the excerpts it gets back. Label and answer are produced by different mechanisms, which is the only reason grading one against the other means anything.
+
+R<sub>DS(on)</sub> varies by more than 2x with junction temperature. An unconditioned R<sub>DS(on)</sub> question is ill-posed, so every label carries the conditions it was measured at and every question repeats them.
+
+## Refusal is a property of retrieval
+
+183 datasheets were fetched, parsed, and then deliberately kept out of the index. Their part numbers still get asked about, and 497 nearly identical ones ARE indexed, so retrieval hands the model ten plausible tables for the wrong components every time. `BUK9V13-40H` is held out. `BUK9K13-40H` is not, and dense retrieval returns it first, with a complete and entirely wrong table.
+
+The symbol arm queries the index for the exact part named. An unindexed part comes back empty, and there is nothing to answer from. This is not a promise made in a prompt.
+
+## The engine does not know what a datasheet is
+
+`packages/doc-rag/` knows documents, chunks, an index it can filter by document id, and a `symbolsOf(query)` hook that pulls identifiers out of a question. A datasheet adapter looks for part numbers; a legal adapter would look for case numbers. An engine that knew what a datasheet was could cheat.
 
 ```
-question
-   |
-   +-- embed + dense search (Qdrant Cloud Inference)  --\
-   |                                                     >-- top 5 chunks
-   +-- packaged-corpus search (in-repo, no secrets)   --/
-                                                            |
-                                                 part-number rerank
-                                                            |
-                                        extractive answer + scored source cards
-                                                            |
-                                          /query  /eval  /report  /health
+packages/doc-rag/   chunk · retrieve (3 strategies) · answer · grade · metrics
+src/engine/         the Cloudflare binding: Vectorize, Workers AI, part-number symbols
+src/api/            /query · /health · /harness/* (token-guarded)
+src/console/        the console, and the /eval page (renders a committed results file)
+tools/              groundtruth · split · questions · ingest · eval · scale
 ```
 
-Every box exists in `src/`. Nothing in this diagram is planned work.
+## What it got wrong
 
-## Verification
+Two defects the eval found and the test suite did not.
 
-| What | Value | When |
-|------|-------|------|
-| Tests | 16 passing (`bun test`), typecheck clean | 2026-07-12 |
-| Eval, 10 ground-truth cases | hit rate 100%, top-1 100%, answer terms 100% | 2026-07-12 |
-| Deploy | version `83ebaa39-fba7-4ac5-8361-4d80ebb904b7` | 2026-07-12 |
-| Effective retrieval path | `local-corpus` (the Qdrant cluster answers 404) | 2026-07-12 |
+**Evidence was one chunk per document.** The fused strategy ranked documents perfectly, then handed the generator a single chunk of each. A datasheet is about 74 chunks; V<sub>DS</sub> is on page one and R<sub>DS(on)</sub> is in a table several pages in. Document recall read 1.000 while answer accuracy read 0.36, and the model was right to refuse, because the figure genuinely was not in the excerpt it was given. The test fixture returned one chunk per document too, so the fake was simpler than the corpus and the suite stayed green. Fixed: 0.36 to 0.84.
 
-Reproduce it: `GET /eval` runs the ten cases live and returns the three numbers. `GET /health` says which path the next query will take, and it asks Qdrant to find out instead of just checking that a key is set.
+**I<sub>D</sub> gets read as a condition.** The symbol I<sub>D</sub> appears twice in a datasheet: once as the rated parameter, once as a test condition for R<sub>DS(on)</sub>. The PMV20XNE is rated I<sub>D</sub> = 7.2 A, and its R<sub>DS(on)</sub> row is measured at I<sub>D</sub> = 5.7 A. The model returns 5.7 A. This is still broken. It is why I<sub>D</sub> scores 0.64 against 0.94 for R<sub>DS(on)</sub>, and it is left in the number rather than prompted away until the test goes green.
 
-## Limits
-
-- **The Qdrant cluster currently answers 404**, so the demo runs on the packaged corpus. The Worker falls back at query time and reports the degrade in the interface, so the console still answers. The vector path, however, is not the one you are looking at right now.
-- The corpus is five datasheets. A question about a sixth part has no answer, and the console says so instead of inventing one.
-- Answers are extractive. Anthropic generation is wired but switched off; without a key there is no generated text.
-- The eval checks retrieval hits and answer-term coverage. It does not check whether the datasheet value itself is correct.
-
-## Run it locally
+## Reproduce it
 
 ```bash
 bun install
-bun run dev     # console on localhost
-bun test        # 16 tests
+bun test                                              # 37 tests
+
+bun tools/fetch.ts data/parts.txt corpus              # 709 PDFs from the vendor
+bun tools/groundtruth.ts corpus > data/groundtruth.json
+bun tools/questions.ts > data/questions.json          # 2,510 questions over 680 parts
+
+INGEST_TOKEN=... bun tools/ingest.ts corpus <worker-url>
+INGEST_TOKEN=... bun tools/eval.ts <worker-url>       # writes data/eval-results.json
+INGEST_TOKEN=... bun tools/scale.ts <worker-url>      # writes data/eval-scale.json
 ```
 
-Without secrets everything runs on the packaged corpus. For the vector path, set `QDRANT_URL` and `QDRANT_API_KEY` as Worker secrets, then `POST /ingest/corpus`.
+The index/holdout split is `fnv1a(part) % 100 < 28`, a pure function of the part number. There is no split file to go stale and no second copy to drift out of step.
+
+`/eval` renders the committed results file. It does not run the eval. A benchmark that reran on every page view would bill the visitor and report a slightly different number each time.
+
+## Limits
+
+- Every question names one part and asks for one figure. Nothing here tests a comparison across two datasheets, a question with no part number in it, a figure that only appears in a graph, or German.
+- With one relevant document per question, nDCG@k and MRR are both strictly decreasing functions of the same rank. They are one measurement printed twice.
+- Query cost is not reported. Vectorize's published formula bills queried and stored dimensions together and does not say plainly how a single query is counted, so any figure would be a guess with a dollar sign in front of it.
+- The corpus is 497 indexed datasheets, not 1000: 758 candidate parts, 709 with a live PDF, 49 obsolete parts served as HTML instead.
+- The PDFs are not in this repo and are not republished. Citations link to the vendor's own asset host.
 
 ## License
 
