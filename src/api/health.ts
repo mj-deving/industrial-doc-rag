@@ -1,5 +1,5 @@
 import { corpus } from "../corpus/manifest";
-import type { Env } from "../types";
+import type { Config } from "../types";
 
 const REQUIRED_SECRETS = ["QDRANT_URL", "QDRANT_API_KEY"] as const;
 
@@ -10,7 +10,7 @@ export type RequiredSecret = (typeof REQUIRED_SECRETS)[number];
 // expired Qdrant Cloud cluster leaves both secrets set and 404s every call,
 // which is exactly how this endpoint reported "ready" while /query returned 500.
 // probeUpstream() is the honest check: it asks the cluster and reports the answer.
-export async function probeUpstream(env: Env): Promise<{ reachable: boolean; detail: string }> {
+export async function probeUpstream(env: Config): Promise<{ reachable: boolean; detail: string }> {
   if (!env.QDRANT_URL || !env.QDRANT_API_KEY) {
     return { reachable: false, detail: "not configured" };
   }
@@ -30,7 +30,7 @@ export async function probeUpstream(env: Env): Promise<{ reachable: boolean; det
   }
 }
 
-export function inspectHealth(env: Env) {
+export function inspectHealth(env: Config) {
   const missingSecrets = REQUIRED_SECRETS.filter((name) => !env[name]);
 
   return {

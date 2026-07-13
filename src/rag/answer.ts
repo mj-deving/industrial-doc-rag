@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
-import type { Env, QueryResponse, Retrieval } from "../types";
+import type { Config, QueryResponse, Retrieval } from "../types";
 
-export async function answerQuestion(env: Env, question: string, retrievals: Retrieval[]): Promise<QueryResponse> {
+export async function answerQuestion(env: Config, question: string, retrievals: Retrieval[]): Promise<QueryResponse> {
   if (!env.ANTHROPIC_API_KEY) {
     throw new Error("Missing ANTHROPIC_API_KEY");
   }

@@ -70,17 +70,29 @@ export function retrievalMetrics(
 /**
  * Reciprocal Rank Fusion. Merges several ranked lists without needing their
  * scores to be comparable, which is the whole point: a dense cosine score and a
- * BM25 score live on different scales and normalising them is guesswork.
+ * lookup hit live on different scales and normalising them is guesswork.
  *
  * k = 60 is the constant from Cormack et al. (2009); it damps the influence of
  * the top ranks just enough that one confident-but-wrong list cannot dominate.
+ *
+ * `weights` exists because plain RRF assumes every list is an OPINION about
+ * relevance, and one of ours is not. An exact identifier match is a primary-key
+ * lookup on the key the corpus itself is filed under, and giving it the same
+ * vote as a cosine neighbour discards that. Unweighted, a symbol hit at rank 1
+ * and a dense hit at rank 1 score identically and the tie breaks arbitrarily,
+ * which is how a fusion silently degrades into its weaker arm.
+ *
+ * The weight is a judgment, not a tuned number, so it is passed in by the caller
+ * and both the weighted and the unweighted arm are reported side by side. The
+ * eval is where a judgment goes to be checked.
  */
-export function rrf(lists: string[][], k = 60): string[] {
+export function rrf(lists: string[][], k = 60, weights?: number[]): string[] {
   const scores = new Map<string, number>();
-  for (const list of lists) {
+  lists.forEach((list, listIndex) => {
+    const weight = weights?.[listIndex] ?? 1;
     list.forEach((id, index) => {
-      scores.set(id, (scores.get(id) ?? 0) + 1 / (k + index + 1));
+      scores.set(id, (scores.get(id) ?? 0) + weight / (k + index + 1));
     });
-  }
+  });
   return [...scores.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => id);
 }

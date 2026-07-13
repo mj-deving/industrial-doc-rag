@@ -2,9 +2,9 @@ import { chunksFromPdfUrl } from "./pdf";
 import { allLocalChunks, queryLocalCorpus, rerankForDatasheetIdentifiers, responseFromRetrievals } from "./local";
 import { hasQdrantConfig, searchChunksWithInference, upsertChunksWithInference } from "./qdrant";
 import { answerQuestion } from "./answer";
-import type { Env, QueryResponse } from "../types";
+import type { Config, QueryResponse } from "../types";
 
-export async function ingestPdf(env: Env, input: { pdfUrl: string; documentId?: string }) {
+export async function ingestPdf(env: Config, input: { pdfUrl: string; documentId?: string }) {
   if (!hasQdrantConfig(env)) {
     const chunks = allLocalChunks().filter((chunk) => !input.documentId || chunk.documentId === input.documentId);
     return {
@@ -25,7 +25,7 @@ export async function ingestPdf(env: Env, input: { pdfUrl: string; documentId?: 
   };
 }
 
-export async function ingestPackagedCorpus(env: Env) {
+export async function ingestPackagedCorpus(env: Config) {
   const chunks = allLocalChunks();
   if (!hasQdrantConfig(env)) {
     return {
@@ -43,7 +43,7 @@ export async function ingestPackagedCorpus(env: Env) {
   };
 }
 
-export async function queryRag(env: Env, question: string): Promise<QueryResponse> {
+export async function queryRag(env: Config, question: string): Promise<QueryResponse> {
   if (!question.trim()) {
     throw new Error("question must not be empty");
   }

@@ -7,3 +7,4 @@ dist/
 # Datasheet PDFs are vendor documents. They live in R2, never in the repo.
 corpus/
 *.pdf
+.ingest-token

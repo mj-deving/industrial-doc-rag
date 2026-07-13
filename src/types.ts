@@ -1,10 +1,30 @@
-export type Env = {
+/**
+ * Plain configuration: strings out of `[vars]` and secrets.
+ *
+ * Kept separate from the bindings because most of the code only reads config, and
+ * a function that reads config should not demand a live Vectorize handle in order
+ * to be called. That is not test cosmetics: a signature that asks for more than it
+ * uses is a signature that lies about what it does.
+ */
+export type Config = {
   ANTHROPIC_API_KEY?: string;
   ANTHROPIC_MODEL?: string;
+
+  // v1: Qdrant. Still wired while the v2 index is built, deleted at the cutover.
   QDRANT_URL?: string;
   QDRANT_API_KEY?: string;
   QDRANT_COLLECTION?: string;
   QDRANT_INFERENCE_MODEL?: string;
+};
+
+export type Env = Config & {
+  // v2: Cloudflare-native. Vectorize holds the chunks, Workers AI embeds them.
+  // The PDFs are not stored at all: citations link to the vendor's own asset host.
+  AI: Ai;
+  VECTORIZE: VectorizeIndex;
+  EMBEDDING_MODEL: string;
+  /** Secret. Guards the write path; without it, /ingest is an open door onto the index. */
+  INGEST_TOKEN?: string;
 };
 
 export type DatasheetChunk = {

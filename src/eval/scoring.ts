@@ -1,8 +1,8 @@
 import { groundTruth } from "./groundTruth";
 import { queryRag } from "../rag/pipeline";
-import type { Env } from "../types";
+import type { Config } from "../types";
 
-export async function runEval(env: Env) {
+export async function runEval(env: Config) {
   const cases = [];
 
   for (const item of groundTruth) {

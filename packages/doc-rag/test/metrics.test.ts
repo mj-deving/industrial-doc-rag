@@ -52,4 +52,15 @@ describe("rrf", () => {
     const fused = rrf([["A", "B"], ["B", "A"], ["B", "A"]]);
     expect(fused[0]).toBe("B");
   });
+
+  test("unweighted, a rank-1 hit on either list ties, and the tie is arbitrary", () => {
+    // Worth pinning because it is the failure the weight exists to prevent: a
+    // fusion whose second arm is a primary-key lookup silently degrades into its
+    // first arm, and nothing in the output says so.
+    expect(rrf([["DENSE"], ["SYMBOL"]])[0]).toBe("DENSE");
+  });
+
+  test("a weighted list wins that tie", () => {
+    expect(rrf([["DENSE"], ["SYMBOL"]], 60, [1, 2])[0]).toBe("SYMBOL");
+  });
 });

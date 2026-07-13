@@ -5,3 +5,21 @@ workers_dev = true
 
 [observability]
 enabled = true
+
+# bge-m3: 1024 dimensions, multilingual. The corpus is English; the questions are
+# not necessarily, and a monolingual encoder would answer a German question about
+# an English datasheet by simply not finding it.
+[ai]
+binding = "AI"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "idr-datasheets"
+
+# No blob store. The PDFs are Nexperia's documents, and their asset host serves
+# them at a deterministic URL keyed on the part number, so a citation links to the
+# vendor's own copy. Mirroring them into R2 would mean republishing someone else's
+# documents to save a redirect. We index the text and cite the source.
+
+[vars]
+EMBEDDING_MODEL = "@cf/baai/bge-m3"

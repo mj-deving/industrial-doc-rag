@@ -1,4 +1,4 @@
-import type { DatasheetChunk, Env, Retrieval } from "../types";
+import type { DatasheetChunk, Config, Retrieval } from "../types";
 
 const DEFAULT_INFERENCE_MODEL = "sentence-transformers/all-minilm-l6-v2";
 const DEFAULT_INFERENCE_DIMENSION = 384;
@@ -14,7 +14,7 @@ type QdrantInferenceDocument = {
   model: string;
 };
 
-export async function ensureCollection(env: Env): Promise<void> {
+export async function ensureCollection(env: Config): Promise<void> {
   const collection = getCollection(env);
   const existing = await qdrant(env, `/collections/${collection}`, { method: "GET" });
   if (existing.status === 200) {
@@ -41,7 +41,7 @@ export async function ensureCollection(env: Env): Promise<void> {
   }
 }
 
-export async function upsertChunks(env: Env, chunks: DatasheetChunk[], embeddings?: number[][]): Promise<void> {
+export async function upsertChunks(env: Config, chunks: DatasheetChunk[], embeddings?: number[][]): Promise<void> {
   if (!embeddings) {
     return upsertChunksWithInference(env, chunks);
   }
@@ -66,7 +66,7 @@ export async function upsertChunks(env: Env, chunks: DatasheetChunk[], embedding
   }
 }
 
-export async function upsertChunksWithInference(env: Env, chunks: DatasheetChunk[]): Promise<void> {
+export async function upsertChunksWithInference(env: Config, chunks: DatasheetChunk[]): Promise<void> {
   await ensureCollection(env);
   const model = getInferenceModel(env);
   const points: QdrantPoint[] = chunks.map((chunk) => ({
@@ -103,7 +103,7 @@ export function uuidFromString(value: string): string {
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
 
-export async function searchChunks(env: Env, vector: number[], limit = 5): Promise<Retrieval[]> {
+export async function searchChunks(env: Config, vector: number[], limit = 5): Promise<Retrieval[]> {
   const response = await qdrant(env, `/collections/${getCollection(env)}/points/search`, {
     method: "POST",
     body: JSON.stringify({
@@ -122,7 +122,7 @@ export async function searchChunks(env: Env, vector: number[], limit = 5): Promi
   }));
 }
 
-export async function searchChunksWithInference(env: Env, question: string, limit = 5): Promise<Retrieval[]> {
+export async function searchChunksWithInference(env: Config, question: string, limit = 5): Promise<Retrieval[]> {
   const response = await qdrant(env, `/collections/${getCollection(env)}/points/query`, {
     method: "POST",
     body: JSON.stringify({
@@ -147,19 +147,19 @@ export async function searchChunksWithInference(env: Env, question: string, limi
   }));
 }
 
-export function hasQdrantConfig(env: Env): boolean {
+export function hasQdrantConfig(env: Config): boolean {
   return Boolean(env.QDRANT_URL && env.QDRANT_API_KEY);
 }
 
-function getCollection(env: Env): string {
+function getCollection(env: Config): string {
   return env.QDRANT_COLLECTION ?? "industrial_datasheets";
 }
 
-function getInferenceModel(env: Env): string {
+function getInferenceModel(env: Config): string {
   return env.QDRANT_INFERENCE_MODEL ?? DEFAULT_INFERENCE_MODEL;
 }
 
-export function qdrant(env: Env, path: string, init: RequestInit): Promise<Response> {
+export function qdrant(env: Config, path: string, init: RequestInit): Promise<Response> {
   if (!env.QDRANT_URL) {
     throw new Error("Missing QDRANT_URL");
   }
