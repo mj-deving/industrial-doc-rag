@@ -129,15 +129,27 @@ export async function retrieve(
 
   const fused = rrf([toDocuments(dense), toDocuments(symbolHits)], 60, [1, SYMBOL_WEIGHT]);
 
-  const byDocument = new Map<string, Retrieved>();
-  for (const hit of [...symbolHits, ...dense]) {
-    const existing = byDocument.get(hit.chunk.documentId);
-    if (!existing || hit.score > existing.score) byDocument.set(hit.chunk.documentId, hit);
+  // The fused list ranks DOCUMENTS. The evidence the generator reads is CHUNKS,
+  // and collapsing one to the other is where the first run of this eval went
+  // wrong: keeping the best chunk PER DOCUMENT handed the model the right
+  // datasheet opened to the wrong page. A datasheet is ~74 chunks, VDS is on
+  // page one and RDS(on) is in a table several pages in, so document recall
+  // read 1.000 while answer accuracy read 0.36, and the model was right to
+  // refuse — the number it was asked for genuinely was not in the excerpt.
+  //
+  // So evidence is the symbol arm's WITHIN-document hits first: the best
+  // passages of the datasheet the question named. Dense fills the remainder.
+  // When the named part is not indexed the symbol arm returns nothing and the
+  // evidence is ten plausible tables for other parts, which is the refusal trap
+  // and is left exactly as hard as it was.
+  const chunks: Retrieved[] = [];
+  const seen = new Set<string>();
+  for (const hit of [...symbolHits.sort((a, b) => b.score - a.score), ...dense]) {
+    if (seen.has(hit.chunk.id)) continue;
+    seen.add(hit.chunk.id);
+    chunks.push(hit);
+    if (chunks.length === k) break;
   }
 
-  return {
-    documents: fused,
-    chunks: fused.map((id) => byDocument.get(id)!).filter(Boolean),
-    symbols
-  };
+  return { documents: fused, chunks, symbols };
 }

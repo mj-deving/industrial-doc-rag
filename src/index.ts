@@ -4,6 +4,10 @@ import { ingest } from "./api/ingest";
 import { evalApi } from "./api/eval";
 import { jsonError } from "./api/errors";
 import { renderConsole } from "./console/page";
+import { renderEval } from "./console/eval-page";
+import type { Results, Scale } from "./console/eval-data";
+import results from "../data/eval-results.json";
+import scale from "../data/eval-scale.json";
 import type { Env } from "./types";
 
 const app = new Hono<{ Bindings: Env }>();
@@ -18,6 +22,13 @@ app.get("/", (c) => {
 
 app.get("/console", (c) => {
   return c.html(renderConsole());
+});
+
+// Public, unauthenticated, and static. The token-guarded /eval/* harness routes
+// above RUN the eval; this one only prints what a previous run committed to the
+// repository. The two share a prefix and nothing else.
+app.get("/eval", (c) => {
+  return c.html(renderEval(results as Results, scale as Scale));
 });
 
 app.onError((error, c) => {

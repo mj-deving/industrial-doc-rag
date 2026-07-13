@@ -5,6 +5,10 @@
 // Mono role = technical metadata only. Prose stays sans.
 // UI language is English because the corpus and the embedding model are English-only;
 // a German question would retrieve badly. Honesty beats consistency here.
+//
+// v2: the copy no longer describes five Infineon datasheets and a Qdrant collection.
+// It describes what is actually deployed, and it links the numbers to /eval rather
+// than asserting them here.
 export function renderConsole(): string {
   return `<!doctype html>
 <html lang="en">
@@ -33,7 +37,7 @@ header{border-bottom:1px solid var(--border);padding:22px 0 18px;margin-bottom:3
 .headrow{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .mark{font-weight:700;font-size:19px;letter-spacing:-.01em}
 .mark .dim{color:var(--text-dim);font-weight:400}
-.tag{color:var(--text-muted);font-size:13.5px;margin-top:4px;max-width:62ch}
+.tag{color:var(--text-muted);font-size:13.5px;margin-top:4px;max-width:64ch}
 .stack{display:flex;gap:6px;flex-wrap:wrap}
 .prim{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);
   border:1px solid var(--border);border-radius:5px;padding:2px 7px;white-space:nowrap}
@@ -42,7 +46,7 @@ header{border-bottom:1px solid var(--border);padding:22px 0 18px;margin-bottom:3
 .badge{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);
   border:1px solid var(--border);border-radius:5px;padding:2px 7px}
 .badge.live{color:var(--accent);border-color:var(--accent-dim)}
-.badge.off{color:var(--text-dim);border-color:var(--border)}
+.badge.off{color:var(--danger);border-color:var(--danger)}
 
 .field{display:flex;gap:10px;align-items:stretch}
 #q{flex:1;min-width:0;background:var(--surface);color:var(--text);border:1px solid var(--border);
@@ -58,55 +62,32 @@ header{border-bottom:1px solid var(--border);padding:22px 0 18px;margin-bottom:3
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .chip{font-family:var(--font-mono);font-size:12px;color:var(--text-muted);background:transparent;
   border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 10px;cursor:pointer;
-  transition:border-color .12s ease,color .12s ease}
+  transition:border-color .12s ease,color .12s ease;text-align:left}
 .chip:hover{border-color:var(--border-bright);color:var(--text)}
-.hint{margin-top:12px;color:var(--text-dim);font-size:12.5px}
+.chip.held{color:var(--text-dim)}
+.chip.held:hover{border-color:var(--danger);color:var(--danger)}
+.hint{margin-top:12px;color:var(--text-dim);font-size:12.5px;max-width:70ch}
+.hint a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid var(--border)}
 
 .answer-region{margin-top:34px;min-height:4px}
 .meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;min-height:18px;flex-wrap:wrap}
 #answer{font-size:15.5px;color:var(--text);white-space:pre-wrap;word-break:break-word}
-#answer.noanswer{color:var(--danger)}
+#answer.refused{color:var(--danger)}
 
 .cites{margin-top:24px;display:grid;gap:8px}
 .cite{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);
   padding:11px 13px}
 .cite-top{display:flex;align-items:center;justify-content:space-between;gap:12px;
   font-family:var(--font-mono);font-size:12.5px}
-.cite-src{color:var(--text)}
 .cite-src a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--border)}
 .cite-idx{color:var(--text-dim)}
-.bar{margin-top:8px;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
-.bar>i{display:block;height:100%;background:var(--accent);border-radius:2px}
-.excerpt{color:var(--text-muted);font-size:13px;margin-top:8px}
+.err{color:var(--danger);font-family:var(--font-mono);font-size:12.5px;margin-top:16px}
 
-.panel{margin-top:40px;border-top:1px solid var(--border);padding-top:18px}
-.panel summary{cursor:pointer;color:var(--text-muted);font-size:13.5px;list-style:none;
-  display:flex;align-items:center;gap:8px}
-.panel summary::-webkit-details-marker{display:none}
-.panel summary .n{font-family:var(--font-mono);color:var(--text-dim);font-size:12px}
-.evalbar{display:flex;gap:10px;align-items:center;margin-top:14px;flex-wrap:wrap}
-#run-eval{background:transparent;color:var(--text-muted);border:1px solid var(--border);
-  border-radius:var(--radius-sm);padding:6px 12px;font-size:12px;font-family:var(--font-mono);
-  cursor:pointer;transition:border-color .12s ease,color .12s ease}
-#run-eval:hover{border-color:var(--border-bright);color:var(--text)}
-#run-eval:disabled{opacity:.5;cursor:not-allowed}
-.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
-.metric{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);
-  padding:11px 13px;font-family:var(--font-mono);font-size:12px;color:var(--text-dim)}
-.metric b{display:block;font-size:20px;color:var(--text);font-weight:600;margin-top:4px}
-.cases{margin-top:12px;display:grid;gap:1px;font-family:var(--font-mono);font-size:12.5px;
-  max-height:280px;overflow:auto}
-.case{display:flex;justify-content:space-between;gap:12px;padding:6px 2px;
-  border-bottom:1px solid var(--border);color:var(--text-muted)}
-.case .c{color:var(--text-dim)}
-.case.miss .c{color:var(--danger)}
-.err{color:var(--danger);font-family:var(--font-mono);font-size:12.5px}
-
-footer{margin:48px 0 40px;color:var(--text-dim);font-size:12px;font-family:var(--font-mono)}
+footer{margin:48px 0 40px;padding-top:18px;border-top:1px solid var(--border);
+  color:var(--text-dim);font-size:12px;font-family:var(--font-mono)}
 footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid var(--border)}
 
 @media (max-width:520px){
-  .metrics{grid-template-columns:1fr}
   .field{flex-direction:column}
   #ask{padding:12px 20px}
 }
@@ -118,24 +99,24 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     <div class="headrow">
       <div>
         <div class="mark">industrial-doc-rag<span class="dim">/</span></div>
-        <div class="tag">Questions about five public Infineon MOSFET datasheets, answered from the datasheet text. Every answer carries the source it came from.</div>
+        <div class="tag">Questions about 497 public Nexperia MOSFET datasheets, answered from the datasheet text. Every answer carries the source it came from, and parts that are not in the corpus get refused rather than approximated.</div>
       </div>
       <div class="stack" aria-label="pipeline primitives">
-        <span class="prim">Workers</span><span class="prim">Qdrant</span><span class="prim">Rerank</span>
-        <span class="prim">Eval</span>
+        <span class="prim">Workers</span><span class="prim">Vectorize</span><span class="prim">bge-m3</span>
+        <span class="prim">RRF</span>
       </div>
     </div>
   </header>
 
-  <div class="health" id="health"><span class="badge">reading health ...</span></div>
+  <div class="health" id="health"><span class="badge">reading index ...</span></div>
 
   <div class="console">
     <div class="field">
-      <input id="q" type="text" autocomplete="off" value="What is the maximum RDS(on) for IPB017N10N5?">
+      <input id="q" type="text" autocomplete="off" value="What is the maximum RDS(on) of the PSMN011-100YSF at VGS = 10 V; ID = 20 A; Tj = 25 °C?">
       <button id="ask">Ask</button>
     </div>
     <div class="chips" id="chips"></div>
-    <div class="hint">Retrieval is dense top-5 plus a part-number rerank. Answers are extracted from the datasheet, not generated.</div>
+    <div class="hint">Retrieval fuses a dense vector search with a part-number lookup. The last question names a datasheet that was deliberately held out of the index, and a near-identical part is in it. <a href="/eval">See what it scores</a>.</div>
   </div>
 
   <div class="answer-region" id="region">
@@ -144,18 +125,9 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     <div class="cites" id="cites"></div>
   </div>
 
-  <details class="panel">
-    <summary>Eval loop <span class="n" id="evalcount">10 ground-truth cases</span></summary>
-    <div class="evalbar">
-      <button id="run-eval">run eval</button>
-      <span class="badge" id="evalnote">retrieval hit, top-1 part match, answer-term coverage</span>
-    </div>
-    <div class="metrics" id="metrics" hidden></div>
-    <div class="cases" id="cases"></div>
-  </details>
-
   <footer>
-    edge-deployed datasheet RAG &middot; <a href="https://github.com/mj-deving/industrial-doc-rag" target="_blank" rel="noreferrer">github.com/mj-deving/industrial-doc-rag</a> &middot; <a href="/report" target="_blank" rel="noreferrer">evidence report</a>
+    497 datasheets indexed &middot; 183 held out &middot; <a href="/eval">eval</a> &middot;
+    <a href="https://github.com/mj-deving/industrial-doc-rag" target="_blank" rel="noreferrer">github.com/mj-deving/industrial-doc-rag</a>
   </footer>
 </div>
 
@@ -165,11 +137,8 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
   var metaEl = document.getElementById("meta");
   var answerEl = document.getElementById("answer");
   var citesEl = document.getElementById("cites");
-  var metricsEl = document.getElementById("metrics");
-  var casesEl = document.getElementById("cases");
   var qEl = document.getElementById("q");
   var askEl = document.getElementById("ask");
-  var evalEl = document.getElementById("run-eval");
 
   function esc(v) {
     return String(v).replace(/[&<>"']/g, function (c) {
@@ -177,175 +146,101 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     });
   }
 
-  function badge(label, live) {
+  function badge(label, cls) {
     var b = document.createElement("span");
-    b.className = "badge " + (live ? "live" : "off");
+    b.className = "badge " + (cls || "");
     b.textContent = label;
     return b;
   }
 
-  function getJson(url) {
-    return fetch(url).then(function (r) { return r.json(); });
-  }
-
-  function postJson(url, body) {
-    return fetch(url, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(body)
-    }).then(function (r) { return r.json(); });
-  }
-
-  function renderError(target, error) {
-    target.innerHTML = "";
-    var d = document.createElement("div");
-    d.className = "err";
-    d.textContent = (error.code || "error") + ": " + (error.message || JSON.stringify(error));
-    target.appendChild(d);
-  }
-
-  getJson("/report").then(function (report) {
-    var h = report.health;
-    // Upstream reachability, not config presence. A dead Qdrant cluster leaves
-    // the secrets set, so providerReady would still say "ready" while every
-    // query degrades to the packaged corpus.
-    var reachable = h.upstream && h.upstream.reachable;
+  fetch("/health").then(function (r) { return r.json(); }).then(function (h) {
     healthEl.innerHTML = "";
-    healthEl.appendChild(badge(reachable ? "qdrant live" : "packaged corpus", reachable));
-    healthEl.appendChild(badge(reachable ? h.mode : "local-corpus", true));
-    healthEl.appendChild(badge("corpus " + h.corpusCount, true));
-    if (!reachable && h.upstream) {
-      healthEl.appendChild(badge(h.upstream.detail, false));
-    }
+    healthEl.appendChild(badge(h.vectors.toLocaleString("en") + " vectors", "live"));
+    healthEl.appendChild(badge(h.dimensions + "d " + h.embeddingModel.split("/").pop()));
+    healthEl.appendChild(badge(h.strategy));
+  }).catch(function () {
+    healthEl.innerHTML = "";
+    healthEl.appendChild(badge("index unreachable", "off"));
+  });
 
-    chipsEl.innerHTML = "";
-    (report.questions || []).forEach(function (item) {
-      var c = document.createElement("button");
-      c.className = "chip";
-      c.textContent = item.expectedPartNumber;
-      c.title = item.question;
-      c.addEventListener("click", function () {
+  fetch("/questions").then(function (r) { return r.json(); }).then(function (list) {
+    list.forEach(function (item) {
+      var b = document.createElement("button");
+      b.className = "chip" + (item.heldOut ? " held" : "");
+      b.textContent = item.part + (item.heldOut ? " (held out)" : "");
+      b.title = item.question;
+      b.addEventListener("click", function () {
         qEl.value = item.question;
         ask();
       });
-      chipsEl.appendChild(c);
+      chipsEl.appendChild(b);
     });
-
-    if (new URLSearchParams(location.search).get("proof") === "1") {
-      ask();
-      getJson("/eval").then(renderEval);
-    }
   });
 
   function ask() {
     var question = qEl.value.trim();
     if (!question) return;
+
     askEl.disabled = true;
     metaEl.innerHTML = "";
-    metaEl.appendChild(badge("querying ...", true));
+    metaEl.appendChild(badge("retrieving ..."));
     answerEl.className = "";
     answerEl.textContent = "";
     citesEl.innerHTML = "";
 
-    postJson("/query", { question: question }).then(function (data) {
-      askEl.disabled = false;
-      if (data.error) {
+    fetch("/query", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ question: question })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (res) {
+        askEl.disabled = false;
         metaEl.innerHTML = "";
-        renderError(answerEl, data.error);
-        return;
-      }
-      metaEl.innerHTML = "";
-      metaEl.appendChild(badge("confidence " + data.confidence, true));
-      metaEl.appendChild(badge(data.mode || "unknown", false));
-      answerEl.textContent = data.answer;
 
-      citesEl.innerHTML = "";
-      (data.sources || []).forEach(function (s) {
-        var card = document.createElement("div");
-        card.className = "cite";
+        if (res.error) {
+          answerEl.className = "refused";
+          answerEl.textContent = res.error;
+          return;
+        }
 
-        var top = document.createElement("div");
-        top.className = "cite-top";
-        var src = document.createElement("span");
-        src.className = "cite-src";
-        var a = document.createElement("a");
-        a.href = s.sourceUrl;
-        a.target = "_blank";
-        a.rel = "noreferrer";
-        a.textContent = s.partNumber;
-        src.appendChild(a);
-        var idx = document.createElement("span");
-        idx.className = "cite-idx";
-        idx.textContent = Number(s.score).toFixed(3);
-        top.appendChild(src);
-        top.appendChild(idx);
+        metaEl.appendChild(badge(res.strategy));
+        metaEl.appendChild(badge(res.timings.retrieveMs + "ms retrieve"));
+        metaEl.appendChild(badge(res.timings.generateMs + "ms generate"));
 
-        var bar = document.createElement("div");
-        bar.className = "bar";
-        var fill = document.createElement("i");
-        fill.style.width = Math.max(2, Math.min(100, Number(s.score) * 100)) + "%";
-        bar.appendChild(fill);
+        if (res.refused) {
+          answerEl.className = "refused";
+          answerEl.textContent =
+            "Not in the corpus. This datasheet was held out of the index, and the parts that look like it are not substitutes.";
+          return;
+        }
 
-        var ex = document.createElement("div");
-        ex.className = "excerpt";
-        ex.textContent = s.excerpt;
-
-        card.appendChild(top);
-        card.appendChild(bar);
-        card.appendChild(ex);
-        citesEl.appendChild(card);
+        answerEl.textContent = res.answer;
+        res.sources.forEach(function (source, i) {
+          var el = document.createElement("div");
+          el.className = "cite";
+          el.innerHTML =
+            '<div class="cite-top"><span class="cite-src"><a href="' +
+            esc(source.sourceUrl) +
+            '" target="_blank" rel="noreferrer">' +
+            esc(source.part) +
+            '.pdf</a></span><span class="cite-idx">rank ' +
+            (i + 1) +
+            "</span></div>";
+          citesEl.appendChild(el);
+        });
+      })
+      .catch(function (error) {
+        askEl.disabled = false;
+        metaEl.innerHTML = "";
+        answerEl.className = "refused";
+        answerEl.textContent = String(error);
       });
-    }).catch(function (e) {
-      askEl.disabled = false;
-      renderError(answerEl, { code: "network", message: String(e) });
-    });
-  }
-
-  function renderEval(data) {
-    evalEl.disabled = false;
-    if (data.error) {
-      renderError(casesEl, data.error);
-      return;
-    }
-    metricsEl.hidden = false;
-    metricsEl.innerHTML = "";
-    [["hit rate", data.hitRate], ["top-1", data.top1Accuracy], ["answer terms", data.answerTermAccuracy]]
-      .forEach(function (pair) {
-        var m = document.createElement("div");
-        m.className = "metric";
-        m.textContent = pair[0];
-        var b = document.createElement("b");
-        b.textContent = Math.round(pair[1] * 100) + "%";
-        m.appendChild(b);
-        metricsEl.appendChild(m);
-      });
-
-    casesEl.innerHTML = "";
-    (data.cases || []).forEach(function (item) {
-      var hit = item.topPart === item.expectedPartNumber;
-      var row = document.createElement("div");
-      row.className = "case" + (hit ? "" : " miss");
-      var left = document.createElement("span");
-      left.textContent = item.expectedPartNumber;
-      var right = document.createElement("span");
-      right.className = "c";
-      right.textContent = (item.topPart || "none") + " / " + item.confidence;
-      row.appendChild(left);
-      row.appendChild(right);
-      casesEl.appendChild(row);
-    });
   }
 
   askEl.addEventListener("click", ask);
-  qEl.addEventListener("keydown", function (e) { if (e.key === "Enter") ask(); });
-  evalEl.addEventListener("click", function () {
-    evalEl.disabled = true;
-    casesEl.innerHTML = "";
-    metricsEl.hidden = true;
-    getJson("/eval").then(renderEval).catch(function (e) {
-      evalEl.disabled = false;
-      renderError(casesEl, { code: "network", message: String(e) });
-    });
+  qEl.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") ask();
   });
 </script>
 </body>

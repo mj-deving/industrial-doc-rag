@@ -17,7 +17,7 @@
  *               A matched sample of indexed questions runs alongside, because a
  *               system that refuses everything scores 100% on refusal alone.
  *
- * Usage: INGEST_TOKEN=... bun tools/eval.ts <worker-url> [--sample N]
+ * Usage: INGEST_TOKEN=... bun tools/eval.ts <worker-url> [--sample N] [--reuse-retrieval]
  */
 
 import { grade } from "../packages/doc-rag/src/grade";
@@ -30,14 +30,27 @@ const token = process.env.INGEST_TOKEN;
 const sampleArg = process.argv.indexOf("--sample");
 const SAMPLE = sampleArg > -1 ? Number(process.argv[sampleArg + 1]) : 150;
 
+/**
+ * Reuse the retrieval block of a previous run.
+ *
+ * Legitimate only when the change under test cannot move a retrieval number.
+ * The chunk-evidence fix is such a change: it alters which EXCERPTS reach the
+ * generator and leaves the document ranking the metrics score byte-identical.
+ * Re-measuring 5475 retrievals to reprint the same three tables would be
+ * ceremony, not verification.
+ */
+const REUSE_RETRIEVAL = process.argv.includes("--reuse-retrieval");
+
 if (!workerUrl || !token) {
-  console.error("usage: INGEST_TOKEN=... bun tools/eval.ts <worker-url> [--sample N]");
+  console.error("usage: INGEST_TOKEN=... bun tools/eval.ts <worker-url> [--sample N] [--reuse-retrieval]");
   process.exit(1);
 }
 
-const RETRIEVE_BATCH = 40;
-const ANSWER_BATCH = 8;
-const CONCURRENCY = 4;
+// A retrieve batch runs in parallel inside the Worker, so in-flight embeddings are
+// BATCH x CONCURRENCY. At 40 x 4 that is 160 at once and Workers AI pushes back.
+const RETRIEVE_BATCH = 20;
+const ANSWER_BATCH = 6;
+const CONCURRENCY = 3;
 
 const questions: Question[] = await Bun.file("data/questions.json").json();
 const indexed = questions.filter((q) => q.split === "indexed");
@@ -50,14 +63,31 @@ function sample<T>(items: T[], n: number): T[] {
   return Array.from({ length: n }, (_, i) => items[Math.floor(i * stride)]);
 }
 
-async function post<T>(path: string, body: unknown): Promise<T> {
+/**
+ * Retry on Workers AI backpressure.
+ *
+ * The first run died two thirds of the way through with "3040: Capacity
+ * temporarily exceeded". That is the platform saying slow down, not the system
+ * being wrong, and a benchmark that throws away 40 minutes of work because an
+ * embedding queue was briefly full is measuring the wrong thing. Backoff, and
+ * report if it ever gives up.
+ */
+async function post<T>(path: string, body: unknown, attempt = 0): Promise<T> {
   const response = await fetch(`${workerUrl}${path}`, {
     method: "POST",
     headers: { "content-type": "application/json", authorization: `Bearer ${token}` },
     body: JSON.stringify(body)
   });
-  if (!response.ok) throw new Error(`${path}: HTTP ${response.status} ${await response.text()}`);
-  return (await response.json()) as T;
+
+  if (response.ok) return (await response.json()) as T;
+
+  const text = await response.text();
+  const transient = response.status >= 500 || response.status === 429;
+  if (transient && attempt < 6) {
+    await Bun.sleep(2 ** attempt * 1000 + Math.floor(Math.random() * 500));
+    return post<T>(path, body, attempt + 1);
+  }
+  throw new Error(`${path}: HTTP ${response.status} after ${attempt + 1} attempts ${text}`);
 }
 
 /** Drive a batched endpoint with a fixed worker pool, preserving input order. */
@@ -102,11 +132,21 @@ type AnswerResult = {
 const byId = new Map(questions.map((q) => [q.id, q]));
 
 // ── 1 + 2. Retrieval quality, per strategy (the ablation) ────────────────────
-console.error(`retrieval: ${indexed.length} indexed questions x ${STRATEGIES.length} strategies`);
 
-const retrieval: Record<string, ReturnType<typeof retrievalMetrics> & { p50Ms: number; p95Ms: number }> = {};
+// No latency here on purpose. The retrieve endpoint runs a batch in parallel for
+// throughput, so any per-question timing it reports is measured under concurrency.
+// Latency is measured by tools/scale.ts, one question at a time.
+const retrieval: Record<string, ReturnType<typeof retrievalMetrics>> = {};
 
-for (const strategy of STRATEGIES) {
+if (REUSE_RETRIEVAL) {
+  const previous = await Bun.file("data/eval-results.json").json();
+  Object.assign(retrieval, previous.retrieval);
+  console.error(`retrieval: reused from the run of ${previous.generatedAt}`);
+} else {
+  console.error(`retrieval: ${indexed.length} indexed questions x ${STRATEGIES.length} strategies`);
+}
+
+for (const strategy of REUSE_RETRIEVAL ? [] : STRATEGIES) {
   const results = await pipeline<Question, RetrieveResult>(
     indexed,
     RETRIEVE_BATCH,
@@ -118,15 +158,9 @@ for (const strategy of STRATEGIES) {
     strategy
   );
 
-  const metrics = retrievalMetrics(
+  retrieval[strategy] = retrievalMetrics(
     results.map((r) => ({ ranked: r.documents, gold: byId.get(r.id)!.part }))
   );
-  const times = results.map((r) => r.ms).sort((a, b) => a - b);
-  retrieval[strategy] = {
-    ...metrics,
-    p50Ms: times[Math.floor(times.length * 0.5)] ?? 0,
-    p95Ms: times[Math.floor(times.length * 0.95)] ?? 0
-  };
 
   const m = retrieval[strategy];
   console.error(

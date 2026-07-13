@@ -41,17 +41,23 @@ evalApi.post("/eval/retrieve", async (c) => {
   };
 
   const search = retriever(c.env, index ?? "l");
-  const results = [];
-  for (const ask of questions) {
-    const started = performance.now();
-    const ranking = await retrieve(search, ask.question, strategy, k ?? 10);
-    results.push({
-      id: ask.id,
-      documents: ranking.documents,
-      symbols: ranking.symbols,
-      ms: Math.round(performance.now() - started)
-    });
-  }
+
+  // Parallel across the batch. 5475 retrievals run sequentially would not fit the
+  // request budget, and this endpoint exists for THROUGHPUT. The `ms` it reports
+  // is therefore measured under concurrency and is not a latency figure: the
+  // latency numbers come from the scaling tool, which asks one question at a time.
+  const results = await Promise.all(
+    questions.map(async (ask) => {
+      const started = performance.now();
+      const ranking = await retrieve(search, ask.question, strategy, k ?? 10);
+      return {
+        id: ask.id,
+        documents: ranking.documents,
+        symbols: ranking.symbols,
+        ms: Math.round(performance.now() - started)
+      };
+    })
+  );
 
   return c.json({ strategy, index: index ?? "l", results });
 });

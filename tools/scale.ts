@@ -42,6 +42,16 @@ const STORED_PER_100M = 0.05;
 const FREE_STORED_DIMS = 10_000_000;
 const DIMENSIONS = 1024;
 
+/** How many single questions to time end-to-end per index. */
+const LATENCY_SAMPLE = 25;
+
+/** Deterministic stride, so the timed questions are the same ones on every rerun. */
+function sample<T>(items: T[], n: number): T[] {
+  if (items.length <= n) return items;
+  const stride = items.length / n;
+  return Array.from({ length: n }, (_, i) => items[Math.floor(i * stride)]);
+}
+
 const labels: GroundTruth[] = await Bun.file("data/groundtruth.json").json();
 const questions: Question[] = await Bun.file("data/questions.json").json();
 
@@ -57,14 +67,23 @@ const SIZES = [
   { key: "l" as const, index: "idr-datasheets", parts: indexedParts }
 ];
 
-async function post<T>(path: string, body: unknown): Promise<T> {
+/** Workers AI answers a burst of embeddings with "3040: Capacity temporarily
+ *  exceeded". That is backpressure, not a wrong answer, so it is waited out. */
+async function post<T>(path: string, body: unknown, attempt = 0): Promise<T> {
   const response = await fetch(`${workerUrl}${path}`, {
     method: "POST",
     headers: { "content-type": "application/json", authorization: `Bearer ${token}` },
     body: JSON.stringify(body)
   });
-  if (!response.ok) throw new Error(`${path}: HTTP ${response.status} ${await response.text()}`);
-  return (await response.json()) as T;
+
+  if (response.ok) return (await response.json()) as T;
+
+  const text = await response.text();
+  if ((response.status >= 500 || response.status === 429) && attempt < 6) {
+    await Bun.sleep(2 ** attempt * 1000 + Math.floor(Math.random() * 500));
+    return post<T>(path, body, attempt + 1);
+  }
+  throw new Error(`${path}: HTTP ${response.status} after ${attempt + 1} attempts ${text}`);
 }
 
 function chunksFor(part: string) {
@@ -107,8 +126,8 @@ for (const size of SIZES) {
   const storedDims = chunkCount * DIMENSIONS;
 
   const results: RetrieveResult[] = [];
-  for (let at = 0; at < asks.length; at += 40) {
-    const batch = asks.slice(at, at + 40);
+  for (let at = 0; at < asks.length; at += 20) {
+    const batch = asks.slice(at, at + 20);
     const { results: got } = await post<{ results: RetrieveResult[] }>("/eval/retrieve", {
       strategy: "hybrid-rrf",
       index: size.key,
@@ -119,7 +138,23 @@ for (const size of SIZES) {
 
   const gold = new Map(asks.map((q) => [q.id, q.part]));
   const metrics = retrievalMetrics(results.map((r) => ({ ranked: r.documents, gold: gold.get(r.id)! })));
-  const times = results.map((r) => r.ms).sort((a, b) => a - b);
+
+  // Latency is measured separately, one question per request, and timed from the
+  // CLIENT. The `ms` the batched calls report is wall time under twenty parallel
+  // in-flight embeddings, which is a throughput figure wearing a latency costume:
+  // it tells you what the queue did, not what a user waits. This costs a minute
+  // per index and is the only number here anyone would ever feel.
+  const times: number[] = [];
+  for (const ask of sample(asks, LATENCY_SAMPLE)) {
+    const started = performance.now();
+    await post("/eval/retrieve", {
+      strategy: "hybrid-rrf",
+      index: size.key,
+      questions: [{ id: ask.id, question: ask.question }]
+    });
+    times.push(Math.round(performance.now() - started));
+  }
+  times.sort((a, b) => a - b);
 
   const billableDims = Math.max(0, storedDims - FREE_STORED_DIMS);
   const entry = {
