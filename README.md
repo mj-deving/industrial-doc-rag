@@ -8,16 +8,24 @@ Five documents is not a retrieval problem: the answer is one of five. 497 lookal
 
 ## What the numbers say
 
+What ships:
+
 | | |
 |---|---|
-| Dense retrieval alone, recall@1 | **0.654** |
-| Same, plus a part-number rerank | 0.952 |
-| Same, fused with a part-number lookup | 1.000 |
+| Right datasheet at rank 1 (1,918 indexed questions) | **1.000** |
 | Answers correct (400 questions, 1% tolerance) | **0.998** |
-| Held-out parts refused, by the model alone | 0.958 |
-| Held-out parts refused, as shipped | **1.000** |
+| Held-out parts refused | **1.000** |
 
-The 1.000 on retrieval is a primary-key lookup, not a triumph, and [/eval](https://industrial-doc-rag.mariusdeving.workers.dev/eval) says so. The number worth reading is the 0.654. On questions that spell the document's name out in full, vector search alone puts the right datasheet first two times in three. Part numbers are exactly the tokens an embedding model is worst at, and 497 lookalike datasheets sit almost on top of one another in that space.
+What the eval found:
+
+| | |
+|---|---|
+| Vector search alone, recall@1 | **0.654** |
+| Same, plus a part-number rerank | 0.952 |
+| Held-out parts refused, by the model alone | 0.958 |
+| Of the answers it invents unaided, the share that are correct | **0.412** |
+
+Retrieval is solved, and it is solved by a key lookup fused into the vector query rather than by a better embedding. The finding is the 0.654 underneath it. On questions that spell the document's name out in full, vector search alone puts the right datasheet first only two times in three, because part numbers are exactly the tokens an embedding model is worst at and 497 lookalike datasheets sit almost on top of one another in that space. That 0.654 is the pipeline most RAG demos ship, measured on the same corpus and the same questions.
 
 The two refusal numbers are the same system measured twice, and the gap between them is the point. See "Refusal is enforced in code".
 

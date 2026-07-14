@@ -161,7 +161,9 @@ code{font-family:var(--font-mono);font-size:12px;color:var(--text);background:va
   color:var(--text-dim)}
 
 /* ── headline results ───────────────────────────────────── */
-.results{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.rowlab{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text-dim);margin:22px 0 8px}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .fig{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-sm);
   padding:13px 15px 14px}
 .fig .k{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
@@ -242,25 +244,21 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
   <div class="abstract">
     <div class="lab">Abstract</div>
     <p>${c.documents} MOSFET datasheets from one vendor are indexed and ${c.heldOut} are deliberately
-    held out. ${int(c.questions)} questions are generated from the tables themselves. Every question
-    names its part in full, and dense retrieval alone still ranks the right datasheet first only
-    ${pct(dense.recall[1])}% of the time: part numbers are the tokens an embedding is worst at. Fused
-    with a part-number lookup it reaches ${num(results.retrieval[results.best].recall[1])}, and answers
-    are then correct on ${pct(results.answer.correct)}% of ${results.answer.sample} questions. Every
-    gain came from the evidence. The generator never changed.</p>
+    held out. ${int(c.questions)} questions are generated from the tables themselves. The system
+    returns the right datasheet at rank 1 on all ${int(dense.questions)} indexed questions, and answers
+    ${pct(results.answer.correct)}% of them correctly. Vector search alone would rank it first only
+    ${pct(dense.recall[1])}% of the time, on those same questions, which spell the part number out in
+    full. Part numbers are the tokens an embedding is worst at, and ${c.documents} lookalike datasheets
+    is where that becomes the whole problem.</p>
   </div>
 
   <section style="margin-top:26px">
+    <div class="rowlab">Shipped</div>
     <div class="results">
       <div class="fig">
-        <div class="k">Dense recall@1</div>
-        <div class="v">${num(dense.recall[1])}</div>
-        <div class="d">Vector search alone, on ${int(dense.questions)} indexed questions.</div>
-      </div>
-      <div class="fig">
-        <div class="k">Fused recall@1</div>
+        <div class="k">Retrieval, recall@1</div>
         <div class="v">${num(results.retrieval[results.best].recall[1])}</div>
-        <div class="d">Vector search fused with a part-number lookup.</div>
+        <div class="d">Right datasheet at rank 1, all ${int(dense.questions)} indexed questions.</div>
       </div>
       <div class="fig">
         <div class="k">Answer accuracy</div>
@@ -268,19 +266,28 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
         <div class="d">${results.answer.sample} questions, value and unit, 1% tolerance.</div>
       </div>
       <div class="fig">
-        <div class="k">Refusal, model alone</div>
-        <div class="v">${pct(results.refusal.refused)}%</div>
-        <div class="d">Held-out parts the model declined to answer unaided.</div>
+        <div class="k">Refusal, held-out parts</div>
+        <div class="v">${pct(results.refusal.guarded.refused)}%</div>
+        <div class="d">Identifier guard on, costing ${pct(results.refusal.guarded.wronglyRefusedIndexed)}% of indexed parts.</div>
+      </div>
+    </div>
+
+    <div class="rowlab">Findings</div>
+    <div class="results">
+      <div class="fig">
+        <div class="k">Vector search alone</div>
+        <div class="v">${num(dense.recall[1])}</div>
+        <div class="d">The same corpus without the part-number arm. Not shipped. See &sect;1.1.</div>
       </div>
       <div class="fig">
-        <div class="k">Refusal, as shipped</div>
-        <div class="v">${pct(results.refusal.guarded.refused)}%</div>
-        <div class="d">With the identifier guard on, costing ${pct(results.refusal.guarded.wronglyRefusedIndexed)}% of indexed parts.</div>
+        <div class="k">Refusal, model alone</div>
+        <div class="v">${pct(results.refusal.refused)}%</div>
+        <div class="d">What the model does when nothing but the model is watching.</div>
       </div>
       <div class="fig">
         <div class="k">Inventions that are correct</div>
         <div class="v warn">${pct(results.refusal.hallucinatedButCorrect)}%</div>
-        <div class="d">Of the ${pct(results.refusal.hallucinated)}% it invents, unaided. See §1.4.</div>
+        <div class="d">Of the ${pct(results.refusal.hallucinated)}% it invents unaided. See &sect;1.4.</div>
       </div>
     </div>
   </section>
@@ -299,11 +306,15 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
       <tbody>${ablationRows(results)}</tbody>
     </table>
     </div>
-    <p class="find"><strong>The 1.000 is a primary-key read, not a triumph.</strong> The fused arm
-    queries the exact part the question names. The number worth reading is the ${num(dense.recall[1])}
-    beside it, on questions that spell the document's name out in full. The middle row is the rerank
-    most demos ship, and it stops at exactly dense's own recall@10: a rerank reorders what it was
-    handed and cannot retrieve what never came back.</p>
+    <p class="find"><strong>Retrieval is solved: ${int(dense.questions)} of ${int(dense.questions)}
+    indexed questions return the right datasheet at rank 1.</strong> That is a key lookup, and it is
+    meant to be. The row above it is the finding. Dense retrieval alone ranks the named datasheet first
+    ${pct(dense.recall[1])}% of the time, on questions that spell its name out in full, and that is the
+    pipeline most RAG demos ship. The middle row is the usual patch: rerank the dense results and float
+    the named document up. It stops at exactly dense's own recall@10, because a rerank reorders what it
+    was handed and cannot retrieve what never came back. Fusing a part-number lookup into the query is
+    the difference between a system that opens the wrong datasheet a third of the time and one that
+    does not.</p>
 
     <h3>1.2 Corpus size</h3>
     <div class="cap">Table 2 · Three real Vectorize indices, same pipeline, each scored only on the
