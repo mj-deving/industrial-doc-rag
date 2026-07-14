@@ -2454,9 +2454,9 @@
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|100|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN1R0-100ASF",
       "BUK7A1R0-100L"
@@ -2467,13 +2467,13 @@
     "filter": {
       "channel": "N",
       "vds": 100,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|100|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9Y12-100E",
       "PSMN012-100YL"
@@ -2484,13 +2484,13 @@
     "filter": {
       "channel": "N",
       "vds": 100,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|20|VGS = 4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 4.5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 20 V whose R_DS(on) is specified at VGS = 4.5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 20 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 4.5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PMPB10XNE"
     ],
@@ -2500,13 +2500,13 @@
     "filter": {
       "channel": "N",
       "vds": 20,
-      "conditions": "VGS = 4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|25|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|25|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 25 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 25 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMNR51-25YLH"
     ],
@@ -2516,13 +2516,13 @@
     "filter": {
       "channel": "N",
       "vds": 25,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|30|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMNR58-30YLH"
     ],
@@ -2532,13 +2532,13 @@
     "filter": {
       "channel": "N",
       "vds": 30,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|30|VGS = 4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 4.5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at VGS = 4.5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 4.5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN1R2-30YLD"
     ],
@@ -2548,13 +2548,13 @@
     "filter": {
       "channel": "N",
       "vds": 30,
-      "conditions": "VGS = 4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|30|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9M5R2-30E"
     ],
@@ -2564,13 +2564,13 @@
     "filter": {
       "channel": "N",
       "vds": 30,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|40|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK7S0R7-40H",
       "PSMNR70-40SSH"
@@ -2581,13 +2581,13 @@
     "filter": {
       "channel": "N",
       "vds": 40,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|40|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK961R6-40E"
     ],
@@ -2597,13 +2597,13 @@
     "filter": {
       "channel": "N",
       "vds": 40,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|55|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|55|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 55 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 55 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN1R2-55SLH"
     ],
@@ -2613,13 +2613,13 @@
     "filter": {
       "channel": "N",
       "vds": 55,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|60|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN4R0-60YS"
     ],
@@ -2629,13 +2629,13 @@
     "filter": {
       "channel": "N",
       "vds": 60,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|60|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9Y4R8-60E"
     ],
@@ -2645,13 +2645,13 @@
     "filter": {
       "channel": "N",
       "vds": 60,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|80|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMNR90-80ASF"
     ],
@@ -2661,13 +2661,13 @@
     "filter": {
       "channel": "N",
       "vds": 80,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:N|80|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9Y11-80E",
       "PSMN010-80YL"
@@ -2678,13 +2678,13 @@
     "filter": {
       "channel": "N",
       "vds": 80,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:P|12|VGS = -4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -4.5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the P-channel parts rated 12 V whose R_DS(on) is specified at VGS = -4.5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 12 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -4.5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PMPB08R4VP"
     ],
@@ -2694,13 +2694,13 @@
     "filter": {
       "channel": "P",
       "vds": 12,
-      "conditions": "VGS = -4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:P|20|VGS = -4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -4.5 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the P-channel parts rated 20 V whose R_DS(on) is specified at VGS = -4.5 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 20 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -4.5 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "PMPB12R5UPE"
     ],
@@ -2710,13 +2710,13 @@
     "filter": {
       "channel": "P",
       "vds": 20,
-      "conditions": "VGS = -4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:P|30|VGS = -10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:P|30|Tj = 25 °C; VGS = -10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the P-channel parts rated 30 V whose R_DS(on) is specified at VGS = -10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK6Y10-30P"
     ],
@@ -2726,13 +2726,13 @@
     "filter": {
       "channel": "P",
       "vds": 30,
-      "conditions": "VGS = -10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -10 V"
     }
   },
   {
-    "id": "corpus:rdson-min-value:P|60|VGS = -10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min-value:P|60|Tj = 25 °C; VGS = -10 V",
     "kind": "superlative-value",
-    "question": "In this corpus, among the P-channel parts rated 60 V whose R_DS(on) is specified at VGS = -10 V; Tj = 25 °C, what is the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 60 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -10 V, what is the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK6Y33-60P"
     ],
@@ -2742,13 +2742,13 @@
     "filter": {
       "channel": "P",
       "vds": 60,
-      "conditions": "VGS = -10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|100|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN1R0-100ASF",
       "BUK7A1R0-100L"
@@ -2759,13 +2759,13 @@
     "filter": {
       "channel": "N",
       "vds": 100,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|100|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 100 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9Y12-100E",
       "PSMN012-100YL"
@@ -2776,13 +2776,13 @@
     "filter": {
       "channel": "N",
       "vds": 100,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|20|VGS = 4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 4.5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 20 V whose R_DS(on) is specified at VGS = 4.5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 20 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 4.5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PMPB10XNE"
     ],
@@ -2792,13 +2792,13 @@
     "filter": {
       "channel": "N",
       "vds": 20,
-      "conditions": "VGS = 4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|25|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|25|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 25 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 25 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMNR51-25YLH"
     ],
@@ -2808,13 +2808,13 @@
     "filter": {
       "channel": "N",
       "vds": 25,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|30|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMNR58-30YLH"
     ],
@@ -2824,13 +2824,13 @@
     "filter": {
       "channel": "N",
       "vds": 30,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|30|VGS = 4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 4.5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at VGS = 4.5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 4.5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN1R2-30YLD"
     ],
@@ -2840,13 +2840,13 @@
     "filter": {
       "channel": "N",
       "vds": 30,
-      "conditions": "VGS = 4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|30|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9M5R2-30E"
     ],
@@ -2856,13 +2856,13 @@
     "filter": {
       "channel": "N",
       "vds": 30,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|40|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK7S0R7-40H",
       "PSMNR70-40SSH"
@@ -2873,13 +2873,13 @@
     "filter": {
       "channel": "N",
       "vds": 40,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|40|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 40 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK961R6-40E"
     ],
@@ -2889,13 +2889,13 @@
     "filter": {
       "channel": "N",
       "vds": 40,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|55|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|55|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 55 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 55 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN1R2-55SLH"
     ],
@@ -2905,13 +2905,13 @@
     "filter": {
       "channel": "N",
       "vds": 55,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|60|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMN4R0-60YS"
     ],
@@ -2921,13 +2921,13 @@
     "filter": {
       "channel": "N",
       "vds": 60,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|60|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 60 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9Y4R8-60E"
     ],
@@ -2937,13 +2937,13 @@
     "filter": {
       "channel": "N",
       "vds": 60,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|80|VGS = 10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at VGS = 10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PSMNR90-80ASF"
     ],
@@ -2953,13 +2953,13 @@
     "filter": {
       "channel": "N",
       "vds": 80,
-      "conditions": "VGS = 10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:N|80|VGS = 5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at VGS = 5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the N-channel parts rated 80 V whose R_DS(on) is specified at Tj = 25 °C; VGS = 5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK9Y11-80E",
       "PSMN010-80YL"
@@ -2970,13 +2970,13 @@
     "filter": {
       "channel": "N",
       "vds": 80,
-      "conditions": "VGS = 5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = 5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:P|12|VGS = -4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -4.5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the P-channel parts rated 12 V whose R_DS(on) is specified at VGS = -4.5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 12 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -4.5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PMPB08R4VP"
     ],
@@ -2986,13 +2986,13 @@
     "filter": {
       "channel": "P",
       "vds": 12,
-      "conditions": "VGS = -4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:P|20|VGS = -4.5 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -4.5 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the P-channel parts rated 20 V whose R_DS(on) is specified at VGS = -4.5 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 20 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -4.5 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "PMPB12R5UPE"
     ],
@@ -3002,13 +3002,13 @@
     "filter": {
       "channel": "P",
       "vds": 20,
-      "conditions": "VGS = -4.5 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -4.5 V"
     }
   },
   {
-    "id": "corpus:rdson-min:P|30|VGS = -10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:P|30|Tj = 25 °C; VGS = -10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the P-channel parts rated 30 V whose R_DS(on) is specified at VGS = -10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 30 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK6Y10-30P"
     ],
@@ -3018,13 +3018,13 @@
     "filter": {
       "channel": "P",
       "vds": 30,
-      "conditions": "VGS = -10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -10 V"
     }
   },
   {
-    "id": "corpus:rdson-min:P|60|VGS = -10 V; Tj = 25 °C",
+    "id": "corpus:rdson-min:P|60|Tj = 25 °C; VGS = -10 V",
     "kind": "superlative-part",
-    "question": "In this corpus, among the P-channel parts rated 60 V whose R_DS(on) is specified at VGS = -10 V; Tj = 25 °C, which part has the lowest maximum R_DS(on)?",
+    "question": "In this corpus, among the P-channel parts rated 60 V whose R_DS(on) is specified at Tj = 25 °C; VGS = -10 V, which part has the lowest maximum R_DS(on)?",
     "truthParts": [
       "BUK6Y33-60P"
     ],
@@ -3034,7 +3034,7 @@
     "filter": {
       "channel": "P",
       "vds": 60,
-      "conditions": "VGS = -10 V; Tj = 25 °C"
+      "conditions": "Tj = 25 °C; VGS = -10 V"
     }
   }
 ]

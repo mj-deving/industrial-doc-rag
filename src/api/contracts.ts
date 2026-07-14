@@ -14,6 +14,141 @@
  * third of the index.
  */
 
+/**
+ * One row of the catalogue: what the model read out of one datasheet.
+ *
+ * The conditions travel WITH the value and are not metadata about it. RDS(on) is
+ * quoted at a gate voltage, and this corpus quotes it at five different ones, so a
+ * row that stored 4.1 mΩ without `VGS = 4.5 V` would let a query rank that part
+ * against another part's test bench.
+ */
+export type Measured = { value: number; unit: string; conditions: string };
+
+export type Attributes = {
+  part: string;
+  /** Signed as the datasheet prints it. A P-channel part is negative. */
+  vds: number | null;
+  /**
+   * EVERY row, not the row. A datasheet quotes on-resistance at more than one gate
+   * drive: the same die reads 2.4 mΩ at VGS = 10 V and 3.6 mΩ at VGS = 4.5 V, and
+   * both are true.
+   *
+   * The first version of this type stored one measurement, and it was wrong in a way
+   * that produces a confident wrong answer rather than a missing one. If the model
+   * happened to record the 4.5 V row, the part vanished from every comparison at
+   * 10 V, and a superlative over that class returned the best of the parts that
+   * remained. The winner would be wrong, the number exact, and nothing would look
+   * broken. Measured on the first extraction: 35 of 426 parts landed in a class the
+   * datasheet does not put them in alone.
+   */
+  rdson: Measured[];
+  id: Measured[];
+  /** Every name the ordering table prints. A package has more than one true name. */
+  package: string[];
+};
+
+/**
+ * Where a model's free text becomes data.
+ *
+ * The extraction reads the datasheet correctly and writes it down the way a person
+ * would, which is not the way a table wants it:
+ *
+ *   conditions   `VGS = 10 V; ID = 20 A; Tj = 25 °C; Fig. 12`   the figure reference rode along
+ *   package      `LFPAK56; Power-SO8 (SOT669)`                  three names in one string
+ *
+ * Left alone, both are silent product defects rather than cosmetic ones. A row
+ * whose package is the single string `TO-236AB (SOT23)` is invisible to a count
+ * filtered on `SOT23`, and a condition string carrying `Fig. 12` lands in a
+ * condition class of its own, so the part is compared against nobody.
+ *
+ * These were first read as extraction errors — agreement with the label came out at
+ * 0.51 on conditions and 0.61 on packages — and the disagreements turned out to be
+ * almost entirely this. The model had read the datasheet right. The comparison, and
+ * the storage, were wrong. That is the fourth time in this project that a number
+ * blamed the system and meant the instrument.
+ */
+
+/** A condition term the corpus actually measures under. Everything else in the
+ *  string (a figure reference, a stray semicolon) is not a condition. */
+const CONDITION_TERM = /^(V(?:GS|DS)|T(?:j|mb|amb)|ID)\s*=/i;
+
+/** Keep the terms that state a condition, in the order printed. */
+export function cleanConditions(conditions: string): string {
+  return conditions
+    .split(";")
+    .map((term) => term.trim())
+    .filter((term) => CONDITION_TERM.test(term))
+    .join("; ");
+}
+
+/**
+ * The condition CLASS of a measurement: its conditions with the drain current
+ * dropped, and its terms in a canonical order.
+ *
+ * `ID = 10 A` varies part to part (it tracks the part's own rating) and barely moves
+ * on-resistance. The gate voltage and the temperature symbol do. Dropping the
+ * current collapses this corpus's 150 distinct condition strings into six real
+ * classes, and keeping `Tmb` (mounting base, which assumes a heatsink) apart from
+ * `Tamb` (free air) stops a thermal assumption from winning a comparison.
+ *
+ * Two parts may be ranked against each other only if their classes are equal, and
+ * THAT is why the terms are sorted. A datasheet prints `VGS = 10 V; Tmb = 25 °C` and
+ * the one beside it prints `Tmb = 25 °C; VGS = 10 V`, and the two are the same test
+ * bench. Measured on the real extraction: 43 parts written the first way, 25 the
+ * second. Measured on the label file: 276 and 100. Keying the class on the printed
+ * order made them two classes, so a superlative over that class competed 43 parts
+ * instead of 68 and returned the best of a subset — an exact number, the wrong
+ * winner, and nothing that looks broken. The order the datasheet prints its
+ * conditions in is typography. It is not a condition.
+ *
+ * The truth generator (`tools/questions-corpus.ts`) already sorted, which is the only
+ * reason the ground truth for these questions is not wrong in the same way.
+ */
+export function classOf(conditions: string): string {
+  return cleanConditions(conditions)
+    .split(";")
+    .map((term) => term.trim())
+    .filter((term) => !/^ID\s*=/i.test(term))
+    .sort()
+    .join("; ");
+}
+
+/**
+ * Split the names a model wrote as prose into the names the ordering table prints.
+ *
+ * `LFPAK56; Power-SO8 (SOT669)` is three names, and every one of them is a true
+ * name for that package. A buyer searching any of them means the same part.
+ */
+/**
+ * A package name is a DESIGNATOR, not a description.
+ *
+ * The ordering table prints `TSOP6  plastic, surface-mounted package (SC-74)`, and
+ * the names in there are `TSOP6` and `SC-74`. The rest is the datasheet describing
+ * the thing rather than naming it. A splitter that kept it would put `plastic` in
+ * the catalogue's vocabulary, and a customer filtering on `plastic` would get
+ * matches, which is worse than getting none.
+ *
+ * Two properties separate the two, and both hold across every name this corpus
+ * prints (SOT669, Power-SO8, LFPAK, LFPAK56D, TO-236AB, SC-74, D2PAK, CCPAK1212):
+ * a designator carries an uppercase letter or a digit, and it has no space in it.
+ */
+function isPackageName(name: string): boolean {
+  return name.length >= 2 && name.length <= 24 && !/\s/.test(name) && /[A-Z0-9]/.test(name);
+}
+
+export function cleanPackages(names: string[]): string[] {
+  const out = new Set<string>();
+  for (const raw of names) {
+    for (const piece of raw.split(/[;,]|\s{2,}/)) {
+      // A parenthesised alternative is a name, not a gloss: `TO-236AB (SOT23)`.
+      for (const name of piece.split(/[()]/)) {
+        if (isPackageName(name.trim())) out.add(name.trim());
+      }
+    }
+  }
+  return [...out];
+}
+
 export type IngestChunk = {
   id: string;
   part: string;

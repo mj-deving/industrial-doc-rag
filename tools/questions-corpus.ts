@@ -35,6 +35,7 @@
  * Usage: bun tools/questions-corpus.ts data/groundtruth.json > data/questions-corpus.json
  */
 
+import { classOf } from "../src/api/contracts";
 import { isHoldout } from "./split";
 import type { GroundTruth, Measurement } from "./groundtruth";
 
@@ -57,32 +58,23 @@ export type CorpusQuestion = {
 };
 
 /**
- * The condition class of an RDS(on) figure: everything except the drain current.
+ * The condition class of a figure, for BOTH fields, and there is exactly one
+ * definition of it: `classOf` in `src/api/contracts.ts`.
  *
- * `ID = 10 A` varies part to part (it is roughly a quarter of the part's rating)
- * and does not move RDS(on) much. VGS and Tj do, so they are the class. Dropping
- * ID is what collapses 150 strings to six.
- */
-export function rdsonClass(m: Measurement): string {
-  return m.conditions
-    .split(";")
-    .map((term) => term.trim())
-    .filter((term) => !/^ID\s*=/.test(term))
-    .join("; ");
-}
-
-/**
- * The condition class of an ID figure, INCLUDING which temperature is held.
+ * It drops the drain current (`ID = 10 A` tracks the part's own rating and barely
+ * moves on-resistance, and dropping it collapses 150 strings to six), it keeps `Tmb`
+ * (mounting base, so a heatsink) apart from `Tamb` (free air), and it sorts the
+ * terms, because `VGS = 10 V; Tmb = 25 °C` and `Tmb = 25 °C; VGS = 10 V` are the
+ * same test bench printed two ways.
  *
- * `Tmb` and `Tamb` must never fall into the same class. See the header.
+ * These were two hand-written copies of that function, and only one of them sorted.
+ * The truth came out right and the catalogue came out wrong, and the two could not
+ * meet: the question asked about a class the catalogue did not have a name for. A
+ * rule this load-bearing gets one implementation, and the truth generator and the
+ * thing being graded both import it.
  */
-export function idClass(m: Measurement): string {
-  return m.conditions
-    .split(";")
-    .map((term) => term.trim())
-    .sort()
-    .join("; ");
-}
+export const rdsonClass = (m: Measurement): string => classOf(m.conditions);
+export const idClass = (m: Measurement): string => classOf(m.conditions);
 
 const channelName = (channel: "N" | "P") => (channel === "N" ? "N-channel" : "P-channel");
 

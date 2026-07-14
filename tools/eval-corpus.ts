@@ -32,7 +32,14 @@
 
 import { namedParts } from "../packages/doc-rag/src/answer";
 import { measures } from "../packages/doc-rag/src/grade";
+import { vocabulary } from "../src/api/catalog";
+import type { Attributes } from "../src/api/contracts";
 import type { CorpusQuestion } from "./questions-corpus";
+
+const catalog: Attributes[] = await Bun.file("data/attributes.json").json();
+/** The same set the shipped guard is handed, read from the same file, so the eval
+ *  attributes a refusal to the mechanism that actually produced it. */
+const NOT_PARTS = new Set(vocabulary(catalog).packages);
 
 const workerUrl = process.argv[2];
 const token = process.env.INGEST_TOKEN;
@@ -45,11 +52,25 @@ if (!workerUrl || !token) {
 const REFUSAL = "NOT_IN_CORPUS";
 const TOLERANCE = 0.01;
 
-type Outcome = "correct" | "wrong" | "guard-refused" | "model-refused";
+/**
+ * `hedged` is the outcome this eval nearly failed to have.
+ *
+ * Asked for the lowest RDS(on) at VGS = 10 V, a catalogue that could not pin the
+ * class answers with the winner of EVERY class — a correct, useful sentence, and a
+ * non-answer to the question that was asked. The right part is somewhere in that
+ * list, so a grader that reads the prose finds it and says correct. The grade would
+ * have gone UP by hedging.
+ *
+ * So a hedge is read from the result's kind, not from its text, and it is neither
+ * correct nor wrong: it states no false fact and it answers no question.
+ */
+type Outcome = "correct" | "wrong" | "hedged" | "guard-refused" | "model-refused" | "catalog-empty";
 
 type Case = {
   id: string;
   kind: CorpusQuestion["kind"];
+  /** Which machine answered: the catalogue counted, or the model wrote. */
+  route: string;
   outcome: Outcome;
   /** Was the true winner's datasheet in the retrieved set at all? `null` when the
    *  guard refused before retrieval could matter. This is the column that turns
@@ -100,49 +121,100 @@ async function post<T>(path: string, body: unknown, attempt = 0): Promise<T> {
   throw new Error(`${path}: HTTP ${response.status} after ${attempt + 1} attempts ${text}`);
 }
 
-type Answered = { id: string; text: string; refused: boolean; retrieved: string[] };
+type Answered = {
+  id: string;
+  text: string;
+  refused: boolean;
+  retrieved: string[];
+  route?: string;
+  kind?: string;
+};
 
 const questions: CorpusQuestion[] = await Bun.file("data/questions-corpus.json").json();
 const byId = new Map(questions.map((q) => [q.id, q]));
 
-// The SHIPPED path, guard on. This is what a visitor to the console gets, and the
-// point of the run is what the visitor gets, not what a flag could produce.
+/**
+ * Asked through `/query`, the endpoint the console calls.
+ *
+ * The baseline was measured through `/harness/answer` with the guard on, which was
+ * byte-for-byte what `/query` did at the time. `/query` now decides a ROUTE first,
+ * and the route is the thing under test, so the eval has to walk through the front
+ * door. Measuring the harness would measure the half of the system that did not
+ * change and report it as unchanged.
+ */
+type QueryResponse = {
+  answer: string;
+  refused: boolean;
+  route?: string;
+  /** The catalogue result's shape. `ambiguous-conditions` is a hedge; see `Outcome`. */
+  kind?: string;
+  sources?: { part: string }[];
+};
+
 const answers: Answered[] = [];
-for (let at = 0; at < questions.length; at += 10) {
-  const batch = questions.slice(at, at + 10);
-  const { results } = await post<{ results: Answered[] }>("/harness/answer", {
-    strategy: "hybrid-rrf",
-    k: 10,
-    guard: true,
-    questions: batch.map((q) => ({ id: q.id, question: q.question }))
-  });
-  answers.push(...results);
+const CONCURRENCY = 4;
+for (let at = 0; at < questions.length; at += CONCURRENCY) {
+  const batch = questions.slice(at, at + CONCURRENCY);
+  const got = await Promise.all(
+    batch.map(async (q) => {
+      const r = await post<QueryResponse>("/query", { question: q.question });
+      return {
+        id: q.id,
+        text: r.answer,
+        refused: r.refused,
+        retrieved: (r.sources ?? []).map((s) => s.part),
+        route: r.route,
+        kind: r.kind
+      };
+    })
+  );
+  answers.push(...got);
   console.error(`  ${answers.length}/${questions.length}`);
 }
 
 const cases: Case[] = answers.map((got) => {
   const q = byId.get(got.id)!;
-  const refusedByGuard = got.refused && namedParts(q.question).length > 0;
-  const sawWinner = refusedByGuard ? null : q.truthParts.some((p) => got.retrieved.includes(p));
+  // Attributed to the mechanism that actually refused, never summed. A catalogue
+  // that matched no rows is a different failure from a guard that mistook a package
+  // for a part, and both are different from a model that honestly declined.
+  const onCatalog = got.route === "catalog";
+  const refusedByGuard =
+    got.refused &&
+    !onCatalog &&
+    namedParts(q.question).filter((token) => !NOT_PARTS.has(token)).length > 0;
+  const sawWinner =
+    refusedByGuard || onCatalog ? null : q.truthParts.some((p) => got.retrieved.includes(p));
+
+  // Every superlative in this set NAMES its condition class. A catalogue answer that
+  // reports one winner per class did not use it, and the honest grade is neither
+  // correct nor wrong. Checked BEFORE correctness, because a hedge lists the true
+  // winner among the others and would otherwise grade itself right.
+  const hedged = onCatalog && got.kind === "ambiguous-conditions" && q.filter.conditions !== undefined;
 
   const correct =
-    q.kind === "count"
+    !hedged &&
+    (q.kind === "count"
       ? countIsCorrect(got.text, q.truthValue!)
       : q.kind === "superlative-value"
         ? valueIsCorrect(got.text, q.truthValue!, q.unit!)
-        : namesPart(got.text, q.truthParts);
+        : namesPart(got.text, q.truthParts));
 
   const outcome: Outcome = got.refused
-    ? refusedByGuard
-      ? "guard-refused"
-      : "model-refused"
-    : correct
-      ? "correct"
-      : "wrong";
+    ? onCatalog
+      ? "catalog-empty"
+      : refusedByGuard
+        ? "guard-refused"
+        : "model-refused"
+    : hedged
+      ? "hedged"
+      : correct
+        ? "correct"
+        : "wrong";
 
   return {
     id: got.id,
     kind: q.kind,
+    route: got.route ?? "retrieval",
     outcome,
     sawWinner,
     candidates: q.candidates,
@@ -160,11 +232,17 @@ const answered = cases.filter((c) => c.outcome === "correct" || c.outcome === "w
 const summary = {
   generatedAt: new Date().toISOString(),
   questions: cases.length,
+  routes: {
+    catalog: cases.filter((c) => c.route === "catalog").length,
+    retrieval: cases.filter((c) => c.route !== "catalog").length
+  },
   outcomes: {
     correct: cases.filter((c) => c.outcome === "correct").length,
     wrong: cases.filter((c) => c.outcome === "wrong").length,
+    hedged: cases.filter((c) => c.outcome === "hedged").length,
     guardRefused: cases.filter((c) => c.outcome === "guard-refused").length,
-    modelRefused: cases.filter((c) => c.outcome === "model-refused").length
+    modelRefused: cases.filter((c) => c.outcome === "model-refused").length,
+    catalogEmpty: cases.filter((c) => c.outcome === "catalog-empty").length
   },
   accuracy: rate(cases, (c) => c.outcome === "correct"),
   /** Of the questions it chose to ANSWER, how many were right. This is the number
@@ -177,6 +255,7 @@ const summary = {
         n: byKind(kind).length,
         correct: rate(byKind(kind), (c) => c.outcome === "correct"),
         wrong: rate(byKind(kind), (c) => c.outcome === "wrong"),
+        hedged: rate(byKind(kind), (c) => c.outcome === "hedged"),
         guardRefused: rate(byKind(kind), (c) => c.outcome === "guard-refused"),
         modelRefused: rate(byKind(kind), (c) => c.outcome === "model-refused")
       }
@@ -196,6 +275,7 @@ console.error("");
 console.error(`questions            ${summary.questions}`);
 console.error(`correct              ${summary.outcomes.correct}`);
 console.error(`wrong                ${summary.outcomes.wrong}`);
+console.error(`hedged               ${summary.outcomes.hedged}   (answered every condition class, so it answered none)`);
 console.error(`refused by the guard ${summary.outcomes.guardRefused}   (false positives: a package is not a part)`);
 console.error(`refused by the model ${summary.outcomes.modelRefused}   (honest: the answer is not in ten chunks)`);
 console.error("");

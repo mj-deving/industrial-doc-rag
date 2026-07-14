@@ -101,12 +101,14 @@ describe("the truth is the corpus the system actually has", () => {
     // Falsifier for the whole claim: if the generator scanned all 680 labels, at
     // least one group's extremum would land on a holdout, because 27% of the
     // corpus is held out and the extremes are not politely distributed.
+    // `candidatesOf(q)` is hoisted out of the predicate on purpose. Called inside it,
+    // it rescanned all 680 labels once per label per question — 25 million operations,
+    // six seconds, and a test that failed by TIMING OUT whenever the machine was busy.
+    // A flaky test is a broken test, and this one was broken by being written inside
+    // out, not by the work being heavy.
     const wouldWin = superlatives.filter((q) => {
-      const all = labels.filter((l) => {
-        const c = candidatesOf(q).find((x) => x.part === l.part);
-        return c !== undefined;
-      });
-      return all.some((l) => isHoldout(l.part));
+      const candidates = new Set(candidatesOf(q).map((c) => c.part));
+      return labels.some((l) => candidates.has(l.part) && isHoldout(l.part));
     });
     expect(wouldWin).toHaveLength(0);
   });
