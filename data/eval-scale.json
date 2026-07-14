@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T10:12:39.703Z",
+  "generatedAt": "2026-07-14T18:53:46.429Z",
   "strategies": [
     "dense",
     "hybrid-rrf"
@@ -19,34 +19,34 @@
       "denseRecallAt5": 1,
       "denseMrr": 1,
       "fusedRecallAt1": 1,
-      "p50Ms": 489,
-      "p95Ms": 976
+      "p50Ms": 605,
+      "p95Ms": 1301
     },
     {
       "documents": 100,
       "chunks": 5133,
-      "questions": 399,
+      "questions": 400,
       "storedDimensions": 5256192,
       "storageUsdPerMonth": 0,
-      "denseRecallAt1": 0.7318,
-      "denseRecallAt5": 0.9474,
-      "denseMrr": 0.8234,
+      "denseRecallAt1": 0.7325,
+      "denseRecallAt5": 0.9475,
+      "denseMrr": 0.8239,
       "fusedRecallAt1": 1,
-      "p50Ms": 488,
-      "p95Ms": 1129
+      "p50Ms": 542,
+      "p95Ms": 869
     },
     {
       "documents": 497,
       "chunks": 25536,
-      "questions": 1918,
+      "questions": 1987,
       "storedDimensions": 26148864,
       "storageUsdPerMonth": 0.0081,
-      "denseRecallAt1": 0.6538,
-      "denseRecallAt5": 0.9067,
-      "denseMrr": 0.7581,
+      "denseRecallAt1": 0.6427,
+      "denseRecallAt5": 0.8983,
+      "denseMrr": 0.7485,
       "fusedRecallAt1": 1,
-      "p50Ms": 487,
-      "p95Ms": 701
+      "p50Ms": 598,
+      "p95Ms": 1080
     }
   ]
 }

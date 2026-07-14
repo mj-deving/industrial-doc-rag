@@ -1,45 +1,22 @@
 {
-  "generatedAt": "2026-07-14T13:01:36.996Z",
-  "questions": 95,
+  "generatedAt": "2026-07-14T18:36:35.476Z",
+  "questions": 248,
   "outcomes": {
-    "correct": 2,
-    "wrong": 23,
-    "guardRefused": 25,
-    "modelRefused": 45
+    "correct": 3,
+    "wrong": 41,
+    "guardRefused": 0,
+    "modelRefused": 204
   },
-  "accuracy": 0.0211,
-  "precisionWhenAnswered": 0.08,
-  "byKind": {
-    "superlative-part": {
-      "n": 37,
-      "correct": 0.0541,
-      "wrong": 0.1892,
-      "guardRefused": 0,
-      "modelRefused": 0.7568
-    },
-    "superlative-value": {
-      "n": 18,
-      "correct": 0,
-      "wrong": 0.1667,
-      "guardRefused": 0,
-      "modelRefused": 0.8333
-    },
-    "count": {
-      "n": 40,
-      "correct": 0,
-      "wrong": 0.325,
-      "guardRefused": 0.625,
-      "modelRefused": 0.05
-    }
-  },
-  "wrongWithoutSeeingWinner": 0.4783,
+  "accuracy": 0.0121,
+  "precisionWhenAnswered": 0.0682,
+  "wrongWithoutSeeingWinner": 0.6829,
+  "winnerRetrieved": 0.3636,
   "cases": [
     {
       "id": "corpus:count-package:CCPAK1212",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 9,
       "expected": "9",
       "got": "NOT_IN_CORPUS"
     },
@@ -48,7 +25,6 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 9,
       "expected": "9",
       "got": "There are 3 parts offered in a CCPAK1212i package: 1. PSMN1R4-100CSF 2. BUK7T1R0-100L 3. PSMNR90-80CSF"
     },
@@ -57,35 +33,23 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 30,
       "expected": "30",
       "got": "There are 11 parts offered in a D2PAK package."
     },
     {
       "id": "corpus:count-package:DFN2020M-6",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 20,
       "expected": "20",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:DFN2020MD-6",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 32,
-      "expected": "32",
-      "got": "NOT_IN_CORPUS"
-    },
-    {
-      "id": "corpus:count-package:DFN2020MD‑6",
-      "kind": "count",
-      "outcome": "guard-refused",
-      "sawWinner": null,
-      "candidates": 16,
-      "expected": "16",
+      "expected": "48",
       "got": "NOT_IN_CORPUS"
     },
     {
@@ -93,70 +57,62 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 38,
       "expected": "38",
       "got": "All 9 parts are offered in a LFPAK package."
     },
     {
       "id": "corpus:count-package:LFPAK33",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 71,
       "expected": "71",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:LFPAK56",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 113,
       "expected": "113",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:LFPAK56D",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 51,
       "expected": "51",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:LFPAK56E",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 13,
       "expected": "13",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:LFPAK88",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 17,
       "expected": "17",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:MLPAK33",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 7,
       "expected": "7",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:Power-SO8",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 139,
       "expected": "139",
       "got": "NOT_IN_CORPUS"
     },
@@ -165,7 +121,6 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 6,
       "expected": "6",
       "got": "There are 5 parts offered in a SC-73 package: 1. BUK9875-100A 2. BUK78150-55A 3. BUK98150-55A 4. BUK7880-55A 5. BUK9880-55A and also BUK98180-100A."
     },
@@ -174,124 +129,110 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 7,
       "expected": "7",
-      "got": "1 part, the PMN40SNA, is offered in a SC-74 package."
+      "got": "According to the provided excerpts, only 1 part, the PMN40SNA, is offered in a SC-74 package."
     },
     {
       "id": "corpus:count-package:SOT1023",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 15,
       "expected": "15",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT1205",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 51,
       "expected": "51",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT1210",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 71,
       "expected": "71",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT1220",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 68,
       "expected": "68",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT1235",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 17,
       "expected": "17",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT223",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 6,
       "expected": "6",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT23",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 39,
       "expected": "39",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT404",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 29,
       "expected": "29",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT457",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 22,
       "expected": "22",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT669",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 150,
       "expected": "150",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT8000A",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 9,
       "expected": "9",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT8002",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 7,
       "expected": "7",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:SOT8005A",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 9,
       "expected": "9",
       "got": "NOT_IN_CORPUS"
     },
@@ -300,16 +241,14 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 29,
       "expected": "29",
-      "got": "All 11 parts are offered in a TO-236AB package."
+      "got": "All 10 parts are offered in a TO-236AB package."
     },
     {
       "id": "corpus:count-package:TSOP6",
       "kind": "count",
-      "outcome": "guard-refused",
+      "outcome": "model-refused",
       "sawWinner": null,
-      "candidates": 22,
       "expected": "22",
       "got": "NOT_IN_CORPUS"
     },
@@ -317,8 +256,7 @@
       "id": "corpus:count-vds:100",
       "kind": "count",
       "outcome": "model-refused",
-      "sawWinner": true,
-      "candidates": 69,
+      "sawWinner": null,
       "expected": "69",
       "got": "NOT_IN_CORPUS"
     },
@@ -327,7 +265,6 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 6,
       "expected": "6",
       "got": "Only 1 part is rated 12 V: PSMN5R5-60YS."
     },
@@ -336,16 +273,14 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 42,
       "expected": "42",
-      "got": "There are 5 parts rated 20 V: PSMN027-100BS, PSMN028-100YS, PSMN5R6-100BS, PMN20ENA, and PMPB30XPE, and also PMV50XP."
+      "got": "There are 5 parts rated 20 V: PSMN027-100BS, PSMN028-100YS, PSMN5R6-100BS, PMN20ENA, and PMPB30XPE."
     },
     {
       "id": "corpus:count-vds:25",
       "kind": "count",
       "outcome": "model-refused",
-      "sawWinner": true,
-      "candidates": 18,
+      "sawWinner": null,
       "expected": "18",
       "got": "NOT_IN_CORPUS"
     },
@@ -354,25 +289,22 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 111,
       "expected": "111",
-      "got": "There are at least 4 parts rated 30 V: PSMN011-30YLC, PSMN7R5-30YLD, PSMN7R0-30MLC, PSMN9R8-30MLC, and PSMN6R0-30YLD."
+      "got": "There are at least 4 parts rated 30 V: PSMN011-30YLC, PSMN7R5-30YLD, PSMN7R0-30MLC, and PSMN6R0-30YLD, and PSMN9R8-30MLC."
     },
     {
       "id": "corpus:count-vds:40",
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 115,
       "expected": "115",
-      "got": "To answer the question, we need to look for the parameter VDS and find the parts that have a rating of 40 V. From the excerpts, we can see that the following pa"
+      "got": "To answer the question, we need to look for the parameter VDS (drain-source voltage) in the excerpts. We find the following parts rated 40 V: - PSMN017-80BS - P"
     },
     {
       "id": "corpus:count-vds:55",
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 5,
       "expected": "5",
       "got": "Based on the provided excerpts, the parts rated 55 V are PMPB55ENEA and PSMN1R2-55SLH. Therefore, there are 2 parts rated 55 V."
     },
@@ -381,7 +313,6 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 72,
       "expected": "72",
       "got": "There are at least 3 parts rated 60 V: PSMN014-60HS, PSMN011-60HL, PSMN7R0-60YS, and PSMN5R5-60YS."
     },
@@ -390,16 +321,30 @@
       "kind": "count",
       "outcome": "wrong",
       "sawWinner": true,
-      "candidates": 54,
       "expected": "54",
       "got": "There are at least 3 parts rated 80 V: PSMN018-80YS, PSMN012-100YS, PSMN2R8-80BS."
+    },
+    {
+      "id": "corpus:id-max:N|100|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN1R0-100ASF | PSMN1R0-100CSF | BUK7A1R0-100L | BUK7T1R0-100L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|100|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9Y12-100E | PSMN012-100YL",
+      "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:id-max:N|100|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 46,
+      "sawWinner": null,
       "expected": "PSMN1R0-100ASF | PSMN1R0-100CSF | BUK7A1R0-100L | BUK7T1R0-100L",
       "got": "NOT_IN_CORPUS"
     },
@@ -407,80 +352,151 @@
       "id": "corpus:id-max:N|100|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 16,
+      "sawWinner": null,
       "expected": "BUK9Y12-100E | PSMN012-100YL",
       "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|20|Tamb = 100 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "PMPB10XNE",
+      "got": "The part PMV20XNE carries 4.8 A at VGS = 4.5 V; Tamb = 100 °C. The part PMPB20XNEA also carries 4.8 A is not found, it carries 4.8 A at the same conditions. The"
     },
     {
       "id": "corpus:id-max:N|20|Tamb = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 12,
       "expected": "PMPB10XNE",
-      "got": "The part PMV20XNE has a continuous drain current of 7.5 A at VGS = 4.5 V; Tamb = 25 °C and the part PMV20XNE is rated 20 V (as inferred from the part number and"
+      "got": "The part PMV20XNEA carries the highest I_D of 7.5 A at VGS = 4.5 V; Tamb = 25 °C."
+    },
+    {
+      "id": "corpus:id-max:N|25|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR51-25YLH",
+      "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:id-max:N|25|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 17,
+      "sawWinner": null,
       "expected": "PSMNR51-25YLH",
       "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|30|Tamb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "PXN4R7-30QL",
+      "got": "PXN010-30QL, 6.5 A at VGS = 10 V; Tamb = 100 °C."
+    },
+    {
+      "id": "corpus:id-max:N|30|Tamb = 100 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "PMPB08R5XN | PMPB06R3XN",
+      "got": "None of the parts in the corpus have their continuous I_D specified at both Tamb = 100 °C and VGS = 4.5 V, except for the [PMPB29XNE] and [PMN30UN] parts. For ["
     },
     {
       "id": "corpus:id-max:N|30|Tamb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 29,
       "expected": "PXN4R7-30QL",
-      "got": "ID: 10 A, at VGS = 10 V; Tamb = 25 °C, for part PMPB10EN and also for part PMPB20EN and also for part PXN010-30QL."
+      "got": "ID: 10 A, Conditions: VGS = 10 V; Tamb = 25 °C, for part PMPB10EN and also for part PMPB20EN is 7.2 A and for part PXN010-30QL is 10.3 A. The highest ID is 10.3"
     },
     {
       "id": "corpus:id-max:N|30|Tamb = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 16,
       "expected": "PMPB08R5XN | PMPB06R3XN",
-      "got": "9.5 A at VGS = 4.5 V; Tamb = 25 °C, part PMPB10XN."
+      "got": "9.5 A at VGS = 4.5 V; Tamb = 25 °C, part PMPB10XN"
+    },
+    {
+      "id": "corpus:id-max:N|30|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR67-30YLE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|30|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9M5R2-30E",
+      "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:id-max:N|30|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 47,
       "expected": "PSMNR58-30YLH",
-      "got": "The part PMPB05R4EN carries the highest I_D of 13 A at VGS = 10 V; Tamb = 25 °C."
+      "got": "The part that carries the highest I_D at the specified conditions is the PMPB05R4EN, with a maximum drain current of 13 A at VGS = 10 V; Tamb = 25 °C."
     },
     {
       "id": "corpus:id-max:N|30|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 6,
+      "sawWinner": null,
       "expected": "BUK9M6R6-30E | BUK9M5R2-30E",
       "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|30|VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PXN4R7-30QL",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|40|Tamb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "PMN20ENA",
+      "got": "ID = 6.5 A at VGS = 10 V; Tamb = 100 °C, part PXN010-30QL is not rated 40 V, so it is not the answer. ID = 2.9 A at VGS = 10 V; Tamb = 100 °C, for part PMN40ENE"
     },
     {
       "id": "corpus:id-max:N|40|Tamb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 8,
+      "sawWinner": null,
       "expected": "BUK9D23-40E | BUK7D25-40E | BUK6D23-40E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|40|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "PSMNR70-40SSH",
+      "got": "ID = 69 A at VGS = 10 V; Tmb = 100 °C for part PSMN4R3-40MSH, and ID = 50 A at VGS = 10 V; Tmb = 100 °C for part BUK9M6R7-40H. Since 69 A is greater than 50 A, "
+    },
+    {
+      "id": "corpus:id-max:N|40|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK961R6-40E",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:id-max:N|40|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 88,
+      "sawWinner": null,
       "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
       "got": "NOT_IN_CORPUS"
     },
@@ -488,26 +504,55 @@
       "id": "corpus:id-max:N|40|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 16,
+      "sawWinner": null,
       "expected": "BUK961R6-40E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|40|VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9D23-40E | BUK7D25-40E | BUK6D23-40E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|60|Tamb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMN40SNA",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:id-max:N|60|Tamb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 15,
+      "sawWinner": null,
       "expected": "BUK7D36-60E",
       "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|60|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK7Y4R8-60E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|60|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "BUK9Y4R8-60E",
+      "got": "ID = 35 A at VGS = 5 V; Tmb = 100 °C for part PSMN011-60HL, and ID = 33 A at VGS = 5 V; Tmb = 100 °C for part PSMN013-60HL. Since 35 A is greater than 33 A, the"
     },
     {
       "id": "corpus:id-max:N|60|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 32,
+      "sawWinner": null,
       "expected": "PSMN3R0-60BS | BUK7Y7R2-60E | BUK7Y6R0-60E | BUK7Y4R8-60E",
       "got": "NOT_IN_CORPUS"
     },
@@ -515,17 +560,39 @@
       "id": "corpus:id-max:N|60|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 19,
+      "sawWinner": null,
       "expected": "PSMN5R6-60YL | BUK9Y4R8-60E | BUK9Y6R0-60E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|60|VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK7D36-60E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|80|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-80CSF | PSMNR90-80ASF",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:id-max:N|80|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9Y11-80E | PSMN010-80YL",
       "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:id-max:N|80|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 42,
+      "sawWinner": null,
       "expected": "PSMNR90-80CSF | PSMNR90-80ASF",
       "got": "NOT_IN_CORPUS"
     },
@@ -533,359 +600,1399 @@
       "id": "corpus:id-max:N|80|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 10,
+      "sawWinner": null,
       "expected": "BUK9Y11-80E | PSMN010-80YL",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:id-max:P|12|Tamb = 25 °C; VGS = -4.5 V",
+      "id": "corpus:id-max:P|12|Tamb = 100 °C; VGS = -4.5 V",
       "kind": "superlative-part",
       "outcome": "correct",
       "sawWinner": true,
-      "candidates": 6,
       "expected": "PMPB08R4VP",
-      "got": "The part PMPB08R4VP carries a continuous I_D of -12 A at Tamb = 25 °C; VGS = -4.5 V. The part PMPB11R2VP carries a continuous I_D of -9.7 A at Tamb = 25 °C; VGS"
+      "got": "The part that carries the highest I_D at Tamb = 100 °C; VGS = -4.5 V among the 12 V P-channel parts is the PMPB09R5VP, with an I_D of -10.5 A not being at 100°C"
+    },
+    {
+      "id": "corpus:id-max:P|12|Tamb = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": true,
+      "expected": "PMPB08R4VP",
+      "got": "The part PMPB11R2VP carries the highest I_D of -9.7 A at VGS = -4.5 V; Tamb = 25 °C."
+    },
+    {
+      "id": "corpus:id-max:P|20|Tamb = 100 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "correct",
+      "sawWinner": true,
+      "expected": "PMPB12R5UPE",
+      "got": "The part PMV48XP carries an I_D of -2.2 A at VGS = -4.5 V; Tamb = 100 °C. The part PMPB12R5UPE is not considered because its continuous I_D at the specified con"
     },
     {
       "id": "corpus:id-max:P|20|Tamb = 25 °C; VGS = -4.5 V",
       "kind": "superlative-part",
       "outcome": "correct",
       "sawWinner": true,
-      "candidates": 30,
       "expected": "PMPB12R5UPE",
       "got": "The part that carries the highest I_D is PMPB12R5UPE, with a drain current of -9.4 A at VGS = -4.5 V; Tamb = 25 °C."
+    },
+    {
+      "id": "corpus:id-max:P|30|Tamb = 100 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB12R5EP",
+      "got": "The part that carries the highest I_D is the PMPB12R5EP, with a drain current of -3.3 A is not found at the specified conditions, but the PMN70EPE has -3.3 A at"
     },
     {
       "id": "corpus:id-max:P|30|Tamb = 25 °C; VGS = -10 V",
       "kind": "superlative-part",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 10,
       "expected": "PMPB14R0EP",
-      "got": "The part that carries the highest I_D is PMPB12R5EP, with a drain current of -8.8 A at VGS = -10 V; Tamb = 25 °C."
+      "got": "The part that carries the highest I_D is PMPB12R5EP with a drain current of -8.8 A at VGS = -10 V; Tamb = 25 °C."
     },
     {
-      "id": "corpus:rdson-min-value:N|100|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|100|Tj = 100 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 46,
-      "expected": "0.99mΩ",
-      "got": "10.2 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C."
+      "expected": "1.6mΩ",
+      "got": "The lowest maximum R_DS(on) at Tj = 100 °C; VGS = 10 V is 16.2 mΩ, measured at VGS = 10 V; ID = 20 A; Tj = 100 °C."
     },
     {
-      "id": "corpus:rdson-min-value:N|100|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|100|Tj = 125 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "27.2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "41mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 15,
+      "expected": "2.3mΩ",
+      "got": "The lowest maximum R_DS(on) is 103 mΩ at VGS = 10 V; ID = 5 A; Tj = 175 °C."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "52.6mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "33.1mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "0.99mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "23mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "12mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|20|VGS = 4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "1.35mΩ",
+      "got": "10.2 mΩ at VGS = 7 V; ID = 20 A; Tj = 25 °C."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 150 °C; VGS = 4.5 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 12,
+      "sawWinner": null,
+      "expected": "21mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 1.8 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "25mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "18mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "14mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|25|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|25|Tj = 150 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 12,
+      "sawWinner": null,
+      "expected": "1.01mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.46mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.45mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "2.04mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "0.57mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|30|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|25|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-value",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 51,
-      "expected": "0.67mΩ",
-      "got": "6.3 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      "expected": "0.82mΩ",
+      "got": "The lowest maximum R_DS(on) is 18 mΩ at VGS = 4.5 V; ID = 7.3 A; Tj = 25 °C."
     },
     {
-      "id": "corpus:rdson-min-value:N|30|VGS = 4.5 V; Tj = 25 °C",
-      "kind": "superlative-value",
-      "outcome": "wrong",
-      "sawWinner": false,
-      "candidates": 18,
-      "expected": "1.6mΩ",
-      "got": "6.3 mΩ at VGS = 4.5 V; Tj = 25 °C"
-    },
-    {
-      "id": "corpus:rdson-min-value:N|30|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|30|Tj = 100 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.5mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.23mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.65mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 150 °C; VGS = 7 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.9mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "9.8mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 1.8 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "20.1mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "0.67mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "12.1mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 6,
+      "expected": "0.9mΩ",
+      "got": "6.9 mΩ at VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "5.2mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|40|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 7 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.25mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 89,
+      "expected": "1.65mΩ",
+      "got": "The lowest maximum R_DS(on) at VGS = 4.5 V is 6 mΩ, measured at ID = 13.5 A; Tj = 25 °C for the part PXN4R7-30QL."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "1.11mΩ",
+      "got": "9.4 mΩ at VGS = 10 V; ID = 25 A; Tj = 105 °C"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 105 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.9mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.23mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "2.1mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "1.53mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "2.6mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "3.1mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "0.7mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|40|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 16,
+      "sawWinner": null,
+      "expected": "1.2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "1.6mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|55|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|55|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 4,
+      "sawWinner": null,
       "expected": "1.03mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|60|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|60|Tj = 100 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 41,
-      "expected": "4mΩ",
+      "sawWinner": null,
+      "expected": "5.1mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|60|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|60|Tj = 150 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 19,
+      "sawWinner": null,
+      "expected": "106mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "7.3mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "28.8mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "10.8mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "3.2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "13.1mΩ",
+      "got": "6.4 mΩ at VGS = 4.5 V; ID = 3.3 A; Tj = 25 °C for PMN40ENE and 6.4 mΩ is not the lowest, 6.3 mΩ is not for VGS = 4.5 V, the lowest maximum is 8.3 mΩ at VGS = 4."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "4.8mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|80|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|60|VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "8.3mΩ",
+      "got": "6.4 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 100 °C; VGS = 10 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 31,
+      "sawWinner": null,
+      "expected": "1.3mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "3.8mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "4.3mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "30.2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "2mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "39mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "27.6mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "0.85mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:N|80|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 10,
+      "sawWinner": null,
+      "expected": "17mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "11mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:P|12|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 7 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": true,
-      "candidates": 6,
+      "sawWinner": null,
+      "expected": "1.22mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|VGS = 10 V",
+      "kind": "superlative-value",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "13.4mΩ",
+      "got": "8.3 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "14mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "20mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "14mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "9.6mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:P|20|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|20|Tj = 150 °C; VGS = -4.5 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": true,
-      "candidates": 26,
+      "sawWinner": null,
+      "expected": "22mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 175 °C; VGS = -8 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "50mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -1.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "75mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "35mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "21mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "14.4mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min-value:P|30|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -8 V",
       "kind": "superlative-value",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 12,
-      "expected": "10mΩ",
-      "got": "NOT_IN_CORPUS"
-    },
-    {
-      "id": "corpus:rdson-min-value:P|60|VGS = -10 V; Tj = 25 °C",
-      "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 4,
+      "sawWinner": null,
       "expected": "33mΩ",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|100|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|30|Tj = 150 °C; VGS = -10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "24mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|30|Tj = 25 °C; VGS = -10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "10mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|30|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "21mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|60|Tj = 175 °C; VGS = -10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "69mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|60|Tj = 25 °C; VGS = -10 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "33mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min-value:P|60|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "36mΩ",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 100 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 46,
       "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
-      "got": "The part PSMN9R8-100YSF has the lowest maximum R_DS(on) of 10.2 mΩ at VGS = 10 V; Tj = 25 °C."
+      "got": "The PSMN9R8-100YSF has a maximum R_DS(on) of 16.2 mΩ at VGS = 10 V; ID = 20 A; Tj = 100 °C. The PSMN011-100YSF has a maximum R_DS(on) of 17.7 mΩ at VGS = 10 V; "
     },
     {
-      "id": "corpus:rdson-min:N|100|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|100|Tj = 125 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9M16-100L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9M16-100L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 15,
+      "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
+      "got": "PSMN011-100YSF, 25.5 mΩ at VGS = 10 V; ID = 20 A; Tj = 175 °C."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9M16-100L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK9Y12-100E | PSMN012-100YL",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|20|VGS = 4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9M16-100L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9Y12-100E | PSMN012-100YL",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 12,
+      "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
+      "got": "The part PSMN7R2-100YSF has the lowest maximum R_DS(on) of 10.4 mΩ at Tj = 25 °C; VGS = 7 V."
+    },
+    {
+      "id": "corpus:rdson-min:N|20|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PMPB10XNE",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|25|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 1.8 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 12,
+      "sawWinner": null,
+      "expected": "PMPB10XNE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB10XNE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB10XNE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PSMNR51-25YLH",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|30|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|25|Tj = 150 °C; VGS = 4.5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 51,
+      "sawWinner": null,
+      "expected": "PSMNR51-25YLH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN0R9-25YLD",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN0R9-25YLD",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR51-25YLH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR51-25YLH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-30BL",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PSMNR58-30YLH",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|30|VGS = 4.5 V; Tj = 25 °C",
-      "kind": "superlative-part",
-      "outcome": "wrong",
-      "sawWinner": false,
-      "candidates": 18,
-      "expected": "PSMN1R2-30YLD",
-      "got": "6.3 mΩ at VGS = 4.5 V; ID = 15 A; Tj = 25 °C, [PSMN6R4-30MLD]"
-    },
-    {
-      "id": "corpus:rdson-min:N|30|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|30|Tj = 150 °C; VGS = 4.5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 6,
+      "sawWinner": null,
+      "expected": "PSMNR58-30YLH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 150 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR67-30YLE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-30BL",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK9M5R2-30E",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|40|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 1.8 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 89,
-      "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
+      "sawWinner": null,
+      "expected": "PMPB09R1XN",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|40|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR58-30YLH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB06R3XN",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR58-30YLH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9M5R2-30E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR67-30YLE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN1R2-30YLC",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|30|VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 16,
+      "expected": "PSMN1R2-30YLC",
+      "got": "The part PSMN6R4-30MLD has a maximum R_DS(on) of 8.3 mΩ at VGS = 4.5 V, ID = 15 A, Tj = 25 °C, and another row has a maximum R_DS(on) of 13.7 mΩ at VGS = 4.5 V,"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN1R1-40BS",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "BUK7S0R7-40H",
+      "got": "The part with the lowest maximum R_DS(on) at Tj = 105 °C; VGS = 10 V is the BUK9J0R9-40H, with a maximum R_DS(on) of 1.17 mΩ, measured at VGS = 10 V; ID = 25 A;"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 105 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9J0R9-40H",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK7S0R7-40H",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9J0R9-40H",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK7S0R7-40H",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-40YLH | BUK9J0R9-40H",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK961R6-40E",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|55|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 4,
+      "sawWinner": null,
+      "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-40YLH | BUK9J0R9-40H",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK961R6-40E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|55|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PSMN1R2-55SLH",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|60|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|60|Tj = 100 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 41,
-      "expected": "PSMN4R0-60YS",
+      "sawWinner": null,
+      "expected": "PSMN3R0-60BS",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|60|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|60|Tj = 150 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 19,
+      "sawWinner": null,
+      "expected": "PMPB55ENEA",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN3R0-60BS",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN011-60ML",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK9Y4R8-60E",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|80|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN3R0-60BS",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMN011-60ML",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9Y4R8-60E",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|60|VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
       "sawWinner": false,
-      "candidates": 31,
+      "expected": "PSMN5R5-60YS",
+      "got": "The part PSMN7R0-60YS has a maximum R_DS(on) of 6.4 mΩ and also 10.2 mΩ at the specified conditions, but another row for the same part number lists 10.2 mΩ. The"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PSMNR90-80ASF",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:N|80|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|80|Tj = 105 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 10,
+      "sawWinner": null,
+      "expected": "BUK7J2R4-80M",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK7J2R4-80M",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9K12-80L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-80ASF",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9K12-80L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK9Y11-80E | PSMN010-80YL",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:P|12|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": true,
-      "candidates": 6,
+      "sawWinner": null,
+      "expected": "PSMNR90-80ASF",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9K12-80L",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK9Y11-80E | PSMN010-80YL",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PSMNR90-80ASF",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:N|80|VGS = 10 V",
+      "kind": "superlative-part",
+      "outcome": "wrong",
+      "sawWinner": false,
+      "expected": "PSMN8R2-80YS",
+      "got": "The part with the lowest maximum R_DS(on) is the PSMN1R8-80SSF, with a maximum R_DS(on) of 1.8 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+    },
+    {
+      "id": "corpus:rdson-min:P|12|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PMPB08R4VP",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:P|20|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -1.8 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": true,
-      "candidates": 26,
+      "sawWinner": null,
+      "expected": "PMPB08R4VP",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB08R4VP",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB08R4VP",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "PMPB12R5UPE",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:P|30|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|20|Tj = 175 °C; VGS = -8 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 12,
+      "sawWinner": null,
+      "expected": "BUK4D38-20P | PMN30XPEA",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -1.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB12R5UPE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB12R5UPE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB12R5UPE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB12R5UPE",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -8 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK4D38-20P | PMV30XPA | PMN30XPEA",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|30|Tj = 150 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "PMPB12R5EP",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|30|Tj = 25 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK6Y10-30P",
       "got": "NOT_IN_CORPUS"
     },
     {
-      "id": "corpus:rdson-min:P|60|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|30|Tj = 25 °C; VGS = -4.5 V",
       "kind": "superlative-part",
       "outcome": "model-refused",
-      "sawWinner": false,
-      "candidates": 4,
+      "sawWinner": null,
+      "expected": "PMPB12R5EP",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|60|Tj = 175 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK6Y33-60P",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|60|Tj = 25 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
+      "expected": "BUK6Y33-60P",
+      "got": "NOT_IN_CORPUS"
+    },
+    {
+      "id": "corpus:rdson-min:P|60|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "outcome": "model-refused",
+      "sawWinner": null,
       "expected": "BUK6Y33-60P",
       "got": "NOT_IN_CORPUS"
     }

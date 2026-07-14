@@ -63,3 +63,45 @@ export type Scale = {
     p95Ms: number;
   }[];
 };
+
+/**
+ * The identifier-free arm: questions about the SET rather than about a document.
+ *
+ * "Which 40 V part has the lowest RDS(on)?" names no datasheet, so there is no key to
+ * look up, and the answer is a property of all 497 documents rather than of any one of
+ * them. Ten retrieved chunks are ten documents. Two systems are measured on the SAME 248
+ * questions: the shipped RAG pipeline (`CorpusBaseline`) and the catalogue the ingest
+ * builds (`CorpusEval`).
+ */
+export type CorpusEval = {
+  generatedAt: string;
+  questions: number;
+  routes: { catalog: number; retrieval: number };
+  outcomes: {
+    correct: number;
+    wrong: number;
+    hedged: number;
+    guardRefused: number;
+    modelRefused: number;
+    catalogEmpty: number;
+  };
+  accuracy: number;
+  precisionWhenAnswered: number;
+  byKind: Record<string, { n: number; correct: number; wrong: number }>;
+  /** Of the wrong superlatives, the share whose winner was never in the pool the query
+   *  competed. The arithmetic is a for loop and is exact by construction, so this is the
+   *  share of remaining error that belongs to the READING rather than to the query. */
+  wrongWinnerNotInPool: number;
+};
+
+export type CorpusBaseline = {
+  generatedAt: string;
+  questions: number;
+  outcomes: { correct: number; wrong: number; guardRefused: number; modelRefused: number };
+  accuracy: number;
+  precisionWhenAnswered: number;
+  /** How often the winning datasheet reached the model at all. The whole argument. */
+  winnerRetrieved: number;
+  /** And of the ones it got wrong, how often it never saw the winner. */
+  wrongWithoutSeeingWinner: number;
+};

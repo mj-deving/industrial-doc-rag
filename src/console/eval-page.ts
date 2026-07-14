@@ -15,7 +15,7 @@
 // Worker and the real index, and they are checked into the repository next to the
 // code that produced them.
 
-import type { Results, Scale } from "./eval-data";
+import type { CorpusBaseline, CorpusEval, Results, Scale } from "./eval-data";
 
 const pct = (n: number) => (n * 100).toFixed(1);
 const num = (n: number) => n.toFixed(3);
@@ -100,8 +100,42 @@ const DEFECTS: [string, string][] = [
   [
     "A table row lost its symbol at a chunk boundary",
     "A datasheet names a parameter once and leaves the column blank beneath it. Cut between them, the second row is a number belonging to nothing."
+  ],
+  [
+    "Unicode has two ohm signs and this corpus uses both",
+    "U+2126 and U+03A9 render identically. The unit filter was a character class written to hold both, and it held U+03A9 twice, because you cannot tell them apart in an editor. Every datasheet using the other one lost every R<sub>DS(on)</sub> row it had: 89 parts with no label, so no question, so never tested."
+  ],
+  [
+    "The label held one measurement per part",
+    "PSMNR58-30YLH quotes R<sub>DS(on)</sub> at 10&nbsp;V and at 4.5&nbsp;V. The parser kept the 10&nbsp;V row, so the truth for \"lowest at 4.5&nbsp;V\" was computed over a pool missing the part that WINS it. The system answered correctly and was marked wrong."
+  ],
+  [
+    "The examples in a prompt became the answer",
+    "Told to capture both a package's trade name and its industry code, the prompt listed ten real ones. A part whose ordering table was not retrieved came back with all eleven names. Measured against the PDF text itself, which is neither the model nor the label: 6 of 497 parts named a package the document never prints."
+  ],
+  [
+    "Fixing one column error created another",
+    "Told to read Min/Typ/Max properly, the model began reading the em-dash in an EMPTY Min cell as a minus sign. 67 N-channel parts came back at -60&nbsp;V &mdash; and the channel was inferred from that sign, so they silently became P-channel parts. A categorical fact carried by a sign bit is one typographic accident from being the opposite fact."
   ]
 ];
+
+function corpusRows(corpus: CorpusEval): string {
+  const label: Record<string, string> = {
+    "superlative-part": "which part is the extreme",
+    "superlative-value": "what is the extreme value",
+    count: "how many parts"
+  };
+  return Object.entries(corpus.byKind)
+    .map(
+      ([key, d]) => `<tr>
+        <td class="s">${label[key] ?? key}</td>
+        <td>${d.n}</td>
+        <td>${num(d.correct)}</td>
+        <td class="barcell"><span class="bar"><i style="width:${pct(d.correct)}%"></i></span></td>
+      </tr>`
+    )
+    .join("");
+}
 
 function defectRows(): string {
   return DEFECTS.map(
@@ -112,7 +146,12 @@ function defectRows(): string {
   ).join("");
 }
 
-export function renderEval(results: Results, scale: Scale): string {
+export function renderEval(
+  results: Results,
+  scale: Scale,
+  corpus: CorpusEval,
+  baseline: CorpusBaseline
+): string {
   const c = results.corpus;
   const dense = results.retrieval["dense"];
   const big = scale.curve[scale.curve.length - 1];
@@ -250,6 +289,11 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     ${pct(dense.recall[1])}% of the time, on those same questions, which spell the part number out in
     full. Part numbers are the tokens an embedding is worst at, and ${c.documents} lookalike datasheets
     is where that becomes the whole problem.</p>
+    <p>A second arm asks ${corpus.questions} questions that name no datasheet at all &mdash; superlatives
+    and counts over the corpus. Retrieval scores ${num(baseline.accuracy)} on them, and not because it
+    retrieves badly: the answer is a property of all ${c.documents} documents and ten chunks are ten
+    documents. Reading the corpus into a table at ingest and answering those questions with arithmetic
+    scores ${num(corpus.accuracy)} on the same set.</p>
   </div>
 
   <section style="margin-top:26px">
@@ -269,6 +313,12 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
         <div class="k">Refusal, held-out parts</div>
         <div class="v">${pct(results.refusal.guarded.refused)}%</div>
         <div class="d">Identifier guard on, costing ${pct(results.refusal.guarded.wronglyRefusedIndexed)}% of indexed parts.</div>
+      </div>
+      <div class="fig">
+        <div class="k">Questions naming no part</div>
+        <div class="v">${num(corpus.accuracy)}</div>
+        <div class="d">${corpus.questions} set queries. The same pipeline without a catalogue scores
+        ${num(baseline.accuracy)}. See &sect;1.5.</div>
       </div>
     </div>
 
@@ -347,9 +397,11 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     rather than the model.</strong> The generator never changed. Three models from three vendors scored
     within a point of each other, which is what happens when they all fail on the same missing rows.
     The defects are logged in &sect;3.</p>
-    <p>One question in ${results.answer.sample} still fails. Asked for R<sub>DS(on)</sub> at
-    T<sub>j</sub> = 25 &deg;C, the model answers from the 150 &deg;C row and restates the 25 &deg;C
-    conditions back. It reports conditions it did not read, and it is left in the number.</p>
+    <p>Two questions in ${results.answer.sample} still fail. PSMN5R3-25MLD is asked for
+    R<sub>DS(on)</sub> at V<sub>GS</sub> = 10 V and the model answers 8.49 m&Omega;, which is the 4.5 V
+    row printed directly above it: it reports conditions it did not read. BUK9K22-80E is refused although
+    its datasheet was retrieved at rank 1. Both are left in the number rather than prompted away until
+    the test goes green.</p>
 
     <h3>1.4 Refusal</h3>
     <div class="cap">${c.heldOut} datasheets were fetched, parsed, and kept out of the index. Their
@@ -366,6 +418,67 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     missing from the corpus. The ${pct(results.refusal.refused)}% is reported rather than the guarded
     ${pct(results.refusal.guarded.refused)}%, because a guarded 100% restates the definition of the
     guard.</p>
+
+    <h3>1.5 Questions that name no part</h3>
+    <div class="cap">Table 4 &middot; ${corpus.questions} questions generated from the same labels, none of
+    which names a datasheet: superlatives and counts over the whole corpus. Both systems answer the
+    identical questions with the same embeddings, the same k, the same generator and the same grader.</div>
+    <div class="scroller">
+    <table>
+      <thead><tr>
+        <th>system</th><th>accuracy</th><th>precision when it answered</th><th>refused</th><th>the winner was retrieved</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="s">retrieval only, no catalogue</td>
+          <td>${num(baseline.accuracy)}</td>
+          <td>${num(baseline.precisionWhenAnswered)}</td>
+          <td>${baseline.outcomes.modelRefused}</td>
+          <td>${num(baseline.winnerRetrieved)}</td>
+        </tr>
+        <tr class="win">
+          <td class="s">catalogue built at ingest</td>
+          <td>${num(corpus.accuracy)}</td>
+          <td>${num(corpus.precisionWhenAnswered)}</td>
+          <td>${corpus.outcomes.modelRefused + corpus.outcomes.guardRefused}</td>
+          <td class="s">not applicable</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="find"><strong>Retrieval does not answer this question badly. It cannot answer it:
+    of the ones it got wrong, ${pct(baseline.wrongWithoutSeeingWinner)}% were wrong about a datasheet
+    that was never retrieved.</strong> The winning document reached the model
+    ${pct(baseline.winnerRetrieved)}% of the time overall. "Which 40&nbsp;V part has the lowest
+    R<sub>DS(on)</sub>" is a property of ${c.documents} documents, and ten chunks are ten documents. The
+    model says so itself when it guesses: asked how many parts ship in a given package, it answered
+    <em>"all 9 parts are offered in a LFPAK package"</em> &mdash; it counted the evidence in front of it
+    and called that the corpus. No prompt and no larger model fixes that, because the information was
+    never in the context.</p>
+    <p>So the corpus is read into a table once, at ingest, by the same model reading the same chunks
+    the retriever returns &mdash; never the label parser, which would make the eval a measurement of the
+    system agreeing with itself. A superlative is then <code>ORDER BY</code> and a count is
+    <code>COUNT</code>, over all ${c.documents} rather than over ten. A planner turns the question into a
+    filter; it never writes a number. Every figure the user sees has been counted.</p>
+    <div class="cap">Table 5 &middot; The same ${corpus.questions} questions by shape, catalogue path.</div>
+    <div class="scroller">
+    <table>
+      <thead><tr><th>question</th><th>n</th><th>correct</th><th></th></tr></thead>
+      <tbody>${corpusRows(corpus)}</tbody>
+    </table>
+    </div>
+    <p class="find"><strong>What is left is the reading, not the arithmetic:
+    ${pct(corpus.wrongWinnerNotInPool)}% of the wrong superlatives are wrong because the winning part was
+    never in the pool the query compared.</strong> The query is a <code>for</code> loop over that pool, so
+    it is exact by construction; a part is absent from a comparison when the model, reading its
+    datasheet, recorded no row under the conditions the question asks about. PMPB10XNE carries only its
+    <code>t &le; 5 s</code> row, so it is missing from every continuous-current question it should win.
+    That is extraction recall, it is measured at ${num(0.849)} for I<sub>D</sub>, and it is the ceiling on
+    this column.</p>
+    <p>An error rate a lookup would shrug off is fatal to a superlative, and the reason is structural: a
+    query for an extremum selects FOR the errors that make a value more extreme. Reading the Min column
+    instead of the Max column moved BUK7S0R7-40H from 0.7&nbsp;m&Omega; to 0.43&nbsp;m&Omega; on 6% of
+    rows &mdash; and handed it every lowest-R<sub>DS(on)</sub> question in its class.</p>
   </section>
 
   <section>
@@ -398,8 +511,9 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
 
   <section>
     <h2><span class="n">3</span>Defects found</h2>
-    <div class="cap">Six defects the eval surfaced and the test suite did not. Two were in the eval
-    itself, and a broken label looks exactly like a broken model until you open the evidence.</div>
+    <div class="cap">Ten defects the eval surfaced and the test suite did not. Five were in the
+    instrument rather than in the system, and a broken label looks exactly like a broken model until you
+    open the evidence.</div>
     <div class="scroller">
     <table class="log">
       <tbody>${defectRows()}</tbody>
@@ -410,10 +524,20 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
   <section>
     <h2><span class="n">4</span>Limits</h2>
     <ul>
-      <li>Every question names one part and asks for one figure. No comparison across two datasheets,
-      no question without a part number, no figure that appears only in a graph, no German.</li>
-      <li>The guard assumes the question names the part. One that does not falls back to the model,
-      which is the ${pct(results.refusal.refused)}%.</li>
+      <li>The catalogue holds four fields: V<sub>DS</sub>, R<sub>DS(on)</sub>, I<sub>D</sub> and the
+      package. A set query about anything else &mdash; gate charge, thermal resistance &mdash; is
+      REFUSED rather than answered from ten chunks, which is the same rule the identifier guard applies
+      to a document it does not have. The refusal names the four fields it does hold.</li>
+      <li>I<sub>D</sub> extraction recall is ${num(0.849)}, and it caps the set-query column: a part
+      whose current row was never read is absent from the comparison, and the query then returns the
+      best of what is left, exactly and wrongly. ${pct(corpus.wrongWinnerNotInPool)}% of the remaining
+      superlative errors are this and nothing else.</li>
+      <li>Package agreement reads ${num(0.998)}, and it is agreement after BOTH sides are normalised the
+      same way. One of those normalisations &mdash; folding a SOT version suffix onto its base code
+      &mdash; was adopted because the label does it. On that specific transform the two mechanisms are
+      no longer independent, and the number is worth less than it looks.</li>
+      <li>Still no comparison across two named datasheets, no figure that appears only in a graph, and
+      no German.</li>
       <li>With one relevant document per question, nDCG@k and MRR are strictly decreasing functions of
       the same rank. They are one measurement printed twice.</li>
       <li>Query cost is not reported. Vectorize bills queried and stored dimensions together and does
