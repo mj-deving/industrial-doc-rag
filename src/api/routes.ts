@@ -9,7 +9,7 @@
 // an invitation to have someone else's documents billed to this account.
 
 import { Hono } from "hono";
-import { answer, namedParts } from "../../packages/doc-rag/src/answer";
+import { answer, namedParts, REFUSAL_TOKEN } from "../../packages/doc-rag/src/answer";
 import { consoleQuestions } from "../console/questions";
 import { retriever } from "../engine/cloudflare";
 import { explain, runQuery, vocabulary } from "./catalog";
@@ -57,13 +57,32 @@ api.post("/query", async (c) => {
   const body = await c.req.json<{ question?: string }>().catch(() => null);
   if (!body?.question) throw badRequest("Expected JSON body with question");
 
+  /**
+   * The binding is untyped at runtime, and the declared type is a wish.
+   *
+   * `AI.run` is typed as returning `{ response: string }` and it does not always. It
+   * threw `text.indexOf is not a function` inside the planner on the first live
+   * request, from a call site the compiler had signed off on — the same way
+   * `VECTORIZE.describe()` ships a type whose field names do not match what the V2
+   * index returns (see `/health` below). This is the second time in this file that
+   * trusting the declared shape over the runtime has produced a 500.
+   *
+   * So the coercion happens HERE, once, at the seam where an untyped binding meets
+   * typed code, rather than in each of the three callers that assume a string.
+   */
   const generate = async (prompt: string, maxTokens = 300): Promise<string> => {
-    const response = (await c.env.AI.run(GENERATOR as keyof AiModels, {
+    const raw = (await c.env.AI.run(GENERATOR as keyof AiModels, {
       messages: [{ role: "user", content: prompt }],
       max_tokens: maxTokens,
       temperature: 0
-    } as never)) as unknown as { response: string };
-    return response.response ?? "";
+    } as never)) as unknown;
+
+    const said = (raw as { response?: unknown })?.response ?? raw;
+    if (typeof said === "string") return said;
+    // An object here is not a failure: the planner asks for JSON, and a binding that
+    // hands back the parsed object rather than the text is giving us the same answer
+    // in a different container. Re-serialising it lets the one parser read both.
+    return said === undefined || said === null ? "" : JSON.stringify(said);
   };
 
   const question = body.question;
@@ -115,9 +134,41 @@ api.post("/query", async (c) => {
         timings: { retrieveMs: 0, generateMs: Math.round(performance.now() - started) }
       });
     }
-    // `lookup` without an identifier, or `unsupported`: fall through to retrieval,
-    // which is where a question the catalogue cannot express belongs. It will refuse
-    // if the excerpts do not hold the answer, and that refusal is honest.
+
+    /**
+     * The catalogue cannot express it, and it names no part. REFUSE.
+     *
+     * This fell through to retrieval, on the reasoning that the model would decline
+     * when the excerpts did not hold the answer. That reasoning is wrong, and the
+     * first live probe showed exactly how. Asked for the part with the lowest total
+     * gate charge — a field this catalogue does not carry — the fall-through answered:
+     *
+     *     "The part PSMN015-60BS has the lowest total gate charge, 17 nC."
+     *
+     * The excerpts DO hold gate charge. They hold it for ten parts. The claim is about
+     * 497, and it was written with a number and two citations attached. That is the
+     * failure this whole system exists to describe, rebuilt inside the router meant to
+     * prevent it: a set question answered from an evidence window and reported as a
+     * fact about the set.
+     *
+     * There is no honest retrieval answer to a corpus-wide question, so there is no
+     * honest fall-through. A `lookup` verdict that names no part gets the same
+     * treatment, because retrieval keys on the identifier that is not there.
+     */
+    return c.json({
+      answer: REFUSAL_TOKEN,
+      refused: true,
+      sources: [],
+      route: "catalog",
+      kind: "unsupported",
+      reason:
+        "This question is about the corpus as a whole, and this catalogue holds only " +
+        "V_DS, R_DS(on), I_D and package. It is not answerable from ten retrieved " +
+        "excerpts, and answering it from them would be a guess with a citation.",
+      strategy: STRATEGY,
+      generator: GENERATOR,
+      timings: { retrieveMs: 0, generateMs: 0 }
+    });
   }
 
   const result = await answer(retriever(c.env), generate, question, STRATEGY, K, true, NOT_PARTS);

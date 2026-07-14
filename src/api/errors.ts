@@ -37,6 +37,13 @@ export function toApiError(error: unknown): ApiError {
 
 export function jsonError(c: Context, error: unknown): Response {
   const apiError = toApiError(error);
+  // A 500 that leaves no trace is a 500 you debug by guessing. This handler caught a
+  // `text.indexOf is not a function` from the planner and returned it as a tidy JSON
+  // body, so `wrangler tail` reported `outcome: ok, exceptions: []` and the stack was
+  // gone. The response tells a caller WHAT broke; only this tells us WHERE.
+  if (apiError.status === 500) {
+    console.error(`500 ${c.req.method} ${new URL(c.req.url).pathname}`, error);
+  }
   return c.json(
     {
       error: {
