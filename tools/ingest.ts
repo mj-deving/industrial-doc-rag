@@ -17,7 +17,7 @@
  *   INGEST_TOKEN=... bun tools/ingest.ts <corpus-dir> <worker-url> [--dry-run]
  */
 
-import type { IngestChunk } from "../src/api/ingest";
+import type { IngestChunk } from "../src/api/contracts";
 import { chunk } from "../packages/doc-rag/src/chunk";
 import { prepare } from "../packages/doc-rag/src/prepare";
 import { isHoldout } from "./split";

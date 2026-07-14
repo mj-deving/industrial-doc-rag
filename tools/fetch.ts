@@ -89,3 +89,5 @@ async function worker(): Promise<void> {
 
 await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 console.error(`\ndone: ${ok} fetched, ${missing} no such part (404), ${failed} failed`);
+
+export {};

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { staleIds, type IngestChunk } from "../../../src/api/ingest";
+import { staleIds, type IngestChunk } from "../../../src/api/contracts";
 
 /**
  * The prune deleted a third of the index — 8,414 of 25,536 chunks — and the eval

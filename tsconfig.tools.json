@@ -1,0 +1,30 @@
+/*
+  The Bun-side program: the corpus adapter (`tools/`), the engine's tests, and the
+  eval harness clients. Everything here runs under Bun, not inside a Worker.
+
+  It needs its own tsconfig because the two runtimes declare colliding globals. The
+  Worker program pulls in `@cloudflare/workers-types`, whose web-standard `Blob` has
+  no `.json()`; `BunFile` extends `Blob`, so inside the Worker program every
+  `Bun.file(path).json()` in `tools/` fails to typecheck. Splitting the programs is
+  the fix, not a cast.
+
+  This gap was invisible because the root `include` listed `src`, `scripts` and an
+  empty `test/`, and nothing in `src/` imports `tools/`. So `tools/` sat in no
+  program at all, and `bun run typecheck` reported clean over code it had never
+  looked at. A check that cannot see its subject always passes.
+*/
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["ES2022"],
+    "types": ["@types/bun"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": ["tools/**/*.ts", "test/**/*.ts", "packages/**/*.ts"]
+}

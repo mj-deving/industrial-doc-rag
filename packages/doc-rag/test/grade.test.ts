@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import { grade, measures } from "../src/grade";
-import type { Answer, Question } from "../src/types";
+import type { Answer, Expected, Question } from "../src/types";
 
 const q = (over: Partial<Question> = {}): Question => ({
   id: "PSMN013-100BS:rdson",
@@ -16,6 +16,7 @@ const a = (text: string, over: Partial<Answer> = {}): Answer => ({
   text,
   refused: false,
   retrieved: ["PSMN013-100BS"],
+  evidence: [],
   ...over
 });
 
@@ -154,7 +155,7 @@ describe("grade: refusal", () => {
 describe("package names", () => {
   test("any name the ordering table prints is a correct answer", () => {
     // BUK6Y19-30P's ordering row, verbatim: Name `LFPAK56; Power-SO8`, Version `SOT669`.
-    const expected = { kind: "text", value: "LFPAK56", accepts: ["Power-SO8", "SOT669"] } as const;
+    const expected: Expected = { kind: "text", value: "LFPAK56", accepts: ["Power-SO8", "SOT669"] };
     const ask = (text: string) =>
       grade(
         { id: "q", part: "BUK6Y19-30P", dimension: "package", split: "indexed", question: "", expected },

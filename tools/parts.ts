@@ -33,3 +33,5 @@ for (const match of text.matchAll(PART)) {
 
 for (const part of [...parts].sort()) console.log(part);
 console.error(`${parts.size} candidate part numbers`);
+
+export {};

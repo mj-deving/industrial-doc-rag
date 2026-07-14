@@ -13,52 +13,18 @@
 import { Hono } from "hono";
 import { bindingFor, embed, type IndexSize, type VectorMeta } from "../engine/cloudflare";
 import type { Env } from "../types";
+import { staleIds, type IngestChunk } from "./contracts";
 
 /** Workers AI takes batches; 32 keeps a request well inside the CPU budget. */
 const EMBED_BATCH = 32;
 
-/** How far past a document's last chunk to sweep for the previous ingest's leftovers.
- *  The longest datasheet in this corpus chunked to 79 before boilerplate stripping and
- *  54 after, so the debris a re-chunk leaves is tens of ids, not hundreds. 80 covers a
- *  document that halves in size; it is slack, not a guess, and every id past the real
- *  end is a no-op delete that still costs a round trip to Vectorize. */
-const OVERHANG = 80;
-
 /** Vectorize's own ceiling on a single deleteByIds call. */
 const DELETE_BATCH = 100;
 
-export type IngestChunk = {
-  id: string;
-  part: string;
-  text: string;
-  index: number;
-  /**
-   * How many chunks this part has IN TOTAL, not how many are in this request.
-   *
-   * The prune below needs to know where the document ends. It cannot learn that
-   * from the payload, because the payload is a fixed-size slice of a stream of
-   * chunks from many parts and a long document spans several requests. Reading the
-   * end from the payload gives a different, WRONG answer in each one — see the
-   * comment on the prune. So the client, which is the only party that knows, says.
-   */
-  total: number;
-};
-
-/**
- * The ids to sweep after writing `chunks`: everything from each part's declared end
- * out to the overhang.
- *
- * The property that matters is that this depends ONLY on `total`, never on which
- * chunks the request happens to carry. Two concurrent requests holding different
- * halves of the same document must compute the same range, or one of them deletes
- * the other's writes. `ingest.test.ts` is what holds that.
- */
-export function staleIds(chunks: IngestChunk[]): string[] {
-  const ends = new Map(chunks.map((chunk) => [chunk.part, chunk.total]));
-  return [...ends].flatMap(([part, total]) =>
-    Array.from({ length: OVERHANG }, (_, i) => `${part}#${total + i}`)
-  );
-}
+// Both live in `contracts.ts`, which imports nothing. The ingest client and the
+// prune's test are Bun-side, and a value import from this route would drag
+// workerd's globals into their program. See the header of that file.
+export { staleIds, type IngestChunk };
 
 export const ingest = new Hono<{ Bindings: Env }>();
 

@@ -77,6 +77,9 @@ type AnswerResult = {
   text: string;
   refused: boolean;
   retrieved: string[];
+  /** Present only when the harness was asked for it. `grade` needs the field to
+   *  exist, and an answer graded without evidence is graded on its text alone. */
+  evidence?: { part: string; text: string }[];
   timings: { retrieveMs: number; generateMs: number };
 };
 
@@ -145,7 +148,7 @@ for (const model of CANDIDATES) {
 
   const graded = answers.map((a) => {
     const question = byId.get(a.id)!;
-    return { ...grade(question, a), split: question.split, dimension: question.dimension, text: a.text };
+    return { ...grade(question, { ...a, evidence: a.evidence ?? [] }), split: question.split, dimension: question.dimension, text: a.text };
   });
 
   const on = (split: string) => graded.filter((g) => g.split === split);

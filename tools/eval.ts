@@ -145,6 +145,9 @@ type AnswerResult = {
   text: string;
   refused: boolean;
   retrieved: string[];
+  /** Present only when the harness was asked for it. `grade` needs the field to
+   *  exist, and an answer graded without evidence is graded on its text alone. */
+  evidence?: { part: string; text: string }[];
   timings: { retrieveMs: number; generateMs: number };
 };
 
@@ -210,7 +213,7 @@ const answers = await pipeline<Question, AnswerResult>(
 
 const graded = answers.map((a) => {
   const question = byId.get(a.id)!;
-  return { ...grade(question, a), id: a.id, split: question.split, dimension: question.dimension, answer: a };
+  return { ...grade(question, { ...a, evidence: a.evidence ?? [] }), id: a.id, split: question.split, dimension: question.dimension, answer: a };
 });
 
 const on = (split: "indexed" | "holdout") => graded.filter((g) => g.split === split);
