@@ -21,6 +21,7 @@
  */
 
 import { isDegenerate } from "../packages/doc-rag/src/degenerate";
+import { guardRefuses } from "../packages/doc-rag/src/answer";
 import { grade } from "../packages/doc-rag/src/grade";
 import { retrievalMetrics } from "../packages/doc-rag/src/metrics";
 import { STRATEGIES, type Strategy } from "../packages/doc-rag/src/retrieve";
@@ -285,8 +286,29 @@ const summary = {
   },
   refusal: {
     sample: held.length,
+    // The MODEL's own discrimination: the harness runs with the identifier guard
+    // OFF, so these two numbers say what happens when nothing but the model notices
+    // that ten convincing excerpts are all about the wrong part.
     refused: rate(held, (g) => g.reason === "refused-correctly"),
     hallucinated: rate(held, (g) => g.reason === "hallucinated"),
+    // And what the SHIPPED system does, which is not the same thing.
+    //
+    // Production refuses any question whose named part appears in none of the
+    // retrieved chunks. Derived here rather than measured, because it is a fact
+    // about the retrieval, not about the generation: a held-out datasheet is not in
+    // the index, so no chunk of it can come back, so the guard fires. Deriving it
+    // costs nothing and states plainly that it is a construction — a measured 1.0
+    // would look like an achievement and would only be restating the definition.
+    guarded: {
+      refused: rate(held, (g) => guardRefuses(byId.get(g.id)!.question, g.answer.retrieved)),
+      // The guard's cost on the other half: how often it would refuse a part we DO
+      // have. Zero, because hybrid-rrf finds the asked document at rank 1 in every
+      // indexed question — but it is asserted here rather than assumed, because the
+      // day retrieval regresses is the day this guard starts eating real answers.
+      wronglyRefusedIndexed: rate(on("indexed"), (g) =>
+        guardRefuses(byId.get(g.id)!.question, g.answer.retrieved)
+      )
+    },
     // Of the answers it invented, how many were even right? A high number here
     // would mean the model is reciting a datasheet it memorised in pretraining,
     // not reading one we gave it, and the whole benchmark would be measuring the

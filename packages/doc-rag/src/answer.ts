@@ -71,7 +71,14 @@ If none of the excerpts come from the exact part the question asks about, reply 
 
 The excerpts are tables rendered as plain text. A parameter's value is in the Min, Typ or Max column of that parameter's own row. The same symbol also appears inside OTHER rows, in their Conditions column, where it names the test condition that other parameter was measured under. A symbol inside a Conditions column is never that symbol's own rating, and the number written next to it there is not the answer to a question about it.
 
-The same parameter is often listed several times at different conditions. When the question names conditions, they are the complete conditions of the row it asks about: a row that adds a further condition — a duration limit, a different temperature — is a different operating point with a different value, and it is not the answer, however closely the rest of it matches.
+The same parameter is listed several times, once per operating point. Pick the row whose conditions are EXACTLY the ones the question names, and no others. A row that lists every condition the question names AND ONE MORE is a different operating point: it is the wrong row precisely because it matches everything you were asked for and then adds a qualifier you were not asked for. A duration limit such as "t <= 5 s" is such a qualifier, and so is a different temperature.
+
+For example, asked for ID at "VGS = 4.5 V; Tamb = 25 °C", given these rows:
+
+    ID   drain current   VGS = 4.5 V; Tamb = 25 °C; t <= 5 s   -   13    A
+    ID   drain current   VGS = 4.5 V; Tamb = 25 °C             -   8.9   A
+
+the answer is 8.9 A. The 13 A row satisfies both conditions in the question, and it is still the wrong row, because it holds only for 5 seconds and the question did not ask for a 5-second rating.
 
 When you do answer, give the figure with its unit and the conditions it was measured at.
 
@@ -82,12 +89,58 @@ QUESTION
 ${question}`;
 }
 
+/**
+ * The part identifiers named in a question.
+ *
+ * Two or more letters, then alphanumerics and hyphens, carrying at least one
+ * digit: `PSMN1R0-30YLD`, `BUK9M43-100E`, `PMV45EN2`. Checked against all 2629
+ * questions in the benchmark — it extracts the asked part every time and never
+ * extracts anything else, because nothing else in a question about a MOSFET has
+ * this shape (`VGS`, `ID` and `Tamb` carry no digit; `10 V` and `25 °C` start
+ * with one).
+ */
+const PART_ID = /\b[A-Z]{2,5}[A-Z0-9]*\d[A-Z0-9]*(?:-[A-Z0-9]+)*\b/g;
+
+export function namedParts(question: string): string[] {
+  return [...new Set(question.match(PART_ID) ?? [])];
+}
+
+/**
+ * Would the identifier guard refuse this question, given what was retrieved?
+ *
+ * The refusal contract is a rule about identifiers, and the prompt asks the model
+ * to enforce it: "if none of the excerpts come from the exact part the question
+ * asks about, reply NOT_IN_CORPUS." That is a request. This is the same rule as a
+ * guarantee, and it is exported so the eval can measure both — what the model does
+ * on its own, and what the shipped system does.
+ *
+ * The model is not bad at the rule; it is asked to apply it while holding ten
+ * excerpts from parts whose datasheets are word-for-word identical to the one it
+ * wants. It fails in two ways, and both are visible in the holdout results:
+ * it answers from a sibling part's table, and — worse — it DECODES THE PART NUMBER.
+ * `PSMN1R0-30YLD` is a 30 V part with an RDS(on) near 1.0 mΩ, and the name says so.
+ * Asked about a datasheet it has never seen, the model reads the naming convention
+ * and answers 30 V, confidently, and is often RIGHT. A right answer about a document
+ * that is not in the corpus is the most dangerous output this system can produce:
+ * it is indistinguishable from a grounded one, and nothing in the corpus supports it.
+ *
+ * A deterministic check cannot be talked out of the rule by a convincing sibling.
+ */
+export function guardRefuses(question: string, retrievedParts: string[]): boolean {
+  const named = namedParts(question);
+  if (named.length === 0) return false; // No identifier to check: the model decides.
+  const have = new Set(retrievedParts);
+  return !named.some((part) => have.has(part));
+}
+
 export async function answer(
   retriever: Retriever,
   generate: Generator,
   question: string,
   strategy: Strategy,
-  k = 10
+  k = 10,
+  /** Off only in the eval, which measures what the MODEL does without the guarantee. */
+  guard = true
 ): Promise<Answer & { timings: { retrieveMs: number; generateMs: number } }> {
   const startRetrieve = performance.now();
   const ranking = await retrieve(retriever, question, strategy, k);
@@ -95,11 +148,16 @@ export async function answer(
 
   // Nothing retrieved: refuse without spending a generation. There is no evidence
   // to reason over, and asking the model anyway is asking it to invent.
-  if (ranking.chunks.length === 0) {
+  //
+  // Same for a question that names a part no retrieved chunk came from. Retrieval
+  // finds the asked document at rank 1 in every one of the 1918 indexed questions
+  // (hybrid-rrf, recall@1 = 1.0), so a part missing from the results is a part
+  // missing from the corpus, and there is nothing to answer from but a lookalike.
+  if (ranking.chunks.length === 0 || (guard && guardRefuses(question, ranking.documents))) {
     return {
-      text: "",
+      text: REFUSAL_TOKEN,
       refused: true,
-      retrieved: [],
+      retrieved: ranking.documents,
       evidence: [],
       timings: { retrieveMs, generateMs: 0 }
     };

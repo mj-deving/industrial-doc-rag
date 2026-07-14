@@ -113,12 +113,26 @@ evalApi.post("/harness/retrieve", async (c) => {
  * comparison is a sequence of two different systems rather than one experiment.
  */
 evalApi.post("/harness/answer", async (c) => {
-  const { questions, strategy, k, model, evidence } = (await c.req.json()) as {
+  const { questions, strategy, k, model, evidence, guard } = (await c.req.json()) as {
     questions: Ask[];
     strategy: Strategy;
     k?: number;
     model?: string;
     evidence?: boolean;
+    /**
+     * The identifier guard, which production runs with and the eval runs WITHOUT.
+     *
+     * With it on, a held-out part is refused deterministically — its datasheet is
+     * not in the index, so no chunk of it can be retrieved, so the guard fires
+     * every time. The refusal rate would be 1.0 by construction, and reporting
+     * that as a result would be reporting the definition of the guard rather than
+     * a measurement of anything. So the harness turns it off and measures what the
+     * MODEL does when it alone has to notice that ten convincing excerpts are all
+     * about the wrong part. That number is the honest one, and it is the number the
+     * eval prints. The guarded number is derived alongside it, from the parts each
+     * question actually retrieved.
+     */
+    guard?: boolean;
   };
 
   const generator = model ?? GENERATOR;
@@ -171,7 +185,14 @@ evalApi.post("/harness/answer", async (c) => {
 
   const results = [];
   for (const ask of questions) {
-    const result = await answer(retriever(c.env), generateChecked, ask.question, strategy, k ?? 10);
+    const result = await answer(
+      retriever(c.env),
+      generateChecked,
+      ask.question,
+      strategy,
+      k ?? 10,
+      guard ?? false
+    );
     results.push({
       id: ask.id,
       text: result.text,

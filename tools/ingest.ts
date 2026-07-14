@@ -17,6 +17,7 @@
  *   INGEST_TOKEN=... bun tools/ingest.ts <corpus-dir> <worker-url> [--dry-run]
  */
 
+import type { IngestChunk } from "../src/api/ingest";
 import { chunk } from "../packages/doc-rag/src/chunk";
 import { prepare } from "../packages/doc-rag/src/prepare";
 import { isHoldout } from "./split";
@@ -46,7 +47,10 @@ const indexed = labels.map((label) => label.part).filter((part) => !isHoldout(pa
 
 console.error(`${indexed.length} parts to index (${labels.length - indexed.length} held out)`);
 
-type Batch = { part: string; chunks: { id: string; part: string; text: string; index: number }[] };
+// The wire type, imported rather than restated. It used to be a hand-copy that
+// omitted `total`, so the payload carried a field the type said was not there and
+// nothing would have caught its removal.
+type Batch = { part: string; chunks: IngestChunk[] };
 
 async function extract(part: string): Promise<Batch | null> {
   const pdf = `${corpusDir}/${part}.pdf`;

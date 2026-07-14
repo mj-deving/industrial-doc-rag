@@ -1,5 +1,5 @@
-import { expect, test } from "bun:test";
-import { buildPrompt, EXCERPT_CHARS, REFUSAL_TOKEN } from "../src/answer";
+import { describe, expect, test } from "bun:test";
+import { buildPrompt, EXCERPT_CHARS, guardRefuses, namedParts, REFUSAL_TOKEN } from "../src/answer";
 import { chunk, MAX_CHARS } from "../src/chunk";
 
 /**
@@ -44,4 +44,42 @@ test("the refusal contract is a token, not a phrasing", () => {
   expect(prompt).toContain(REFUSAL_TOKEN);
   // The part label is what lets the model see the excerpts are about another part.
   expect(prompt).toContain("[OTHER]");
+});
+
+/**
+ * The identifier guard.
+ *
+ * The prompt asks the model to refuse a question about a part it has no excerpt
+ * for. On 400 held-out questions the model failed that 17 times, and the way it
+ * failed is the point: `PSMN1R0-30YLD` is a 30 V part and its NAME says so, so the
+ * model read the naming convention and answered "30 V" about a datasheet it had
+ * never seen. It was right. A right answer with no document behind it is the worst
+ * output this system has, because nothing distinguishes it from a grounded one.
+ */
+describe("the identifier guard", () => {
+  const ask = (part: string) => `What is the drain-source voltage rating (VDS) of the ${part}?`;
+
+  test("refuses when no retrieved chunk comes from the part named", () => {
+    expect(guardRefuses(ask("PSMN1R0-30YLD"), ["PSMN1R0-30YLC", "PSMN1R5-30YL"])).toBe(true);
+  });
+
+  test("does NOT refuse when the named part was retrieved", () => {
+    // The expensive direction to get wrong: this guard eating a real answer.
+    expect(guardRefuses(ask("PSMN1R0-30YLD"), ["PSMN1R0-30YLC", "PSMN1R0-30YLD"])).toBe(false);
+  });
+
+  test("a part number is not its lookalike neighbour", () => {
+    // One character apart, a different component, and the whole holdout trap.
+    expect(guardRefuses(ask("BUK9M43-100E"), ["BUK9M34-100E"])).toBe(true);
+  });
+
+  test("stands aside when the question names no part", () => {
+    // Nothing to check: the model decides, as it did before the guard existed.
+    expect(guardRefuses("What does RDS(on) mean?", ["PSMN1R0-30YLD"])).toBe(false);
+  });
+
+  test("it reads the part out of a question full of numbers and symbols", () => {
+    const q = "What drain current (ID) is the PMPB14XP rated for at VGS = -4.5 V; Tamb = 25 °C?";
+    expect(namedParts(q)).toEqual(["PMPB14XP"]);
+  });
 });

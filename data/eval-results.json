@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T07:58:12.325Z",
+  "generatedAt": "2026-07-14T09:16:25.704Z",
   "corpus": {
     "documents": 497,
     "heldOut": 183,
@@ -9,33 +9,33 @@
     "dense": {
       "questions": 1918,
       "recall": {
-        "1": 0.6204,
-        "3": 0.8014,
-        "5": 0.8634,
-        "10": 0.9103
+        "1": 0.6538,
+        "3": 0.8394,
+        "5": 0.9067,
+        "10": 0.9515
       },
-      "mrr": 0.7214,
+      "mrr": 0.7581,
       "ndcg": {
-        "1": 0.6204,
-        "3": 0.7266,
-        "5": 0.7522,
-        "10": 0.7675
+        "1": 0.6538,
+        "3": 0.7629,
+        "5": 0.7907,
+        "10": 0.8054
       }
     },
     "dense+symbol": {
       "questions": 1918,
       "recall": {
-        "1": 0.9103,
-        "3": 0.9103,
-        "5": 0.9103,
-        "10": 0.9103
+        "1": 0.9515,
+        "3": 0.9515,
+        "5": 0.9515,
+        "10": 0.9515
       },
-      "mrr": 0.9103,
+      "mrr": 0.9515,
       "ndcg": {
-        "1": 0.9103,
-        "3": 0.9103,
-        "5": 0.9103,
-        "10": 0.9103
+        "1": 0.9515,
+        "3": 0.9515,
+        "5": 0.9515,
+        "10": 0.9515
       }
     },
     "hybrid-rrf": {
@@ -58,44 +58,48 @@
   "best": "hybrid-rrf",
   "generator": null,
   "answer": {
-    "sample": 150,
-    "precision": 0.979,
-    "coverage": 0.973,
-    "correct": 0.953,
-    "wrongValue": 0.02,
-    "noValue": 0.007,
-    "refusedWrongly": 0.02,
+    "sample": 400,
+    "precision": 0.998,
+    "coverage": 1,
+    "correct": 0.998,
+    "wrongValue": 0.003,
+    "noValue": 0,
+    "refusedWrongly": 0,
     "degenerate": 0,
-    "signAgreement": 1,
+    "signAgreement": 0.997,
     "byDimension": {
       "vds": {
-        "n": 36,
+        "n": 100,
         "correct": 1
       },
       "rdson": {
-        "n": 33,
-        "correct": 0.939
+        "n": 85,
+        "correct": 0.988
       },
       "id": {
-        "n": 41,
-        "correct": 0.902
+        "n": 108,
+        "correct": 1
       },
       "package": {
-        "n": 40,
-        "correct": 0.975
+        "n": 107,
+        "correct": 1
       }
     }
   },
   "refusal": {
-    "sample": 150,
-    "refused": 0.98,
-    "hallucinated": 0.02,
-    "hallucinatedButCorrect": 0.667
+    "sample": 400,
+    "refused": 0.958,
+    "hallucinated": 0.043,
+    "guarded": {
+      "refused": 1,
+      "wronglyRefusedIndexed": 0
+    },
+    "hallucinatedButCorrect": 0.412
   },
   "latency": {
-    "retrieveP50Ms": 460,
-    "retrieveP95Ms": 751,
-    "generateP50Ms": 1131,
-    "generateP95Ms": 2267
+    "retrieveP50Ms": 452,
+    "retrieveP95Ms": 809,
+    "generateP50Ms": 1074,
+    "generateP95Ms": 2405
   }
 }
