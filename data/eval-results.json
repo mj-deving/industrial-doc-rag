@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-07-13T14:52:34.039Z",
+  "generatedAt": "2026-07-13T20:59:30.929Z",
   "corpus": {
     "documents": 497,
     "heldOut": 183,
-    "questions": 2510
+    "questions": 2512
   },
   "retrieval": {
     "dense": {
-      "questions": 1825,
+      "questions": 1826,
       "recall": {
-        "1": 0.4948,
-        "3": 0.6515,
-        "5": 0.7134,
-        "10": 0.7945
+        "1": 0.6046,
+        "3": 0.793,
+        "5": 0.8571,
+        "10": 0.9074
       },
-      "mrr": 0.5892,
+      "mrr": 0.7095,
       "ndcg": {
-        "1": 0.4948,
-        "3": 0.5866,
-        "5": 0.6121,
-        "10": 0.6385
+        "1": 0.6046,
+        "3": 0.7149,
+        "5": 0.7413,
+        "10": 0.7578
       }
     },
     "dense+symbol": {
-      "questions": 1825,
+      "questions": 1826,
       "recall": {
-        "1": 0.7945,
-        "3": 0.7945,
-        "5": 0.7945,
-        "10": 0.7945
+        "1": 0.9069,
+        "3": 0.9069,
+        "5": 0.9069,
+        "10": 0.9069
       },
-      "mrr": 0.7945,
+      "mrr": 0.9069,
       "ndcg": {
-        "1": 0.7945,
-        "3": 0.7945,
-        "5": 0.7945,
-        "10": 0.7945
+        "1": 0.9069,
+        "3": 0.9069,
+        "5": 0.9069,
+        "10": 0.9069
       }
     },
     "hybrid-rrf": {
-      "questions": 1825,
+      "questions": 1826,
       "recall": {
         "1": 1,
         "3": 1,
@@ -56,41 +56,46 @@
     }
   },
   "best": "hybrid-rrf",
+  "generator": null,
   "answer": {
     "sample": 150,
-    "correct": 0.84,
-    "wrongValue": 0.08,
-    "noValue": 0.027,
-    "refusedWrongly": 0.053,
+    "precision": 0.972,
+    "coverage": 0.967,
+    "correct": 0.94,
+    "wrongValue": 0.027,
+    "noValue": 0.013,
+    "refusedWrongly": 0.02,
+    "degenerate": 0,
+    "signAgreement": 1,
     "byDimension": {
       "vds": {
+        "n": 35,
+        "correct": 0.971
+      },
+      "rdson": {
         "n": 37,
         "correct": 0.892
       },
-      "rdson": {
+      "id": {
         "n": 36,
         "correct": 0.944
       },
-      "id": {
-        "n": 39,
-        "correct": 0.641
-      },
       "package": {
-        "n": 38,
-        "correct": 0.895
+        "n": 42,
+        "correct": 0.952
       }
     }
   },
   "refusal": {
     "sample": 150,
-    "refused": 0.973,
-    "hallucinated": 0.027,
-    "hallucinatedButCorrect": 0
+    "refused": 0.98,
+    "hallucinated": 0.02,
+    "hallucinatedButCorrect": 0.667
   },
   "latency": {
-    "retrieveP50Ms": 480,
-    "retrieveP95Ms": 817,
-    "generateP50Ms": 969,
-    "generateP95Ms": 3977
+    "retrieveP50Ms": 415,
+    "retrieveP95Ms": 579,
+    "generateP50Ms": 930,
+    "generateP95Ms": 1983
   }
 }

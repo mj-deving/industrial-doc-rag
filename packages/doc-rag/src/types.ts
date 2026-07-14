@@ -60,4 +60,7 @@ export type Answer = {
   refused: boolean;
   /** Ranked document ids behind the answer, best first. */
   retrieved: string[];
+  /** The excerpts the answer was written from, in the order the prompt saw them.
+   *  A failure is only diagnosable against the evidence that produced it. */
+  evidence: { part: string; text: string }[];
 };

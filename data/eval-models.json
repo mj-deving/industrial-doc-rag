@@ -1,0 +1,161 @@
+{
+  "generatedAt": "2026-07-13T18:37:32.198Z",
+  "strategy": "hybrid-rrf",
+  "sample": 50,
+  "results": [
+    {
+      "model": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.939,
+      "coverage": 0.98,
+      "accuracy": 0.92,
+      "refusedWrongly": 0.02,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 1,
+        "id": 0.733,
+        "package": 1
+      },
+      "generateP50Ms": 970,
+      "generateP95Ms": 4086
+    },
+    {
+      "model": "@cf/nvidia/nemotron-3-120b-a12b",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.978,
+      "coverage": 0.92,
+      "accuracy": 0.9,
+      "refusedWrongly": 0.02,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0.03,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 0.917,
+        "id": 0.733,
+        "package": 1
+      },
+      "generateP50Ms": 8738,
+      "generateP95Ms": 23054
+    },
+    {
+      "model": "@cf/zai-org/glm-5.2",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.978,
+      "coverage": 0.92,
+      "accuracy": 0.9,
+      "refusedWrongly": 0.08,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 0.917,
+        "id": 0.733,
+        "package": 1
+      },
+      "generateP50Ms": 38840,
+      "generateP95Ms": 60324
+    },
+    {
+      "model": "@cf/qwen/qwen3-30b-a3b-fp8",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.956,
+      "coverage": 0.9,
+      "accuracy": 0.86,
+      "refusedWrongly": 0.08,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 0.917,
+        "id": 0.667,
+        "package": 0.909
+      },
+      "generateP50Ms": 4044,
+      "generateP95Ms": 14810
+    },
+    {
+      "model": "@cf/mistralai/mistral-small-3.1-24b-instruct",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.977,
+      "coverage": 0.88,
+      "accuracy": 0.86,
+      "refusedWrongly": 0.08,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 0.917,
+        "id": 0.733,
+        "package": 0.818
+      },
+      "generateP50Ms": 631,
+      "generateP95Ms": 2053
+    },
+    {
+      "model": "@cf/moonshotai/kimi-k2.6",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.978,
+      "coverage": 0.92,
+      "accuracy": 0.9,
+      "refusedWrongly": 0.02,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0.03,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 0.917,
+        "id": 0.733,
+        "package": 1
+      },
+      "generateP50Ms": 8077,
+      "generateP95Ms": 31082
+    },
+    {
+      "model": "@cf/google/gemma-4-26b-a4b-it",
+      "n": {
+        "indexed": 50,
+        "holdout": 50
+      },
+      "precision": 0.976,
+      "coverage": 0.84,
+      "accuracy": 0.82,
+      "refusedWrongly": 0.02,
+      "refusesHoldout": 1,
+      "degenerate": 0,
+      "unreadable": 0.07,
+      "byDimension": {
+        "vds": 1,
+        "rdson": 0.917,
+        "id": 0.467,
+        "package": 1
+      },
+      "generateP50Ms": 8494,
+      "generateP95Ms": 25355
+    }
+  ]
+}

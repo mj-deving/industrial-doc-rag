@@ -13,6 +13,7 @@
 
 import { Hono } from "hono";
 import { answer } from "../../packages/doc-rag/src/answer";
+import { isDegenerate } from "../../packages/doc-rag/src/degenerate";
 import { retrieve, type Strategy } from "../../packages/doc-rag/src/retrieve";
 import { retriever, type IndexSize } from "../engine/cloudflare";
 import type { Env } from "../types";
@@ -51,9 +52,16 @@ evalApi.use("/harness/*", async (c, next) => {
 
 type Ask = { id: string; question: string };
 
-/** Temporary. What does a given model ACTUALLY return? The shipped types say one
- *  thing and four candidates returned an empty string, which is the shape of a
- *  refusal and would have won the refusal test outright. */
+/**
+ * What does a given model ACTUALLY return?
+ *
+ * This exists because the shipped Workers AI types describe one response shape and
+ * the platform serves two, and four of seven candidates came back as an empty
+ * string — which is the shape of a refusal, and would have won the refusal test
+ * outright. I wrote a parser for the shape I assumed, it was wrong, and this
+ * endpoint is what replaced assuming with looking. It stays: every new candidate
+ * is a new chance for the response shape to be something else again.
+ */
 evalApi.post("/harness/raw", async (c) => {
   const { model, prompt } = (await c.req.json()) as { model: string; prompt?: string };
   const raw = await c.env.AI.run(model as keyof AiModels, {
@@ -105,11 +113,12 @@ evalApi.post("/harness/retrieve", async (c) => {
  * comparison is a sequence of two different systems rather than one experiment.
  */
 evalApi.post("/harness/answer", async (c) => {
-  const { questions, strategy, k, model } = (await c.req.json()) as {
+  const { questions, strategy, k, model, evidence } = (await c.req.json()) as {
     questions: Ask[];
     strategy: Strategy;
     k?: number;
     model?: string;
+    evidence?: boolean;
   };
 
   const generator = model ?? GENERATOR;
@@ -134,14 +143,44 @@ evalApi.post("/harness/answer", async (c) => {
     return text || UNREADABLE;
   };
 
+  /**
+   * Token soup is a broken response, not a wrong one, and it is worth one retry.
+   *
+   * The incumbent collapses into repeated tokens ("seeded seeded uling Hlav") on
+   * about 1.3% of calls — an fp8 quantisation artefact, not a reading error.
+   *
+   * A retry only helps if the collapse is transient, and `temperature: 0` says it
+   * should not be: a deterministic decode returns the same garbage forever, and the
+   * retry would be a no-op that merely looked like a fix. So it was measured rather
+   * than assumed. BUK7K12-60E's package question, which produced soup in the eval,
+   * was asked four more times through this endpoint and answered correctly four
+   * times out of four. Temperature zero is not determinism on this platform, and the
+   * collapse does not reproduce.
+   *
+   * Retrying a WRONG answer would be tuning until the benchmark agrees. Retrying a
+   * BROKEN one is what any caller does when the wire returns garbage. The line
+   * between them is `isDegenerate`, which fires on repetition rather than on content
+   * and has not yet fired on a real answer.
+   */
+  const generateOnce = generate;
+  const generateChecked = async (prompt: string): Promise<string> => {
+    const first = await generateOnce(prompt);
+    if (!isDegenerate(first)) return first;
+    return generateOnce(prompt);
+  };
+
   const results = [];
   for (const ask of questions) {
-    const result = await answer(retriever(c.env), generate, ask.question, strategy, k ?? 10);
+    const result = await answer(retriever(c.env), generateChecked, ask.question, strategy, k ?? 10);
     results.push({
       id: ask.id,
       text: result.text,
       refused: result.refused,
       retrieved: result.retrieved,
+      // Off by default: ten chunks per question is most of the payload, and a
+      // 300-question run does not need them. On when a failure needs explaining,
+      // because the alternative is inferring what the model saw.
+      ...(evidence ? { evidence: result.evidence } : {}),
       timings: {
         retrieveMs: Math.round(result.timings.retrieveMs),
         generateMs: Math.round(result.timings.generateMs)

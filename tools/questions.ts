@@ -66,7 +66,12 @@ export function questionsFor(truth: GroundTruth): Question[] {
   }
 
   if (truth.id_a) {
-    add("id", `What continuous drain current (ID) is the ${truth.part} rated for${at(truth.id_a)}?`, {
+    // Not "continuous". Where a part is rated only for t <= 5 s, no continuous
+    // figure exists, and the adjective made the question ask for a row the
+    // datasheet does not have while the label held one it does. The conditions
+    // identify the row on their own; an adjective that is sometimes false does
+    // not help, it just moves the question off the label.
+    add("id", `What drain current (ID) is the ${truth.part} rated for${at(truth.id_a)}?`, {
       kind: "numeric",
       value: truth.id_a.value,
       unit: truth.id_a.unit,

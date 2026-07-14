@@ -55,6 +55,28 @@ function split(block: string): string[] {
   return pieces;
 }
 
+/**
+ * The last whole lines of `text`, up to `budget` characters. Never a partial line.
+ *
+ * Returns nothing rather than overrun. A line that does not fit the overlap budget
+ * is not a table row — it is a glued run of cells that `split` has already cut to
+ * the target size — and carrying it forward would push the next chunk past the
+ * ceiling that keeps ingestion working at all.
+ */
+function tail(text: string, budget: number): string {
+  const lines = text.split("\n");
+  const kept: string[] = [];
+  let size = 0;
+
+  for (let at = lines.length - 1; at >= 0; at--) {
+    const line = lines[at];
+    if (size + line.length > budget) break;
+    kept.unshift(line);
+    size += line.length + 1;
+  }
+  return kept.join("\n");
+}
+
 export function chunk(document: Document): Chunk[] {
   const blocks = normalise(document.text)
     .split(/\n{2,}/)
@@ -69,7 +91,13 @@ export function chunk(document: Document): Chunk[] {
       texts.push(current.trim());
       // Carry a tail forward so a fact split across the seam survives in one of
       // the two halves. A table row is short; the overlap is longer than a row.
-      current = current.slice(-OVERLAP_CHARS);
+      //
+      // Whole lines only. A character slice lands in the middle of a row, and the
+      // half it hands to the next chunk begins after the symbol column: the chunk
+      // opens with `VGS = 10 V; Tmb = 25 °C; Fig. 2 - - 36 A` and never says what
+      // the 36 A is. That is a number belonging to nothing, and a model handed one
+      // will either refuse or guess. Observed on BUK7M19-60E, where it did refuse.
+      current = tail(current, OVERLAP_CHARS);
     }
     current = current ? `${current}\n\n${block}` : block;
   }

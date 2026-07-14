@@ -18,6 +18,7 @@
  */
 
 import { chunk } from "../packages/doc-rag/src/chunk";
+import { prepare } from "../packages/doc-rag/src/prepare";
 import { isHoldout } from "./split";
 import type { GroundTruth } from "./groundtruth";
 
@@ -56,10 +57,29 @@ async function extract(part: string): Promise<Batch | null> {
     return null;
   }
 
-  const chunks = chunk({ id: part, title: part, text }).map((c) => ({
+  // Strip the boilerplate and bind each table row to its symbol BEFORE chunking.
+  // The chunker stays generic; the vendor's page furniture is an ingest concern.
+  // The ground truth is parsed from the raw render, not from this — the label must
+  // come from the document, not from my cleanup of it, or a bug in the cleanup
+  // would rewrite the label and the evidence together and the eval would report
+  // a perfect score for agreeing with itself.
+  const chunks = chunk({ id: part, title: part, text: prepare(text) }).map((c) => ({
     id: c.id,
     part: c.documentId,
-    text: c.text,
+    // Every chunk names its part, deliberately.
+    //
+    // The part number used to reach every chunk by accident: it is stamped into the
+    // legal footer of every page, so stripping the boilerplate stripped the only
+    // thing anchoring a chunk to its own datasheet. Binding table rows to their
+    // symbol then made the damage visible — `ID drain current VGS = 10 V; Tamb =
+    // 25 °C` is now a complete, self-contained row, and it is also WORD FOR WORD the
+    // same row in four hundred other datasheets. Retrieval promptly answered a
+    // question about PMPB11EN with the ID rows of PMPB95ENEA, PMV65XP and PMN40ENE.
+    //
+    // So the anchor goes back in on purpose, as a header rather than as a copyright
+    // notice. This is what the footer was doing all along; it was just doing it by
+    // luck, and the luck ran out the moment the text got cleaner.
+    text: `${part}\n${c.text}`,
     index: c.index
   }));
 
@@ -117,21 +137,38 @@ let sent = 0;
 let done = 0;
 let sendCursor = 0;
 
+/**
+ * Post one batch, and survive a blip.
+ *
+ * Vectorize returned a single 502 four hundred requests into a run and the whole
+ * ingest died, leaving the index half-written — which is worse than not having run
+ * it, because the next thing to touch that index is an eval that will report a
+ * number for a system that is in no coherent state. A transient upstream failure is
+ * a fact of the platform, so it is the client's job to absorb it, not the operator's.
+ */
+async function post(payload: unknown, attempt = 0): Promise<number> {
+  const response = await fetch(`${workerUrl}/ingest/chunks`, {
+    method: "POST",
+    // The token goes in a header, never in the URL: a URL lands in logs, in
+    // shell history, and in referrers.
+    headers: { "content-type": "application/json", authorization: `Bearer ${token}` },
+    body: JSON.stringify(payload)
+  });
+
+  if (response.ok) return ((await response.json()) as { upserted: number }).upserted;
+
+  const body = await response.text();
+  if ((response.status >= 500 || response.status === 429) && attempt < 5) {
+    await Bun.sleep(2 ** attempt * 1000 + Math.floor(Math.random() * 500));
+    return post(payload, attempt + 1);
+  }
+  throw new Error(`ingest failed: HTTP ${response.status} ${body}`);
+}
+
 async function sendWorker(): Promise<void> {
   while (sendCursor < requests.length) {
     const payload = requests[sendCursor++];
-    const response = await fetch(`${workerUrl}/ingest/chunks`, {
-      method: "POST",
-      // The token goes in a header, never in the URL: a URL lands in logs, in
-      // shell history, and in referrers.
-      headers: { "content-type": "application/json", authorization: `Bearer ${token}` },
-      body: JSON.stringify(payload)
-    });
-
-    if (!response.ok) {
-      throw new Error(`ingest failed: HTTP ${response.status} ${await response.text()}`);
-    }
-    const { upserted } = (await response.json()) as { upserted: number };
+    const upserted = await post(payload);
     sent += upserted;
     done++;
     if (done % 20 === 0) console.error(`${done}/${requests.length} requests · ${sent} chunks`);

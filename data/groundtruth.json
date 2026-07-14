@@ -175,7 +175,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -5.6,
+      "value": -4.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -260,7 +260,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 6.9,
+      "value": 5.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -314,10 +314,10 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 8.3,
+      "value": 4.2,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 4.5 V; Tsp = 25 °C"
+      "conditions": "VGS = 4.5 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 60,
@@ -399,7 +399,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -3.7,
+      "value": -3.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -417,7 +417,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 14,
+      "value": 10,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -435,7 +435,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 18,
+      "value": 13,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -453,7 +453,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -12.3,
+      "value": -8.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -507,7 +507,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 21.5,
+      "value": 12.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -543,7 +543,7 @@
     "package": "TSOP6",
     "vds_v": 30,
     "id_a": {
-      "value": 8,
+      "value": 6.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -561,7 +561,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -5.3,
+      "value": -4.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -610,7 +610,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 7.2,
+      "value": 5.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -819,10 +819,10 @@
     "package": null,
     "vds_v": 40,
     "id_a": {
-      "value": 19,
+      "value": 8,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 23,
@@ -922,7 +922,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -5,
+      "value": -4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -994,7 +994,7 @@
     "package": "TSOP6",
     "vds_v": 60,
     "id_a": {
-      "value": 2,
+      "value": 1.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -1120,7 +1120,7 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 14.3,
+      "value": 10.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -1169,7 +1169,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -3.2,
+      "value": -2.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1349,7 +1349,7 @@
     "package": null,
     "vds_v": 25,
     "id_a": {
-      "value": 19,
+      "value": 11.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -1506,10 +1506,10 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -6.7,
+      "value": -3.4,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = -4.5 V; Tsp = 25 °C"
+      "conditions": "VGS = -4.5 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 110,
@@ -1604,10 +1604,10 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 10.6,
+      "value": 3.4,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 77,
@@ -1797,7 +1797,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -3.3,
+      "value": -2.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -1815,7 +1815,7 @@
     "package": null,
     "vds_v": 40,
     "id_a": {
-      "value": 11.5,
+      "value": 8.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -1949,7 +1949,7 @@
     "package": "SOT23",
     "vds_v": 20,
     "id_a": {
-      "value": 8.6,
+      "value": 6.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -2039,7 +2039,7 @@
     "package": null,
     "vds_v": -12,
     "id_a": {
-      "value": -12.7,
+      "value": -8.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -2057,7 +2057,7 @@
     "package": "SOT23",
     "vds_v": -30,
     "id_a": {
-      "value": -3.4,
+      "value": -2.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -2487,7 +2487,7 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -13,
+      "value": -9.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -2595,7 +2595,7 @@
     "package": "TSOP6",
     "vds_v": -30,
     "id_a": {
-      "value": -4.4,
+      "value": -3.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -2667,7 +2667,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 4.4,
+      "value": 3.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -2806,7 +2806,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 12,
+      "value": 7.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -3035,7 +3035,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 5.1,
+      "value": 4.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -3089,7 +3089,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 7.6,
+      "value": 6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -3107,7 +3107,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -4.4,
+      "value": -3.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -3496,7 +3496,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -10.6,
+      "value": -7.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -3586,7 +3586,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 15,
+      "value": 11,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -3622,7 +3622,7 @@
     "package": null,
     "vds_v": 80,
     "id_a": {
-      "value": 4.1,
+      "value": 2.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -3694,7 +3694,7 @@
     "package": "TSOP6",
     "vds_v": -20,
     "id_a": {
-      "value": -5.7,
+      "value": -4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -3851,10 +3851,10 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -18,
+      "value": -6,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = -4.5 V; Tsp = 25 °C"
+      "conditions": "VGS = -4.5 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 38,
@@ -3869,7 +3869,7 @@
     "package": "TSOP6",
     "vds_v": 60,
     "id_a": {
-      "value": 4.5,
+      "value": 3.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -3887,10 +3887,10 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 17,
+      "value": 5.5,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 38,
@@ -3923,7 +3923,7 @@
     "package": "TSOP6",
     "vds_v": 30,
     "id_a": {
-      "value": 5.7,
+      "value": 4.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -4008,7 +4008,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 13.5,
+      "value": 9.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4044,7 +4044,7 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -11,
+      "value": -7.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -4080,7 +4080,7 @@
     "package": "TSOP6",
     "vds_v": 30,
     "id_a": {
-      "value": 5.7,
+      "value": 4.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4134,7 +4134,7 @@
     "package": "TSOP6",
     "vds_v": -30,
     "id_a": {
-      "value": -6,
+      "value": -4.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -4170,10 +4170,10 @@
     "package": null,
     "vds_v": -40,
     "id_a": {
-      "value": -14,
+      "value": -6,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = -10 V; Tsp = 25 °C"
+      "conditions": "VGS = -10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 43,
@@ -4237,7 +4237,7 @@
     "package": "TSOP6",
     "vds_v": 20,
     "id_a": {
-      "value": 7.1,
+      "value": 5.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4343,7 +4343,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 13,
+      "value": 9.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4464,7 +4464,7 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 12.9,
+      "value": 9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4482,10 +4482,10 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 13,
+      "value": 5,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 43,
@@ -4639,7 +4639,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 10,
+      "value": 7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4657,7 +4657,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 17,
+      "value": 11,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -4675,7 +4675,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 10,
+      "value": 7.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -4827,7 +4827,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 17.3,
+      "value": 11.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -4863,7 +4863,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -3.3,
+      "value": -2.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -4948,7 +4948,7 @@
     "package": "TSOP6",
     "vds_v": -20,
     "id_a": {
-      "value": -4.7,
+      "value": -3.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5028,7 +5028,7 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -10.3,
+      "value": -7.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5113,7 +5113,7 @@
     "package": "SOT23",
     "vds_v": -30,
     "id_a": {
-      "value": -5.3,
+      "value": -4.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -5234,7 +5234,7 @@
     "package": "TSOP6",
     "vds_v": -20,
     "id_a": {
-      "value": -3.9,
+      "value": -3.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5306,7 +5306,7 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -10.3,
+      "value": -7.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5396,7 +5396,7 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 16.4,
+      "value": 11.6,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -5445,10 +5445,10 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -4.3,
+      "value": -2.8,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = -4.5 V; Tsp = 25 °C"
+      "conditions": "VGS = -4.5 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 74,
@@ -5463,7 +5463,7 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -7.9,
+      "value": -5.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -5481,10 +5481,10 @@
     "package": null,
     "vds_v": 40,
     "id_a": {
-      "value": 19,
+      "value": 8,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 25,
@@ -5553,7 +5553,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 22,
+      "value": 14,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -5638,7 +5638,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 19,
+      "value": 13,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -5692,7 +5692,7 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 4.4,
+      "value": 3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -5710,7 +5710,7 @@
     "package": null,
     "vds_v": 80,
     "id_a": {
-      "value": 2.8,
+      "value": 1.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -5831,10 +5831,10 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 22,
+      "value": 7.2,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 22,
@@ -5867,10 +5867,10 @@
     "package": "LFPAK56",
     "vds_v": 100,
     "id_a": {
-      "value": 58,
+      "value": 82,
       "typ": null,
       "unit": "A",
-      "conditions": "Tmb = 100 °C; VGS = 10 V"
+      "conditions": "VGS = 10 V; Tj = 25 °C"
     },
     "rdson_mohm": {
       "value": 13,
@@ -6091,10 +6091,10 @@
     "package": null,
     "vds_v": 40,
     "id_a": {
-      "value": 5.7,
+      "value": 2.9,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 120,
@@ -6194,10 +6194,10 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 7.4,
+      "value": 2.7,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 125,
@@ -6248,7 +6248,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 5.1,
+      "value": 4.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -6405,7 +6405,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 5.1,
+      "value": 3.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -6477,7 +6477,7 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 10.4,
+      "value": 7.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -6657,7 +6657,7 @@
     "package": null,
     "vds_v": -12,
     "id_a": {
-      "value": -14,
+      "value": -9.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -6747,7 +6747,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -11,
+      "value": -7.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -6783,7 +6783,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -6.8,
+      "value": -4.7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -6819,10 +6819,10 @@
     "package": "D2PAK",
     "vds_v": 200,
     "id_a": {
-      "value": 27.5,
+      "value": 39,
       "typ": null,
       "unit": "A",
-      "conditions": "Tmb = 100 °C"
+      "conditions": "Tmb = 25 °C"
     },
     "rdson_mohm": {
       "value": 165,
@@ -6855,10 +6855,10 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 5.7,
+      "value": 2.1,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 210,
@@ -7030,7 +7030,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -5.3,
+      "value": -4.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -7159,7 +7159,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 15,
+      "value": 11,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -7401,7 +7401,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 17,
+      "value": 12,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -7684,7 +7684,7 @@
     "package": "TSOP6",
     "vds_v": 20,
     "id_a": {
-      "value": 9.1,
+      "value": 6.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -7751,10 +7751,10 @@
     "package": null,
     "vds_v": 80,
     "id_a": {
-      "value": 5.1,
+      "value": 1.9,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 230,
@@ -7826,7 +7826,7 @@
       "value": 75,
       "typ": null,
       "unit": "A",
-      "conditions": "Tmb = 100 °C; VGS = 10 V"
+      "conditions": "VGS = 10 V; Tj = 25 °C"
     },
     "rdson_mohm": {
       "value": 7.6,
@@ -7895,7 +7895,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -12.5,
+      "value": -8.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -8119,7 +8119,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 10,
+      "value": 7.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -8204,7 +8204,7 @@
     "package": "TSOP6",
     "vds_v": 20,
     "id_a": {
-      "value": 6,
+      "value": 4.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -8222,7 +8222,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 16.5,
+      "value": 10.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -8240,7 +8240,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -12,
+      "value": -9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -8284,7 +8284,7 @@
     "package": null,
     "vds_v": -12,
     "id_a": {
-      "value": -17.5,
+      "value": -12.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -8699,7 +8699,7 @@
     "package": "SOT23",
     "vds_v": -20,
     "id_a": {
-      "value": -5.6,
+      "value": -4.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -8789,7 +8789,7 @@
     "package": "SOT23",
     "vds_v": 20,
     "id_a": {
-      "value": 5.4,
+      "value": 4.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -9039,7 +9039,7 @@
     "part": "PSMN7R0-30YLC",
     "channel": "N",
     "package": "SOT669",
-    "vds_v": null,
+    "vds_v": 30,
     "id_a": {
       "value": 61,
       "typ": null,
@@ -9134,7 +9134,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 25,
+      "value": 15,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -9170,7 +9170,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 13,
+      "value": 9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -9188,10 +9188,10 @@
     "package": null,
     "vds_v": 80,
     "id_a": {
-      "value": 9.8,
+      "value": 3.2,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 81,
@@ -9404,10 +9404,10 @@
     "package": null,
     "vds_v": 40,
     "id_a": {
-      "value": 18,
+      "value": 6,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 30,
@@ -9440,10 +9440,10 @@
     "package": null,
     "vds_v": 40,
     "id_a": {
-      "value": 19,
+      "value": 8,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 23,
@@ -9945,7 +9945,7 @@
     "package": null,
     "vds_v": 25,
     "id_a": {
-      "value": 22.3,
+      "value": 13.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -9963,7 +9963,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 13,
+      "value": 8.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -10017,7 +10017,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 3.7,
+      "value": 3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -10123,7 +10123,7 @@
       "value": 100,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tmb = 100 °C"
+      "conditions": "VGS = 10 V; Tmb = 25 °C"
     },
     "rdson_mohm": {
       "value": 2,
@@ -10282,7 +10282,7 @@
     "package": null,
     "vds_v": -12,
     "id_a": {
-      "value": -16.7,
+      "value": -12,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10318,10 +10318,10 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 11,
+      "value": 4,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 72,
@@ -10336,7 +10336,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 10,
+      "value": 7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -10390,7 +10390,7 @@
     "package": null,
     "vds_v": -12,
     "id_a": {
-      "value": -15,
+      "value": -10.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10457,7 +10457,7 @@
     "package": "SOT23",
     "vds_v": 20,
     "id_a": {
-      "value": 3.4,
+      "value": 2.8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -10475,7 +10475,7 @@
     "package": null,
     "vds_v": -30,
     "id_a": {
-      "value": -11.2,
+      "value": -8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -10 V; Tamb = 25 °C"
@@ -10547,7 +10547,7 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 10.1,
+      "value": 7,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -10565,7 +10565,7 @@
     "package": null,
     "vds_v": -20,
     "id_a": {
-      "value": -8.5,
+      "value": -6.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10655,7 +10655,7 @@
     "package": null,
     "vds_v": -12,
     "id_a": {
-      "value": -13,
+      "value": -9.1,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10709,7 +10709,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 11.3,
+      "value": 8,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -10763,10 +10763,10 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 11,
+      "value": 4,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 56,
@@ -10781,10 +10781,10 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 26,
+      "value": 8.5,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 4.5 V; Tsp = 25 °C"
+      "conditions": "VGS = 4.5 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 16,
@@ -10799,7 +10799,7 @@
     "package": "TSOP6",
     "vds_v": -20,
     "id_a": {
-      "value": -6.8,
+      "value": -5.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -10969,7 +10969,7 @@
     "package": null,
     "vds_v": 20,
     "id_a": {
-      "value": 11.4,
+      "value": 7.9,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -11005,7 +11005,7 @@
     "package": "TSOP6",
     "vds_v": -20,
     "id_a": {
-      "value": -7,
+      "value": -5.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = -4.5 V; Tamb = 25 °C"
@@ -11113,7 +11113,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 5.5,
+      "value": 4.3,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 4.5 V; Tamb = 25 °C"
@@ -11149,7 +11149,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 18.3,
+      "value": 11.4,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -11167,10 +11167,10 @@
     "package": null,
     "vds_v": 60,
     "id_a": {
-      "value": 14,
+      "value": 5.5,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = 10 V; Tsp = 25 °C"
+      "conditions": "VGS = 10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 36,
@@ -11215,7 +11215,12 @@
     "channel": "N",
     "package": "D2PAK",
     "vds_v": 100,
-    "id_a": null,
+    "id_a": {
+      "value": 120,
+      "typ": null,
+      "unit": "A",
+      "conditions": "VGS = 10 V; Tj = 25 °C"
+    },
     "rdson_mohm": {
       "value": 4.8,
       "typ": 4.1,
@@ -11319,7 +11324,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 10.4,
+      "value": 7.2,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -11458,7 +11463,7 @@
     "package": "SOT23",
     "vds_v": 30,
     "id_a": {
-      "value": 5.6,
+      "value": 4.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -11543,7 +11548,7 @@
     "package": null,
     "vds_v": 30,
     "id_a": {
-      "value": 11.3,
+      "value": 7.5,
       "typ": null,
       "unit": "A",
       "conditions": "VGS = 10 V; Tamb = 25 °C"
@@ -11687,10 +11692,10 @@
     "package": null,
     "vds_v": -60,
     "id_a": {
-      "value": -8,
+      "value": -3,
       "typ": null,
       "unit": "A",
-      "conditions": "VGS = -10 V; Tsp = 25 °C"
+      "conditions": "VGS = -10 V; Tamb = 25 °C"
     },
     "rdson_mohm": {
       "value": 120,

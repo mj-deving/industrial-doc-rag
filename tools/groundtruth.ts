@@ -69,10 +69,32 @@ const PACKAGES = [
   "SOT428", "SOT404", "SOT223", "SOT23", "SOT89", "SOT78", "SO8", "TSOP6"
 ];
 
-// A data row ends with: Min Typ Max Unit. Each value is a number or a bare "-".
-// Anchoring at end-of-line is what stops a trailing figure reference ("Fig. 10")
-// in the conditions column from being read as a value.
-const TAIL = /(-?\d+(?:\.\d+)?|-)\s+(-?\d+(?:\.\d+)?|-)\s+(-?\d+(?:\.\d+)?|-)\s+(\S+)\s*$/;
+// A data row ends with its value columns and then a unit. Each value is a number
+// or a bare "-". Anchoring at end-of-line is what stops a trailing figure
+// reference ("Fig. 10") in the conditions column from being read as a value.
+//
+// TWO or three columns, because the datasheet uses both and this pattern used to
+// insist on three. Quick reference data prints Min Typ Max; Limiting values prints
+// only Min Max. So a three-column pattern silently cannot match a single row of
+// the Limiting values table, and every label this file has ever produced came from
+// the Quick reference table alone — which the datasheet itself calls "an extract of
+// the product data given in the Limiting values and Characteristics sections". The
+// label was reading the summary while the model read the source, and where the two
+// disagree (a 5-second rating in the extract, a continuous one in the real table)
+// the model was marked wrong for reading the better document.
+const TAIL = /((?:(?:-?\d+(?:\.\d+)?|-)\s+){2,3})(\S+)\s*$/;
+
+/** Min, typ and max out of a row's value columns. Typ is absent in a two-column table. */
+function columns(row: string): { min: string; typ: string; max: string } {
+  const match = TAIL.exec(row);
+  if (!match) throw new Error(`not a data row: ${row}`);
+  const values = match[1].trim().split(/\s+/);
+  return {
+    min: values[0],
+    typ: values.length === 3 ? values[1] : "-",
+    max: values[values.length - 1]
+  };
+}
 
 // A new table row starts with a symbol: an uppercase-led token, then whitespace,
 // then a lowercase parameter name. Continuation rows have neither.
@@ -102,7 +124,7 @@ function rowsFor(lines: string[], symbol: string): Row[] {
 
     const match = TAIL.exec(line);
     if (!match) continue;
-    rows.push({ text: line, min: match[1], typ: match[2], max: match[3], unit: match[4] });
+    rows.push({ text: line, ...columns(line), unit: match[2] });
   }
 
   // The table can repeat its header across a page break, so the same row can be
@@ -131,9 +153,34 @@ function num(field: string): number | null {
  */
 const CONDITION = /\b(VGS|VDS|ID|Tj|Tmb|Tsp|Tamb|IDM|f)\s*=\s*[-\d.]+\s*[^\s;]*/g;
 
+/**
+ * A duration limit is a condition, and dropping it changes which row you are
+ * talking about.
+ *
+ * This clause is not of the form `SYMBOL = value`, so the regex above never saw
+ * it, and the label went out carrying only `VGS = 10 V; Tamb = 25 °C`. But the
+ * datasheet lists ID at those conditions TWICE: once for t <= 5 s and once with
+ * no time limit at all, and the two are different currents. The question then
+ * quoted the truncated conditions and asked for the continuous rating while the
+ * label held the 5-second one, so a model reading the datasheet correctly was
+ * marked wrong. The benchmark was asking about one row and grading against another.
+ */
+const DURATION = /\bt\s*[≤<]=?\s*[\d.]+\s*\w+/;
+
 function conditions(text: string): string {
   const clauses = [...text.matchAll(CONDITION)].map((m) => m[0].trim());
-  return clauses.join("; ");
+  const limit = DURATION.exec(text);
+  return [...clauses, ...(limit ? [limit[0].trim()] : [])].join("; ");
+}
+
+/** Quoted at the 25 C reference temperature, whichever temperature the part uses. */
+function isReferenceAmbient(text: string): boolean {
+  return /T(amb|mb|j)\s*=\s*25/.test(text);
+}
+
+/** A row with no duration limit is the continuous rating. With one, it is not. */
+function isContinuous(text: string): boolean {
+  return !DURATION.test(text);
 }
 
 /** True when a row is quoted at the standard 25 C reference junction temperature. */
@@ -195,7 +242,18 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
   }
 
   const vdsMax = vdsRows[0] ? num(vdsRows[0].max) : null;
-  const idMax = idRows[0] ? num(idRows[0].max) : null;
+
+  // Select the ID row by CONDITION, never by position, for exactly the reason
+  // RDSon already is. A datasheet lists the drain current several times: at the
+  // reference temperature and at 100 C, and — where the part has one — with and
+  // without a 5-second duration limit. Taking the first row took whichever the
+  // typesetter happened to print first, which is the t <= 5 s figure, and that is
+  // not the current the part can carry continuously.
+  const idRow =
+    idRows.find((r) => isReferenceAmbient(r.text) && isContinuous(r.text)) ??
+    idRows.find((r) => isReferenceAmbient(r.text)) ??
+    idRows[0];
+  const idMax = idRow ? num(idRow.max) : null;
 
   return {
     part,
@@ -204,13 +262,16 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
     // Signed, as printed. A P-channel part reads -30 V and the label says so.
     vds_v: vdsMax,
     id_a:
-      idMax === null || !idRows[0]
+      idMax === null || !idRow
         ? null
         : {
             value: idMax,
             typ: null,
             unit: "A",
-            conditions: conditions(idRows[0].text)
+            // The FULL conditions of the row the value came from, duration limit
+            // included. The question quotes these back, so a truncation here is a
+            // question about a row that is not the row being graded.
+            conditions: conditions(idRow.text)
           },
     rdson_mohm: rdson
   };
