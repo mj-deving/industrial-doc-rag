@@ -22,6 +22,7 @@
  * Usage: INGEST_TOKEN=... bun tools/scale.ts <worker-url> [--ingest]
  */
 
+import { prepare } from "../packages/doc-rag/src/prepare";
 import { chunk } from "../packages/doc-rag/src/chunk";
 import { retrievalMetrics } from "../packages/doc-rag/src/metrics";
 import { isHoldout } from "./split";
@@ -86,13 +87,27 @@ async function post<T>(path: string, body: unknown, attempt = 0): Promise<T> {
   throw new Error(`${path}: HTTP ${response.status} after ${attempt + 1} attempts ${text}`);
 }
 
+/**
+ * The same pipeline `tools/ingest.ts` runs, because a curve built any other way is
+ * not a curve of this system.
+ *
+ * This used to chunk the RAW `pdftotext` output: no boilerplate strip, no symbol
+ * binding, no part-number anchor. Only the two SMALL indices are filled here — the
+ * 497 row reads the production index — so the curve was plotting one pipeline at 5
+ * and 100 documents and a different one at 497. It showed dense recall@1 IMPROVING
+ * from 0.499 at a hundred documents to 0.654 at five hundred, which cannot be true
+ * of a corpus that only gets harder, and was the tell.
+ */
 function chunksFor(part: string) {
   const proc = Bun.spawnSync(["pdftotext", "-layout", `corpus/${part}.pdf`, "-"]);
   const text = new TextDecoder().decode(proc.stdout);
-  return chunk({ id: part, title: part, text }).map((c) => ({
+  const produced = chunk({ id: part, title: part, text: prepare(text) });
+
+  return produced.map((c) => ({
     id: c.id,
     part: c.documentId,
-    text: c.text,
+    total: produced.length,
+    text: `${part}\n${c.text}`,
     index: c.index
   }));
 }
