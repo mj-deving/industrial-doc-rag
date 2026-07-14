@@ -108,9 +108,12 @@ const same = (a: string, b: string) => a.trim().toLowerCase() === b.trim().toLow
  *  drift apart, and the eval would then measure its own copy. */
 export function matches(row: Attributes, filters: QuerySpec["filters"]): boolean {
   if (filters.channel !== undefined) {
-    // Channel is not extracted directly: the sign of VDS carries it, which is how
-    // the datasheet itself says it. A P-channel part quotes a negative rating.
-    const channel = row.vds === null ? null : row.vds < 0 ? "P" : "N";
+    // Read from the datasheet's first sentence. It used to be DERIVED from the sign of
+    // VDS — a P-channel part quotes a negative rating — and then the model read the
+    // em-dash in an empty Min column as a minus sign on 67 N-channel parts, which
+    // silently moved every one of them into the P-channel half of the corpus. The sign
+    // is still the fallback for a row written before the field existed, and only that.
+    const channel = row.channel ?? (row.vds === null ? null : row.vds < 0 ? "P" : "N");
     if (channel !== filters.channel) return false;
   }
   if (filters.vds !== undefined) {

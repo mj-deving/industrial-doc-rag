@@ -26,6 +26,20 @@ export type Measured = { value: number; unit: string; conditions: string };
 
 export type Attributes = {
   part: string;
+  /**
+   * Read from the datasheet's first sentence, not inferred from the sign of anything.
+   *
+   * It used to be inferred: a P-channel part quotes a negative rating, so `vds < 0`
+   * meant P. That held until a prompt change made the model read the em-dash in an
+   * empty Min column as a minus sign, and 67 N-channel parts came back rated -60 V.
+   * They did not become slightly wrong. They became P-channel parts — they left every
+   * N-channel comparison they belonged in and entered every P-channel one they did not.
+   *
+   * A categorical fact that is carried by the sign bit of a different field is one
+   * typographic accident away from being the opposite fact. Every datasheet opens with
+   * "N-channel enhancement mode Field-Effect Transistor", so it is read, not derived.
+   */
+  channel: "N" | "P" | null;
   /** Signed as the datasheet prints it. A P-channel part is negative. */
   vds: number | null;
   /**

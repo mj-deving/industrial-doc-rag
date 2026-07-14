@@ -93,7 +93,10 @@ function prompt(part: string, excerpts: string[]): string {
   return `You are reading excerpts from ONE MOSFET datasheet. Extract its ratings and answer with JSON only.
 
 Fields:
-  "vds"     the drain-source voltage rating in volts, SIGNED exactly as the datasheet prints it (a P-channel part is negative). Number, or null.
+  "channel" "N" or "P". The first sentence of the datasheet says which: "N-channel enhancement mode Field-Effect Transistor". null if it does not.
+  "vds"     the drain-source voltage rating in volts. Number, or null. An N-channel part's rating is POSITIVE; a P-channel part's is negative.
+            A "-" standing alone in a value column means the datasheet does not specify THAT COLUMN. It is a blank cell, not a minus sign,
+            and it never belongs to the number beside it. A row printed "-  -  60" states one value, and the value is 60.
   "rdson"   an ARRAY of EVERY maximum drain-source on-state resistance the datasheet quotes, one entry per set of conditions:
             [{"value": number, "unit": "mOhm", "conditions": "..."}, ...]
             A datasheet quotes this at more than one gate voltage. Both are true and BOTH must be listed. [] if none is stated.
@@ -173,6 +176,7 @@ export function parseAttributes(part: string, text: string): Attributes | null {
 
   return {
     part,
+    channel: row.channel === "N" || row.channel === "P" ? row.channel : null,
     vds: typeof row.vds === "number" ? row.vds : null,
     rdson: measured(row.rdson, "mΩ"),
     id: measured(row.id, "A"),

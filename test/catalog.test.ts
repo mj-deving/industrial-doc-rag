@@ -8,10 +8,11 @@
 
 import { describe, expect, test } from "bun:test";
 import { classOf, cleanConditions, cleanPackages, type Attributes } from "../src/api/contracts";
-import { runQuery, vocabulary, type QuerySpec } from "../src/api/catalog";
+import { matches, runQuery, vocabulary, type QuerySpec } from "../src/api/catalog";
 
 const row = (part: string, over: Partial<Attributes> = {}): Attributes => ({
   part,
+  channel: "N",
   vds: 40,
   rdson: [{ value: 10, unit: "mΩ", conditions: "VGS = 10 V; ID = 25 A; Tj = 25 °C" }],
   id: [{ value: 50, unit: "A", conditions: "VGS = 10 V; Tmb = 25 °C" }],
@@ -184,9 +185,20 @@ describe("counts and ties", () => {
   });
 
   test("a P-channel part is ranked on magnitude, not on the sign it prints", () => {
+    // The fixture names the channel now. It used to leave it to the sign of vds, which is
+    // the inference this corpus proved cannot be trusted: an em-dash in an empty column
+    // makes an N-channel part negative, and the part changes channel.
     const p = [
-      row("P-BIG", { vds: -30, id: [{ value: -8.8, unit: "A", conditions: "VGS = -10 V; Tamb = 25 °C" }] }),
-      row("P-SMALL", { vds: -30, id: [{ value: -2.4, unit: "A", conditions: "VGS = -10 V; Tamb = 25 °C" }] })
+      row("P-BIG", {
+        channel: "P",
+        vds: -30,
+        id: [{ value: -8.8, unit: "A", conditions: "VGS = -10 V; Tamb = 25 °C" }]
+      }),
+      row("P-SMALL", {
+        channel: "P",
+        vds: -30,
+        id: [{ value: -2.4, unit: "A", conditions: "VGS = -10 V; Tamb = 25 °C" }]
+      })
     ];
     const result = runQuery(
       { op: "max", field: "id", filters: { channel: "P", conditions: "VGS = -10 V; Tamb = 25 °C" } },
@@ -296,5 +308,37 @@ describe("a duration limit is a condition, not a figure reference", () => {
 
   test("and a figure reference is still a figure reference", () => {
     expect(cleanConditions("VGS = 10 V; ID = 20 A; Tj = 25 °C; Fig. 12")).toBe("VGS = 10 V; ID = 20 A; Tj = 25 °C");
+  });
+});
+
+/**
+ * A channel is a fact about the part. It was a sign bit on a different field.
+ *
+ * `matches` derived it: `row.vds < 0 ? "P" : "N"`, because a P-channel datasheet quotes
+ * a negative rating. Then the extraction prompt was changed to make the model read the
+ * Min/Typ/Max columns properly, and the model started reading the em-dash in an empty Min
+ * cell as a minus sign. 67 N-channel parts came back at -60 V, and the sign is the channel,
+ * so they did not become slightly wrong: they left every N-channel comparison they belonged
+ * in and entered every P-channel one they did not. Nothing in the answer would look odd.
+ */
+describe("the channel is read, not derived from a minus sign", () => {
+  const n = row("N-PART", { channel: "N", vds: -60 }); // as the dash-bug produced it
+  const p = row("P-PART", { channel: "P", vds: -30 });
+
+  test("a mis-signed rating no longer moves a part into the other channel", () => {
+    expect(matches(n, { channel: "N" })).toBe(true);
+    expect(matches(n, { channel: "P" })).toBe(false);
+    expect(matches(p, { channel: "P" })).toBe(true);
+  });
+
+  test("and a part whose channel was never read still falls back to the sign", () => {
+    // Not a hypothetical: the catalogue was written twice before the field existed.
+    const old = row("OLD", { channel: null, vds: -30 });
+    expect(matches(old, { channel: "P" })).toBe(true);
+    expect(matches(old, { channel: "N" })).toBe(false);
+  });
+
+  test("the voltage filter reads the magnitude, so a sign cannot hide a part from it", () => {
+    expect(matches(n, { vds: 60 })).toBe(true);
   });
 });
