@@ -26,9 +26,20 @@ export type Results = {
   };
   refusal: {
     sample: number;
+    /** What the MODEL does alone. The eval runs with the identifier guard off. */
     refused: number;
     hallucinated: number;
     hallucinatedButCorrect: number;
+    /** What the SHIPPED system does. Derived from the parts each question retrieved,
+     *  not measured, because a held-out datasheet cannot be retrieved and so the
+     *  guard always fires: a measured 1.0 would restate the guard's definition. */
+    guarded: {
+      refused: number;
+      /** The guard's cost: indexed parts it would refuse. Zero, and asserted rather
+       *  than assumed, because the day retrieval regresses is the day it starts
+       *  eating real answers. */
+      wronglyRefusedIndexed: number;
+    };
   };
   latency: Record<string, number>;
 };

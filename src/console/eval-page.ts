@@ -170,11 +170,19 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
 
   <section>
     <h2>Where the questions come from</h2>
-    <p class="lede">Nobody wrote them. A parser reads the "Quick reference data" table out of each
-    PDF and produces four labelled facts per part: the V<sub>DS</sub> rating, the maximum
-    R<sub>DS(on)</sub> with the conditions it was measured at, the continuous I<sub>D</sub>, and the
-    package. The question is generated from the label, so the label is not an opinion about the
-    answer, it is the table the answer is printed in.</p>
+    <p class="lede">Nobody wrote them. A parser reads each PDF and produces four labelled facts per
+    part: the V<sub>DS</sub> rating, the maximum R<sub>DS(on)</sub> with the conditions it was
+    measured at, the continuous I<sub>D</sub>, and the package. The question is generated from the
+    label, so the label is not an opinion about the answer, it is the table the answer is printed
+    in.</p>
+    <p>Each fact is read from the table that states it, and that sentence is load-bearing. The parser
+    used to read I<sub>D</sub> out of the "Quick reference data" table, which the datasheet itself
+    describes as an extract of the sections below it. The extract quotes a 5-second pulse rating; the
+    Limiting Values table quotes the continuous one. 121 of 680 I<sub>D</sub> labels were the wrong
+    number, and the model was marked wrong for reading the authoritative table. The package label had
+    the same shape of bug, scanned out of the front page against a list of package names, and it
+    picked <span style="font-family:var(--font-mono)">SO8</span> for the PSMN012-100YS out of a
+    marketing bullet. Its ordering table says LFPAK. So did the model.</p>
     <p>The system under test never sees that parse. It embeds the whole document, retrieves across
     ${c.documents} near-identical MOSFET datasheets, and a model reads the excerpts it gets back. The
     label and the answer are produced by different mechanisms, which is the only reason grading one
@@ -230,26 +238,36 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
       </div>
     </div>
 
-    <p class="note"><strong>This column read 0.353 until this eval found out why.</strong> The fused
-    strategy ranked documents perfectly and then handed the model one chunk of each. A datasheet is
-    about 74 chunks, so it got the right datasheet opened to the wrong page, and refused 53% of the
-    questions it should have answered. The model was right to refuse: the figure was genuinely not in
-    the excerpt. R<sub>DS(on)</sub> went from 0.111 to 0.944 when the evidence was assembled from
-    within the named document instead. The pre-fix run is committed next to this one, measured against
-    the old code rather than quoted from memory.</p>
+    <p class="note"><strong>This column read 0.353, then 0.840, and every gain came from the
+    evidence rather than the model.</strong> The generator never changed. Three models from three
+    vendors were benchmarked against these questions and scored within a point of each other, which
+    is what happens when they are all failing on the same missing rows.</p>
 
-    <p>The noise floor is about one question. That before-number first came out 0.360 and reproduced
-    at 0.353: same questions, same code, same temperature 0, one answer of 150 different. Decoding
-    here is not bit-exact, so a gap under a point is noise rather than a result.</p>
+    <p>The fused strategy ranked documents perfectly and then handed the model one chunk of each, so
+    it got the right datasheet opened to the wrong page and refused half the questions it should have
+    answered. Then the prompt truncated each excerpt at 900 characters against a chunker that bounds a
+    chunk at 1,800, so the model was shown the first half of every chunk it retrieved, and a table
+    chunk always lost its last rows. The last rows of a limiting-values table are the operating points
+    a question distinguishes between. And the ingest prune, which exists to remove a previous ingest's
+    leftovers, inferred where a document ended from whichever slice of it a concurrent request
+    happened to hold, and deleted 8,414 of 25,536 chunks at random. Nothing failed. The eval kept
+    reporting 0.95 against a corpus a third of which was missing.</p>
 
-    <p class="note"><strong>I<sub>D</sub> is the weak column, and the reason is worth naming.</strong>
-    In a datasheet the symbol I<sub>D</sub> appears twice: once as the parameter being rated, and
-    once as a test condition for a different parameter. The PMV20XNE is rated
-    <span style="font-family:var(--font-mono)">I<sub>D</sub> = 7.2 A</span>, and its R<sub>DS(on)</sub>
-    row is measured <span style="font-family:var(--font-mono)">at I<sub>D</sub> = 5.7 A</span>. The
-    model returns 5.7 A. It is reading a condition as if it were a rating. That is a real defect of
-    this system, it is left in the number, and it is not fixed by rewriting the prompt until the test
-    goes green.</p>
+    <p>The noise floor is zero. Three consecutive runs of the same code against the same index return
+    the same score and the same failures, so a moved number is a real one. An earlier version of this
+    page blamed the platform's decoding for a one-question wobble. The wobble was an index that had
+    not finished settling after a re-ingest.</p>
+
+    <p class="note"><strong>I<sub>D</sub> was the weak column at 0.64, and it is now 1.000 on 108
+    questions.</strong> In a datasheet the symbol I<sub>D</sub> appears twice: once as the parameter
+    being rated, once as a test condition for a different parameter. The model returned the condition.
+    It was never fixed by rewriting the prompt until the test went green. It was fixed by showing the
+    model the whole table.</p>
+
+    <p>One indexed question in 400 still fails. PSMN1R5-50YLH is asked for R<sub>DS(on)</sub> at
+    T<sub>j</sub> = 25 &deg;C, the top excerpt holds the 150 &deg;C row, and the model answers
+    3.52 m&#8486; while restating the question's 25 &deg;C conditions back. It reports conditions it
+    did not read. That one is left in the number.</p>
   </section>
 
   <section>
@@ -260,20 +278,37 @@ footer a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid va
     wrong components every single time.</p>
     <div class="split">
       <div class="card">
-        <div class="k">refused correctly</div>
+        <div class="k">refused, model alone</div>
         <div class="v">${pct(results.refusal.refused)}%</div>
         <div class="d">Said the part is not in the corpus, rather than reading a neighbour's table.</div>
       </div>
       <div class="card">
         <div class="k">invented an answer</div>
         <div class="v${results.refusal.hallucinated > 0.05 ? " warn" : ""}">${pct(results.refusal.hallucinated)}%</div>
-        <div class="d">Of those, ${pct(results.refusal.hallucinatedButCorrect)}% happened to be right, which would be worse.</div>
+        <div class="d">Of those, ${pct(results.refusal.hallucinatedButCorrect)}% were right, which is worse.</div>
       </div>
     </div>
-    <p class="note">Refusal here is a property of retrieval, not a promise in a prompt. The symbol arm
-    queries the index for the named part; an unindexed part comes back empty, and there is nothing to
-    answer from. A held-out part like BUK9V13-40H sits one letter from BUK9K13-40H, which IS indexed,
-    and dense retrieval returns it first, with a complete and entirely wrong table.</p>
+
+    <p class="note"><strong>${pct(results.refusal.hallucinatedButCorrect)}% of the inventions are
+    correct, and that is the finding.</strong> The PSMN1R0-30YLD is a 30 V part with an
+    R<sub>DS(on)</sub> near 1.0 m&#8486;, and its name says so. Asked about a datasheet it has never
+    seen, the model decodes the naming convention and answers 30 V, confidently, and is right. An
+    answer that is correct and grounded in no document is the worst output this system can produce,
+    because nothing distinguishes it from one that is.</p>
+
+    <p>So the rule is enforced in code rather than requested in the prompt. If a question names a part
+    and no retrieved chunk came from that part, the system refuses before it generates. Fused
+    retrieval finds the asked document at rank 1 in all ${results.retrieval["hybrid-rrf"].questions.toLocaleString()}
+    indexed questions, so a part missing from the results is a part missing from the corpus. Shipped,
+    refusal is ${pct(results.refusal.guarded.refused)}%, and the guard wrongly refuses
+    ${pct(results.refusal.guarded.wronglyRefusedIndexed)}% of the parts that ARE indexed.</p>
+
+    <p>The number in the card above is the harder one. This eval runs with that guard switched off, so
+    it measures what the model does when nothing but the model notices that ten convincing tables are
+    all about the wrong component. A guarded 100% restates the definition of the guard; printing it as
+    a result would be theatre. A held-out part like BUK9V13-40H sits one letter from BUK9K13-40H,
+    which IS indexed, and dense retrieval returns it first, with a complete and entirely wrong
+    table.</p>
   </section>
 
   <section>
