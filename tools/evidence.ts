@@ -15,6 +15,7 @@
  * Usage: INGEST_TOKEN=... bun tools/evidence.ts <worker-url> <question-id>...
  */
 
+import { visible } from "../packages/doc-rag/src/answer";
 import { carriesValue, grade } from "../packages/doc-rag/src/grade";
 import type { Question } from "../packages/doc-rag/src/types";
 
@@ -81,7 +82,13 @@ for (const result of results) {
   // A diagnostic that is confidently wrong is worse than no diagnostic, because
   // it is trusted. It now uses the grader's own reader, so the tool that explains
   // a failure and the tool that judges it cannot disagree about what the answer is.
-  const carries = (text: string) => carriesValue(text, question.expected);
+  // `visible`, not the raw chunk. The prompt truncates each excerpt, so a check
+  // against the full text answers a question about evidence the model was never
+  // shown. This tool said "CARRIES THE ANSWER" of a row sitting at char 1040 of a
+  // chunk the model saw 900 characters of, and I read that as the generator
+  // ignoring its evidence when in fact I had cut the evidence off. A diagnostic
+  // must read the artefact the system read, not the one it was derived from.
+  const carries = (text: string) => carriesValue(visible(text), question.expected);
 
   result.evidence.forEach((excerpt, at) => {
     const flag = carries(excerpt.text) ? "  <<< CARRIES THE ANSWER" : "";

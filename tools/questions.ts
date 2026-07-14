@@ -79,10 +79,14 @@ export function questionsFor(truth: GroundTruth): Question[] {
     });
   }
 
-  if (truth.package) {
+  // Graded on the ordering table's Name column, and accepting the other names that
+  // same row prints — the second name where there is one, and the SOT version.
+  if (truth.package?.length) {
+    const [name, ...aliases] = truth.package;
     add("package", `Which package is the ${truth.part} supplied in?`, {
       kind: "text",
-      value: truth.package
+      value: name,
+      accepts: aliases
     });
   }
 

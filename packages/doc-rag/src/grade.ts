@@ -95,20 +95,38 @@ function escape(text: string): string {
 }
 
 /**
+ * Every dash a typesetter reaches for, folded onto the one a person types.
+ *
+ * Nexperia prints `DFN2020MD‑6` with a NON-BREAKING hyphen (U+2011) in some
+ * datasheets and an ASCII `-` in others — the same package, two codepoints that
+ * render identically. Without this, a model that reads the part correctly and
+ * types the obvious hyphen is marked wrong for a character it cannot see. Exactly
+ * the ohm-sign trap in the header, one row down.
+ */
+const DASHES = /[‐‑‒–—―−]/g;
+const flatten = (text: string): string => text.replace(DASHES, "-");
+
+/**
  * A package name must match as a whole token. `LFPAK56` is a prefix of
  * `LFPAK56D` and they are different packages, so a substring test would mark a
  * wrong answer right.
  */
 function mentions(text: string, value: string): boolean {
-  return new RegExp(`(?<![A-Za-z0-9])${escape(value)}(?![A-Za-z0-9])`, "i").test(text);
+  return new RegExp(`(?<![A-Za-z0-9])${escape(flatten(value))}(?![A-Za-z0-9])`, "i").test(
+    flatten(text)
+  );
 }
 
 type Match = { ok: boolean; found: string | null; signMatched: boolean | null };
 
 function matchesValue(text: string, expected: Expected): Match {
   if (expected.kind === "text") {
-    const ok = mentions(text, expected.value);
-    return { ok, found: ok ? expected.value : null, signMatched: null };
+    // The graded name, then the other names the datasheet prints for the same
+    // thing. `LFPAK56`, `Power-SO8` and `SOT669` are one package on one row of one
+    // table, and an engineer answers with whichever is in front of them.
+    const named = [expected.value, ...(expected.accepts ?? [])];
+    const hit = named.find((name) => mentions(text, name));
+    return { ok: hit !== undefined, found: hit ?? null, signMatched: null };
   }
 
   const parsed = measures(text).filter((m) => m.unit === expected.unit);

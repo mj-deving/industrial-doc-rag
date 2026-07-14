@@ -34,7 +34,17 @@ export type Retrieved = {
 
 export type Expected =
   | { kind: "numeric"; value: number; unit: string; tolerance: number }
-  | { kind: "text"; value: string };
+  /**
+   * `value` is the name the question is graded on; `accepts` are the OTHER names
+   * the datasheet gives for the same thing, and an answer using any of them is
+   * right.
+   *
+   * This is not leniency, it is the document. BUK6Y19-30P's ordering table prints
+   * its package as `LFPAK56; Power-SO8` and its version as `SOT669`: three names,
+   * one package, all three printed by Nexperia on the same row. A single-string
+   * label cannot hold that, so it silently picks one and marks the other two wrong.
+   */
+  | { kind: "text"; value: string; accepts?: string[] };
 
 export type Question = {
   id: string;

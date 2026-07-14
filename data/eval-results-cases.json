@@ -14,7 +14,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "100 V, at 25 °C ≤ Tj ≤ 175 °C"
+    "text": "100 V at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
     "id": "PSMN013-60HS:vds",
@@ -31,73 +31,76 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "60 V, 25 °C ≤ Tj ≤ 175 °C"
+    "text": "60 V, at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
-    "id": "PSMN1R3-30YL:vds",
+    "id": "PSMN1R3-30YL:id",
     "split": "indexed",
-    "dimension": "vds",
+    "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "30 V",
+    "found": "100 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 30,
-      "unit": "V",
+      "value": 100,
+      "unit": "A",
       "tolerance": 0.01
     },
-    "text": "30 V, Tj ≥ 25 °C; Tj ≤ 150 °C"
+    "text": "100 A at Tmb = 25 °C; VGS = 10 V."
   },
   {
-    "id": "PSMN1R7-25YLD:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "LFPAK56; Power-SO8 (SOT669)"
-  },
-  {
-    "id": "BUK6Y19-30P:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "-30 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": -30,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "-30 V, at Tj = 25 °C"
-  },
-  {
-    "id": "BUK9M7R2-40E:rdson",
+    "id": "BUK7Y3R5-40E:rdson",
     "split": "indexed",
     "dimension": "rdson",
     "correct": true,
     "reason": "match",
-    "found": "7.2 mΩ",
+    "found": "3.5 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 7.2,
+      "value": 3.5,
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "7.2 mΩ at VGS = 5 V; ID = 20 A; Tj = 25 °C."
+    "text": "3.5 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+  },
+  {
+    "id": "BUK6Y19-30P:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "-45 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -45,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "-45 A at VGS = -10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK9M7R2-40E:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK33",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
+    },
+    "text": "The BUK9M7R2-40E is supplied in an LFPAK33 (SOT1210) package."
   },
   {
     "id": "PMPB12R7EP:vds",
@@ -131,73 +134,77 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "24 mΩ at VGS = 10 V; ID = 6.1 A; Tj = 25 °C."
+    "text": "24 mΩ at VGS = 10 V; ID = 6.1 A; Tj = 25 °C"
   },
   {
-    "id": "PMV20XNE:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "5.7 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 5.7,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "7.2 A at VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s, and 5.7 A at VGS = 4.5 V; Tamb = 25 °C."
-  },
-  {
-    "id": "BUK7Y59-60E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "17 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 17,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "17 A at VGS = 10 V; Tmb = 25 °C"
-  },
-  {
-    "id": "PSMN2R4-30MLD:package",
+    "id": "PMV20XNE:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "LFPAK33",
+    "found": "TO-236AB",
     "signMatched": null,
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     },
-    "text": "The PSMN2R4-30MLD is supplied in the LFPAK33 (SOT1210) package."
+    "text": "The PMV20XNE is supplied in a TO-236AB (SOT23) plastic surface-mounted package; 3 leads."
   },
   {
-    "id": "BUK9D23-40E:vds",
+    "id": "BUK6Y24-40P:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
     "reason": "match",
-    "found": "40 V",
+    "found": "-40 V",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 40,
+      "value": -40,
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "40 V, at Tj = 25 °C."
+    "text": "-40 V, conditions: Tj = 25 °C"
+  },
+  {
+    "id": "BUK7Y7R2-60E:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "7.2 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 7.2,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "7.2 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+  },
+  {
+    "id": "BUK9D23-40E:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "DFN2020MD-6",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    },
+    "text": "DFN2020MD-6 (SOT1220), no conditions."
   },
   {
     "id": "BUK764R0-40E:vds",
@@ -217,7 +224,59 @@
     "text": "40 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
   },
   {
-    "id": "PSMN2R0-30YLD:vds",
+    "id": "PSMN2R0-30YLD:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "2 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 2,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "2 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
+  },
+  {
+    "id": "PSMN8R5-60YS:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "76 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 76,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "76 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PMV75UP:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "TO-236AB",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
+    },
+    "text": "TO-236AB (SOT23) plastic surface-mounted package; 3 leads"
+  },
+  {
+    "id": "PSMN1R4-30YLD:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
@@ -231,92 +290,42 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "30 V; 25 °C ≤ Tj ≤ 175 °C"
+    "text": "30 V, at 25 °C ≤ Tj ≤ 175 °C."
   },
   {
-    "id": "PSMN8R5-60YS:vds",
+    "id": "PSMN016-100BS:id",
     "split": "indexed",
-    "dimension": "vds",
+    "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "60 V",
+    "found": "57 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 60,
-      "unit": "V",
+      "value": 57,
+      "unit": "A",
       "tolerance": 0.01
     },
-    "text": "60 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+    "text": "57 A at Tj = 25 °C; VGS = 10 V."
   },
   {
-    "id": "PMV75UP:rdson",
+    "id": "PSMN1R2-80ASE:package",
     "split": "indexed",
-    "dimension": "rdson",
+    "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "102 mΩ",
-    "signMatched": true,
+    "found": "CCPAK1212",
+    "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 102,
-      "unit": "mΩ",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     },
-    "text": "102 mΩ at VGS = -4.5 V; ID = -2.5 A; Tj = 25 °C"
-  },
-  {
-    "id": "PSMN040-100MSE:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "36.6 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 36.6,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "36.6 mΩ at VGS = 10 V; ID = 10 A; Tj = 25 °C."
-  },
-  {
-    "id": "PXN7R7-25QL:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "7.7 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 7.7,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "7.7 mΩ at VGS = 10 V; ID = 11.8 A; Tj = 25 °C"
-  },
-  {
-    "id": "PSMN1R2-80ASE:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "1.18 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 1.18,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "1.18 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
+    "text": "CCPAK1212 package; 13 terminals; 2.0 mm pitch, 12 mm x 12 mm x 2.5 mm body"
   },
   {
     "id": "PSMN5R0-40MLH:package",
@@ -329,29 +338,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
-    "text": "LFPAK33, no conditions."
+    "text": "LFPAK33 (SOT1210)"
   },
   {
-    "id": "PSMN1R7-40YLD:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": false,
-    "reason": "wrong-value",
-    "found": "3.5 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 1.8,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "3.5 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
-  },
-  {
-    "id": "PSMN5R0-40MSH:vds",
+    "id": "PSMN1R7-40YLD:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
@@ -366,6 +361,24 @@
       "tolerance": 0.01
     },
     "text": "40 V, 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PMPB15XPA:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "DFN2020MD-6",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    },
+    "text": "The PMPB15XPA is supplied in a DFN2020MD-6 (SOT1220) package, with dimensions 2 x 2 x 0.65 mm."
   },
   {
     "id": "PMV28ENEA:rdson",
@@ -385,38 +398,39 @@
     "text": "37 mΩ at VGS = 10 V; ID = 4.4 A; Tj = 25 °C."
   },
   {
-    "id": "PMPB14XN:rdson",
+    "id": "PMPB14XN:id",
     "split": "indexed",
-    "dimension": "rdson",
+    "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "18 mΩ",
+    "found": "8.1 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 18,
-      "unit": "mΩ",
+      "value": 8.1,
+      "unit": "A",
       "tolerance": 0.01
     },
-    "text": "18 mΩ at VGS = 4.5 V; ID = 8.1 A; Tj = 25 °C."
+    "text": "11.5 A at VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s, and 8.1 A at VGS = 4.5 V; Tamb = 25 °C."
   },
   {
-    "id": "PSMN2R3-100SSE:vds",
+    "id": "PSMN017-60YS:package",
     "split": "indexed",
-    "dimension": "vds",
+    "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "100 V",
-    "signMatched": true,
+    "found": "LFPAK",
+    "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "V",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     },
-    "text": "100 V, at 25 °C ≤ Tj ≤ 175 °C"
+    "text": "The PSMN017-60YS is supplied in an LFPAK package, specifically SOT669, which is a plastic single-ended surface-mounted package with 4 leads."
   },
   {
     "id": "PMV16XN:rdson",
@@ -439,9 +453,9 @@
     "id": "PMPB14XP:id",
     "split": "indexed",
     "dimension": "id",
-    "correct": false,
-    "reason": "wrong-value",
-    "found": "-12.7 A",
+    "correct": true,
+    "reason": "match",
+    "found": "-8.6 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
@@ -450,24 +464,24 @@
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "-12.7 A at VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
+    "text": "-8.6 A at VGS = -4.5 V; Tamb = 25 °C."
   },
   {
-    "id": "BUK7K6R2-40E:rdson",
+    "id": "BUK7K6R2-40E:vds",
     "split": "indexed",
-    "dimension": "rdson",
+    "dimension": "vds",
     "correct": true,
     "reason": "match",
-    "found": "5.8 mΩ",
+    "found": "40 V",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 5.8,
-      "unit": "mΩ",
+      "value": 40,
+      "unit": "V",
       "tolerance": 0.01
     },
-    "text": "5.8 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C"
+    "text": "40 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
   },
   {
     "id": "PSMN5R6-100BS:id",
@@ -484,22 +498,24 @@
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "100 A at Tmb = 25 °C; VGS = 10 V."
+    "text": "100 A, at Tmb = 25 °C; VGS = 10 V."
   },
   {
-    "id": "PSMN025-100HS:package",
+    "id": "PSMN025-100HS:id",
     "split": "indexed",
-    "dimension": "package",
+    "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "LFPAK56D",
-    "signMatched": null,
+    "found": "29.5 A",
+    "signMatched": true,
     "degenerate": false,
     "expected": {
-      "kind": "text",
-      "value": "LFPAK56D"
+      "kind": "numeric",
+      "value": 29.5,
+      "unit": "A",
+      "tolerance": 0.01
     },
-    "text": "The PSMN025-100HS is supplied in the LFPAK56D; Dual LFPAK (SOT1205) package."
+    "text": "29.5 A at VGS = 10 V; Tmb = 25 °C."
   },
   {
     "id": "PSMN3R3-40MLH:rdson",
@@ -519,9 +535,9 @@
     "text": "3.3 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
   },
   {
-    "id": "BUK9Y107-80E:rdson",
+    "id": "BUK9Y107-80E:id",
     "split": "indexed",
-    "dimension": "rdson",
+    "dimension": "id",
     "correct": false,
     "reason": "refused-wrongly",
     "found": null,
@@ -529,142 +545,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 107,
-      "unit": "mΩ",
+      "value": 11.8,
+      "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7M19-60E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "36 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 36,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "36 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK9Y3R5-40E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "100 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "100 A at VGS = 5 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMN8R5-40MLD:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "60 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 60,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "60 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMNR70-40YSN:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56E",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56E"
-    },
-    "text": "The PSMNR70-40YSN is supplied in the LFPAK56E; Power-SO8 (SOT1023) package."
-  },
-  {
-    "id": "BUK9Y6R5-40H:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "70 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 70,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "70 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK7Y8R7-60E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "The BUK7Y8R7-60E is supplied in an LFPAK56; Power-SO8 package."
-  },
-  {
-    "id": "BUK7K12-60E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56D",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56D"
-    },
-    "text": "The BUK7K12-60E is supplied in an LFPAK56D (Dual Power-SO8) package, also referred to as SOT1205."
-  },
-  {
-    "id": "BUK7Y3R1-80M:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "LFPAK56; plastic, single-ended surface-mounted package; 4 terminals, also known as Power-SO8."
-  },
-  {
-    "id": "BUK9M10-30E:package",
+    "id": "BUK7M19-60E:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
@@ -674,1188 +562,154 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
-    "text": "The BUK9M10-30E is supplied in an LFPAK33 (SOT1210) package, which is a plastic single ended surface mounted package with 8 leads."
+    "text": "The BUK7M19-60E is supplied in an LFPAK33 (SOT1210) package."
   },
   {
-    "id": "BUK7Y3R5-40H:id",
+    "id": "BUK9Y3R5-40E:package",
     "split": "indexed",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "120 A",
+    "found": "LFPAK56",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "The BUK9Y3R5-40E is supplied in an LFPAK56; Power-SO8 package."
+  },
+  {
+    "id": "PMV40UN2:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "44 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 120,
-      "unit": "A",
+      "value": 44,
+      "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "120 A at VGS = 10 V; Tmb = 25 °C."
+    "text": "44 mΩ at VGS = 4.5 V; ID = 3.7 A; Tj = 25 °C."
   },
   {
-    "id": "PSMN1R4-40YLD:id",
+    "id": "PSMN1R2-80CSE:id",
     "split": "indexed",
     "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "240 A",
+    "found": "375 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 240,
+      "value": 375,
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "240 A at VGS = 10 V; Tmb = 25 °C."
+    "text": "375 A at VGS = 10 V; Tmb = 25 °C."
   },
   {
-    "id": "PSMN8R7-80BS:vds",
+    "id": "BUK7A1R0-100L:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
     "reason": "match",
-    "found": "80 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 80,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "80 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
-  },
-  {
-    "id": "BUK9Y12-40E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "52 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 52,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "52 A at VGS = 5 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK7Y6R0-60E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "100 A",
+    "found": "100 V",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
       "value": 100,
-      "unit": "A",
+      "unit": "V",
       "tolerance": 0.01
     },
-    "text": "100 A at Tmb = 25 °C; VGS = 10 V."
+    "text": "100 V, at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
-    "id": "BUK6Y10-30P:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "LFPAK56; Power-SO8 (SOT669)"
-  },
-  {
-    "id": "BUK9K12-80L:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "51 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 51,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "51 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK7K8R7-40E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56D",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56D"
-    },
-    "text": "The BUK7K8R7-40E is supplied in the LFPAK56D (SOT1205) package, also referred to as LFPAK5 in the ordering information."
-  },
-  {
-    "id": "BUK9Y25-60E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "The BUK9Y25-60E is supplied in an LFPAK56; Power-SO8 package."
-  },
-  {
-    "id": "PSMN013-60HL:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56D",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56D"
-    },
-    "text": "LFPAK56D; Dual LFPAK (LFPAK56D); 8 leads"
-  },
-  {
-    "id": "BUK6D38-30E:rdson",
+    "id": "PSMN2R0-40YLB:rdson",
     "split": "indexed",
     "dimension": "rdson",
     "correct": true,
     "reason": "match",
-    "found": "38 mΩ",
+    "found": "2.1 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 2.1,
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "38 mΩ at VGS = 10 V; ID = 5.5 A; Tj = 25 °C."
+    "text": "2.1 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
   },
   {
-    "id": "BUK7Y19-100E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "The BUK7Y19-100E is supplied in an LFPAK56; Power-SO8 package."
-  },
-  {
-    "id": "BUK9K13-60E:rdson",
+    "id": "BUK7S1R0-40H:rdson",
     "split": "indexed",
     "dimension": "rdson",
     "correct": true,
     "reason": "match",
-    "found": "12.5 mΩ",
+    "found": "1 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 12.5,
+      "value": 1,
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "12.5 mΩ at VGS = 5 V; ID = 10 A; Tj = 25 °C."
+    "text": "1 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
   },
   {
-    "id": "PSMN0R9-30YLD:id",
+    "id": "PMV20EN:id",
     "split": "indexed",
     "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "300 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 300,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "300 A at Tmb = 25 °C; VGS = 10 V."
-  },
-  {
-    "id": "PMN28UNE:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "TSOP6",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "TSOP6"
-    },
-    "text": "TSOP6, plastic, surface-mounted package (SC-74), as per the description in the ordering information table."
-  },
-  {
-    "id": "PSMN5R5-100YSF:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "115 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 115,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "115 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMNR51-25YLH:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "25 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 25,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "25 V, 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "BUK9M9R1-40E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "64 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 64,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "64 A at VGS = 5 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK9M35-80E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK33",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "The BUK9M35-80E is supplied in an LFPAK33 (SOT1210) package, which is a plastic single ended surface mounted package with 8 leads."
-  },
-  {
-    "id": "BUK7J2R4-80M:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "80 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 80,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "80 V, at 25 °C ≤ Tj ≤ 175 °C."
-  },
-  {
-    "id": "BUK7Y4R4-40E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "100 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "100 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK9M20-60EL:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "40 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "40 A at VGS = 10 V; Tmb = 25 °C"
-  },
-  {
-    "id": "PSMN3R0-30YLD:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "LFPAK56; Plastic single-ended surface-mounted package (LFPAK56; Power-SO8); 4 leads, as listed in the ordering information table from [PSMN2R0-30YLD]."
-  },
-  {
-    "id": "PSMN1R1-25YLC:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "25 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 25,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "25 V at 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "PSMN012-100YS:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": false,
-    "reason": "no-value",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SO8"
-    },
-    "text": "LFPAK; 4 leads, \nno specific conditions are given in the question, and this parameter does not have any conditions in the table."
-  },
-  {
-    "id": "PSMN1R0-40ULD:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "LFPAK56-UL, also known as SOT1023A, a plastic, single-ended surface-mounted package (LFPAK56); 4 leads; 1.27 mm pitch."
-  },
-  {
-    "id": "PSMN1R5-40YSD:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "The PSMN1R5-40YSD is supplied in the LFPAK56; Power-SO8 (SOT669) package."
-  },
-  {
-    "id": "PSMNR70-40SSH:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK88",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
-    },
-    "text": "LFPAK88"
-  },
-  {
-    "id": "BUK7M6R0-40H:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "6 mΩ",
+    "found": "6 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
       "value": 6,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "6 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C."
-  },
-  {
-    "id": "BUK761R6-40E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "120 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 120,
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "120 A at VGS = 10 V; Tmb = 25 °C."
+    "text": "6 A at VGS = 10 V; Tamb = 25 °C."
   },
   {
-    "id": "PMPB33XP:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "-20 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": -20,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "-20 V at Tj = 25 °C"
-  },
-  {
-    "id": "BUK9K49-80L:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "17 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 17,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "17 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK9M48-80L:package",
+    "id": "BUK9K61-100L:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "LFPAK33",
+    "found": "LFPAK56D",
     "signMatched": null,
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     },
-    "text": "The BUK9M48-80L is supplied in the LFPAK33 package."
+    "text": "LFPAK56D; Dual Power-SO8 package, also known as SOT1205"
   },
   {
-    "id": "BUK7Y7R8-80E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "7.8 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 7.8,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "7.8 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
-  },
-  {
-    "id": "PMV88ENEA:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "SOT23",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SOT23"
-    },
-    "text": "The PMV88ENEA is supplied in a TO-236AB (SOT23) package, which is a plastic surface-mounted package with 3 leads."
-  },
-  {
-    "id": "BUK7Y1R7-40H:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "40 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "BUK7M45-40E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "45 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 45,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "45 mΩ at VGS = 10 V; ID = 5 A; Tj = 25 °C"
-  },
-  {
-    "id": "PSMN5R0-80BS:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "D2PAK",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "D2PAK"
-    },
-    "text": "D2PAK; plastic single-ended surface-mounted package (D2PAK); 3 leads SOT404"
-  },
-  {
-    "id": "PSMN3R3-100SSF:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK88",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
-    },
-    "text": "LFPAK88 (SOT1235)"
-  },
-  {
-    "id": "BUK7Y15-60E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "15 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 15,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "15 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C"
-  },
-  {
-    "id": "BUK6D125-60E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "2.7 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 2.7,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "2.7 A at VGS = 10 V; Tamb = 25 °C."
-  },
-  {
-    "id": "PSMN1R9-40YSD:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "40 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "40 V, 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "PMPB29XNEA:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "33 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 33,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "33 mΩ at VGS = 4.5 V; ID = 5 A; Tj = 25 °C."
-  },
-  {
-    "id": "BUK9M85-60E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK33",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "The BUK9M85-60E is supplied in an LFPAK33 package."
-  },
-  {
-    "id": "PSMN012-60HL:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "60 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 60,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "60 V, 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "PSMN1R0-25YLD:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "25 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 25,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "25 V at 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "PSMN1R6-30MLH:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "160 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 160,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "160 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMN8R5-40HS:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "30 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 30,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "30 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMN057-200B:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "200 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 200,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "200 V; 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "BUK7K5R1-30E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "5.1 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 5.1,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "5.1 mΩ at VGS = 10 V; ID = 10 A; Tj = 25 °C"
-  },
-  {
-    "id": "PMN40SNA:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "36 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 36,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "36 mΩ at VGS = 10 V; ID = 4.7 A; Tj = 25 °C."
-  },
-  {
-    "id": "PSMN2R6-100SSF:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": false,
-    "reason": "refused-wrongly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 2.6,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN1R7-30YL:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "30 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 30,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "30 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
-  },
-  {
-    "id": "PSMN2R2-40BS:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "D2PAK",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "D2PAK"
-    },
-    "text": "D2PAK; plastic single-ended surface-mounted package (D2PAK); 3 leads SOT404 (one lead cropped)"
-  },
-  {
-    "id": "BUK7Y4R8-60E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK56",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "The BUK7Y4R8-60E is supplied in an LFPAK56; Power-SO8 (SOT669) package."
-  },
-  {
-    "id": "PSMN6R7-40MSD:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "40 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "PMPB07R3EN:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "30 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 30,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "30 V, at Tj = 25 °C."
-  },
-  {
-    "id": "BUK9K35-60E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "22 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 22,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "22 A at VGS = 5 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK7M4R3-40H:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK33",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "The BUK7M4R3-40H is supplied in the LFPAK33 (SOT1210) package."
-  },
-  {
-    "id": "PMV50EPEA:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "SOT23",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SOT23"
-    },
-    "text": "The PMV50EPEA is supplied in a plastic surface-mounted package; 3 leads, also known as SOT23 or TO-236AB."
-  },
-  {
-    "id": "PSMN9R8-100YSF:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "10.2 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 10.2,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "10.2 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C."
-  },
-  {
-    "id": "PSMN3R0-30MLC:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK33",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "LFPAK33 (SOT1210), 4 leads"
-  },
-  {
-    "id": "BUK7M15-60E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK33",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "The BUK7M15-60E is supplied in an LFPAK33 (SOT1210) package."
-  },
-  {
-    "id": "BUK7K25-40E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "25 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 25,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "25 mΩ at VGS = 10 V; ID = 5 A; Tj = 25 °C"
-  },
-  {
-    "id": "PSMN3R5-40YSB:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "120 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 120,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "120 A at VGS = 10 V; Tmb = 25 °C; Fig. 2"
-  },
-  {
-    "id": "BUK9M4R3-40H:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "40 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "PMPB14R0EP:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": false,
-    "reason": "wrong-value",
-    "found": "-12 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": -9,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "-12 A at VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
-  },
-  {
-    "id": "PSMN013-80YS:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "SOT669",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SOT669"
-    },
-    "text": "LFPAK; plastic single-ended surface-mounted package (LFPAK); 4 leads, SOT669"
-  },
-  {
-    "id": "BUK98150-55A:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "55 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 55,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "55 V; Tj ≥ 25 °C; Tj ≤ 150 °C"
-  },
-  {
-    "id": "PSMN5R8-40YS:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "90 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 90,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "90 A at Tmb = 25 °C; VGS = 10 V; see Figure 1"
-  },
-  {
-    "id": "PSMN011-60HL:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "35 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 35,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "35 A at VGS = 5 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMN1R1-40BS:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "40 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "40 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
-  },
-  {
-    "id": "PMV130ENEA:rdson",
+    "id": "BUK9M120-100E:rdson",
     "split": "indexed",
     "dimension": "rdson",
     "correct": true,
@@ -1869,27 +723,132 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "120 mΩ at VGS = 10 V; ID = 1.5 A; Tj = 25 °C."
+    "text": "120 mΩ at VGS = 5 V; ID = 5 A; Tj = 25 °C"
   },
   {
-    "id": "PMV27UPE:id",
+    "id": "PSMN2R2-30YLC:package",
     "split": "indexed",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "-4.5 A",
+    "found": "LFPAK",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK; Power-SO8"
+  },
+  {
+    "id": "PMV65UNEA:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "73 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": -4.5,
+      "value": 73,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "73 mΩ at VGS = 4.5 V; ID = 2.8 A; Tj = 25 °C"
+  },
+  {
+    "id": "PSMN045-100HL:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56D",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
+    },
+    "text": "The PSMN045-100HL is supplied in an LFPAK56D; plastic, single ended surface mounted package (SOT1205), also described as a Dual LFPAK (LFPAK56D); 8 leads."
+  },
+  {
+    "id": "PMPB16EP:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "-30 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -30,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "-30 V, Tj = 25 °C"
+  },
+  {
+    "id": "PSMN4R2-40VSH:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "4.2 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 4.2,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "4.2 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C"
+  },
+  {
+    "id": "PMPB95ENEA:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "105 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 105,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "105 mΩ at VGS = 10 V; ID = 2.8 A; Tj = 25 °C."
+  },
+  {
+    "id": "PSMN7R5-30YLD:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "51 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 51,
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "-4.5 A at VGS = -4.5 V; Tamb = 25 °C."
+    "text": "51 A at Tmb = 25 °C; VGS = 10 V."
   },
   {
-    "id": "BUK6Y33-60P:package",
+    "id": "PSMNR89-25YLE:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
@@ -1899,46 +858,50 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     },
-    "text": "LFPAK56; Power-SO8 (SOT669)"
+    "text": "The PSMNR89-25YLE is supplied in the LFPAK56; Power-SO8 (SOT669) package."
   },
   {
-    "id": "BUK9M24-60E:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "60 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 60,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "60 V, at 25 °C ≤ Tj ≤ 175 °C."
-  },
-  {
-    "id": "PSMNR67-30YLE:rdson",
+    "id": "PSMN7R5-30MLD:rdson",
     "split": "indexed",
     "dimension": "rdson",
-    "correct": false,
-    "reason": "wrong-value",
-    "found": "1.3 mΩ",
+    "correct": true,
+    "reason": "match",
+    "found": "7.6 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 0.7,
+      "value": 7.6,
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "1.3 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
+    "text": "7.6 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C."
   },
   {
-    "id": "BUK7M33-60E:id",
+    "id": "BUK6Y61-60P:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "-25 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -25,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "-25 A at VGS = -10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK9K31-100L:id",
     "split": "indexed",
     "dimension": "id",
     "correct": true,
@@ -1955,7 +918,41 @@
     "text": "24 A at VGS = 10 V; Tmb = 25 °C."
   },
   {
-    "id": "BUK6D81-80E:vds",
+    "id": "PMPB19R0UPE:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "-20 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -20,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "-20 V, Tj = 25 °C"
+  },
+  {
+    "id": "PSMN3R4-30BLE:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "3.4 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 3.4,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "3.4 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
+  },
+  {
+    "id": "PSMN017-80BS:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
@@ -1969,140 +966,10 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "80 V, at Tj = 25 °C."
+    "text": "80 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
   },
   {
-    "id": "BUK9Y1R3-40H:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "190 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 190,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "190 A at VGS = 10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PMN30ENEA:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "TSOP6",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "TSOP6"
-    },
-    "text": "TSOP6; plastic surface-mounted package (TSOP6); 6 leads"
-  },
-  {
-    "id": "PSMN9R1-30YL:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "SOT669",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SOT669"
-    },
-    "text": "LFPAK; Power-SO8, plastic single-ended surface-mounted package; 4 leads, SOT669"
-  },
-  {
-    "id": "PSMN4R3-40MLH:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "match",
-    "found": "40 V",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
-  },
-  {
-    "id": "BUK9M43-100E:vds",
-    "split": "indexed",
-    "dimension": "vds",
-    "correct": false,
-    "reason": "refused-wrongly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7Y98-80E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "98 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 98,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "98 mΩ at VGS = 10 V; ID = 5 A; Tj = 25 °C"
-  },
-  {
-    "id": "BUK9M17-30E:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "37 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 37,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "37 A at VGS = 5 V; Tmb = 25 °C."
-  },
-  {
-    "id": "BUK9M23-80E:package",
-    "split": "indexed",
-    "dimension": "package",
-    "correct": true,
-    "reason": "match",
-    "found": "LFPAK33",
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "The BUK9M23-80E is supplied in the LFPAK33 (SOT1210) package."
-  },
-  {
-    "id": "PMV90ENE:vds",
+    "id": "PMPB09R1XN:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
@@ -2119,109 +986,372 @@
     "text": "30 V, at Tj = 25 °C."
   },
   {
-    "id": "PSMNR90-40YSN:rdson",
+    "id": "PSMN2R8-80BS:vds",
     "split": "indexed",
-    "dimension": "rdson",
+    "dimension": "vds",
     "correct": true,
     "reason": "match",
-    "found": "0.97 mΩ",
+    "found": "80 V",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 0.97,
-      "unit": "mΩ",
+      "value": 80,
+      "unit": "V",
       "tolerance": 0.01
     },
-    "text": "0.97 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
+    "text": "80 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
   },
   {
-    "id": "BUK961R6-40E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "1.6 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 1.6,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "1.6 mΩ at VGS = 5 V; ID = 25 A; Tj = 25 °C"
-  },
-  {
-    "id": "BUK9Y153-100E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "153 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 153,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "153 mΩ at VGS = 5 V; ID = 2 A; Tj = 25 °C"
-  },
-  {
-    "id": "PMPB08R4VP:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "9.6 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 9.6,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "9.6 mΩ at VGS = -4.5 V; ID = -12 A; Tj = 25 °C."
-  },
-  {
-    "id": "PSMN1R0-30YLC:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "1.15 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 1.15,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "1.15 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
-  },
-  {
-    "id": "PMV164ENE:id",
+    "id": "PMPB10XNE:id",
     "split": "indexed",
     "dimension": "id",
     "correct": true,
     "reason": "match",
-    "found": "1.6 A",
+    "found": "9 A",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 1.6,
+      "value": 9,
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "1.6 A at VGS = 10 V; Tamb = 25 °C."
+    "text": "9 A at VGS = 4.5 V; Tamb = 25 °C."
   },
   {
-    "id": "BUK7M11-40H:package",
+    "id": "PSMNR90-80ASF:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "CCPAK1212",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
+    },
+    "text": "CCPAK1212 package, no conditions."
+  },
+  {
+    "id": "PMPB06R3XN:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "30 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 30,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "30 V, at Tj = 25 °C."
+  },
+  {
+    "id": "BUK7M8R5-40H:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "8.5 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 8.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "8.5 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C."
+  },
+  {
+    "id": "PSMN041-80YL:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "25 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 25,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "25 A, at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK7Y3R0-40H:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK56; Power-SO8, also known as SOT669."
+  },
+  {
+    "id": "PSMN2R9-25YLC:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "100 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "100 A at Tmb = 25 °C; VGS = 10 V; see Figure 1"
+  },
+  {
+    "id": "BUK9Y1R9-40H:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN2R2-40YSB:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PMN70XP:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "88 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 88,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "88 mΩ at VGS = -4.5 V; ID = -3.1 A; Tj = 25 °C."
+  },
+  {
+    "id": "PMPB29XPE:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "-5 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -5,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "-5 A at VGS = -4.5 V; Tamb = 25 °C."
+  },
+  {
+    "id": "PSMN047-100NSE:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": false,
+    "reason": "no-value",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    },
+    "text": "The PSMN047-100NSE is supplied in a DFN2020 package, which is a 2 mm x 2 mm space-saving package."
+  },
+  {
+    "id": "PSMN7R0-30YL:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "30 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 30,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "30 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "BUK7D25-40E:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "25 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 25,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "25 mΩ at VGS = 10 V; ID = 8 A; Tj = 25 °C"
+  },
+  {
+    "id": "PXN5R4-30QL:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "14 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 14,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "14 A at VGS = 10 V; Tamb = 25 °C."
+  },
+  {
+    "id": "BUK9K45-100E:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "100 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "100 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "BUK7K89-100E:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": false,
+    "reason": "refused-wrongly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 82.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN6R0-30YLB:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK; Power-SO8, plastic single-ended surface-mounted package; 4 leads, SOT669"
+  },
+  {
+    "id": "BUK7Y1R7-40H:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK56; Power-SO8, plastic, single-ended surface-mounted package; 4 terminals, SOT669"
+  },
+  {
+    "id": "PSMN3R2-40YLD:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN2R0-25MLD:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
@@ -2231,43 +1361,1034 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
-    "text": "The BUK7M11-40H is supplied in an LFPAK33 (SOT1210) package."
+    "text": "The PSMN2R0-25MLD is supplied in the LFPAK33 (SOT1210) package."
   },
   {
-    "id": "PMPB13UP:vds",
+    "id": "BUK6D120-40E:vds",
     "split": "indexed",
     "dimension": "vds",
     "correct": true,
     "reason": "match",
-    "found": "-12 V",
+    "found": "40 V",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": -12,
+      "value": 40,
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "-12 V, Tj = 25 °C"
+    "text": "40 V, at Tj = 25 °C."
   },
   {
-    "id": "PMPB13XNE:rdson",
+    "id": "PSMN021-100YL:rdson",
     "split": "indexed",
     "dimension": "rdson",
     "correct": true,
     "reason": "match",
-    "found": "16 mΩ",
+    "found": "22 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 16,
+      "value": 22,
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "16 mΩ at VGS = 4.5 V; ID = 8 A; Tj = 25 °C"
+    "text": "22 mΩ at VGS = 5 V; ID = 15 A; Tj = 25 °C."
+  },
+  {
+    "id": "PMV45EN2:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": false,
+    "reason": "wrong-value",
+    "found": "5.1 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 4.1,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "5.1 A at VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
+  },
+  {
+    "id": "PSMN1R9-40YSD:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK56; Power-SO8 (SOT669)"
+  },
+  {
+    "id": "PMPB100ENE:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "72 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 72,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "72 mΩ at VGS = 10 V; ID = 3.9 A; Tj = 25 °C."
+  },
+  {
+    "id": "PMV30XPA:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "-4.9 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -4.9,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "-4.9 A at VGS = -4.5 V; Tamb = 25 °C."
+  },
+  {
+    "id": "PSMN012-60HL:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "40 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "40 A at VGS = 5 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PSMN1R0-25YLD:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK56; Power-SO8 (SOT669)"
+  },
+  {
+    "id": "PSMN028-100HS:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "100 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "100 V, 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PMPB17EP:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "21 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 21,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "21 mΩ at VGS = -10 V; ID = -5.8 A; Tj = 25 °C."
+  },
+  {
+    "id": "PSMN057-200B:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "39 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 39,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "39 A, Tmb = 25 °C"
+  },
+  {
+    "id": "BUK7K5R1-30E:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "40 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "40 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PMN40SNA:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "SC-74",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
+    },
+    "text": "SC-74; TSOP6 plastic, surface-mounted package (SC-74; TSOP6); 6 leads, no conditions."
+  },
+  {
+    "id": "PMV30XPEA:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "-20 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -20,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "-20 V, at Tj = 25 °C."
+  },
+  {
+    "id": "PSMN1R4-100CSF:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "100 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "100 V, at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN1R5-30BLE:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "1.5 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 1.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "1.5 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+  },
+  {
+    "id": "BUK9M13-80L:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "55 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 55,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "55 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK9M15-60E:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "60 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 60,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "60 V, at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN6R0-30YL:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "79 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 79,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "79 A at Tmb = 25 °C; VGS = 10 V."
+  },
+  {
+    "id": "BUK9K25-40E:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56D",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
+    },
+    "text": "LFPAK56D (SOT1205)"
+  },
+  {
+    "id": "PSMN2R9-100SSE:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK88",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
+    },
+    "text": "LFPAK88 (SOT1235)"
+  },
+  {
+    "id": "PMN16XNE:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "20 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 20,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "20 V, at Tj = 25 °C."
+  },
+  {
+    "id": "PSMN1R0-40SSH:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "325 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 325,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "325 A at VGS = 10 V; Tmb = 25 °C"
+  },
+  {
+    "id": "BUK9K22-80E:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "80 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 80,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "80 V; 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN9R0-25MLC:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "55 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 55,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "55 A at Tmb = 25 °C; VGS = 10 V."
+  },
+  {
+    "id": "BUK7S2R5-40H:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "140 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 140,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "140 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PMPB14R8XN:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "DFN2020M-6",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    },
+    "text": "DFN2020M-6 (SOT1220-2)"
+  },
+  {
+    "id": "PSMN4R0-30YL:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "30 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 30,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "30 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN3R4-30BL:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "D2PAK",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
+    },
+    "text": "D2PAK (plastic single-ended surface-mounted package; 3 leads SOT404, one lead cropped)"
+  },
+  {
+    "id": "PSMN1R8-80SSF:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "270 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 270,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "270 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK98150-55A:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "SC-73",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
+    },
+    "text": "The BUK98150-55A is supplied in a plastic surface-mounted package with increased heatsink; 4 leads, also known as SC-73 (SOT223)."
+  },
+  {
+    "id": "BUK9Y72-80E:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "78 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 78,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "78 mΩ at VGS = 5 V; ID = 5 A; Tj = 25 °C"
+  },
+  {
+    "id": "PSMN2R8-40BS:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "D2PAK",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
+    },
+    "text": "D2PAK; plastic single-ended surface-mounted package (D2PAK); 3 leads (one lead cropped), SOT404"
+  },
+  {
+    "id": "PSMN1R1-30YLE:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "1.26 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 1.26,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "1.26 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+  },
+  {
+    "id": "BUK7M3R3-40H:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "3.3 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 3.3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "3.3 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+  },
+  {
+    "id": "PSMNR90-80ASE:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "CCPAK1212",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
+    },
+    "text": "CCPAK1212; 13 terminals; 2.0 mm pitch, 12 mm x 12 mm x 2.5 mm body"
+  },
+  {
+    "id": "PSMN4R0-60YS:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "60 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 60,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "60 V; Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN6R4-30MLD:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "8.3 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 8.3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "8.3 mΩ at VGS = 4.5 V; ID = 15 A; Tj = 25 °C."
+  },
+  {
+    "id": "BUK9Y6R0-60E:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "100 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "100 A at VGS = 5 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PXN4R7-30QL:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "MLPAK33",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
+    },
+    "text": "MLPAK33, plastic thermal enhanced surface mounted package; mini leads; 8 terminals; pitch 0.65 mm; 3.3 x 3.3 x 0.8 mm body"
+  },
+  {
+    "id": "BUK7Y1R4-40H:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "BUK9Y2R8-40H:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "2.8 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 2.8,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "2.8 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
+  },
+  {
+    "id": "BUK9M19-60E:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "38 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 38,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "38 A at VGS = 5 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PSMN014-40YS:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN4R3-40MLH:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "95 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 95,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "95 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK9M43-100E:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK33",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
+    },
+    "text": "The BUK9M43-100E is supplied in the LFPAK33 (Power33) package."
+  },
+  {
+    "id": "PSMN018-80YS:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "80 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 80,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "80 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "BUK9K6R2-40E:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "40 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "40 A at VGS = 5 V; Tmb = 25 °C."
+  },
+  {
+    "id": "PMPB10R3XN:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": false,
+    "reason": "wrong-value",
+    "found": "13 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 8.9,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "13 A at VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
+  },
+  {
+    "id": "PMV90ENE:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "TO-236AB",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
+    },
+    "text": "plastic surface-mounted package; 3 leads (TO-236AB, SOT23)"
+  },
+  {
+    "id": "PSMN8R0-40HL:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
+  },
+  {
+    "id": "BUK7J1R0-40H:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": false,
+    "reason": "refused-wrongly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9M16-100L:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "45 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 45,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "45 A at VGS = 10 V; Tmb = 25 °C."
+  },
+  {
+    "id": "BUK6D72-30E:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "4 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 4,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "4 A at VGS = 10 V; Tamb = 25 °C."
+  },
+  {
+    "id": "PSMN1R0-30YLC:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "LFPAK56",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "LFPAK56; plastic, single-ended surface-mounted package; 4 terminals, also known as Power-SO8 (SOT669)"
+  },
+  {
+    "id": "PSMN4R0-40YS:vds",
+    "split": "indexed",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "match",
+    "found": "40 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "40 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "PMPB30XPE:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": false,
+    "reason": "wrong-value",
+    "found": "-8.5 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -6.2,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "-8.5 A at VGS = -4.5 V; Tamb = 25 °C"
+  },
+  {
+    "id": "PMPB13UP:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "-9.1 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -9.1,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "-9.1 A at VGS = -4.5 V; Tamb = 25 °C"
+  },
+  {
+    "id": "PMPB13XNE:package",
+    "split": "indexed",
+    "dimension": "package",
+    "correct": true,
+    "reason": "match",
+    "found": "DFN2020MD-6",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    },
+    "text": "DFN2020MD-6 (SOT1220), no conditions."
   },
   {
     "id": "PSMNR56-25YLE:vds",
@@ -2284,7 +2405,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "25 V, at 25 °C ≤ Tj ≤ 175 °C"
+    "text": "25 V, measured at 25 °C ≤ Tj ≤ 175 °C."
   },
   {
     "id": "PMN55ENEA:rdson",
@@ -2304,21 +2425,23 @@
     "text": "60 mΩ at VGS = 10 V; ID = 3.6 A; Tj = 25 °C."
   },
   {
-    "id": "PSMN2R6-30YLC:id",
+    "id": "PSMN2R6-30YLC:package",
     "split": "indexed",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "100 A",
-    "signMatched": true,
+    "found": "LFPAK",
+    "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "A",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     },
-    "text": "100 A at Tmb = 25 °C; VGS = 10 V."
+    "text": "LFPAK; Power-SO8"
   },
   {
     "id": "BUK7M10-40E:package",
@@ -2331,9 +2454,12 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
-    "text": "The BUK7M10-40E is supplied in an LFPAK33 (SOT1210) package."
+    "text": "The BUK7M10-40E is supplied in the LFPAK33 (SOT1210) package."
   },
   {
     "id": "PSMN2R8-40YSB:vds",
@@ -2353,24 +2479,41 @@
     "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
-    "id": "PMPB55ENEA:id",
+    "id": "PMPB55ENEA:rdson",
     "split": "indexed",
-    "dimension": "id",
+    "dimension": "rdson",
     "correct": true,
     "reason": "match",
-    "found": "4 A",
+    "found": "56 mΩ",
     "signMatched": true,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 4,
+      "value": 56,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "56 mΩ at VGS = 10 V; ID = 4 A; Tj = 25 °C."
+  },
+  {
+    "id": "PSMN0R9-30ULD:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "300 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 300,
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "4 A at VGS = 10 V; Tamb = 25 °C."
+    "text": "300 A at VGS = 10 V; Tmb = 25 °C."
   },
   {
-    "id": "PSMN0R9-30ULD:package",
+    "id": "PSMN012-100YL:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
@@ -2380,63 +2523,16 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     },
-    "text": "LFPAK56-UL, plastic, single-ended surface-mounted package (LFPAK56); 4 leads; 1.27 mm pitch"
+    "text": "The PSMN012-100YL is supplied in an LFPAK56; Power-SO8 package."
   },
   {
-    "id": "BUK7M9R9-60E:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "9.9 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 9.9,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "9.9 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C"
-  },
-  {
-    "id": "PMN100EPA:rdson",
-    "split": "indexed",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "match",
-    "found": "130 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 130,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "130 mΩ at VGS = -10 V; ID = -2.5 A; Tj = 25 °C."
-  },
-  {
-    "id": "BUK6Y14-40P:id",
-    "split": "indexed",
-    "dimension": "id",
-    "correct": true,
-    "reason": "match",
-    "found": "-64 A",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": -64,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "-64 A at VGS = -10 V; Tmb = 25 °C."
-  },
-  {
-    "id": "PSMN010-80YL:package",
+    "id": "PSMN2R0-25YLD:package",
     "split": "indexed",
     "dimension": "package",
     "correct": true,
@@ -2446,9 +2542,47 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     },
-    "text": "LFPAK56; Plastic single-ended surface-mounted package (Power-SO8); 4 leads"
+    "text": "LFPAK56; Power-SO8, terminals"
+  },
+  {
+    "id": "BUK6Y14-40P:rdson",
+    "split": "indexed",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "match",
+    "found": "14 mΩ",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 14,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "14 mΩ at VGS = -10 V; ID = -10.8 A; Tj = 25 °C."
+  },
+  {
+    "id": "PSMN010-80YL:id",
+    "split": "indexed",
+    "dimension": "id",
+    "correct": true,
+    "reason": "match",
+    "found": "84 A",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 84,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "84 A at VGS = 5 V; Tmb = 25 °C."
   },
   {
     "id": "PMN280ENEA:package",
@@ -2456,12 +2590,16 @@
     "dimension": "package",
     "correct": true,
     "reason": "match",
-    "found": "TSOP6",
+    "found": "SC-74",
     "signMatched": null,
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     },
     "text": "SC-74; TSOP6 plastic, surface-mounted package (SC-74; TSOP6); 6 leads"
   },
@@ -2517,9 +2655,9 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN1R3-80SSF:rdson",
+    "id": "PSMN1R3-80SSF:id",
     "split": "holdout",
-    "dimension": "rdson",
+    "dimension": "id",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -2527,8 +2665,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 1.2,
-      "unit": "mΩ",
+      "value": 335,
+      "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -2551,58 +2689,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK4D60-30:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 4.2,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN3R3-80YSF:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 3.1,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN1R9-40YSB:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 200,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN4R0-25YLC:package",
+    "id": "BUK4D60-30:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -2612,12 +2699,49 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN016-100YS:id",
+    "id": "PSMN3R3-80YSF:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 80,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN1R9-40YSB:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 1.9,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN4R0-25YLC:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -2627,8 +2751,25 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 51,
+      "value": 84,
       "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN016-100YS:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -2644,7 +2785,11 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -2717,36 +2862,38 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMPB8XN:id",
+    "id": "PMPB8XN:package",
     "split": "holdout",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
     "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 10.1,
-      "unit": "A",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN5R2-60YL:vds",
+    "id": "BUK7K13-60E:package",
     "split": "holdout",
-    "dimension": "vds",
+    "dimension": "package",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
     "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 60,
-      "unit": "V",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -2785,9 +2932,9 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMV50XNEA:rdson",
+    "id": "PMV50XNEA:id",
     "split": "holdout",
-    "dimension": "rdson",
+    "dimension": "id",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -2795,8 +2942,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 60,
-      "unit": "mΩ",
+      "value": 3.4,
+      "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -2819,19 +2966,21 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN4R5-80YSF:vds",
+    "id": "PSMN0R7-25YLD:package",
     "split": "holdout",
-    "dimension": "vds",
+    "dimension": "package",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
     "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 80,
-      "unit": "V",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -2904,19 +3053,18 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMV15ENE:id",
+    "id": "PMV15ENE:package",
     "split": "holdout",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
     "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 6.2,
-      "unit": "A",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "SOT23",
+      "accepts": []
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -2931,7 +3079,11 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -2953,7 +3105,76 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN3R5-40YSD:vds",
+    "id": "PSMN3R5-40YSD:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 3.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMV28UNEA:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 4.7,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9M12-60E:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 54,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN1R1-100CSE:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN3R2-40YLB:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -2970,7 +3191,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMV28UNEA:rdson",
+    "id": "PSMN013-100BS:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -2980,74 +3201,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 32,
+      "value": 13.9,
       "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9M12-60E:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 12,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN1R1-100CSE:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 430,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9Y8R8-60EL:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN013-100BS:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -3070,9 +3225,9 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PXN017-30QL:rdson",
+    "id": "PXN017-30QL:id",
     "split": "holdout",
-    "dimension": "rdson",
+    "dimension": "id",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -3080,8 +3235,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 17.4,
-      "unit": "mΩ",
+      "value": 7.9,
+      "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -3104,9 +3259,9 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7M17-80E:vds",
+    "id": "BUK7M17-80E:rdson",
     "split": "holdout",
-    "dimension": "vds",
+    "dimension": "rdson",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -3114,8 +3269,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 80,
-      "unit": "V",
+      "value": 17,
+      "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -3138,24 +3293,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN013-30MLC:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 13.6,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9M24-40E:id",
+    "id": "PSMN013-30MLC:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -3165,14 +3303,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": 39,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7K6R8-40E:package",
+    "id": "BUK9M24-40E:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -3182,27 +3320,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMNR98-25YLE:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7K17-80E:vds",
+    "id": "PSMNR98-25YLE:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -3212,14 +3338,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 80,
+      "value": 25,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9M5R0-40H:vds",
+    "id": "BUK7Y1R0-40N:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -3236,9 +3362,184 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMN55ENE:rdson",
+    "id": "BUK7K17-80E:rdson",
     "split": "holdout",
     "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 16.7,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9M5R0-40H:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 85,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMN55ENE:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": false,
+    "reason": "hallucinated",
+    "found": "TSOP6",
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
+    },
+    "text": "SC-74; TSOP6 plastic, surface-mounted package (SC-74; TSOP6); 6 leads, as listed in Table 3. Ordering information from [PMN55ENEA]."
+  },
+  {
+    "id": "BUK9Y7R0-60EL:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9Y4R4-40E:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMNR55-40SSH:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 0.55,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMN50EPE:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -4.6,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK6D43-40P:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": -6,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMN48XPA2:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMV164ENEA:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": false,
+    "reason": "hallucinated",
+    "found": "60 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 60,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "60 V, at Tj = 25 °C."
+  },
+  {
+    "id": "BUK6D43-60E:vds",
+    "split": "holdout",
+    "dimension": "vds",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -3247,13 +3548,13 @@
     "expected": {
       "kind": "numeric",
       "value": 60,
-      "unit": "mΩ",
+      "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9Y7R0-60EL:rdson",
+    "id": "PSMN3R3-40MSH:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -3263,31 +3564,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 4.5,
+      "value": 3.3,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9K29-100E:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 30,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9Y4R4-40E:package",
+    "id": "BUK9832-55A:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -3297,27 +3581,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMNR55-40SSH:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK6D43-40P:vds",
+    "id": "PMPB25ENE:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -3327,65 +3599,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": -40,
+      "value": 30,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMN48XPA2:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 55,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN6R1-30YLD:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 66,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMV164ENEA:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 1.6,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN3R3-40MSH:vds",
+    "id": "BUK7M5R0-40H:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -3397,57 +3618,6 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9832-55A:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 12,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMPB13R6XN:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 7,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7M5R0-40H:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 5,
-      "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -3480,14 +3650,17 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMN52XP:vds",
+    "id": "PMN52XP:rdson",
     "split": "holdout",
-    "dimension": "vds",
+    "dimension": "rdson",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -3495,8 +3668,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": -20,
-      "unit": "V",
+      "value": 62,
+      "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -3536,19 +3709,20 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMPB19XP:id",
+    "id": "PMPB19XP:package",
     "split": "holdout",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
     "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": -7.2,
-      "unit": "A",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -3587,7 +3761,24 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN4R2-30MLD:package",
+    "id": "PSMN4R2-30MLD:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 70,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMPB215ENEA:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -3597,12 +3788,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN013-100YSE:vds",
+    "id": "BUK7Y43-60E:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -3612,14 +3806,31 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 100,
+      "value": 60,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7Y43-60E:rdson",
+    "id": "BUK7K52-60E:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": false,
+    "reason": "hallucinated",
+    "found": "60 V",
+    "signMatched": true,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 60,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "60 V, Tj ≥ 25 °C; Tj ≤ 175 °C"
+  },
+  {
+    "id": "PSMN6R1-25MLD:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -3629,14 +3840,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 43,
+      "value": 7.24,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7K52-60E:id",
+    "id": "BUK7S0R5-40H:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -3646,16 +3857,16 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 15.4,
+      "value": 500,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN6R1-25MLD:id",
+    "id": "PSMNR60-25YLH:vds",
     "split": "holdout",
-    "dimension": "id",
+    "dimension": "vds",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -3663,39 +3874,9 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 60,
-      "unit": "A",
+      "value": 25,
+      "unit": "V",
       "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7S0R5-40H:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN2R0-100SSF:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -3734,9 +3915,9 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN2R0-55YLH:rdson",
+    "id": "PSMN2R0-55YLH:id",
     "split": "holdout",
-    "dimension": "rdson",
+    "dimension": "id",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -3744,8 +3925,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 2.1,
-      "unit": "mΩ",
+      "value": 200,
+      "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -3768,24 +3949,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7M6R7-40H:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 50,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN015-100YL:package",
+    "id": "BUK7M6R7-40H:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -3795,291 +3959,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7Y22-100E:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN8R0-40BS:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN038-100YL:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 30,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN4R0-30YLD:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 95,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN013-60YL:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9Y8R5-80E:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 80,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN7R5-60YL:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 7.5,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN2R4-30YLD:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": false,
-    "reason": "hallucinated",
-    "found": "2.4 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 2.4,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "2.4 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
-  },
-  {
-    "id": "BUK9M53-60E:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 17,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN8R9-100BSE:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "D2PAK"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN2R8-80SSF:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7K23-80E:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 80,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7J1R4-40H:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMN40ENA:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 43,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK6D230-80E:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 230,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN1R5-30YLC:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SO8"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN2R2-40YSD:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 40,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN7R6-100BSE:vds",
+    "id": "BUK7Y22-100E:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4096,7 +3984,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN2R5-80SSE:rdson",
+    "id": "PSMN029-100HL:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -4106,14 +3994,84 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 2.5,
+      "value": 29,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN8R5-40MSD:rdson",
+    "id": "PSMN8R0-40BS:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 77,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN038-100YL:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN013-60YL:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 60,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMPB08R6EN:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 10.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9Y8R5-80E:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -4130,7 +4088,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMN30UNE:id",
+    "id": "PSMN7R5-60YL:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4140,14 +4098,84 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 4.8,
+      "value": 86,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMPB07R3VP:id",
+    "id": "PSMN2R4-30YLD:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN8R9-100BSE:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN2R8-80SSF:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 80,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN020-30MLC:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 18.1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK7K23-80E:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4157,14 +4185,52 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": -12.5,
+      "value": 17,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN4R4-30MLC:vds",
+    "id": "BUK7J1R4-40H:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMN40ENA:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN1R5-30YLC:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4181,105 +4247,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN1R0-40YLD:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 280,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "280 A at VGS = 10 V; Tmb = 25 °C [PSMN1R0-40ULD] \n\nNote: Since there is no excerpt for PSMN1R0-40YLD, but there is one for PSMN1R0-40ULD which has a note stating \"For non-UL2595 applications please use PSMN1R0-40YLD\", it can be inferred that the ratings might be similar. However, according to the given instructions, if the part number does not match exactly, the answer should be \"NOT_IN_CORPUS\". \n"
-  },
-  {
-    "id": "BUK7Y7R0-40H:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 68,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMV30UN2:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SOT23"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9M20-40H:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN3R5-25MLD:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 25,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN075-100MSE:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9M31-60EL:rdson",
+    "id": "BUK9Y38-100E:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -4289,46 +4257,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 20.6,
+      "value": 38,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN7R0-30YLC:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "SOT669"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK7Y25-80E:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 25,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN4R1-60YL:id",
+    "id": "PSMN2R2-40YSD:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4338,14 +4274,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 100,
+      "value": 180,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMV20XNEA:id",
+    "id": "PSMN7R6-100BSE:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4355,14 +4291,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 6.3,
+      "value": 75,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9Y113-100E:package",
+    "id": "PSMN2R5-80SSE:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -4372,61 +4308,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9K13-60RA:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56D"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9Y25-80E:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 27,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK6D30-40E:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 6,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PSMN9R5-100BS:vds",
+    "id": "PMN30UNE:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4436,16 +4326,16 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 100,
+      "value": 20,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN1R0-100ASE:id",
+    "id": "PMPB07R3VP:rdson",
     "split": "holdout",
-    "dimension": "id",
+    "dimension": "rdson",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -4453,14 +4343,31 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 430,
-      "unit": "A",
+      "value": 8.6,
+      "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7Y12-40E:package",
+    "id": "PSMN1R0-40YSH:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN4R4-30MLC:package",
     "split": "holdout",
     "dimension": "package",
     "correct": true,
@@ -4470,12 +4377,15 @@
     "degenerate": false,
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9K134-100E:vds",
+    "id": "BUK7Y7R0-40H:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4485,14 +4395,101 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 100,
+      "value": 40,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMN25ENEA:vds",
+    "id": "PMV30UN2:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 20,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9M20-40H:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 20,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9Y21-40E:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 33,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN3R5-25MLD:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN075-100MSE:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN7R0-30YLC:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4509,7 +4506,59 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7M21-40E:rdson",
+    "id": "PSMN3R0-30YL:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN4R1-60YL:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 60,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMV20XNEA:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 20,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9Y113-100E:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -4519,14 +4568,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 21,
+      "value": 113,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7M9R5-40H:id",
+    "id": "BUK9K13-60RA:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4543,24 +4592,44 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMV280ENEA:id",
+    "id": "PMPB20XPEA:package",
     "split": "holdout",
-    "dimension": "id",
+    "dimension": "package",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
     "signMatched": null,
     "degenerate": false,
     "expected": {
-      "kind": "numeric",
-      "value": 1.1,
-      "unit": "A",
-      "tolerance": 0.01
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PXN6R2-25QL:vds",
+    "id": "BUK9Y25-80E:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN034-100BS:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4570,14 +4639,83 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 25,
+      "value": 100,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN4R4-80BS:id",
+    "id": "PSMN9R5-100BS:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK7Y12-40E:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN1R0-30YLE:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 30,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9K134-100E:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 159,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMN25ENEA:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4587,9 +4725,97 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 100,
+      "value": 6.4,
       "unit": "A",
       "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK7M21-40E:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK7M9R5-40H:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN4R5-40BS:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 40,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PXN6R2-25QL:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 13.1,
+      "unit": "A",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN4R4-80BS:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -4611,24 +4837,7 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK7K32-100E:vds",
-    "split": "holdout",
-    "dimension": "vds",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 100,
-      "unit": "V",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMV65UNE:rdson",
+    "id": "BUK7K32-100E:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -4638,8 +4847,25 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 73,
+      "value": 27.5,
       "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMV65UNE:id",
+    "split": "holdout",
+    "dimension": "id",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 2.8,
+      "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -4662,7 +4888,25 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMPB23XNE:vds",
+    "id": "PMPB10XNEA:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMV60ENEA:vds",
     "split": "holdout",
     "dimension": "vds",
     "correct": true,
@@ -4672,78 +4916,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 20,
+      "value": 40,
       "unit": "V",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PMV60ENEA:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 3,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9M24-80L:id",
-    "split": "holdout",
-    "dimension": "id",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 35,
-      "unit": "A",
-      "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMN30XPA:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "TSOP6"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "PMN30XP:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "TSOP6"
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9M60-100L:rdson",
+    "id": "BUK9M24-80L:rdson",
     "split": "holdout",
     "dimension": "rdson",
     "correct": true,
@@ -4753,14 +4933,31 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": 23.6,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN025-80YL:id",
+    "id": "PMN30XPA:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 38,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PMN30XP:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4770,14 +4967,65 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 37,
+      "value": -5.2,
       "unit": "A",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "PSMN1R8-30MLH:id",
+    "id": "BUK9M60-100L:vds",
+    "split": "holdout",
+    "dimension": "vds",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 100,
+      "unit": "V",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN025-80YL:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 27,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "PSMN1R8-30MLH:rdson",
+    "split": "holdout",
+    "dimension": "rdson",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "numeric",
+      "value": 2.1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK9K25-40RA:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4787,24 +5035,9 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 150,
+      "value": 18.2,
       "unit": "A",
       "tolerance": 0.01
-    },
-    "text": "NOT_IN_CORPUS"
-  },
-  {
-    "id": "BUK9K25-40RA:package",
-    "split": "holdout",
-    "dimension": "package",
-    "correct": true,
-    "reason": "refused-correctly",
-    "found": null,
-    "signMatched": null,
-    "degenerate": false,
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK56D"
     },
     "text": "NOT_IN_CORPUS"
   },
@@ -4894,9 +5127,9 @@
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK9K20-80E:vds",
+    "id": "BUK9K20-80E:rdson",
     "split": "holdout",
-    "dimension": "vds",
+    "dimension": "rdson",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -4904,8 +5137,8 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 80,
-      "unit": "V",
+      "value": 19.4,
+      "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
@@ -4914,23 +5147,6 @@
     "id": "PSMN1R0-30YLD:rdson",
     "split": "holdout",
     "dimension": "rdson",
-    "correct": false,
-    "reason": "hallucinated",
-    "found": "1.85 mΩ",
-    "signMatched": true,
-    "degenerate": false,
-    "expected": {
-      "kind": "numeric",
-      "value": 1.3,
-      "unit": "mΩ",
-      "tolerance": 0.01
-    },
-    "text": "1.85 mΩ at VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
-  },
-  {
-    "id": "BUK9M28-80E:rdson",
-    "split": "holdout",
-    "dimension": "rdson",
     "correct": true,
     "reason": "refused-correctly",
     "found": null,
@@ -4938,14 +5154,14 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": 28,
+      "value": 1.3,
       "unit": "mΩ",
       "tolerance": 0.01
     },
     "text": "NOT_IN_CORPUS"
   },
   {
-    "id": "BUK6D120-60P:id",
+    "id": "BUK9M28-80E:id",
     "split": "holdout",
     "dimension": "id",
     "correct": true,
@@ -4955,9 +5171,27 @@
     "degenerate": false,
     "expected": {
       "kind": "numeric",
-      "value": -3,
+      "value": 33,
       "unit": "A",
       "tolerance": 0.01
+    },
+    "text": "NOT_IN_CORPUS"
+  },
+  {
+    "id": "BUK6D120-60P:package",
+    "split": "holdout",
+    "dimension": "package",
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
+    "degenerate": false,
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     },
     "text": "NOT_IN_CORPUS"
   }

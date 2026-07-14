@@ -145,3 +145,45 @@ describe("grade: refusal", () => {
     expect(grade(pChannel, a("-20 V."))).toMatchObject({ correct: false, reason: "wrong-value" });
   });
 });
+
+/**
+ * A package has more than one true name, and one of them is spelled with a
+ * character nobody can type. Both facts come from the datasheet, not from a wish
+ * to be lenient.
+ */
+describe("package names", () => {
+  test("any name the ordering table prints is a correct answer", () => {
+    // BUK6Y19-30P's ordering row, verbatim: Name `LFPAK56; Power-SO8`, Version `SOT669`.
+    const expected = { kind: "text", value: "LFPAK56", accepts: ["Power-SO8", "SOT669"] } as const;
+    const ask = (text: string) =>
+      grade(
+        { id: "q", part: "BUK6Y19-30P", dimension: "package", split: "indexed", question: "", expected },
+        { text, refused: false, retrieved: [], evidence: [] }
+      ).correct;
+
+    expect(ask("It is supplied in an LFPAK56 package.")).toBe(true);
+    expect(ask("Power-SO8.")).toBe(true);
+    expect(ask("SOT669")).toBe(true);
+    expect(ask("LFPAK33")).toBe(false);
+  });
+
+  test("a package is not its own longer-named neighbour", () => {
+    const expected = { kind: "text", value: "LFPAK56" } as const;
+    const graded = grade(
+      { id: "q", part: "X", dimension: "package", split: "indexed", question: "", expected },
+      { text: "LFPAK56D", refused: false, retrieved: [], evidence: [] }
+    );
+    expect(graded.correct).toBe(false);
+  });
+
+  test("the non-breaking hyphen Nexperia prints is the hyphen a person types", () => {
+    // The label carries U+2011 because the PDF does. The model types U+002D, which
+    // is the only hyphen on a keyboard. Same package, and it must not be a miss.
+    const expected = { kind: "text", value: "DFN2020MD‑6" } as const;
+    const graded = grade(
+      { id: "q", part: "PMPB10EN", dimension: "package", split: "indexed", question: "", expected },
+      { text: "DFN2020MD-6 (SOT1220).", refused: false, retrieved: [], evidence: [] }
+    );
+    expect(graded.correct).toBe(true);
+  });
+});

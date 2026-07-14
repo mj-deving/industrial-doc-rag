@@ -46,7 +46,10 @@
     "question": "Which package is the BUK9V13-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -96,7 +99,11 @@
     "question": "Which package is the PSMN011-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -146,7 +153,11 @@
     "question": "Which package is the PSMN2R1-30YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -196,7 +207,10 @@
     "question": "Which package is the PMV100XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -246,7 +260,10 @@
     "question": "Which package is the PSMN013-60HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -296,7 +313,10 @@
     "question": "Which package is the PMV52ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -346,7 +366,10 @@
     "question": "Which package is the PSMN011-60ML supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -396,7 +419,10 @@
     "question": "Which package is the PSMN3R7-100BSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -433,7 +459,10 @@
     "question": "Which package is the PSMN1R3-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK2",
+      "accepts": [
+        "SOT1023"
+      ]
     }
   },
   {
@@ -470,7 +499,10 @@
     "question": "Which package is the PSMN3R0-60BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -520,7 +552,8 @@
     "question": "Which package is the PMV27UPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -557,7 +590,10 @@
     "question": "Which package is the PSMN028-100YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -607,7 +643,11 @@
     "question": "Which package is the PSMN1R7-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -657,7 +697,11 @@
     "question": "Which package is the BUK7Y3R5-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -707,7 +751,10 @@
     "question": "Which package is the PSMN1R3-80SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -747,6 +794,20 @@
       "value": 5.1,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB50ENE:package",
+    "part": "PMPB50ENE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB50ENE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -796,7 +857,11 @@
     "question": "Which package is the BUK9Y7R2-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -846,7 +911,11 @@
     "question": "Which package is the BUK7Y65-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -886,6 +955,20 @@
       "value": 4.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK4D60-30:package",
+    "part": "BUK4D60-30",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK4D60-30 supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -935,7 +1018,11 @@
     "question": "Which package is the BUK6Y19-30P supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -985,7 +1072,10 @@
     "question": "Which package is the PMV48XPA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -1022,7 +1112,10 @@
     "question": "Which package is the PSMN3R9-25MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -1072,7 +1165,10 @@
     "question": "Which package is the BUK9M7R2-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -1122,7 +1218,10 @@
     "question": "Which package is the PMV50UPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -1165,6 +1264,20 @@
     }
   },
   {
+    "id": "PMPB10EN:package",
+    "part": "PMPB10EN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB10EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB06R2EN:vds",
     "part": "PMPB06R2EN",
     "dimension": "vds",
@@ -1204,6 +1317,20 @@
     }
   },
   {
+    "id": "PMPB06R2EN:package",
+    "part": "PMPB06R2EN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB06R2EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB12R7EP:vds",
     "part": "PMPB12R7EP",
     "dimension": "vds",
@@ -1240,6 +1367,20 @@
       "value": -8.7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB12R7EP:package",
+    "part": "PMPB12R7EP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB12R7EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -1289,7 +1430,10 @@
     "question": "Which package is the PSMN1R9-80SSJ supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -1339,7 +1483,11 @@
     "question": "Which package is the BUK9Y22-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -1379,6 +1527,20 @@
       "value": 12.7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PXN6R7-30QL:package",
+    "part": "PXN6R7-30QL",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PXN6R7-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
     }
   },
   {
@@ -1428,7 +1590,11 @@
     "question": "Which package is the PSMN3R3-80YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -1478,7 +1644,10 @@
     "question": "Which package is the PMN25ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -1515,7 +1684,10 @@
     "question": "Which package is the PMV33UPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -1565,7 +1737,11 @@
     "question": "Which package is the PSMN1R9-40YSB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -1615,7 +1791,11 @@
     "question": "Which package is the BUK9Y29-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -1665,7 +1845,10 @@
     "question": "Which package is the PMV20XNE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -1702,7 +1885,10 @@
     "question": "Which package is the PSMN4R0-25YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -1739,7 +1925,10 @@
     "question": "Which package is the PSMN2R8-25MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -1789,7 +1978,10 @@
     "question": "Which package is the PSMN5R3-25MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -1839,7 +2031,10 @@
     "question": "Which package is the BUK7880-55A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -1889,7 +2084,11 @@
     "question": "Which package is the BUK7Y59-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -1939,7 +2138,11 @@
     "question": "Which package is the BUK6Y24-40P supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -1976,7 +2179,10 @@
     "question": "Which package is the PSMN7R0-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -2013,7 +2219,11 @@
     "question": "Which package is the PSMN016-100YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -2063,7 +2273,10 @@
     "question": "Which package is the PSMN2R4-30MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -2113,7 +2326,11 @@
     "question": "Which package is the BUK7Y7R2-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -2150,7 +2367,10 @@
     "question": "Which package is the PSMN3R8-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -2200,7 +2420,10 @@
     "question": "Which package is the BUK7K5R6-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -2243,6 +2466,20 @@
     }
   },
   {
+    "id": "BUK9D23-40E:package",
+    "part": "BUK9D23-40E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK9D23-40E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN013-30YLC:vds",
     "part": "PSMN013-30YLC",
     "dimension": "vds",
@@ -2276,7 +2513,11 @@
     "question": "Which package is the PSMN013-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -2316,6 +2557,20 @@
       "value": 505,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMNR90-80CSF:package",
+    "part": "PSMNR90-80CSF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMNR90-80CSF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -2365,7 +2620,10 @@
     "question": "Which package is the BUK9K6R8-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -2415,7 +2673,10 @@
     "question": "Which package is the BUK9M52-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -2465,7 +2726,11 @@
     "question": "Which package is the BUK9Y59-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -2505,6 +2770,20 @@
       "value": -4,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB47XP:package",
+    "part": "PMPB47XP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB47XP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -2554,7 +2833,10 @@
     "question": "Which package is the BUK764R0-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -2604,7 +2886,11 @@
     "question": "Which package is the PSMN3R9-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -2654,7 +2940,10 @@
     "question": "Which package is the PMV37ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -2704,7 +2993,10 @@
     "question": "Which package is the PMN230ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -2754,7 +3046,11 @@
     "question": "Which package is the PSMN2R0-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -2804,7 +3100,10 @@
     "question": "Which package is the BUK9M3R3-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -2854,7 +3153,10 @@
     "question": "Which package is the PSMN013-40VLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -2904,7 +3206,10 @@
     "question": "Which package is the BUK7M15-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -2954,7 +3259,11 @@
     "question": "Which package is the PSMN8R5-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -3004,7 +3313,10 @@
     "question": "Which package is the BUK7M67-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -3044,6 +3356,20 @@
       "value": 10.1,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB8XN:package",
+    "part": "PMPB8XN",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB8XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -3093,7 +3419,8 @@
     "question": "Which package is the PMV48XPA2 supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -3130,7 +3457,10 @@
     "question": "Which package is the PSMN1R5-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -3180,7 +3510,10 @@
     "question": "Which package is the PMV75UP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -3230,7 +3563,10 @@
     "question": "Which package is the BUK7K13-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -3280,7 +3616,11 @@
     "question": "Which package is the PSMN5R2-60YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -3330,7 +3670,10 @@
     "question": "Which package is the PSMN2R3-100SSJ supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -3380,7 +3723,10 @@
     "question": "Which package is the BUK7M42-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -3430,7 +3776,11 @@
     "question": "Which package is the BUK9Y19-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -3480,7 +3830,11 @@
     "question": "Which package is the BUK9Y1R6-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -3530,7 +3884,10 @@
     "question": "Which package is the PSMN040-100MSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -3580,7 +3937,11 @@
     "question": "Which package is the PSMN1R4-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -3630,7 +3991,10 @@
     "question": "Which package is the PMV15ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -3673,6 +4037,20 @@
     }
   },
   {
+    "id": "PXN7R7-25QL:package",
+    "part": "PXN7R7-25QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN7R7-25QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
+    }
+  },
+  {
     "id": "PSMN016-100BS:vds",
     "part": "PSMN016-100BS",
     "dimension": "vds",
@@ -3706,7 +4084,10 @@
     "question": "Which package is the PSMN016-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -3746,6 +4127,20 @@
       "value": 460,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R0-100ASF:package",
+    "part": "PSMN1R0-100ASF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R0-100ASF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -3795,7 +4190,10 @@
     "question": "Which package is the BUK9M14-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -3835,6 +4233,20 @@
       "value": 375,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R2-80ASE:package",
+    "part": "PSMN1R2-80ASE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R2-80ASE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -3884,7 +4296,8 @@
     "question": "Which package is the PMV50XNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -3934,7 +4347,10 @@
     "question": "Which package is the BUK7M12-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -3974,6 +4390,20 @@
       "value": 340,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R4-100CSE:package",
+    "part": "PSMN1R4-100CSE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R4-100CSE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -4023,7 +4453,10 @@
     "question": "Which package is the PSMN5R0-40MLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -4066,6 +4499,20 @@
     }
   },
   {
+    "id": "BUK4D110-20P:package",
+    "part": "BUK4D110-20P",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK4D110-20P supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN1R0-100CSF:vds",
     "part": "PSMN1R0-100CSF",
     "dimension": "vds",
@@ -4102,6 +4549,20 @@
       "value": 460,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R0-100CSF:package",
+    "part": "PSMN1R0-100CSF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R0-100CSF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -4151,7 +4612,10 @@
     "question": "Which package is the BUK9K52-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -4201,7 +4665,11 @@
     "question": "Which package is the PSMN1R7-40YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -4238,7 +4706,10 @@
     "question": "Which package is the PSMN030-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -4275,7 +4746,10 @@
     "question": "Which package is the PMV48XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -4315,6 +4789,20 @@
       "value": 3.4,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D77-60E:package",
+    "part": "BUK6D77-60E",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK6D77-60E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -4364,7 +4852,11 @@
     "question": "Which package is the PSMN0R7-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -4404,6 +4896,20 @@
       "value": -8.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB15XPA:package",
+    "part": "PMPB15XPA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB15XPA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -4453,7 +4959,11 @@
     "question": "Which package is the PSMN4R5-80YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -4503,7 +5013,10 @@
     "question": "Which package is the PSMN5R0-40MSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -4540,7 +5053,10 @@
     "question": "Which package is the PSMN8R2-80YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -4590,7 +5106,11 @@
     "question": "Which package is the BUK7Y113-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -4640,7 +5160,11 @@
     "question": "Which package is the PSMN3R5-80YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -4690,7 +5214,10 @@
     "question": "Which package is the PMV28ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -4740,7 +5267,10 @@
     "question": "Which package is the BUK9M11-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -4790,7 +5320,10 @@
     "question": "Which package is the BUK768R1-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -4840,7 +5373,10 @@
     "question": "Which package is the PMV65XPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -4880,6 +5416,20 @@
       "value": 8.1,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB14XN:package",
+    "part": "PMPB14XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB14XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -4929,7 +5479,10 @@
     "question": "Which package is the BUK7S0R7-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -4979,7 +5532,11 @@
     "question": "Which package is the PSMN2R5-40YLB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -5016,7 +5573,10 @@
     "question": "Which package is the PSMN017-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -5066,7 +5626,10 @@
     "question": "Which package is the PSMN2R3-100SSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -5116,7 +5679,11 @@
     "question": "Which package is the BUK7Y12-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -5153,7 +5720,10 @@
     "question": "Which package is the PMN48XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -5203,7 +5773,10 @@
     "question": "Which package is the PSMN014-60HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -5253,7 +5826,10 @@
     "question": "Which package is the PMV16XN supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -5293,6 +5869,20 @@
       "value": 495,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R0-80CSE:package",
+    "part": "PSMN1R0-80CSE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R0-80CSE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -5342,7 +5932,11 @@
     "question": "Which package is the PSMN5R6-60YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -5392,7 +5986,10 @@
     "question": "Which package is the PSMN6R7-40MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -5442,7 +6039,8 @@
     "question": "Which package is the PMV15ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -5482,6 +6080,20 @@
       "value": -8.6,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB14XP:package",
+    "part": "PMPB14XP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB14XP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -5531,7 +6143,10 @@
     "question": "Which package is the PMV74EPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -5558,6 +6173,20 @@
       "value": 91,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN5R0-30YL:package",
+    "part": "PSMN5R0-30YL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN5R0-30YL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -5607,7 +6236,10 @@
     "question": "Which package is the BUK9875-100A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -5657,7 +6289,11 @@
     "question": "Which package is the PSMN6R0-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -5707,7 +6343,10 @@
     "question": "Which package is the BUK7K6R2-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -5757,7 +6396,8 @@
     "question": "Which package is the PMV100EPA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -5807,7 +6447,10 @@
     "question": "Which package is the PMN120ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -5857,7 +6500,10 @@
     "question": "Which package is the BUK9M8R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -5894,7 +6540,10 @@
     "question": "Which package is the PSMN5R6-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -5944,7 +6593,10 @@
     "question": "Which package is the BUK9K13-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -5994,7 +6646,8 @@
     "question": "Which package is the PMV28XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -6044,7 +6697,11 @@
     "question": "Which package is the PSMN3R5-40YSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -6094,7 +6751,10 @@
     "question": "Which package is the BUK9K5R1-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -6144,7 +6804,10 @@
     "question": "Which package is the PSMN025-100HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -6181,7 +6844,10 @@
     "question": "Which package is the PSMN3R3-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -6231,7 +6897,10 @@
     "question": "Which package is the PMV28UNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -6281,7 +6950,10 @@
     "question": "Which package is the PSMNR90-30BL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -6318,7 +6990,10 @@
     "question": "Which package is the PSMN5R5-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -6368,7 +7043,10 @@
     "question": "Which package is the BUK9M12-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -6418,7 +7096,10 @@
     "question": "Which package is the PSMN3R3-40MLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -6468,7 +7149,10 @@
     "question": "Which package is the BUK9K12-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -6508,6 +7192,20 @@
       "value": 430,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R1-100CSE:package",
+    "part": "PSMN1R1-100CSE",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PSMN1R1-100CSE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -6557,7 +7255,10 @@
     "question": "Which package is the PMV19XNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -6607,7 +7308,11 @@
     "question": "Which package is the BUK9Y107-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -6657,7 +7362,10 @@
     "question": "Which package is the BUK7M27-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -6697,6 +7405,20 @@
       "value": -9.4,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB12R5UPE:package",
+    "part": "PMPB12R5UPE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB12R5UPE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -6746,7 +7468,10 @@
     "question": "Which package is the BUK7M19-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -6796,7 +7521,10 @@
     "question": "Which package is the BUK7K45-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -6846,7 +7574,10 @@
     "question": "Which package is the BUK7M12-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -6896,7 +7627,11 @@
     "question": "Which package is the BUK9Y3R5-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -6946,7 +7681,11 @@
     "question": "Which package is the BUK9Y8R8-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -6996,7 +7735,10 @@
     "question": "Which package is the PMN70EPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -7046,7 +7788,10 @@
     "question": "Which package is the BUK9M6R6-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -7086,17 +7831,6 @@
       "value": 60,
       "unit": "A",
       "tolerance": 0.01
-    }
-  },
-  {
-    "id": "PSMN8R5-40MLD:package",
-    "part": "PSMN8R5-40MLD",
-    "dimension": "package",
-    "split": "indexed",
-    "question": "Which package is the PSMN8R5-40MLD supplied in?",
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK33"
     }
   },
   {
@@ -7146,7 +7880,11 @@
     "question": "Which package is the PSMN3R2-40YLB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -7196,7 +7934,10 @@
     "question": "Which package is the PMV40UN2 supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -7246,7 +7987,11 @@
     "question": "Which package is the PSMNR58-30YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -7296,7 +8041,11 @@
     "question": "Which package is the PSMNR70-40YSN supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -7346,7 +8095,10 @@
     "question": "Which package is the PSMN013-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -7389,6 +8141,20 @@
     }
   },
   {
+    "id": "PSMN1R2-80CSE:package",
+    "part": "PSMN1R2-80CSE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R2-80CSE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
+    }
+  },
+  {
     "id": "PSMN1R1-80ASF:vds",
     "part": "PSMN1R1-80ASF",
     "dimension": "vds",
@@ -7425,6 +8191,20 @@
       "value": 385,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R1-80ASF:package",
+    "part": "PSMN1R1-80ASF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R1-80ASF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -7474,7 +8254,11 @@
     "question": "Which package is the PSMN2R6-80YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -7511,7 +8295,11 @@
     "question": "Which package is the PSMN9R5-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -7551,6 +8339,20 @@
       "value": 7.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PXN017-30QL:package",
+    "part": "PXN017-30QL",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PXN017-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
     }
   },
   {
@@ -7600,7 +8402,11 @@
     "question": "Which package is the BUK9Y6R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -7637,7 +8443,10 @@
     "question": "Which package is the PSMN069-100YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -7677,6 +8486,20 @@
       "value": 460,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK7A1R0-100L:package",
+    "part": "BUK7A1R0-100L",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK7A1R0-100L supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -7726,7 +8549,10 @@
     "question": "Which package is the BUK98180-100A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -7776,7 +8602,10 @@
     "question": "Which package is the BUK9K89-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -7826,7 +8655,11 @@
     "question": "Which package is the BUK7Y8R7-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -7876,7 +8709,10 @@
     "question": "Which package is the BUK7M17-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -7926,7 +8762,11 @@
     "question": "Which package is the PSMN2R0-40YLB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -7976,7 +8816,11 @@
     "question": "Which package is the PSMN2R8-40YSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -8026,7 +8870,11 @@
     "question": "Which package is the PSMN014-80YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -8076,7 +8924,10 @@
     "question": "Which package is the BUK7K12-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -8126,7 +8977,10 @@
     "question": "Which package is the BUK7S1R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -8176,7 +9030,10 @@
     "question": "Which package is the PMV42ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -8226,7 +9083,10 @@
     "question": "Which package is the PSMN013-30MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -8276,7 +9136,11 @@
     "question": "Which package is the BUK7Y3R1-80M supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -8326,7 +9190,10 @@
     "question": "Which package is the PMV20EN supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -8376,7 +9243,10 @@
     "question": "Which package is the PMV50XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -8426,7 +9296,10 @@
     "question": "Which package is the BUK9M10-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -8476,7 +9349,10 @@
     "question": "Which package is the BUK9K61-100L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -8513,7 +9389,10 @@
     "question": "Which package is the PSMN012-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -8553,6 +9432,20 @@
       "value": 460,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK7T1R0-100L:package",
+    "part": "BUK7T1R0-100L",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK7T1R0-100L supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -8602,7 +9495,11 @@
     "question": "Which package is the BUK7Y3R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -8652,7 +9549,10 @@
     "question": "Which package is the BUK9M120-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -8702,7 +9602,10 @@
     "question": "Which package is the PSMN6R8-40HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -8752,7 +9655,11 @@
     "question": "Which package is the PSMN1R4-40YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -8789,7 +9696,11 @@
     "question": "Which package is the PSMN2R2-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -8839,7 +9750,10 @@
     "question": "Which package is the BUK7K15-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -8876,7 +9790,10 @@
     "question": "Which package is the PSMN7R0-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -8913,7 +9830,10 @@
     "question": "Which package is the PSMN8R7-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -8963,7 +9883,10 @@
     "question": "Which package is the BUK9M24-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -9013,7 +9936,10 @@
     "question": "Which package is the PMV65UNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -9063,7 +9989,10 @@
     "question": "Which package is the BUK7K6R8-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -9100,7 +10029,10 @@
     "question": "Which package is the PSMN9R8-30MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -9150,7 +10082,11 @@
     "question": "Which package is the PSMNR98-25YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9200,7 +10136,11 @@
     "question": "Which package is the BUK9Y12-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9250,7 +10190,10 @@
     "question": "Which package is the PSMN045-100HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -9300,7 +10243,11 @@
     "question": "Which package is the BUK9Y41-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9350,7 +10297,11 @@
     "question": "Which package is the BUK7Y6R0-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9400,7 +10351,11 @@
     "question": "Which package is the BUK9Y43-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9440,6 +10395,20 @@
       "value": -7.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB16EP:package",
+    "part": "PMPB16EP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB16EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -9489,7 +10458,11 @@
     "question": "Which package is the BUK6Y10-30P supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9539,7 +10512,11 @@
     "question": "Which package is the BUK7Y1R0-40N supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9579,6 +10556,20 @@
       "value": 355,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK7T1R4-100L:package",
+    "part": "BUK7T1R4-100L",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK7T1R4-100L supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -9628,7 +10619,10 @@
     "question": "Which package is the PSMN4R2-40VSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -9668,6 +10662,20 @@
       "value": 11,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB08R5XN:package",
+    "part": "PMPB08R5XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB08R5XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -9717,7 +10725,10 @@
     "question": "Which package is the BUK9K12-80L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -9757,6 +10768,20 @@
       "value": 2.8,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB95ENEA:package",
+    "part": "PMPB95ENEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB95ENEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -9806,7 +10831,11 @@
     "question": "Which package is the BUK9Y8R7-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9856,7 +10885,10 @@
     "question": "Which package is the BUK7K8R7-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -9906,7 +10938,11 @@
     "question": "Which package is the PSMN7R5-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -9956,7 +10992,10 @@
     "question": "Which package is the PMN42XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -10006,7 +11045,10 @@
     "question": "Which package is the BUK7K17-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -10056,7 +11098,11 @@
     "question": "Which package is the BUK9Y25-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10106,7 +11152,10 @@
     "question": "Which package is the BUK9M5R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -10156,7 +11205,11 @@
     "question": "Which package is the PSMNR89-25YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10206,7 +11259,11 @@
     "question": "Which package is the BUK7Y153-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10256,7 +11313,10 @@
     "question": "Which package is the PSMN013-60HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -10293,7 +11353,10 @@
     "question": "Which package is the PSMN2R7-30BL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -10343,7 +11406,10 @@
     "question": "Which package is the PSMN7R5-30MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -10383,6 +11449,20 @@
       "value": -6,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK4D38-20P:package",
+    "part": "BUK4D38-20P",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK4D38-20P supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -10432,7 +11512,10 @@
     "question": "Which package is the PMN55ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -10472,6 +11555,20 @@
       "value": 5.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D38-30E:package",
+    "part": "BUK6D38-30E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D38-30E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -10521,7 +11618,11 @@
     "question": "Which package is the BUK6Y61-60P supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10571,7 +11672,10 @@
     "question": "Which package is the PMN40ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -10621,7 +11725,11 @@
     "question": "Which package is the BUK7Y19-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10671,7 +11779,10 @@
     "question": "Which package is the BUK9K31-100L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -10721,7 +11832,11 @@
     "question": "Which package is the BUK9Y7R0-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10758,7 +11873,11 @@
     "question": "Which package is the PSMN4R5-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -10798,6 +11917,20 @@
       "value": 9.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB10XN:package",
+    "part": "PMPB10XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB10XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -10847,7 +11980,10 @@
     "question": "Which package is the BUK9K13-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -10887,6 +12023,20 @@
       "value": -7.6,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB19R0UPE:package",
+    "part": "PMPB19R0UPE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB19R0UPE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -10936,7 +12086,10 @@
     "question": "Which package is the BUK9K29-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -10986,7 +12139,10 @@
     "question": "Which package is the PMN30UN supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -11036,7 +12192,11 @@
     "question": "Which package is the BUK9Y4R4-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -11086,7 +12246,10 @@
     "question": "Which package is the PSMNR55-40SSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -11136,7 +12299,10 @@
     "question": "Which package is the PMN50EPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -11186,7 +12352,11 @@
     "question": "Which package is the PSMN0R9-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -11226,6 +12396,20 @@
       "value": -6,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D43-40P:package",
+    "part": "BUK6D43-40P",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK6D43-40P supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -11275,7 +12459,10 @@
     "question": "Which package is the PSMN3R4-30BLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -11312,7 +12499,11 @@
     "question": "Which package is the PSMN011-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -11362,7 +12553,11 @@
     "question": "Which package is the PMN48XPA2 supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -11412,7 +12607,10 @@
     "question": "Which package is the PMN28UNE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -11449,7 +12647,10 @@
     "question": "Which package is the PSMN7R6-60BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -11486,7 +12687,10 @@
     "question": "Which package is the PSMN017-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -11523,7 +12727,10 @@
     "question": "Which package is the BUK78150-55A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -11573,7 +12780,11 @@
     "question": "Which package is the PSMN5R5-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -11610,7 +12821,10 @@
     "question": "Which package is the PSMN027-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -11660,7 +12874,11 @@
     "question": "Which package is the PSMN6R1-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -11700,6 +12918,20 @@
       "value": 9.3,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB09R1XN:package",
+    "part": "PMPB09R1XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB09R1XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -11749,7 +12981,10 @@
     "question": "Which package is the BUK9K18-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -11799,7 +13034,10 @@
     "question": "Which package is the PMV164ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -11849,7 +13087,11 @@
     "question": "Which package is the PSMNR51-25YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -11886,7 +13128,10 @@
     "question": "Which package is the PSMN2R8-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -11936,7 +13181,10 @@
     "question": "Which package is the BUK7K35-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -11986,7 +13234,10 @@
     "question": "Which package is the BUK9M9R1-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -12029,6 +13280,20 @@
     }
   },
   {
+    "id": "PMPB10XNE:package",
+    "part": "PMPB10XNE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB10XNE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "BUK6D43-60E:vds",
     "part": "BUK6D43-60E",
     "dimension": "vds",
@@ -12065,6 +13330,20 @@
       "value": 5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D43-60E:package",
+    "part": "BUK6D43-60E",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK6D43-60E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -12114,7 +13393,10 @@
     "question": "Which package is the BUK9880-55A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -12164,7 +13446,10 @@
     "question": "Which package is the BUK9M35-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -12204,6 +13489,20 @@
       "value": 505,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMNR90-80ASF:package",
+    "part": "PSMNR90-80ASF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMNR90-80ASF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -12253,7 +13552,10 @@
     "question": "Which package is the PSMN3R3-40MSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -12303,7 +13605,10 @@
     "question": "Which package is the BUK7K17-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -12353,7 +13658,11 @@
     "question": "Which package is the BUK9Y3R0-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -12390,7 +13699,10 @@
     "question": "Which package is the BUK9832-55A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -12440,7 +13752,11 @@
     "question": "Which package is the BUK7J2R4-80M supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -12483,6 +13799,20 @@
     }
   },
   {
+    "id": "PMPB13R6XN:package",
+    "part": "PMPB13R6XN",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB13R6XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB06R3XN:vds",
     "part": "PMPB06R3XN",
     "dimension": "vds",
@@ -12519,6 +13849,20 @@
       "value": 11,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB06R3XN:package",
+    "part": "PMPB06R3XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB06R3XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -12561,6 +13905,20 @@
     }
   },
   {
+    "id": "PMPB25ENE:package",
+    "part": "PMPB25ENE",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB25ENE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN015-60BS:vds",
     "part": "PSMN015-60BS",
     "dimension": "vds",
@@ -12594,7 +13952,10 @@
     "question": "Which package is the PSMN015-60BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -12644,7 +14005,11 @@
     "question": "Which package is the BUK7Y4R4-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -12694,7 +14059,10 @@
     "question": "Which package is the BUK7M8R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -12744,7 +14112,10 @@
     "question": "Which package is the BUK7M5R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -12794,7 +14165,11 @@
     "question": "Which package is the BUK7Y38-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -12844,7 +14219,10 @@
     "question": "Which package is the BUK9M20-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -12894,7 +14272,11 @@
     "question": "Which package is the PSMN041-80YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -12931,7 +14313,10 @@
     "question": "Which package is the PMV160UP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -12971,6 +14356,20 @@
       "value": 11.4,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PXN9R0-30QL:package",
+    "part": "PXN9R0-30QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN9R0-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
     }
   },
   {
@@ -13020,7 +14419,11 @@
     "question": "Which package is the PSMN3R0-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13070,7 +14473,10 @@
     "question": "Which package is the PMV65XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -13107,7 +14513,10 @@
     "question": "Which package is the PSMN1R2-25YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK2",
+      "accepts": [
+        "SOT1023"
+      ]
     }
   },
   {
@@ -13157,7 +14566,11 @@
     "question": "Which package is the BUK7Y3R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13207,7 +14620,8 @@
     "question": "Which package is the PMV52ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -13257,7 +14671,10 @@
     "question": "Which package is the BUK7M8R0-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -13307,7 +14724,10 @@
     "question": "Which package is the PMN52XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -13357,7 +14777,11 @@
     "question": "Which package is the PSMN012-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13394,7 +14818,11 @@
     "question": "Which package is the PSMN1R1-25YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13431,7 +14859,11 @@
     "question": "Which package is the PSMN2R9-25YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13481,7 +14913,11 @@
     "question": "Which package is the PSMNR70-30YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13521,6 +14957,20 @@
       "value": -7.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB19XP:package",
+    "part": "PMPB19XP",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB19XP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -13570,7 +15020,11 @@
     "question": "Which package is the PSMN3R5-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13607,7 +15061,10 @@
     "question": "Which package is the PSMN012-100YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -13657,7 +15114,11 @@
     "question": "Which package is the BUK7Y2R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13707,7 +15168,11 @@
     "question": "Which package is the BUK9Y1R9-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13757,7 +15222,10 @@
     "question": "Which package is the PMV35EPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -13807,7 +15275,10 @@
     "question": "Which package is the PSMN1R0-40ULD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56-UL",
+      "accepts": [
+        "SOT1023A"
+      ]
     }
   },
   {
@@ -13857,7 +15328,10 @@
     "question": "Which package is the PSMN1R2-55SLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -13894,7 +15368,10 @@
     "question": "Which package is the PSMN4R6-60BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -13944,7 +15421,11 @@
     "question": "Which package is the PSMN2R2-40YSB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -13994,7 +15475,11 @@
     "question": "Which package is the PSMN1R5-40YSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -14044,7 +15529,11 @@
     "question": "Which package is the BUK9Y4R8-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -14094,7 +15583,10 @@
     "question": "Which package is the PMN70XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -14144,7 +15636,10 @@
     "question": "Which package is the PSMNR70-40SSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -14194,7 +15689,10 @@
     "question": "Which package is the BUK7S1R2-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -14237,6 +15735,20 @@
     }
   },
   {
+    "id": "PMPB29XPE:package",
+    "part": "PMPB29XPE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB29XPE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB20XPE:vds",
     "part": "PMPB20XPE",
     "dimension": "vds",
@@ -14273,6 +15785,20 @@
       "value": -7.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB20XPE:package",
+    "part": "PMPB20XPE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB20XPE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -14322,7 +15848,10 @@
     "question": "Which package is the BUK7M6R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -14372,7 +15901,10 @@
     "question": "Which package is the PSMN047-100NSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -14422,7 +15954,10 @@
     "question": "Which package is the PSMN2R3-80SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -14472,7 +16007,10 @@
     "question": "Which package is the BUK761R6-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404A"
+      ]
     }
   },
   {
@@ -14515,6 +16053,20 @@
     }
   },
   {
+    "id": "PMPB07R0UN:package",
+    "part": "PMPB07R0UN",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB07R0UN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB27EPA:vds",
     "part": "PMPB27EPA",
     "dimension": "vds",
@@ -14554,6 +16106,20 @@
     }
   },
   {
+    "id": "PMPB27EPA:package",
+    "part": "PMPB27EPA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB27EPA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN7R0-30YL:vds",
     "part": "PSMN7R0-30YL",
     "dimension": "vds",
@@ -14587,7 +16153,10 @@
     "question": "Which package is the PSMN7R0-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -14637,7 +16206,10 @@
     "question": "Which package is the PMV65XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -14680,6 +16252,20 @@
     }
   },
   {
+    "id": "PMPB33XP:package",
+    "part": "PMPB33XP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB33XP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "BUK7D25-40E:vds",
     "part": "BUK7D25-40E",
     "dimension": "vds",
@@ -14716,6 +16302,20 @@
       "value": 8,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK7D25-40E:package",
+    "part": "BUK7D25-40E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK7D25-40E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -14765,7 +16365,10 @@
     "question": "Which package is the PSMN4R2-30MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -14815,7 +16418,11 @@
     "question": "Which package is the PSMN8R7-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -14865,7 +16472,10 @@
     "question": "Which package is the BUK9K49-80L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -14905,6 +16515,20 @@
       "value": 14,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PXN5R4-30QL:package",
+    "part": "PXN5R4-30QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN5R4-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
     }
   },
   {
@@ -14954,7 +16578,10 @@
     "question": "Which package is the PSMN4R3-40MSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -15004,7 +16631,10 @@
     "question": "Which package is the BUK9M48-80L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -15041,7 +16671,10 @@
     "question": "Which package is the PSMN102-200Y supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -15091,7 +16724,10 @@
     "question": "Which package is the BUK9K45-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -15131,6 +16767,20 @@
       "value": 13,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB05R4EN:package",
+    "part": "PMPB05R4EN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB05R4EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -15180,7 +16830,11 @@
     "question": "Which package is the BUK7Y7R8-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15230,7 +16884,10 @@
     "question": "Which package is the BUK7K89-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -15273,6 +16930,20 @@
     }
   },
   {
+    "id": "PMPB85ENEA:package",
+    "part": "PMPB85ENEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB85ENEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB215ENEA:vds",
     "part": "PMPB215ENEA",
     "dimension": "vds",
@@ -15309,6 +16980,20 @@
       "value": 1.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB215ENEA:package",
+    "part": "PMPB215ENEA",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB215ENEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -15358,7 +17043,10 @@
     "question": "Which package is the PMV88ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -15395,7 +17083,11 @@
     "question": "Which package is the PSMN6R0-30YLB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15445,7 +17137,11 @@
     "question": "Which package is the BUK9Y15-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15495,7 +17191,10 @@
     "question": "Which package is the PMN230ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -15545,7 +17244,11 @@
     "question": "Which package is the BUK7Y1R7-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15595,7 +17298,10 @@
     "question": "Which package is the PMN48XPA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -15635,6 +17341,20 @@
       "value": 7.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D22-30E:package",
+    "part": "BUK6D22-30E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D22-30E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -15684,7 +17404,10 @@
     "question": "Which package is the BUK7M45-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -15734,7 +17457,11 @@
     "question": "Which package is the PSMN013-100YSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15784,7 +17511,11 @@
     "question": "Which package is the PSMN3R2-40YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15834,7 +17565,11 @@
     "question": "Which package is the BUK7Y43-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -15871,7 +17606,10 @@
     "question": "Which package is the PSMN012-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -15908,7 +17646,10 @@
     "question": "Which package is the PSMN5R0-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -15958,7 +17699,10 @@
     "question": "Which package is the PSMN2R0-25MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -16008,7 +17752,10 @@
     "question": "Which package is the BUK7K52-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -16058,7 +17805,10 @@
     "question": "Which package is the PSMN6R1-25MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -16108,7 +17858,11 @@
     "question": "Which package is the PSMNR90-40YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -16148,17 +17902,6 @@
       "value": 500,
       "unit": "A",
       "tolerance": 0.01
-    }
-  },
-  {
-    "id": "BUK7S0R5-40H:package",
-    "part": "BUK7S0R5-40H",
-    "dimension": "package",
-    "split": "holdout",
-    "question": "Which package is the BUK7S0R5-40H supplied in?",
-    "expected": {
-      "kind": "text",
-      "value": "LFPAK88"
     }
   },
   {
@@ -16208,7 +17951,10 @@
     "question": "Which package is the PSMN3R3-100SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -16258,7 +18004,8 @@
     "question": "Which package is the PMV28ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -16308,7 +18055,10 @@
     "question": "Which package is the PSMN2R0-100SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -16351,6 +18101,20 @@
     }
   },
   {
+    "id": "BUK6D120-40E:package",
+    "part": "BUK6D120-40E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D120-40E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMV32UP:vds",
     "part": "PMV32UP",
     "dimension": "vds",
@@ -16384,7 +18148,10 @@
     "question": "Which package is the PMV32UP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -16434,7 +18201,11 @@
     "question": "Which package is the PSMNR60-25YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -16484,7 +18255,11 @@
     "question": "Which package is the BUK7Y15-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -16534,7 +18309,11 @@
     "question": "Which package is the PSMN021-100YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -16584,7 +18363,10 @@
     "question": "Which package is the PMV450ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -16624,6 +18406,20 @@
       "value": 2.7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D125-60E:package",
+    "part": "BUK6D125-60E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D125-60E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -16673,7 +18469,10 @@
     "question": "Which package is the BUK9M42-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -16723,7 +18522,11 @@
     "question": "Which package is the PSMN4R1-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -16773,7 +18576,10 @@
     "question": "Which package is the PMV45EN2 supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -16823,7 +18629,10 @@
     "question": "Which package is the BUK9M156-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -16873,7 +18682,11 @@
     "question": "Which package is the PSMN2R0-55YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -16913,6 +18726,20 @@
       "value": 7.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB12UNEA:package",
+    "part": "PMPB12UNEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB12UNEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -16962,7 +18789,10 @@
     "question": "Which package is the PSMN1R5-25MLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -17012,7 +18842,11 @@
     "question": "Which package is the PSMN1R9-40YSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17062,7 +18896,11 @@
     "question": "Which package is the BUK9Y14-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17099,7 +18937,10 @@
     "question": "Which package is the PSMN039-100YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -17142,6 +18983,20 @@
     }
   },
   {
+    "id": "PMPB29XNEA:package",
+    "part": "PMPB29XNEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB29XNEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB100ENE:vds",
     "part": "PMPB100ENE",
     "dimension": "vds",
@@ -17178,6 +19033,20 @@
       "value": 3.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB100ENE:package",
+    "part": "PMPB100ENE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB100ENE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -17227,7 +19096,11 @@
     "question": "Which package is the BUK7Y72-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17277,7 +19150,10 @@
     "question": "Which package is the BUK9M85-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -17327,7 +19203,8 @@
     "question": "Which package is the PMV30XPA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -17367,6 +19244,20 @@
       "value": 7.3,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB15XN:package",
+    "part": "PMPB15XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB15XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -17416,7 +19307,11 @@
     "question": "Which package is the PSMN1R8-40YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17466,7 +19361,10 @@
     "question": "Which package is the BUK7M6R7-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -17516,7 +19414,10 @@
     "question": "Which package is the PSMN012-60HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -17566,7 +19467,10 @@
     "question": "Which package is the PMV30ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -17616,7 +19520,11 @@
     "question": "Which package is the PSMN019-100YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17666,7 +19574,11 @@
     "question": "Which package is the PSMN1R0-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17716,7 +19628,11 @@
     "question": "Which package is the BUK9J0R9-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -17766,7 +19682,11 @@
     "question": "Which package is the PSMN015-100YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17816,7 +19736,11 @@
     "question": "Which package is the BUK7Y22-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -17856,6 +19780,20 @@
       "value": -9.7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB11R2VP:package",
+    "part": "PMPB11R2VP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB11R2VP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -17905,7 +19843,10 @@
     "question": "Which package is the PSMN1R6-30MLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -17955,7 +19896,10 @@
     "question": "Which package is the PSMN028-100HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -18005,7 +19949,11 @@
     "question": "Which package is the PSMN1R2-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -18055,7 +20003,10 @@
     "question": "Which package is the PSMN8R5-40HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -18095,6 +20046,20 @@
       "value": -7.7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB17EP:package",
+    "part": "PMPB17EP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB17EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -18144,7 +20109,10 @@
     "question": "Which package is the PSMN038-100HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -18184,6 +20152,20 @@
       "value": -4.7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB48EP:package",
+    "part": "PMPB48EP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB48EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -18233,7 +20215,10 @@
     "question": "Which package is the PSMN029-100HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -18283,7 +20268,10 @@
     "question": "Which package is the PSMN057-200B supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -18333,7 +20321,11 @@
     "question": "Which package is the BUK7Y9R9-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -18373,6 +20365,20 @@
       "value": 2.1,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D210-60E:package",
+    "part": "BUK6D210-60E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D210-60E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -18422,7 +20428,10 @@
     "question": "Which package is the BUK7K5R1-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -18472,7 +20481,10 @@
     "question": "Which package is the BUK7K18-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -18509,7 +20521,10 @@
     "question": "Which package is the PSMN8R0-40BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -18559,7 +20574,10 @@
     "question": "Which package is the PSMN071-100NSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -18609,7 +20627,11 @@
     "question": "Which package is the PMN40SNA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -18659,7 +20681,10 @@
     "question": "Which package is the BUK9M11-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -18709,7 +20734,11 @@
     "question": "Which package is the PSMN038-100YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -18759,7 +20788,10 @@
     "question": "Which package is the PSMN1R9-80SSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -18809,7 +20841,10 @@
     "question": "Which package is the PSMN2R6-100SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -18859,7 +20894,10 @@
     "question": "Which package is the PMV30XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -18896,7 +20934,11 @@
     "question": "Which package is the PSMN6R0-25YLB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -18933,7 +20975,10 @@
     "question": "Which package is the PSMN7R0-30MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -18970,7 +21015,11 @@
     "question": "Which package is the PSMN1R7-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19010,6 +21059,20 @@
       "value": 355,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R4-100CSF:package",
+    "part": "PSMN1R4-100CSF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R4-100CSF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -19059,7 +21122,11 @@
     "question": "Which package is the PSMN4R0-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19109,7 +21176,11 @@
     "question": "Which package is the BUK9Y65-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19159,7 +21230,11 @@
     "question": "Which package is the PSMN013-60YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19199,6 +21274,20 @@
       "value": 11,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB08R6EN:package",
+    "part": "PMPB08R6EN",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB08R6EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -19248,7 +21337,11 @@
     "question": "Which package is the BUK9Y8R5-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19285,7 +21378,10 @@
     "question": "Which package is the PSMN2R2-40BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -19335,7 +21431,10 @@
     "question": "Which package is the PSMN1R5-30BLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -19385,7 +21484,11 @@
     "question": "Which package is the BUK9Y2R4-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19435,7 +21538,11 @@
     "question": "Which package is the PSMN7R5-60YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19485,7 +21592,11 @@
     "question": "Which package is the BUK7Y4R8-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19535,7 +21646,10 @@
     "question": "Which package is the BUK9M13-80L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -19572,7 +21686,10 @@
     "question": "Which package is the PSMN026-80YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -19622,7 +21739,10 @@
     "question": "Which package is the BUK9M9R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -19672,7 +21792,10 @@
     "question": "Which package is the PSMN6R7-40MSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -19722,7 +21845,10 @@
     "question": "Which package is the BUK9M15-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -19772,7 +21898,11 @@
     "question": "Which package is the PSMN2R4-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19822,7 +21952,10 @@
     "question": "Which package is the BUK7S2R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -19865,6 +21998,20 @@
     }
   },
   {
+    "id": "PMPB07R3EN:package",
+    "part": "PMPB07R3EN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB07R3EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN6R0-30YL:vds",
     "part": "PSMN6R0-30YL",
     "dimension": "vds",
@@ -19898,7 +22045,10 @@
     "question": "Which package is the PSMN6R0-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -19948,7 +22098,11 @@
     "question": "Which package is the PSMN020-100YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -19998,7 +22152,10 @@
     "question": "Which package is the BUK9K35-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -20048,7 +22205,10 @@
     "question": "Which package is the BUK9K25-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -20098,7 +22258,10 @@
     "question": "Which package is the BUK9M53-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -20148,7 +22311,10 @@
     "question": "Which package is the PSMN8R9-100BSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -20198,7 +22364,10 @@
     "question": "Which package is the PSMN2R8-80SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -20248,7 +22417,10 @@
     "question": "Which package is the PSMN020-30MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -20298,7 +22470,10 @@
     "question": "Which package is the BUK7K23-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -20348,7 +22523,10 @@
     "question": "Which package is the PSMNR90-50SLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -20398,7 +22576,10 @@
     "question": "Which package is the BUK7M4R3-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -20448,7 +22629,10 @@
     "question": "Which package is the PSMN2R9-100SSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -20498,7 +22682,10 @@
     "question": "Which package is the BUK9K35-100L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -20548,7 +22735,10 @@
     "question": "Which package is the PMV50EPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -20598,7 +22788,11 @@
     "question": "Which package is the BUK7Y14-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -20648,7 +22842,10 @@
     "question": "Which package is the PMN16XNE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -20675,6 +22872,20 @@
       "value": 100,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R0-30YL:package",
+    "part": "PSMN2R0-30YL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN2R0-30YL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -20724,7 +22935,11 @@
     "question": "Which package is the BUK7J1R4-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -20774,7 +22989,11 @@
     "question": "Which package is the PMN40ENA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -20814,6 +23033,20 @@
       "value": 1.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D230-80E:package",
+    "part": "BUK6D230-80E",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK6D230-80E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -20863,7 +23096,11 @@
     "question": "Which package is the PSMN1R5-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -20913,7 +23150,11 @@
     "question": "Which package is the BUK9Y38-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -20963,7 +23204,11 @@
     "question": "Which package is the PSMN2R2-40YSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -21013,7 +23258,10 @@
     "question": "Which package is the PSMN7R6-100BSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -21063,7 +23311,11 @@
     "question": "Which package is the PSMN9R8-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -21113,7 +23365,10 @@
     "question": "Which package is the PSMN2R5-80SSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -21163,7 +23418,10 @@
     "question": "Which package is the PSMN1R0-40SSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -21206,6 +23464,20 @@
     }
   },
   {
+    "id": "PMPB12R5EP:package",
+    "part": "PMPB12R5EP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB12R5EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN3R0-30MLC:vds",
     "part": "PSMN3R0-30MLC",
     "dimension": "vds",
@@ -21239,7 +23511,10 @@
     "question": "Which package is the PSMN3R0-30MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -21289,7 +23564,11 @@
     "question": "Which package is the BUK9Y11-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -21339,7 +23618,10 @@
     "question": "Which package is the BUK9K22-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -21389,7 +23671,10 @@
     "question": "Which package is the BUK7M15-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -21439,7 +23724,11 @@
     "question": "Which package is the PSMN5R4-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -21476,7 +23765,10 @@
     "question": "Which package is the PSMN9R0-25MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -21526,7 +23818,11 @@
     "question": "Which package is the PSMN2R0-40YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -21576,7 +23872,10 @@
     "question": "Which package is the BUK7K25-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -21626,7 +23925,10 @@
     "question": "Which package is the PSMN8R5-40MSD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -21676,7 +23978,10 @@
     "question": "Which package is the BUK7S2R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -21716,6 +24021,20 @@
       "value": 385,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R1-80CSF:package",
+    "part": "PSMN1R1-80CSF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R1-80CSF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212i",
+      "accepts": [
+        "SOT8005A"
+      ]
     }
   },
   {
@@ -21765,7 +24084,11 @@
     "question": "Which package is the PSMN3R5-40YSB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -21808,6 +24131,20 @@
     }
   },
   {
+    "id": "PMPB14R8XN:package",
+    "part": "PMPB14R8XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB14R8XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB29XPEA:vds",
     "part": "PMPB29XPEA",
     "dimension": "vds",
@@ -21844,6 +24181,20 @@
       "value": -5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB29XPEA:package",
+    "part": "PMPB29XPEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB29XPEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -21893,7 +24244,11 @@
     "question": "Which package is the PSMN4R8-100YSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -21943,7 +24298,10 @@
     "question": "Which package is the BUK9M4R3-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -21980,7 +24338,10 @@
     "question": "Which package is the PSMN4R0-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -22030,7 +24391,10 @@
     "question": "Which package is the PMN30UNE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -22073,6 +24437,20 @@
     }
   },
   {
+    "id": "PXN010-30QL:package",
+    "part": "PXN010-30QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN010-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
+    }
+  },
+  {
     "id": "PMPB14R0EP:vds",
     "part": "PMPB14R0EP",
     "dimension": "vds",
@@ -22112,6 +24490,20 @@
     }
   },
   {
+    "id": "PMPB14R0EP:package",
+    "part": "PMPB14R0EP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB14R0EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN3R4-30BL:vds",
     "part": "PSMN3R4-30BL",
     "dimension": "vds",
@@ -22145,7 +24537,10 @@
     "question": "Which package is the PSMN3R4-30BL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -22182,7 +24577,10 @@
     "question": "Which package is the PSMN6R5-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -22225,6 +24623,20 @@
     }
   },
   {
+    "id": "PMPB07R3VP:package",
+    "part": "PMPB07R3VP",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB07R3VP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN045-80YS:vds",
     "part": "PSMN045-80YS",
     "dimension": "vds",
@@ -22258,7 +24670,10 @@
     "question": "Which package is the PSMN045-80YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -22295,7 +24710,10 @@
     "question": "Which package is the PSMN013-80YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -22345,7 +24763,11 @@
     "question": "Which package is the PSMN1R0-40YSH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -22395,7 +24817,10 @@
     "question": "Which package is the PSMN1R8-80SSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -22445,7 +24870,11 @@
     "question": "Which package is the PSMN4R2-80YSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -22485,6 +24914,20 @@
       "value": 355,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK7A1R3-100L:package",
+    "part": "BUK7A1R3-100L",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK7A1R3-100L supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -22534,7 +24977,10 @@
     "question": "Which package is the BUK98150-55A supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT223"
+      "value": "SC-73",
+      "accepts": [
+        "SOT223"
+      ]
     }
   },
   {
@@ -22584,7 +25030,11 @@
     "question": "Which package is the PSMNR82-30YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -22621,7 +25071,10 @@
     "question": "Which package is the PSMN4R4-30MLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -22671,7 +25124,10 @@
     "question": "Which package is the BUK9M6R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -22708,7 +25164,10 @@
     "question": "Which package is the PSMN5R8-40YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -22758,7 +25217,11 @@
     "question": "Which package is the BUK9Y72-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -22808,7 +25271,10 @@
     "question": "Which package is the BUK9M67-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -22858,7 +25324,10 @@
     "question": "Which package is the PSMN011-60HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -22908,7 +25377,11 @@
     "question": "Which package is the PSMN1R0-40YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -22945,7 +25418,10 @@
     "question": "Which package is the PSMN2R8-40BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -22985,6 +25461,20 @@
       "value": 8,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB13XNEA:package",
+    "part": "PMPB13XNEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB13XNEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -23034,7 +25524,11 @@
     "question": "Which package is the BUK9Y7R6-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23071,7 +25565,10 @@
     "question": "Which package is the PSMN1R1-40BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -23121,7 +25618,11 @@
     "question": "Which package is the PSMN1R1-30YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23171,7 +25672,10 @@
     "question": "Which package is the BUK9K8R7-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -23221,7 +25725,10 @@
     "question": "Which package is the PMV130ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -23271,7 +25778,10 @@
     "question": "Which package is the BUK7M3R3-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -23308,7 +25818,11 @@
     "question": "Which package is the PSMN1R2-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23358,7 +25872,10 @@
     "question": "Which package is the PMV27UPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -23398,6 +25915,20 @@
       "value": 495,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMNR90-80ASE:package",
+    "part": "PSMNR90-80ASE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMNR90-80ASE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -23447,7 +25978,11 @@
     "question": "Which package is the PSMN7R2-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23497,7 +26032,11 @@
     "question": "Which package is the BUK6Y33-60P supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23547,7 +26086,11 @@
     "question": "Which package is the BUK7Y7R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23597,7 +26140,10 @@
     "question": "Which package is the PMV30UN2 supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -23647,7 +26193,10 @@
     "question": "Which package is the BUK9K5R6-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -23697,7 +26246,10 @@
     "question": "Which package is the BUK9M20-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -23747,7 +26299,11 @@
     "question": "Which package is the PSMN4R0-60YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23797,7 +26353,10 @@
     "question": "Which package is the BUK9M6R7-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -23847,7 +26406,10 @@
     "question": "Which package is the BUK9M24-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -23897,7 +26459,11 @@
     "question": "Which package is the BUK9Y21-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -23947,7 +26513,10 @@
     "question": "Which package is the PSMN3R5-25MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -23997,7 +26566,10 @@
     "question": "Which package is the PSMN075-100MSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -24047,7 +26619,10 @@
     "question": "Which package is the PSMN6R4-30MLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -24087,6 +26662,20 @@
       "value": 355,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R3-100ASF:package",
+    "part": "PSMN1R3-100ASF",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R3-100ASF supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -24136,7 +26725,11 @@
     "question": "Which package is the PSMNR67-30YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -24186,7 +26779,10 @@
     "question": "Which package is the BUK9M31-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -24236,7 +26832,11 @@
     "question": "Which package is the BUK9Y6R0-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24273,7 +26873,11 @@
     "question": "Which package is the PSMN7R0-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24300,6 +26904,20 @@
       "value": 100,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN3R0-30YL:package",
+    "part": "PSMN3R0-30YL",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PSMN3R0-30YL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -24336,7 +26954,10 @@
     "question": "Which package is the PSMN011-80YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -24386,7 +27007,11 @@
     "question": "Which package is the BUK7Y25-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24436,7 +27061,10 @@
     "question": "Which package is the BUK7M33-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -24486,7 +27114,11 @@
     "question": "Which package is the PSMN4R1-60YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24526,6 +27158,20 @@
       "value": 15,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PXN4R7-30QL:package",
+    "part": "PXN4R7-30QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN4R7-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
     }
   },
   {
@@ -24575,7 +27221,11 @@
     "question": "Which package is the BUK7Y2R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24618,6 +27268,20 @@
     }
   },
   {
+    "id": "PMPB11EN:package",
+    "part": "PMPB11EN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB11EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "BUK6D81-80E:vds",
     "part": "BUK6D81-80E",
     "dimension": "vds",
@@ -24654,6 +27318,20 @@
       "value": 3.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D81-80E:package",
+    "part": "BUK6D81-80E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D81-80E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -24703,7 +27381,10 @@
     "question": "Which package is the PMV20XNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -24753,7 +27434,11 @@
     "question": "Which package is the BUK7Y1R4-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24793,6 +27478,20 @@
       "value": -5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB43XPEA:package",
+    "part": "PMPB43XPEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB43XPEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -24842,7 +27541,11 @@
     "question": "Which package is the BUK9Y113-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24892,7 +27595,11 @@
     "question": "Which package is the BUK9Y1R3-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -24942,7 +27649,10 @@
     "question": "Which package is the BUK9K13-60RA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -24992,7 +27702,11 @@
     "question": "Which package is the BUK9Y2R8-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25032,6 +27746,20 @@
       "value": -7.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB20XPEA:package",
+    "part": "PMPB20XPEA",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB20XPEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -25081,7 +27809,11 @@
     "question": "Which package is the BUK9Y25-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25121,6 +27853,20 @@
       "value": 340,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R4-100ASE:package",
+    "part": "PSMN1R4-100ASE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PSMN1R4-100ASE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -25170,7 +27916,10 @@
     "question": "Which package is the PMN30ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -25210,6 +27959,20 @@
       "value": 6,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D30-40E:package",
+    "part": "BUK6D30-40E",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK6D30-40E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -25259,7 +28022,10 @@
     "question": "Which package is the BUK9M19-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -25302,6 +28068,20 @@
     }
   },
   {
+    "id": "BUK6D23-40E:package",
+    "part": "BUK6D23-40E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D23-40E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN2R5-30YL:vds",
     "part": "PSMN2R5-30YL",
     "dimension": "vds",
@@ -25335,7 +28115,10 @@
     "question": "Which package is the PSMN2R5-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -25372,7 +28155,11 @@
     "question": "Which package is the PSMN9R1-30YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT669"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25409,7 +28196,10 @@
     "question": "Which package is the PSMN014-40YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -25459,7 +28249,11 @@
     "question": "Which package is the BUK7Y25-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25509,7 +28303,11 @@
     "question": "Which package is the PSMN1R7-40YLB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25559,7 +28357,10 @@
     "question": "Which package is the PSMN4R3-40MLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -25596,7 +28397,10 @@
     "question": "Which package is the PSMN034-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -25633,7 +28437,10 @@
     "question": "Which package is the PSMN9R5-100BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -25673,6 +28480,20 @@
       "value": 430,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R0-100ASE:package",
+    "part": "PSMN1R0-100ASE",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PSMN1R0-100ASE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "CCPAK1212",
+      "accepts": [
+        "SOT8000A"
+      ]
     }
   },
   {
@@ -25722,7 +28543,11 @@
     "question": "Which package is the BUK7Y12-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25772,7 +28597,11 @@
     "question": "Which package is the BUK9Y12-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25822,7 +28651,8 @@
     "question": "Which package is the PMV13XNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -25872,7 +28702,11 @@
     "question": "Which package is the PSMN1R0-30YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -25922,7 +28756,10 @@
     "question": "Which package is the BUK9K134-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -25972,7 +28809,10 @@
     "question": "Which package is the BUK9M43-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -26012,6 +28852,20 @@
       "value": 7.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB20XNEA:package",
+    "part": "PMPB20XNEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB20XNEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -26061,7 +28915,11 @@
     "question": "Which package is the PSMN6R0-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -26111,7 +28969,10 @@
     "question": "Which package is the PMN25ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -26161,7 +29022,11 @@
     "question": "Which package is the BUK7Y98-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -26198,7 +29063,10 @@
     "question": "Which package is the PSMN018-80YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -26248,7 +29116,10 @@
     "question": "Which package is the BUK7M21-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -26298,7 +29169,11 @@
     "question": "Which package is the PSMN015-100YSF supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -26348,7 +29223,10 @@
     "question": "Which package is the BUK9M17-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -26398,7 +29276,10 @@
     "question": "Which package is the BUK7M9R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -26448,7 +29329,10 @@
     "question": "Which package is the PMV280ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -26498,7 +29382,10 @@
     "question": "Which package is the BUK9K6R2-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -26548,7 +29435,10 @@
     "question": "Which package is the PSMN014-40HLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -26585,7 +29475,10 @@
     "question": "Which package is the PSMN4R5-40BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -26635,7 +29528,10 @@
     "question": "Which package is the BUK9M23-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -26678,6 +29574,20 @@
     }
   },
   {
+    "id": "PXN6R2-25QL:package",
+    "part": "PXN6R2-25QL",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PXN6R2-25QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
+    }
+  },
+  {
     "id": "PMPB10R3XN:vds",
     "part": "PMPB10R3XN",
     "dimension": "vds",
@@ -26714,6 +29624,20 @@
       "value": 8.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB10R3XN:package",
+    "part": "PMPB10R3XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB10R3XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -26763,7 +29687,10 @@
     "question": "Which package is the BUK9K30-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -26813,7 +29740,10 @@
     "question": "Which package is the PSMN033-100HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -26863,7 +29793,10 @@
     "question": "Which package is the PMV90ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -26900,7 +29833,10 @@
     "question": "Which package is the PSMN4R4-80BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -26950,7 +29886,8 @@
     "question": "Which package is the PMV88ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -26990,6 +29927,20 @@
       "value": 5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB29XNE:package",
+    "part": "PMPB29XNE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB29XNE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -27039,7 +29990,11 @@
     "question": "Which package is the PSMNR90-40YSN supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27089,7 +30044,10 @@
     "question": "Which package is the PSMN8R0-40HL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -27129,6 +30087,21 @@
       "value": 100,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R0-30YLE:package",
+    "part": "PSMN2R0-30YLE",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PSMN2R0-30YLE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27178,7 +30151,11 @@
     "question": "Which package is the BUK9Y15-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27228,7 +30205,10 @@
     "question": "Which package is the BUK961R6-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -27278,7 +30258,11 @@
     "question": "Which package is the BUK7J1R0-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -27328,7 +30312,11 @@
     "question": "Which package is the PMN20ENA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -27378,7 +30366,11 @@
     "question": "Which package is the BUK9Y153-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27428,7 +30420,10 @@
     "question": "Which package is the BUK9M16-100L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -27478,7 +30473,11 @@
     "question": "Which package is the PSMN2R5-40YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27528,7 +30527,11 @@
     "question": "Which package is the BUK9Y22-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27568,6 +30571,20 @@
       "value": -12,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB08R4VP:package",
+    "part": "PMPB08R4VP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB08R4VP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -27617,7 +30634,10 @@
     "question": "Which package is the BUK7K32-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -27660,6 +30680,20 @@
     }
   },
   {
+    "id": "BUK6D72-30E:package",
+    "part": "BUK6D72-30E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D72-30E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB16R5XNE:vds",
     "part": "PMPB16R5XNE",
     "dimension": "vds",
@@ -27696,6 +30730,20 @@
       "value": 7,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB16R5XNE:package",
+    "part": "PMPB16R5XNE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB16R5XNE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -27745,7 +30793,11 @@
     "question": "Which package is the PSMN1R2-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27795,7 +30847,11 @@
     "question": "Which package is the PSMN1R0-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -27835,6 +30891,20 @@
       "value": -10.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB09R5VP:package",
+    "part": "PMPB09R5VP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB09R5VP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -27884,7 +30954,10 @@
     "question": "Which package is the BUK7M22-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -27934,7 +31007,8 @@
     "question": "Which package is the PMV164ENE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -27971,7 +31045,10 @@
     "question": "Which package is the PSMN4R0-40YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -28021,7 +31098,10 @@
     "question": "Which package is the PMV65UNE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -28061,6 +31141,20 @@
       "value": -8,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB14R7EP:package",
+    "part": "PMPB14R7EP",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB14R7EP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020M-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -28110,7 +31204,10 @@
     "question": "Which package is the BUK7V4R2-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -28150,6 +31247,20 @@
       "value": 9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB10XNEA:package",
+    "part": "PMPB10XNEA",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB10XNEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -28199,7 +31310,10 @@
     "question": "Which package is the BUK7M11-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -28242,6 +31356,20 @@
     }
   },
   {
+    "id": "PMPB23XNE:package",
+    "part": "PMPB23XNE",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the PMPB23XNE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PMPB30XPE:vds",
     "part": "PMPB30XPE",
     "dimension": "vds",
@@ -28278,6 +31406,20 @@
       "value": -6.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB30XPE:package",
+    "part": "PMPB30XPE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB30XPE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -28327,7 +31469,10 @@
     "question": "Which package is the PMV60ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -28377,7 +31522,10 @@
     "question": "Which package is the BUK9M24-80L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -28427,7 +31575,10 @@
     "question": "Which package is the BUK9M15-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -28477,7 +31628,10 @@
     "question": "Which package is the BUK9K32-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -28517,6 +31671,20 @@
       "value": -9.1,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB13UP:package",
+    "part": "PMPB13UP",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB13UP supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -28566,7 +31734,11 @@
     "question": "Which package is the BUK7Y21-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -28616,7 +31788,11 @@
     "question": "Which package is the PSMN1R5-50YLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -28656,6 +31832,20 @@
       "value": 8,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB13XNE:package",
+    "part": "PMPB13XNE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB13XNE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -28705,7 +31895,10 @@
     "question": "Which package is the BUK9M5R2-30E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -28755,7 +31948,11 @@
     "question": "Which package is the PMN30XPA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -28798,6 +31995,20 @@
     }
   },
   {
+    "id": "BUK6D56-60E:package",
+    "part": "BUK6D56-60E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK6D56-60E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "BUK4D16-20:vds",
     "part": "BUK4D16-20",
     "dimension": "vds",
@@ -28834,6 +32045,20 @@
       "value": 8.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK4D16-20:package",
+    "part": "BUK4D16-20",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK4D16-20 supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -28883,7 +32108,10 @@
     "question": "Which package is the PMN30XP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -28920,7 +32148,10 @@
     "question": "Which package is the PSMN8R3-40YS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "SOT669"
+      ]
     }
   },
   {
@@ -28970,7 +32201,11 @@
     "question": "Which package is the PSMNR56-25YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56E"
+      "value": "LFPAK56E",
+      "accepts": [
+        "Power-SO8",
+        "SOT1023"
+      ]
     }
   },
   {
@@ -29020,7 +32255,11 @@
     "question": "Which package is the PMN30XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -29070,7 +32309,10 @@
     "question": "Which package is the BUK9M34-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -29120,7 +32362,11 @@
     "question": "Which package is the PMN55ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -29170,7 +32416,10 @@
     "question": "Which package is the BUK7M6R3-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -29220,7 +32469,8 @@
     "question": "Which package is the PMV15UNEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -29257,7 +32507,11 @@
     "question": "Which package is the PSMN2R6-30YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -29307,7 +32561,10 @@
     "question": "Which package is the PSMN9R3-60HS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -29347,6 +32604,20 @@
       "value": 7.9,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB12UNE:package",
+    "part": "PMPB12UNE",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB12UNE supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -29396,7 +32667,10 @@
     "question": "Which package is the BUK7M10-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -29446,7 +32720,10 @@
     "question": "Which package is the PMN30XPE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "TSOP6",
+      "accepts": [
+        "SOT457"
+      ]
     }
   },
   {
@@ -29496,7 +32773,10 @@
     "question": "Which package is the BUK9M60-100L supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -29546,7 +32826,11 @@
     "question": "Which package is the PSMN025-80YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -29596,7 +32880,10 @@
     "question": "Which package is the PSMN1R8-30MLH supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -29646,7 +32933,10 @@
     "question": "Which package is the BUK7K29-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -29696,7 +32986,10 @@
     "question": "Which package is the BUK9K25-40RA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -29736,6 +33029,20 @@
       "value": 4.3,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB33XN:package",
+    "part": "PMPB33XN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB33XN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -29785,7 +33092,11 @@
     "question": "Which package is the PSMN2R8-40YSB supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -29828,6 +33139,20 @@
     }
   },
   {
+    "id": "PXN8R3-30QL:package",
+    "part": "PXN8R3-30QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN8R3-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
+    }
+  },
+  {
     "id": "BUK7D36-60E:vds",
     "part": "BUK7D36-60E",
     "dimension": "vds",
@@ -29867,6 +33192,20 @@
     }
   },
   {
+    "id": "BUK7D36-60E:package",
+    "part": "BUK7D36-60E",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the BUK7D36-60E supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD‑6",
+      "accepts": [
+        "SOT1220"
+      ]
+    }
+  },
+  {
     "id": "PSMN1R2-25YLC:vds",
     "part": "PSMN1R2-25YLC",
     "dimension": "vds",
@@ -29900,7 +33239,11 @@
     "question": "Which package is the PSMN1R2-25YLC supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SO8"
+      "value": "LFPAK",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -29940,6 +33283,20 @@
       "value": 4,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB55ENEA:package",
+    "part": "PMPB55ENEA",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB55ENEA supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -29989,7 +33346,10 @@
     "question": "Which package is the PSMN4R8-100BSE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -30039,7 +33399,11 @@
     "question": "Which package is the BUK9Y13-60EL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -30089,7 +33453,10 @@
     "question": "Which package is the BUK9K35-60RA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -30139,7 +33506,11 @@
     "question": "Which package is the PSMN059-150Y supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -30189,7 +33560,10 @@
     "question": "Which package is the PSMN0R9-30ULD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56-UL",
+      "accepts": [
+        "SOT1023A"
+      ]
     }
   },
   {
@@ -30239,7 +33613,10 @@
     "question": "Which package is the BUK7S1R5-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK88"
+      "value": "LFPAK88",
+      "accepts": [
+        "SOT1235"
+      ]
     }
   },
   {
@@ -30279,6 +33656,20 @@
       "value": 7.2,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMPB20EN:package",
+    "part": "PMPB20EN",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PMPB20EN supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -30328,7 +33719,10 @@
     "question": "Which package is the PSMN011-60MS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -30378,7 +33772,11 @@
     "question": "Which package is the PSMN012-100YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -30428,7 +33826,10 @@
     "question": "Which package is the BUK7M9R9-60E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -30478,7 +33879,10 @@
     "question": "Which package is the BUK9K52-60RA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -30528,7 +33932,11 @@
     "question": "Which package is the PSMN2R0-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -30578,7 +33986,11 @@
     "question": "Which package is the PMN100EPA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -30615,7 +34027,10 @@
     "question": "Which package is the PSMN4R3-30BL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -30665,7 +34080,8 @@
     "question": "Which package is the PMV37EN2 supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -30715,7 +34131,11 @@
     "question": "Which package is the BUK6Y14-40P supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -30765,7 +34185,10 @@
     "question": "Which package is the PMV250EPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "TO-236AB",
+      "accepts": [
+        "SOT23"
+      ]
     }
   },
   {
@@ -30815,7 +34238,11 @@
     "question": "Which package is the BUK7Y41-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -30852,7 +34279,10 @@
     "question": "Which package is the PSMN1R7-60BS supplied in?",
     "expected": {
       "kind": "text",
-      "value": "D2PAK"
+      "value": "D2PAK",
+      "accepts": [
+        "SOT404"
+      ]
     }
   },
   {
@@ -30892,6 +34322,20 @@
       "value": 7.5,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PXN018-30QL:package",
+    "part": "PXN018-30QL",
+    "dimension": "package",
+    "split": "indexed",
+    "question": "Which package is the PXN018-30QL supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "MLPAK33",
+      "accepts": [
+        "SOT8002"
+      ]
     }
   },
   {
@@ -30941,7 +34385,10 @@
     "question": "Which package is the BUK7K134-100E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -30991,7 +34438,10 @@
     "question": "Which package is the BUK9K20-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56D"
+      "value": "LFPAK56D",
+      "accepts": [
+        "SOT1205"
+      ]
     }
   },
   {
@@ -31041,7 +34491,11 @@
     "question": "Which package is the PSMN1R0-30YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -31091,7 +34545,11 @@
     "question": "Which package is the PSMN010-80YL supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -31141,7 +34599,10 @@
     "question": "Which package is the BUK9M28-80E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -31191,7 +34652,11 @@
     "question": "Which package is the PSMN1R6-25YLE supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -31241,7 +34706,11 @@
     "question": "Which package is the BUK7Y29-40E supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -31281,6 +34750,20 @@
       "value": -3,
       "unit": "A",
       "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK6D120-60P:package",
+    "part": "BUK6D120-60P",
+    "dimension": "package",
+    "split": "holdout",
+    "question": "Which package is the BUK6D120-60P supplied in?",
+    "expected": {
+      "kind": "text",
+      "value": "DFN2020MD-6",
+      "accepts": [
+        "SOT1220"
+      ]
     }
   },
   {
@@ -31330,7 +34813,11 @@
     "question": "Which package is the PMN280ENEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   },
   {
@@ -31380,7 +34867,10 @@
     "question": "Which package is the BUK7M20-40H supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK33"
+      "value": "LFPAK33",
+      "accepts": [
+        "SOT1210"
+      ]
     }
   },
   {
@@ -31430,7 +34920,11 @@
     "question": "Which package is the PSMN0R9-25YLD supplied in?",
     "expected": {
       "kind": "text",
-      "value": "LFPAK56"
+      "value": "LFPAK56",
+      "accepts": [
+        "Power-SO8",
+        "SOT669"
+      ]
     }
   },
   {
@@ -31480,7 +34974,8 @@
     "question": "Which package is the PMV240SP supplied in?",
     "expected": {
       "kind": "text",
-      "value": "SOT23"
+      "value": "SOT23",
+      "accepts": []
     }
   },
   {
@@ -31530,7 +35025,11 @@
     "question": "Which package is the PMN40XPEA supplied in?",
     "expected": {
       "kind": "text",
-      "value": "TSOP6"
+      "value": "SC-74",
+      "accepts": [
+        "TSOP6",
+        "SOT457"
+      ]
     }
   }
 ]

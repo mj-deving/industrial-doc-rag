@@ -28,7 +28,7 @@ const OVERLAP_CHARS = 180;
  * 13 KB chunk averages an entire page into one point in the embedding space,
  * where it is close to nothing and retrievable by nothing.
  */
-const MAX_CHARS = 1800;
+export const MAX_CHARS = 1800;
 
 /** Split a block that is too big to be a chunk on its own, on line boundaries. */
 function split(block: string): string[] {

@@ -63,9 +63,20 @@ async function extract(part: string): Promise<Batch | null> {
   // come from the document, not from my cleanup of it, or a bug in the cleanup
   // would rewrite the label and the evidence together and the eval would report
   // a perfect score for agreeing with itself.
-  const chunks = chunk({ id: part, title: part, text: prepare(text) }).map((c) => ({
+  const produced = chunk({ id: part, title: part, text: prepare(text) });
+
+  const chunks = produced.map((c) => ({
     id: c.id,
     part: c.documentId,
+    // Where this document ENDS, carried on every chunk so the server's prune knows
+    // it without having to infer it from the request it happens to be looking at.
+    //
+    // Requests are packed to a fixed size out of a stream of chunks from many parts
+    // and are sent concurrently, so a long datasheet is split across several of
+    // them. A server that infers the end from one request infers a different, wrong
+    // end from each, and deletes the chunks the other requests wrote. It did: a
+    // third of the index, 8,414 chunks, gone at random. See `src/api/ingest.ts`.
+    total: produced.length,
     // Every chunk names its part, deliberately.
     //
     // The part number used to reach every chunk by accident: it is stamped into the

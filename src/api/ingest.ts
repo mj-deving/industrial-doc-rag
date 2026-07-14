@@ -32,7 +32,33 @@ export type IngestChunk = {
   part: string;
   text: string;
   index: number;
+  /**
+   * How many chunks this part has IN TOTAL, not how many are in this request.
+   *
+   * The prune below needs to know where the document ends. It cannot learn that
+   * from the payload, because the payload is a fixed-size slice of a stream of
+   * chunks from many parts and a long document spans several requests. Reading the
+   * end from the payload gives a different, WRONG answer in each one — see the
+   * comment on the prune. So the client, which is the only party that knows, says.
+   */
+  total: number;
 };
+
+/**
+ * The ids to sweep after writing `chunks`: everything from each part's declared end
+ * out to the overhang.
+ *
+ * The property that matters is that this depends ONLY on `total`, never on which
+ * chunks the request happens to carry. Two concurrent requests holding different
+ * halves of the same document must compute the same range, or one of them deletes
+ * the other's writes. `ingest.test.ts` is what holds that.
+ */
+export function staleIds(chunks: IngestChunk[]): string[] {
+  const ends = new Map(chunks.map((chunk) => [chunk.part, chunk.total]));
+  return [...ends].flatMap(([part, total]) =>
+    Array.from({ length: OVERHANG }, (_, i) => `${part}#${total + i}`)
+  );
+}
 
 export const ingest = new Hono<{ Bindings: Env }>();
 
@@ -83,13 +109,27 @@ ingest.post("/ingest/chunks", async (c) => {
   // strip was meant to remove. The index would then be a blend of two ingests, and
   // the eval run against it would measure a system that never existed.
   //
-  // Deleting ids that do not exist is a no-op, so the overhang costs nothing and is
-  // set well past the longest document in the corpus.
-  const parts = [...new Set(chunks.map((chunk) => chunk.part))];
-  const stale = parts.flatMap((part) => {
-    const highest = Math.max(...chunks.filter((c) => c.part === part).map((c) => c.index));
-    return Array.from({ length: OVERHANG }, (_, i) => `${part}#${highest + 1 + i}`);
-  });
+  // The end of the document is `total`, and it MUST come from the client.
+  //
+  // This used to read the end out of the payload — `max(index)` over the chunks in
+  // this request — and that is wrong in the most destructive way available. The
+  // client packs FIXED-SIZE requests out of a stream of chunks from many parts, and
+  // sends them CONCURRENTLY, so a 50-chunk datasheet is split across two requests:
+  // one holding chunks 0..6, another holding 7..49. The first request concluded the
+  // document ended at 6 and deleted `#7..#86` — the very chunks the second request
+  // had just written. Which of the two won depended on which HTTP response landed
+  // first.
+  //
+  // It cost a third of the index: 25,536 chunks were upserted and 17,122 survived.
+  // The eval kept running, against a corpus with 8,414 chunks missing at random, and
+  // still scored 0.95 — so nothing failed loudly enough to be noticed. The one part I
+  // happened to open by hand was missing the row the question asked about, and that
+  // is the only reason I am reading this line rather than shipping.
+  //
+  // With `total`, every request computes the SAME range, so the prune is idempotent
+  // and no ordering of the concurrent writes can delete a live chunk. Deleting ids
+  // that do not exist is a no-op, so the overhang past the end costs nothing.
+  const stale = staleIds(chunks);
   // Vectorize refuses more than 100 ids in one delete, so the sweep goes in batches.
   for (let offset = 0; offset < stale.length; offset += DELETE_BATCH) {
     await target.deleteByIds(stale.slice(offset, offset + DELETE_BATCH));

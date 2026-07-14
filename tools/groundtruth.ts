@@ -44,7 +44,8 @@ export type Measurement = {
 export type GroundTruth = {
   part: string;
   channel: "N" | "P";
-  package: string | null;
+  /** Every name the ordering table prints for this part's package. See `packageOf`. */
+  package: string[] | null;
   /**
    * Drain-source voltage in V, SIGNED as the datasheet prints it. A P-channel
    * part quotes -30 V and the label says -30.
@@ -63,11 +64,73 @@ export type GroundTruth = {
   rdson_mohm: Measurement | null;
 };
 
-const PACKAGES = [
-  "LFPAK88", "LFPAK56D", "LFPAK56E", "LFPAK56", "LFPAK33", "CFP15", "CFP3", "CFP2",
-  "D2PAK", "DPAK", "TO-220AB", "TO-220", "TO-247", "TO-263", "SOT1289", "SOT669",
-  "SOT428", "SOT404", "SOT223", "SOT23", "SOT89", "SOT78", "SO8", "TSOP6"
-];
+/**
+ * Where the datasheet actually STATES the package: the Ordering information table.
+ *
+ *   Type number      Package
+ *                    Name       Description                          Version
+ *   PSMN012-100YS    LFPAK      plastic single-ended package; ...    SOT669
+ *
+ * This used to be a hand-written list of package names scanned against the first
+ * 4000 characters of the document, taking the first name in LIST order that
+ * appeared anywhere in that slab. Two things were wrong with it, and they
+ * compounded.
+ *
+ * The list did not contain `LFPAK` (only `LFPAK56`, `LFPAK33`, …), so the one name
+ * PSMN012-100YS actually uses could not be found. What the scan found instead was
+ * `SO8`, from a MARKETING BULLET on the front page: "LFPAK provides maximum power
+ * density in a Power SO8 package". The label for that part became SO8. The model
+ * read the title and the ordering table, answered LFPAK, and was marked wrong.
+ *
+ * And the list was silently incomplete in the other direction: `DFN2020MD-6`,
+ * `CCPAK1212i` and `MLPAK33` were not in it, so 165 parts got NO package label and
+ * therefore no package question. The benchmark was not testing them at all.
+ *
+ * Third time in this file that the label read a SUMMARY surface — the quick-
+ * reference extract, the marketing bullet — while the model read the authoritative
+ * one. The rule that falls out: parse the table that states the fact, never the
+ * prose that mentions it.
+ *
+ * A package has several true names. The Name column may hold two (`LFPAK56;
+ * Power-SO8`, sometimes wrapped onto the next line) and the Version column is a
+ * third (`SOT669`). All of them are printed by Nexperia, on one row, for one
+ * package, and an engineer answers with whichever is in front of them. So the
+ * label is a LIST, and the grader accepts any member.
+ */
+const PACKAGE_NAME = /^[A-Z][A-Za-z0-9‐-―-]*$/;
+const PACKAGE_VERSION = /\b(SOT\d+[A-Z]?)\b/;
+
+function packageOf(text: string, part: string): string[] | null {
+  const at = text.indexOf("Ordering information");
+  if (at === -1) return null;
+
+  const lines = text.slice(at, at + 2500).split("\n");
+  const escaped = part.replace(/[-.]/g, "\\$&");
+  const rowAt = lines.findIndex((line) => new RegExp(`^\\s*${escaped}\\s`).test(line));
+  if (rowAt === -1) return null;
+
+  const row = lines[rowAt];
+  const tokens = row.slice(row.indexOf(part) + part.length).trim().split(/\s+/);
+
+  const name = tokens[0]?.replace(/;$/, "") ?? "";
+  if (!PACKAGE_NAME.test(name)) return null;
+
+  const names = [name];
+
+  // A trailing semicolon promises a second name — on this row, or wrapped onto the
+  // next. It must carry a digit: the token after the name is otherwise the start of
+  // the Description column, and "Plastic" is not a package.
+  if (tokens[0].endsWith(";")) {
+    const candidates = [tokens[1], lines[rowAt + 1]?.trim().split(/\s+/)[0]];
+    const alias = candidates.find((t) => t && PACKAGE_NAME.test(t) && /\d/.test(t));
+    if (alias) names.push(alias);
+  }
+
+  const version = PACKAGE_VERSION.exec(row)?.[1] ?? PACKAGE_VERSION.exec(lines[rowAt + 1] ?? "")?.[1];
+  if (version && !names.includes(version)) names.push(version);
+
+  return names;
+}
 
 // A data row ends with its value columns and then a unit. Each value is a number
 // or a bare "-". Anchoring at end-of-line is what stops a trailing figure
@@ -258,7 +321,7 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
   return {
     part,
     channel,
-    package: PACKAGES.find((name) => head.includes(name)) ?? null,
+    package: packageOf(text, part),
     // Signed, as printed. A P-channel part reads -30 V and the label says so.
     vds_v: vdsMax,
     id_a:

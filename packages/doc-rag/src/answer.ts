@@ -21,6 +21,7 @@
  *      new way.
  */
 
+import { MAX_CHARS } from "./chunk";
 import { retrieve, type Retriever, type Strategy } from "./retrieve";
 import type { Answer } from "./types";
 
@@ -28,13 +29,39 @@ export type Generator = (prompt: string) => Promise<string>;
 
 export const REFUSAL_TOKEN = "NOT_IN_CORPUS";
 
-/** Excerpts are truncated so a 10-chunk context stays inside a small model's window. */
-const EXCERPT_CHARS = 900;
+/**
+ * How much of a retrieved chunk the model is shown. It is the chunker's own
+ * ceiling, so the answer is: all of it.
+ *
+ * This was 900, with a comment saying excerpts are truncated "so a 10-chunk
+ * context stays inside a small model's window" — a number I guessed, against a
+ * window I never measured, sitting downstream of a chunker that bounds a chunk at
+ * 1800. The two constants had to agree and nothing made them, so the model was
+ * shown the first HALF of every chunk it retrieved and the second half was thrown
+ * away silently.
+ *
+ * What that cost: PMPB14XP's Limiting Values table retrieved correctly, at rank 1,
+ * with the asked-for row present. The row sat at character 1040 of a 1057-character
+ * chunk. The model never saw it. It saw the ID row above it — the one with the
+ * `t <= 5 s` duration limit — answered from that, and was marked wrong for reading
+ * the only ID row I had left in its context. Every table chunk loses its LAST rows
+ * this way, and the last rows of a limiting-values table are exactly the operating
+ * points a question distinguishes between.
+ *
+ * Tying it to the chunker's constant is the point. A prompt that re-bounds a chunk
+ * with a second, unrelated number is a prompt that will disagree with the chunker
+ * the moment either one moves.
+ */
+export const EXCERPT_CHARS = MAX_CHARS;
+
+/** What the model is actually shown for one chunk. Exported so a diagnostic can
+ *  inspect the same bytes the model read, rather than the ones it might have. */
+export function visible(text: string): string {
+  return text.slice(0, EXCERPT_CHARS);
+}
 
 export function buildPrompt(question: string, excerpts: { part: string; text: string }[]): string {
-  const evidence = excerpts
-    .map((e) => `[${e.part}]\n${e.text.slice(0, EXCERPT_CHARS)}`)
-    .join("\n\n---\n\n");
+  const evidence = excerpts.map((e) => `[${e.part}]\n${visible(e.text)}`).join("\n\n---\n\n");
 
   return `Answer the question using ONLY the datasheet excerpts below.
 
