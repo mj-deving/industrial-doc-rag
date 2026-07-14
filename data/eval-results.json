@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T20:59:30.929Z",
+  "generatedAt": "2026-07-14T07:14:39.840Z",
   "corpus": {
     "documents": 497,
     "heldOut": 183,
@@ -9,17 +9,17 @@
     "dense": {
       "questions": 1826,
       "recall": {
-        "1": 0.6046,
+        "1": 0.6051,
         "3": 0.793,
-        "5": 0.8571,
-        "10": 0.9074
+        "5": 0.8582,
+        "10": 0.9069
       },
-      "mrr": 0.7095,
+      "mrr": 0.71,
       "ndcg": {
-        "1": 0.6046,
-        "3": 0.7149,
-        "5": 0.7413,
-        "10": 0.7578
+        "1": 0.6051,
+        "3": 0.7153,
+        "5": 0.7422,
+        "10": 0.7581
       }
     },
     "dense+symbol": {
@@ -59,11 +59,11 @@
   "generator": null,
   "answer": {
     "sample": 150,
-    "precision": 0.972,
-    "coverage": 0.967,
-    "correct": 0.94,
+    "precision": 0.973,
+    "coverage": 0.973,
+    "correct": 0.947,
     "wrongValue": 0.027,
-    "noValue": 0.013,
+    "noValue": 0.007,
     "refusedWrongly": 0.02,
     "degenerate": 0,
     "signAgreement": 1,
@@ -82,20 +82,20 @@
       },
       "package": {
         "n": 42,
-        "correct": 0.952
+        "correct": 0.976
       }
     }
   },
   "refusal": {
     "sample": 150,
-    "refused": 0.98,
-    "hallucinated": 0.02,
-    "hallucinatedButCorrect": 0.667
+    "refused": 0.987,
+    "hallucinated": 0.013,
+    "hallucinatedButCorrect": 0.5
   },
   "latency": {
-    "retrieveP50Ms": 415,
-    "retrieveP95Ms": 579,
-    "generateP50Ms": 930,
-    "generateP95Ms": 1983
+    "retrieveP50Ms": 429,
+    "retrieveP95Ms": 745,
+    "generateP50Ms": 1014,
+    "generateP95Ms": 2377
   }
 }

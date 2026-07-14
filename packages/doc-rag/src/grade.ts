@@ -135,6 +135,25 @@ function matchesValue(text: string, expected: Expected): Match {
   return { ok: false, found: `${closest.value} ${closest.unit}`, signMatched: sign(closest) };
 }
 
+/**
+ * Does this text contain the expected value at all?
+ *
+ * The same reader the grader uses, pointed at a retrieved excerpt instead of an
+ * answer. It is what `tools/evidence.ts` asks of the ten chunks a model was
+ * handed: was the answer in there, or was the model asked to invent?
+ *
+ * Weaker for a number than for a package name, and the difference matters. A
+ * datasheet row is full of numbers, so `13 A` appearing SOMEWHERE in an excerpt
+ * does not prove it appears as the answer to THIS question — it may be another
+ * parameter's rating, or a test condition. A hit here means the answer is
+ * reachable from the evidence, never that the evidence is unambiguous. A MISS,
+ * though, is conclusive: the number is not in the text, so the model could only
+ * have invented it.
+ */
+export function carriesValue(text: string, expected: Expected): boolean {
+  return matchesValue(text, expected).ok;
+}
+
 export function grade(question: Question, answer: Answer): Grade {
   const held = question.split === "holdout";
 

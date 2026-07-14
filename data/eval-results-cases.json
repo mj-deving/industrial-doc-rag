@@ -131,7 +131,7 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "24 mΩ at VGS = 10 V; ID = 6.1 A; Tj = 25 °C"
+    "text": "24 mΩ at VGS = 10 V; ID = 6.1 A; Tj = 25 °C."
   },
   {
     "id": "PMV20XNE:id",
@@ -165,7 +165,7 @@
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "17 A at VGS = 10 V; Tmb = 25 °C."
+    "text": "17 A at VGS = 10 V; Tmb = 25 °C"
   },
   {
     "id": "PSMN2R4-30MLD:package",
@@ -180,7 +180,7 @@
       "kind": "text",
       "value": "LFPAK33"
     },
-    "text": "LFPAK33 (SOT1210)"
+    "text": "The PSMN2R4-30MLD is supplied in the LFPAK33 (SOT1210) package."
   },
   {
     "id": "BUK9D23-40E:vds",
@@ -231,7 +231,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "30 V, at 25 °C ≤ Tj ≤ 175 °C"
+    "text": "30 V; 25 °C ≤ Tj ≤ 175 °C"
   },
   {
     "id": "PSMN8R5-60YS:vds",
@@ -265,7 +265,7 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "102 mΩ at VGS = -4.5 V; ID = -2.5 A; Tj = 25 °C."
+    "text": "102 mΩ at VGS = -4.5 V; ID = -2.5 A; Tj = 25 °C"
   },
   {
     "id": "PSMN040-100MSE:rdson",
@@ -467,7 +467,7 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "5.8 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C."
+    "text": "5.8 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C"
   },
   {
     "id": "PSMN5R6-100BS:id",
@@ -499,7 +499,7 @@
       "kind": "text",
       "value": "LFPAK56D"
     },
-    "text": "LFPAK56D; Dual LFPAK (SOT1205)"
+    "text": "The PSMN025-100HS is supplied in the LFPAK56D; Dual LFPAK (SOT1205) package."
   },
   {
     "id": "PSMN3R3-40MLH:rdson",
@@ -631,7 +631,7 @@
       "kind": "text",
       "value": "LFPAK56"
     },
-    "text": "The BUK7Y8R7-60E is supplied in an LFPAK56; Power-SO8 package, which is a Plastic single-ended surface-mounted package (LFPAK56; Power-SO8); 4 leads."
+    "text": "The BUK7Y8R7-60E is supplied in an LFPAK56; Power-SO8 package."
   },
   {
     "id": "BUK7K12-60E:package",
@@ -646,7 +646,7 @@
       "kind": "text",
       "value": "LFPAK56D"
     },
-    "text": "The BUK7K12-60E is supplied in an LFPAK56D (Dual Power-SO8) also known as SOT1205 package."
+    "text": "The BUK7K12-60E is supplied in an LFPAK56D (Dual Power-SO8) package, also referred to as SOT1205."
   },
   {
     "id": "BUK7Y3R1-80M:package",
@@ -661,7 +661,7 @@
       "kind": "text",
       "value": "LFPAK56"
     },
-    "text": "The BUK7Y3R1-80M is supplied in the LFPAK56; plastic, single-ended surface-mounted package; 4 terminals, also known as Power-SO8."
+    "text": "LFPAK56; plastic, single-ended surface-mounted package; 4 terminals, also known as Power-SO8."
   },
   {
     "id": "BUK9M10-30E:package",
@@ -676,7 +676,7 @@
       "kind": "text",
       "value": "LFPAK33"
     },
-    "text": "The BUK9M10-30E is supplied in the LFPAK33 (SOT1210) package, an 8-lead plastic single ended surface mounted package."
+    "text": "The BUK9M10-30E is supplied in an LFPAK33 (SOT1210) package, which is a plastic single ended surface mounted package with 8 leads."
   },
   {
     "id": "BUK7Y3R5-40H:id",
@@ -744,7 +744,7 @@
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "52 A at VGS = 5 V; Tmb = 25 °C; Fig. 1"
+    "text": "52 A at VGS = 5 V; Tmb = 25 °C."
   },
   {
     "id": "BUK7Y6R0-60E:id",
@@ -761,7 +761,7 @@
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "100 A at VGS = 10 V; Tmb = 25 °C."
+    "text": "100 A at Tmb = 25 °C; VGS = 10 V."
   },
   {
     "id": "BUK6Y10-30P:package",
@@ -808,7 +808,7 @@
       "kind": "text",
       "value": "LFPAK56D"
     },
-    "text": "LFPAK56D (SOT1205)"
+    "text": "The BUK7K8R7-40E is supplied in the LFPAK56D (SOT1205) package, also referred to as LFPAK5 in the ordering information."
   },
   {
     "id": "BUK9Y25-60E:package",
@@ -887,7 +887,7 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "12.5 mΩ at VGS = 5 V; ID = 10 A; Tj = 25 °C"
+    "text": "12.5 mΩ at VGS = 5 V; ID = 10 A; Tj = 25 °C."
   },
   {
     "id": "PSMN0R9-30YLD:id",
@@ -919,7 +919,7 @@
       "kind": "text",
       "value": "TSOP6"
     },
-    "text": "TSOP6, plastic, surface-mounted package (SC-74)"
+    "text": "TSOP6, plastic, surface-mounted package (SC-74), as per the description in the ordering information table."
   },
   {
     "id": "PSMN5R5-100YSF:id",
@@ -1051,7 +1051,7 @@
       "kind": "text",
       "value": "LFPAK56"
     },
-    "text": "LFPAK56; Plastic single-ended surface-mounted package (LFPAK56; Power-SO8); 4 leads, SOT669"
+    "text": "LFPAK56; Plastic single-ended surface-mounted package (LFPAK56; Power-SO8); 4 leads, as listed in the ordering information table from [PSMN2R0-30YLD]."
   },
   {
     "id": "PSMN1R1-25YLC:vds",
@@ -1083,7 +1083,7 @@
       "kind": "text",
       "value": "SO8"
     },
-    "text": "LFPAK; 4 leads, as described in SOT669"
+    "text": "LFPAK; 4 leads, \nno specific conditions are given in the question, and this parameter does not have any conditions in the table."
   },
   {
     "id": "PSMN1R0-40ULD:package",
@@ -1179,7 +1179,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "-20 V, Tj = 25 °C"
+    "text": "-20 V at Tj = 25 °C"
   },
   {
     "id": "BUK9K49-80L:id",
@@ -1260,7 +1260,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C."
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
     "id": "BUK7M45-40E:rdson",
@@ -1424,7 +1424,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "25 V, at 25 °C ≤ Tj ≤ 175 °C."
+    "text": "25 V at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
     "id": "PSMN1R6-30MLH:id",
@@ -1573,7 +1573,7 @@
       "kind": "text",
       "value": "LFPAK56"
     },
-    "text": "The BUK7Y4R8-60E is supplied in an LFPAK56; Power-SO8 package, also referred to as SOT669."
+    "text": "The BUK7Y4R8-60E is supplied in an LFPAK56; Power-SO8 (SOT669) package."
   },
   {
     "id": "PSMN6R7-40MSD:vds",
@@ -1590,7 +1590,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "40 V, 25 °C ≤ Tj ≤ 175 °C"
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
     "id": "PMPB07R3EN:vds",
@@ -1639,7 +1639,7 @@
       "kind": "text",
       "value": "LFPAK33"
     },
-    "text": "The BUK7M4R3-40H is supplied in an LFPAK33 (SOT1210) package."
+    "text": "The BUK7M4R3-40H is supplied in the LFPAK33 (SOT1210) package."
   },
   {
     "id": "PMV50EPEA:package",
@@ -1686,7 +1686,7 @@
       "kind": "text",
       "value": "LFPAK33"
     },
-    "text": "LFPAK33 (SOT1210); 4 leads or 8 leads"
+    "text": "LFPAK33 (SOT1210), 4 leads"
   },
   {
     "id": "BUK7M15-60E:package",
@@ -1784,7 +1784,7 @@
       "kind": "text",
       "value": "SOT669"
     },
-    "text": "The PSMN013-80YS is supplied in an LFPAK package, specifically SOT669, which is a plastic single-ended surface-mounted package (LFPAK) with 4 leads."
+    "text": "LFPAK; plastic single-ended surface-mounted package (LFPAK); 4 leads, SOT669"
   },
   {
     "id": "BUK98150-55A:vds",
@@ -1801,7 +1801,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "55 V, Tj ≥ 25 °C; Tj ≤ 150 °C"
+    "text": "55 V; Tj ≥ 25 °C; Tj ≤ 150 °C"
   },
   {
     "id": "PSMN5R8-40YS:id",
@@ -1918,7 +1918,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "60 V, at 25 °C ≤ Tj ≤ 175 °C"
+    "text": "60 V, at 25 °C ≤ Tj ≤ 175 °C."
   },
   {
     "id": "PSMNR67-30YLE:rdson",
@@ -2001,22 +2001,22 @@
       "kind": "text",
       "value": "TSOP6"
     },
-    "text": "TSOP6, as described in the ordering information."
+    "text": "TSOP6; plastic surface-mounted package (TSOP6); 6 leads"
   },
   {
     "id": "PSMN9R1-30YL:package",
     "split": "indexed",
     "dimension": "package",
-    "correct": false,
-    "reason": "no-value",
-    "found": null,
+    "correct": true,
+    "reason": "match",
+    "found": "SOT669",
     "signMatched": null,
     "degenerate": false,
     "expected": {
       "kind": "text",
       "value": "SOT669"
     },
-    "text": "LFPAK; Power-SO8, no conditions are specified for this parameter in the excerpts."
+    "text": "LFPAK; Power-SO8, plastic single-ended surface-mounted package; 4 leads, SOT669"
   },
   {
     "id": "PSMN4R3-40MLH:vds",
@@ -2033,7 +2033,7 @@
       "unit": "V",
       "tolerance": 0.01
     },
-    "text": "40 V, 25 °C ≤ Tj ≤ 175 °C"
+    "text": "40 V, at 25 °C ≤ Tj ≤ 175 °C"
   },
   {
     "id": "BUK9M43-100E:vds",
@@ -2233,7 +2233,7 @@
       "kind": "text",
       "value": "LFPAK33"
     },
-    "text": "LFPAK33 (SOT1210)"
+    "text": "The BUK7M11-40H is supplied in an LFPAK33 (SOT1210) package."
   },
   {
     "id": "PMPB13UP:vds",
@@ -3929,7 +3929,7 @@
       "unit": "mΩ",
       "tolerance": 0.01
     },
-    "text": "2.4 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C"
+    "text": "2.4 mΩ at VGS = 10 V; ID = 25 A; Tj = 25 °C."
   },
   {
     "id": "BUK9M53-60E:id",
@@ -4184,10 +4184,10 @@
     "id": "PSMN1R0-40YLD:id",
     "split": "holdout",
     "dimension": "id",
-    "correct": false,
-    "reason": "hallucinated",
-    "found": "280 A",
-    "signMatched": true,
+    "correct": true,
+    "reason": "refused-correctly",
+    "found": null,
+    "signMatched": null,
     "degenerate": false,
     "expected": {
       "kind": "numeric",
@@ -4195,7 +4195,7 @@
       "unit": "A",
       "tolerance": 0.01
     },
-    "text": "280 A at VGS = 10 V; Tmb = 25 °C."
+    "text": "280 A at VGS = 10 V; Tmb = 25 °C [PSMN1R0-40ULD] \n\nNote: Since there is no excerpt for PSMN1R0-40YLD, but there is one for PSMN1R0-40ULD which has a note stating \"For non-UL2595 applications please use PSMN1R0-40YLD\", it can be inferred that the ratings might be similar. However, according to the given instructions, if the part number does not match exactly, the answer should be \"NOT_IN_CORPUS\". \n"
   },
   {
     "id": "BUK7Y7R0-40H:id",

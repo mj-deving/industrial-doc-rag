@@ -15,7 +15,7 @@
  * Usage: INGEST_TOKEN=... bun tools/evidence.ts <worker-url> <question-id>...
  */
 
-import { grade } from "../packages/doc-rag/src/grade";
+import { carriesValue, grade } from "../packages/doc-rag/src/grade";
 import type { Question } from "../packages/doc-rag/src/types";
 
 const workerUrl = process.argv[2];
@@ -73,8 +73,15 @@ for (const result of results) {
   // The whole point. Does the answer to the question appear anywhere in the ten
   // excerpts the model was handed? If yes, a refusal is the generator's failure.
   // If no, the generator was asked to invent, and refusing was the right call.
-  const carries = (text: string) =>
-    question.expected.kind === "text" && text.toLowerCase().includes(want.toLowerCase());
+  //
+  // This read `expected.kind === "text" && ...` and so answered NO for every
+  // numeric question in the corpus — which is nearly all of them. It reported
+  // "the evidence does NOT contain the answer" on evidence that plainly did, and
+  // I believed it once, and went looking for a retrieval bug that was not there.
+  // A diagnostic that is confidently wrong is worse than no diagnostic, because
+  // it is trusted. It now uses the grader's own reader, so the tool that explains
+  // a failure and the tool that judges it cannot disagree about what the answer is.
+  const carries = (text: string) => carriesValue(text, question.expected);
 
   result.evidence.forEach((excerpt, at) => {
     const flag = carries(excerpt.text) ? "  <<< CARRIES THE ANSWER" : "";
@@ -86,7 +93,7 @@ for (const result of results) {
   console.log(`${"-".repeat(78)}`);
   console.log(
     hits > 0
-      ? `The evidence CONTAINS the answer in ${hits} of ${result.evidence.length} excerpts. A miss here is the generator's.`
-      : `The evidence does NOT contain the answer. The generator could only have invented it.`
+      ? `The value appears in ${hits} of ${result.evidence.length} excerpts, so the answer was reachable and a miss is the generator's. It does not follow that the right ROW was legible — read the excerpts.`
+      : `The value appears in NONE of the ${result.evidence.length} excerpts. Whatever the model said, it did not read it here.`
   );
 }
