@@ -97,9 +97,15 @@ Fields:
   "rdson"   an ARRAY of EVERY maximum drain-source on-state resistance the datasheet quotes, one entry per set of conditions:
             [{"value": number, "unit": "mOhm", "conditions": "..."}, ...]
             A datasheet quotes this at more than one gate voltage. Both are true and BOTH must be listed. [] if none is stated.
+            THE COLUMN MATTERS. This row prints its numbers in the order Min, Typ, Max. Take the MAX — the LAST of them.
+            The first number is a MINIMUM on-state resistance, which is not a figure anyone can design against, and it is
+            the one you will take by accident because it comes first.
   "id"      an ARRAY of every maximum CONTINUOUS drain current, one entry per set of conditions, same shape.
             Continuous means it carries this indefinitely. A rating that holds only for a limited time is a DIFFERENT figure and must not be listed.
             The same current is quoted at more than one temperature (25 °C and 100 °C are both common). List EVERY temperature, not the first one.
+            If you do list a time-limited row, its conditions MUST carry the duration exactly as printed ("t <= 5 s").
+            The time-limited row and the continuous row are printed at the SAME gate voltage and the SAME temperature, and
+            the duration is the only thing that tells them apart. Drop it and a five-second rating becomes a permanent one.
   "package" EVERY name this part's package goes by, as an array of strings, and ONLY names PRINTED IN THE EXCERPTS ABOVE. [] if none is printed.
             A package has two kinds of name and a datasheet prints both, in different places:
               a trade name, used in the title and the general description
@@ -109,7 +115,7 @@ Fields:
             excerpts print only one name for this package, list exactly that one. A name you supply
             from memory is indistinguishable from one you read, and it is wrong.
 
-Copy each conditions string exactly as printed, including the gate voltage and the temperature symbol (Tj, Tmb and Tamb are different things and must not be confused).
+Copy each conditions string exactly as printed, including the gate voltage, the temperature symbol (Tj, Tmb and Tamb are different things and must not be confused), and any duration limit.
 
 Answer with one JSON object and nothing else.
 

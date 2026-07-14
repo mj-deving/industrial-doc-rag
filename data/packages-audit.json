@@ -1,42 +1,9 @@
 {
-  "generatedAt": "2026-07-14T16:18:35.458Z",
+  "generatedAt": "2026-07-14T16:56:59.564Z",
   "partsAudited": 497,
   "catalogueFabricated": {
-    "parts": 6,
-    "names": [
-      [
-        "LFPAK56",
-        5
-      ],
-      [
-        "LFPAK33",
-        5
-      ],
-      [
-        "D2PAK",
-        4
-      ],
-      [
-        "TO-236AB",
-        4
-      ],
-      [
-        "SOT1210",
-        4
-      ],
-      [
-        "SOT404",
-        4
-      ],
-      [
-        "SOT1220",
-        4
-      ],
-      [
-        "SOT23",
-        4
-      ]
-    ]
+    "parts": 0,
+    "names": []
   },
   "labelMissed": {
     "parts": 187,
@@ -90,6 +57,10 @@
         1
       ],
       [
+        "25RS10H",
+        1
+      ],
+      [
         "SOT1210",
         1
       ]
@@ -100,7 +71,7 @@
     "names": [
       [
         "LFPAK",
-        101
+        100
       ],
       [
         "Power-SO8",
@@ -108,15 +79,15 @@
       ],
       [
         "SC-74",
-        14
+        15
       ],
       [
         "LFPAK56",
-        13
+        14
       ],
       [
-        "SOT8002",
-        7
+        "TO-236AB",
+        8
       ],
       [
         "D2PAK",
@@ -127,15 +98,11 @@
         2
       ],
       [
-        "LFPAK56E",
-        2
-      ],
-      [
         "CCPAK1212",
         1
       ],
       [
-        "LFPAK56-UL",
+        "LFPAK56E",
         1
       ]
     ]
@@ -483,7 +450,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "PSMN1R5-30YL",
@@ -533,9 +502,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "PSMN016-100BS",
@@ -835,15 +802,15 @@
     },
     {
       "part": "PSMN025-100HS",
-      "fabricated": [
-        "LFPAK56"
-      ],
+      "fabricated": [],
       "missedByLabel": [
         "Power-SO8",
+        "25RS10H",
         "LFPAK"
       ],
       "missedByCatalogue": [
-        "Power-SO8"
+        "Power-SO8",
+        "LFPAK"
       ]
     },
     {
@@ -1003,16 +970,7 @@
     },
     {
       "part": "PSMN9R5-30YLC",
-      "fabricated": [
-        "LFPAK33",
-        "LFPAK56",
-        "D2PAK",
-        "TO-236AB",
-        "SOT1210",
-        "SOT404",
-        "SOT1220",
-        "SOT23"
-      ],
+      "fabricated": [],
       "missedByLabel": [],
       "missedByCatalogue": []
     },
@@ -1436,16 +1394,7 @@
     },
     {
       "part": "PSMN4R5-30YLC",
-      "fabricated": [
-        "LFPAK33",
-        "LFPAK56",
-        "D2PAK",
-        "TO-236AB",
-        "SOT1210",
-        "SOT404",
-        "SOT1220",
-        "SOT23"
-      ],
+      "fabricated": [],
       "missedByLabel": [],
       "missedByCatalogue": []
     },
@@ -1701,9 +1650,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "PSMN3R0-30YLD",
@@ -1727,7 +1674,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "BUK7M8R0-40E",
@@ -1960,9 +1909,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "PSMN4R3-40MSH",
@@ -2026,20 +1973,9 @@
     },
     {
       "part": "PSMN6R0-30YLB",
-      "fabricated": [
-        "LFPAK33",
-        "LFPAK56",
-        "D2PAK",
-        "TO-236AB",
-        "SOT1210",
-        "SOT404",
-        "SOT1220",
-        "SOT23"
-      ],
+      "fabricated": [],
       "missedByLabel": [],
-      "missedByCatalogue": [
-        "LFPAK"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "BUK9Y15-100E",
@@ -2141,7 +2077,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "BUK6D120-40E",
@@ -2253,7 +2191,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "PMPB15XN",
@@ -2464,20 +2404,9 @@
     },
     {
       "part": "PSMN6R0-25YLB",
-      "fabricated": [
-        "LFPAK33",
-        "LFPAK56",
-        "D2PAK",
-        "TO-236AB",
-        "SOT1210",
-        "SOT404",
-        "SOT1220",
-        "SOT23"
-      ],
+      "fabricated": [],
       "missedByLabel": [],
-      "missedByCatalogue": [
-        "LFPAK"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "PSMN7R0-30MLC",
@@ -2829,9 +2758,7 @@
     },
     {
       "part": "PSMN4R0-30YL",
-      "fabricated": [
-        "LFPAK33"
-      ],
+      "fabricated": [],
       "missedByLabel": [],
       "missedByCatalogue": []
     },
@@ -2841,9 +2768,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "PMPB14R0EP",
@@ -3137,9 +3062,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "BUK7Y2R5-40H",
@@ -3211,7 +3134,9 @@
       "missedByLabel": [
         "SC-74"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "SC-74"
+      ]
     },
     {
       "part": "BUK9M19-60E",
@@ -3387,7 +3312,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "PMPB29XNE",
@@ -3403,7 +3330,6 @@
         "LFPAK"
       ],
       "missedByCatalogue": [
-        "LFPAK56E",
         "LFPAK"
       ]
     },
@@ -3529,7 +3455,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "PSMN4R0-40YS",
@@ -3671,7 +3599,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "PSMN2R6-30YLC",
@@ -3745,9 +3675,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "BUK7D36-60E",
@@ -3780,7 +3708,7 @@
         "LFPAK56"
       ],
       "missedByCatalogue": [
-        "LFPAK56-UL"
+        "LFPAK56"
       ]
     },
     {
@@ -3845,7 +3773,9 @@
       "missedByLabel": [
         "TO-236AB"
       ],
-      "missedByCatalogue": []
+      "missedByCatalogue": [
+        "TO-236AB"
+      ]
     },
     {
       "part": "BUK6Y14-40P",
@@ -3865,9 +3795,7 @@
       "missedByLabel": [
         "SOT8002-1"
       ],
-      "missedByCatalogue": [
-        "SOT8002"
-      ]
+      "missedByCatalogue": []
     },
     {
       "part": "PSMN010-80YL",

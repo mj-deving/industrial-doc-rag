@@ -238,3 +238,63 @@ describe("a package name is not an exact string", () => {
     expect(cleanPackages(["TO-236AB"])).toEqual(["TO-236AB"]);
   });
 });
+
+describe("a fragment of a name on the same part is not a name", () => {
+  test("SO8 is the tail of Power-SO8, and the datasheet that prints it says so", () => {
+    // All 23 catalogue rows carrying `SO8` also carry `Power-SO8`. The token comes out of
+    // a marketing bullet — "LFPAK provides maximum power density in a Power SO8 package" —
+    // and the label's parser made this exact mistake first, on PSMN012-100YS, which is
+    // defect three in the README. Told to list every printed name, the model reproduced it.
+    expect(cleanPackages(["LFPAK56E", "SO8", "SOT1023", "Power-SO8"]).sort()).toEqual([
+      "LFPAK56E",
+      "Power-SO8",
+      "SOT1023"
+    ]);
+  });
+
+  test("a prefix is not a fragment, and a family name keeps its own identity", () => {
+    // LFPAK is a real package and LFPAK56 is a different one. The rule is suffix-only for
+    // exactly this reason: `LFPAK56` does not end in `-LFPAK`, so nothing is dropped.
+    expect(cleanPackages(["LFPAK", "LFPAK56"]).sort()).toEqual(["LFPAK", "LFPAK56"]);
+    // And the version fold survives it: SOT1220-2 does not end in `-SOT1220`.
+    expect(cleanPackages(["SOT1220-2"]).sort()).toEqual(["SOT1220", "SOT1220-2"]);
+  });
+
+  test("a fragment is only a fragment next to its whole", () => {
+    // On a part whose only name is SO8, there is nothing to be a fragment OF. The rule
+    // reads the row, not a list of bad words, so it cannot delete a part's only package.
+    expect(cleanPackages(["SO8"])).toEqual(["SO8"]);
+  });
+});
+
+/**
+ * The one qualifier that is not noise.
+ *
+ * `cleanConditions` was written to strip `Fig. 12` — a figure reference riding along in a
+ * conditions cell, which is typography. It strips anything that is not a V, a T or an ID
+ * term, and `t <= 5 s` is none of those, so it stripped that too.
+ *
+ * A duration limit is not typography. It is the ONLY thing separating two rows that are
+ * otherwise identical: a datasheet quotes the drain current at VGS = 10 V, Tamb = 25 °C,
+ * and again at VGS = 10 V, Tamb = 25 °C, t <= 5 s, and the second is 30% higher because it
+ * only holds for five seconds. Delete the qualifier and the two rows become one condition
+ * class, the pulsed figure looks like a continuous rating, and it wins every "which part
+ * carries the highest current" it is entered into — because a query for an extremum
+ * selects FOR exactly this kind of error.
+ */
+describe("a duration limit is a condition, not a figure reference", () => {
+  test("the five-second rating keeps the five seconds", () => {
+    expect(cleanConditions("VGS = 10 V; Tamb = 25 °C; t ≤ 5 s")).toBe("VGS = 10 V; Tamb = 25 °C; t ≤ 5 s");
+    expect(cleanConditions("VGS = 10 V; Tamb = 25 °C; t <= 5 s")).toBe("VGS = 10 V; Tamb = 25 °C; t <= 5 s");
+  });
+
+  test("so it is a different test bench from the continuous rating, and cannot be compared with it", () => {
+    // PMN25ENE, verbatim: 8 A for five seconds, 6.1 A indefinitely, same gate drive and the
+    // same ambient. The catalogue stored the 8 A under the continuous conditions.
+    expect(classOf("VGS = 10 V; Tamb = 25 °C; t ≤ 5 s")).not.toBe(classOf("VGS = 10 V; Tamb = 25 °C"));
+  });
+
+  test("and a figure reference is still a figure reference", () => {
+    expect(cleanConditions("VGS = 10 V; ID = 20 A; Tj = 25 °C; Fig. 12")).toBe("VGS = 10 V; ID = 20 A; Tj = 25 °C");
+  });
+});

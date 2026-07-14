@@ -56,7 +56,13 @@ for (const row of catalogue) {
   ).text();
   read++;
 
-  const inDocument = new Set(vocabulary.filter((name) => printed(text, name)));
+  // The document's names go through the catalogue's own normaliser before the compare.
+  // Without it the audit reports its own normalisation as a fabrication: PMPB06R2EN's
+  // datasheet prints only `SOT1220-2`, the label's parser files it as `SOT1220`, and
+  // `cleanPackages` derives the same base name — so a raw compare called 20 correctly
+  // normalised rows invented. An instrument that compares a normalised value against a
+  // raw one measures the normaliser, which is the fifth time that has happened here.
+  const inDocument = new Set(cleanPackages(vocabulary.filter((name) => printed(text, name))));
   const inCatalogue = new Set(row.package);
   const inLabel = new Set(byPart.get(row.part) ?? []);
 

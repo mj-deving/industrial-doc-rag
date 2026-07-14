@@ -68,9 +68,32 @@ export type Attributes = {
  * blamed the system and meant the instrument.
  */
 
-/** A condition term the corpus actually measures under. Everything else in the
- *  string (a figure reference, a stray semicolon) is not a condition. */
-const CONDITION_TERM = /^(V(?:GS|DS)|T(?:j|mb|amb)|ID)\s*=/i;
+/**
+ * A condition term the corpus actually measures under. Everything else in the string (a
+ * figure reference, a stray semicolon) is not a condition.
+ *
+ * ── The duration term is here because leaving it out was the worst bug in this file ──
+ *
+ * This was a whitelist of V, T and ID terms, written to strip `Fig. 12`. `t <= 5 s` is
+ * none of those, so it was stripped as well — and a duration limit is not typography. It
+ * is the ONLY thing separating two rows a datasheet prints one above the other:
+ *
+ *     ID   drain current   VGS = 10 V; Tamb = 25 °C; t <= 5 s    8    A
+ *     ID   drain current   VGS = 10 V; Tamb = 25 °C              6.1  A
+ *
+ * Same gate drive, same ambient; the top row is 30% higher and holds for five seconds.
+ * Strip the qualifier and the two collapse into one condition class, the pulsed figure is
+ * stored as a continuous rating, and it wins every "which part carries the highest
+ * current" it is entered into — because a query for an extremum selects FOR errors that
+ * make a value more extreme. An error rate a lookup would shrug off is fatal to a
+ * superlative, and it is fatal precisely at the top of the table, where the answer is.
+ *
+ * The prompt already told the model not to report a time-limited rating. It is now told
+ * to copy the duration too, so that when it reports one anyway, the row lands in a class
+ * of its own and is compared against nobody. The instruction is a request; the class is
+ * a guarantee.
+ */
+const CONDITION_TERM = /^(V(?:GS|DS)|T(?:j|mb|amb)|ID)\s*=|^t\s*[≤<]/i;
 
 /** Keep the terms that state a condition, in the order printed. */
 export function cleanConditions(conditions: string): string {
@@ -169,6 +192,29 @@ export function cleanPackages(names: string[]): string[] {
         if (base?.[1]) out.add(base[1]);
       }
     }
+  }
+
+  /**
+   * A name that is the tail of another name ON THE SAME PART is a fragment of it.
+   *
+   * `SO8` is what is left of `Power-SO8` when a sentence breaks it: every datasheet in
+   * this family carries the bullet "LFPAK provides maximum power density in a Power SO8
+   * package", and the token `SO8` stands alone in it. The label's own parser fell for it
+   * first — `PSMN012-100YS` was labelled `SO8`, which is defect three in the README — and
+   * when the extraction prompt was changed to "list every name printed in the excerpts",
+   * the model reproduced the same error on 4 parts. All 23 rows that carry `SO8` also
+   * carry `Power-SO8`, so the row itself says which one is the designator.
+   *
+   * Suffix-only, and that is the whole safety of it: `LFPAK56` does not end in `-LFPAK`
+   * and `SOT1220-2` does not end in `-SOT1220`, so a family name and a version fold both
+   * survive. And a part whose ONLY name is `SO8` keeps it — there is nothing for it to be
+   * a fragment of. The rule reads the row, not a list of words I decided were bad.
+   */
+  for (const name of [...out]) {
+    const whole = [...out].some(
+      (other) => other !== name && new RegExp(`[-\\s]${name}$`).test(other)
+    );
+    if (whole) out.delete(name);
   }
   return [...out];
 }
