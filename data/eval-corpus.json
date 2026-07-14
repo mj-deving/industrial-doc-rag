@@ -1,47 +1,49 @@
 {
-  "generatedAt": "2026-07-14T16:07:26.668Z",
-  "questions": 95,
+  "generatedAt": "2026-07-14T18:09:42.211Z",
+  "questions": 248,
   "routes": {
-    "catalog": 92,
-    "retrieval": 3
+    "catalog": 248,
+    "retrieval": 0
   },
   "outcomes": {
-    "correct": 68,
-    "wrong": 24,
+    "correct": 214,
+    "wrong": 34,
     "hedged": 0,
-    "guardRefused": 3,
+    "guardRefused": 0,
     "modelRefused": 0,
     "catalogEmpty": 0
   },
-  "accuracy": 0.7158,
-  "precisionWhenAnswered": 0.7391,
+  "accuracy": 0.8629,
+  "precisionWhenAnswered": 0.8629,
   "byKind": {
     "superlative-part": {
-      "n": 37,
-      "correct": 0.7838,
-      "wrong": 0.2162,
+      "n": 125,
+      "correct": 0.824,
+      "wrong": 0.176,
       "hedged": 0,
       "guardRefused": 0,
       "modelRefused": 0
     },
     "superlative-value": {
-      "n": 18,
-      "correct": 0.7222,
-      "wrong": 0.2778,
+      "n": 84,
+      "correct": 0.9286,
+      "wrong": 0.0714,
       "hedged": 0,
       "guardRefused": 0,
       "modelRefused": 0
     },
     "count": {
-      "n": 40,
-      "correct": 0.65,
-      "wrong": 0.275,
+      "n": 39,
+      "correct": 0.8462,
+      "wrong": 0.1538,
       "hedged": 0,
-      "guardRefused": 0.075,
+      "guardRefused": 0,
       "modelRefused": 0
     }
   },
   "wrongWithoutSeeingWinner": 0,
+  "wrongWinnerNotInPool": 0.9286,
+  "catalogSuperlativesGraded": 209,
   "cases": [
     {
       "id": "corpus:count-package:CCPAK1212",
@@ -49,6 +51,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 9,
       "expected": "9",
       "got": "9 parts in this corpus in a CCPAK1212 package."
@@ -59,6 +62,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 9,
       "expected": "9",
       "got": "9 parts in this corpus in a CCPAK1212i package."
@@ -67,11 +71,12 @@
       "id": "corpus:count-package:D2PAK",
       "kind": "count",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 30,
       "expected": "30",
-      "got": "34 parts in this corpus in a D2PAK package."
+      "got": "30 parts in this corpus in a D2PAK package."
     },
     {
       "id": "corpus:count-package:DFN2020M-6",
@@ -79,6 +84,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 20,
       "expected": "20",
       "got": "20 parts in this corpus in a DFN2020M-6 package."
@@ -87,21 +93,12 @@
       "id": "corpus:count-package:DFN2020MD-6",
       "kind": "count",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
-      "candidates": 32,
-      "expected": "32",
+      "winnerInPool": null,
+      "candidates": 48,
+      "expected": "48",
       "got": "48 parts in this corpus in a DFN2020MD-6 package."
-    },
-    {
-      "id": "corpus:count-package:DFN2020MD‑6",
-      "kind": "count",
-      "route": "retrieval",
-      "outcome": "guard-refused",
-      "sawWinner": null,
-      "candidates": 16,
-      "expected": "16",
-      "got": "NOT_IN_CORPUS"
     },
     {
       "id": "corpus:count-package:LFPAK",
@@ -109,9 +106,10 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 38,
       "expected": "38",
-      "got": "37 parts in this corpus in a LFPAK package."
+      "got": "39 parts in this corpus in a LFPAK package."
     },
     {
       "id": "corpus:count-package:LFPAK33",
@@ -119,9 +117,10 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 71,
       "expected": "71",
-      "got": "77 parts in this corpus in a LFPAK33 package."
+      "got": "72 parts in this corpus in a LFPAK33 package."
     },
     {
       "id": "corpus:count-package:LFPAK56",
@@ -129,9 +128,10 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 113,
       "expected": "113",
-      "got": "119 parts in this corpus in a LFPAK56 package."
+      "got": "112 parts in this corpus in a LFPAK56 package."
     },
     {
       "id": "corpus:count-package:LFPAK56D",
@@ -139,6 +139,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 51,
       "expected": "51",
       "got": "51 parts in this corpus in a LFPAK56D package."
@@ -147,11 +148,12 @@
       "id": "corpus:count-package:LFPAK56E",
       "kind": "count",
       "route": "catalog",
-      "outcome": "correct",
+      "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 13,
       "expected": "13",
-      "got": "13 parts in this corpus in a LFPAK56E package."
+      "got": "14 parts in this corpus in a LFPAK56E package."
     },
     {
       "id": "corpus:count-package:LFPAK88",
@@ -159,6 +161,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 17,
       "expected": "17",
       "got": "17 parts in this corpus in a LFPAK88 package."
@@ -169,6 +172,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 7,
       "expected": "7",
       "got": "7 parts in this corpus in a MLPAK33 package."
@@ -176,12 +180,13 @@
     {
       "id": "corpus:count-package:Power-SO8",
       "kind": "count",
-      "route": "retrieval",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 139,
       "expected": "139",
-      "got": "NOT_IN_CORPUS"
+      "got": "139 parts in this corpus in a Power-SO8 package."
     },
     {
       "id": "corpus:count-package:SC-73",
@@ -189,6 +194,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 6,
       "expected": "6",
       "got": "6 parts in this corpus in a SC-73 package."
@@ -197,11 +203,12 @@
       "id": "corpus:count-package:SC-74",
       "kind": "count",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 7,
       "expected": "7",
-      "got": "8 parts in this corpus in a SC-74 package."
+      "got": "7 parts in this corpus in a SC-74 package."
     },
     {
       "id": "corpus:count-package:SOT1023",
@@ -209,6 +216,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 15,
       "expected": "15",
       "got": "15 parts in this corpus in a SOT1023 package."
@@ -219,6 +227,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 51,
       "expected": "51",
       "got": "51 parts in this corpus in a SOT1205 package."
@@ -229,19 +238,21 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 71,
       "expected": "71",
-      "got": "76 parts in this corpus in a SOT1210 package."
+      "got": "72 parts in this corpus in a SOT1210 package."
     },
     {
       "id": "corpus:count-package:SOT1220",
       "kind": "count",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 68,
       "expected": "68",
-      "got": "52 parts in this corpus in a SOT1220 package."
+      "got": "68 parts in this corpus in a SOT1220 package."
     },
     {
       "id": "corpus:count-package:SOT1235",
@@ -249,6 +260,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 17,
       "expected": "17",
       "got": "17 parts in this corpus in a SOT1235 package."
@@ -259,6 +271,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 6,
       "expected": "6",
       "got": "6 parts in this corpus in a SOT223 package."
@@ -267,21 +280,23 @@
       "id": "corpus:count-package:SOT23",
       "kind": "count",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 39,
       "expected": "39",
-      "got": "43 parts in this corpus in a SOT23 package."
+      "got": "39 parts in this corpus in a SOT23 package."
     },
     {
       "id": "corpus:count-package:SOT404",
       "kind": "count",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 29,
       "expected": "29",
-      "got": "33 parts in this corpus in a SOT404 package."
+      "got": "29 parts in this corpus in a SOT404 package."
     },
     {
       "id": "corpus:count-package:SOT457",
@@ -289,6 +304,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 22,
       "expected": "22",
       "got": "22 parts in this corpus in a SOT457 package."
@@ -299,6 +315,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 150,
       "expected": "150",
       "got": "150 parts in this corpus in a SOT669 package."
@@ -309,6 +326,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 9,
       "expected": "9",
       "got": "9 parts in this corpus in a SOT8000A package."
@@ -316,12 +334,13 @@
     {
       "id": "corpus:count-package:SOT8002",
       "kind": "count",
-      "route": "retrieval",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 7,
       "expected": "7",
-      "got": "NOT_IN_CORPUS"
+      "got": "7 parts in this corpus in a SOT8002 package."
     },
     {
       "id": "corpus:count-package:SOT8005A",
@@ -329,6 +348,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 9,
       "expected": "9",
       "got": "9 parts in this corpus in a SOT8005A package."
@@ -339,9 +359,10 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 29,
       "expected": "29",
-      "got": "43 parts in this corpus in a TO-236AB package."
+      "got": "34 parts in this corpus in a TO-236AB package."
     },
     {
       "id": "corpus:count-package:TSOP6",
@@ -349,6 +370,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 22,
       "expected": "22",
       "got": "22 parts in this corpus in a TSOP6 package."
@@ -359,6 +381,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 69,
       "expected": "69",
       "got": "69 parts in this corpus rated 100 V."
@@ -369,6 +392,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 6,
       "expected": "6",
       "got": "6 parts in this corpus rated 12 V."
@@ -379,6 +403,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 42,
       "expected": "42",
       "got": "42 parts in this corpus rated 20 V."
@@ -389,6 +414,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 18,
       "expected": "18",
       "got": "18 parts in this corpus rated 25 V."
@@ -399,6 +425,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 111,
       "expected": "111",
       "got": "111 parts in this corpus rated 30 V."
@@ -409,6 +436,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 115,
       "expected": "115",
       "got": "115 parts in this corpus rated 40 V."
@@ -419,6 +447,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 5,
       "expected": "5",
       "got": "5 parts in this corpus rated 55 V."
@@ -429,6 +458,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 72,
       "expected": "72",
       "got": "72 parts in this corpus rated 60 V."
@@ -439,9 +469,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": null,
       "candidates": 54,
       "expected": "54",
       "got": "54 parts in this corpus rated 80 V."
+    },
+    {
+      "id": "corpus:id-max:N|100|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 47,
+      "expected": "PSMN1R0-100ASF | PSMN1R0-100CSF | BUK7A1R0-100L | BUK7T1R0-100L",
+      "got": "Of the 15 parts in this corpus, specified at Tmb = 100 °C; VGS = 10 V, the highest I_D is 340 A: PSMN1R4-100CSE and PSMN1R4-100ASE."
+    },
+    {
+      "id": "corpus:id-max:N|100|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "BUK9Y12-100E | PSMN012-100YL",
+      "got": "Of the 6 parts in this corpus, specified at Tmb = 100 °C; VGS = 5 V, the highest I_D is 60 A: PSMN012-100YL."
     },
     {
       "id": "corpus:id-max:N|100|Tmb = 25 °C; VGS = 10 V",
@@ -449,9 +502,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 46,
       "expected": "PSMN1R0-100ASF | PSMN1R0-100CSF | BUK7A1R0-100L | BUK7T1R0-100L",
-      "got": "Of the 36 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 460 A: PSMN1R0-100ASF and PSMN1R0-100CSF."
+      "got": "Of the 39 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 460 A: PSMN1R0-100ASF and PSMN1R0-100CSF."
     },
     {
       "id": "corpus:id-max:N|100|Tmb = 25 °C; VGS = 5 V",
@@ -459,9 +513,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 16,
       "expected": "BUK9Y12-100E | PSMN012-100YL",
-      "got": "Of the 8 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 85 A: BUK9Y12-100E."
+      "got": "Of the 11 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 85 A: BUK9Y12-100E and PSMN012-100YL."
+    },
+    {
+      "id": "corpus:id-max:N|20|Tamb = 100 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 11,
+      "expected": "PMPB10XNE",
+      "got": "Of the 6 parts in this corpus, specified at Tamb = 100 °C; VGS = 4.5 V, the highest I_D is 5 A: PMPB12UNEA and PMPB12UNE."
     },
     {
       "id": "corpus:id-max:N|20|Tamb = 25 °C; VGS = 4.5 V",
@@ -469,9 +535,21 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": false,
       "candidates": 12,
       "expected": "PMPB10XNE",
-      "got": "Of the 8 parts in this corpus, specified at Tamb = 25 °C; VGS = 4.5 V, the highest I_D is 10.4 A: PMPB15XN."
+      "got": "Of the 8 parts in this corpus, specified at Tamb = 25 °C; VGS = 4.5 V, the highest I_D is 7.9 A: PMPB12UNEA and PMPB12UNE."
+    },
+    {
+      "id": "corpus:id-max:N|25|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 17,
+      "expected": "PSMNR51-25YLH",
+      "got": "Of the 8 parts in this corpus, specified at Tmb = 100 °C; VGS = 10 V, the highest I_D is 380 A: PSMNR51-25YLH."
     },
     {
       "id": "corpus:id-max:N|25|Tmb = 25 °C; VGS = 10 V",
@@ -479,9 +557,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 17,
       "expected": "PSMNR51-25YLH",
       "got": "Of the 17 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 380 A: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:id-max:N|30|Tamb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 24,
+      "expected": "PXN4R7-30QL",
+      "got": "Of the 5 parts in this corpus, specified at Tamb = 100 °C; VGS = 10 V, the highest I_D is 6.5 A: PXN010-30QL."
+    },
+    {
+      "id": "corpus:id-max:N|30|Tamb = 100 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 16,
+      "expected": "PMPB08R5XN | PMPB06R3XN",
+      "got": "Of the 9 parts in this corpus, specified at Tamb = 100 °C; VGS = 4.5 V, the highest I_D is 5 A: PMPB13XNEA and PMPB13XNE."
     },
     {
       "id": "corpus:id-max:N|30|Tamb = 25 °C; VGS = 10 V",
@@ -489,6 +590,7 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 29,
       "expected": "PXN4R7-30QL",
       "got": "Of the 23 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 15 A: PXN4R7-30QL."
@@ -497,11 +599,34 @@
       "id": "corpus:id-max:N|30|Tamb = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 16,
       "expected": "PMPB08R5XN | PMPB06R3XN",
-      "got": "Of the 14 parts in this corpus, specified at Tamb = 25 °C; VGS = 4.5 V, the highest I_D is 13 A: PMPB10R3XN."
+      "got": "Of the 16 parts in this corpus, specified at Tamb = 25 °C; VGS = 4.5 V, the highest I_D is 11 A: PMPB08R5XN and PMPB06R3XN."
+    },
+    {
+      "id": "corpus:id-max:N|30|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 47,
+      "expected": "PSMNR67-30YLE",
+      "got": "Of the 21 parts in this corpus, specified at Tmb = 100 °C; VGS = 10 V, the highest I_D is 361 A: PSMNR67-30YLE."
+    },
+    {
+      "id": "corpus:id-max:N|30|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "BUK9M5R2-30E",
+      "got": "Of the 6 parts in this corpus, specified at Tmb = 100 °C; VGS = 5 V, the highest I_D is 63 A: BUK9M5R2-30E."
     },
     {
       "id": "corpus:id-max:N|30|Tmb = 25 °C; VGS = 10 V",
@@ -509,9 +634,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 47,
       "expected": "PSMNR58-30YLH",
-      "got": "Of the 37 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 380 A: PSMNR58-30YLH."
+      "got": "Of the 41 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 380 A: PSMNR58-30YLH."
     },
     {
       "id": "corpus:id-max:N|30|Tmb = 25 °C; VGS = 5 V",
@@ -519,9 +645,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 6,
       "expected": "BUK9M6R6-30E | BUK9M5R2-30E",
       "got": "Of the 6 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 70 A: BUK9M6R6-30E and BUK9M5R2-30E."
+    },
+    {
+      "id": "corpus:id-max:N|30|VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 9,
+      "expected": "PXN4R7-30QL",
+      "got": "Of the 3 parts in this corpus, specified at VGS = 10 V, the highest I_D is 22 A: BUK6D22-30E."
+    },
+    {
+      "id": "corpus:id-max:N|40|Tamb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "PMN20ENA",
+      "got": "Of the 4 parts in this corpus, specified at Tamb = 100 °C; VGS = 10 V, the highest I_D is 4.4 A: PMN20ENA."
     },
     {
       "id": "corpus:id-max:N|40|Tamb = 25 °C; VGS = 10 V",
@@ -529,9 +678,32 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": false,
       "candidates": 8,
       "expected": "BUK9D23-40E | BUK7D25-40E | BUK6D23-40E",
       "got": "Of the 4 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 6.2 A: PMN20ENA."
+    },
+    {
+      "id": "corpus:id-max:N|40|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 76,
+      "expected": "PSMNR70-40SSH",
+      "got": "Of the 40 parts in this corpus, specified at Tmb = 100 °C; VGS = 10 V, the highest I_D is 285 A: PSMNR90-40YLH."
+    },
+    {
+      "id": "corpus:id-max:N|40|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 16,
+      "expected": "BUK961R6-40E",
+      "got": "Of the 9 parts in this corpus, specified at Tmb = 100 °C; VGS = 5 V, the highest I_D is 52 A: BUK9M7R2-40E."
     },
     {
       "id": "corpus:id-max:N|40|Tmb = 25 °C; VGS = 10 V",
@@ -539,9 +711,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 88,
       "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
-      "got": "Of the 66 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 425 A: BUK7S0R7-40H and PSMNR70-40SSH."
+      "got": "Of the 83 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 425 A: BUK7S0R7-40H and PSMNR70-40SSH."
     },
     {
       "id": "corpus:id-max:N|40|Tmb = 25 °C; VGS = 5 V",
@@ -549,9 +722,32 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": false,
       "candidates": 16,
       "expected": "BUK961R6-40E",
-      "got": "Of the 12 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 100 A: BUK9Y3R0-40E."
+      "got": "Of the 14 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 100 A: BUK9Y3R0-40E."
+    },
+    {
+      "id": "corpus:id-max:N|40|VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK9D23-40E | BUK7D25-40E | BUK6D23-40E",
+      "got": "Of the 4 parts in this corpus, specified at VGS = 10 V, the highest I_D is 19 A: BUK9D23-40E, BUK7D25-40E and BUK6D23-40E."
+    },
+    {
+      "id": "corpus:id-max:N|60|Tamb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 11,
+      "expected": "PMN40SNA",
+      "got": "Of the 9 parts in this corpus, specified at Tamb = 100 °C; VGS = 10 V, the highest I_D is 3 A: PMN40SNA."
     },
     {
       "id": "corpus:id-max:N|60|Tamb = 25 °C; VGS = 10 V",
@@ -559,9 +755,32 @@
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": false,
       "candidates": 15,
       "expected": "BUK7D36-60E",
-      "got": "Of the 11 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 4.7 A: PMN40SNA."
+      "got": "Of the 10 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 4.7 A: PMN40SNA."
+    },
+    {
+      "id": "corpus:id-max:N|60|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 32,
+      "expected": "BUK7Y4R8-60E",
+      "got": "Of the 13 parts in this corpus, specified at Tmb = 100 °C; VGS = 10 V, the highest I_D is 83.4 A: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:id-max:N|60|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 19,
+      "expected": "BUK9Y4R8-60E",
+      "got": "Of the 6 parts in this corpus, specified at Tmb = 100 °C; VGS = 5 V, the highest I_D is 33 A: BUK9M15-60E."
     },
     {
       "id": "corpus:id-max:N|60|Tmb = 25 °C; VGS = 10 V",
@@ -569,9 +788,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 32,
       "expected": "PSMN3R0-60BS | BUK7Y7R2-60E | BUK7Y6R0-60E | BUK7Y4R8-60E",
-      "got": "Of the 27 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 100 A: PSMN3R0-60BS, BUK7Y7R2-60E, BUK7Y6R0-60E and BUK7Y4R8-60E."
+      "got": "Of the 29 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 100 A: PSMN3R0-60BS, BUK7Y7R2-60E, BUK7Y6R0-60E and BUK7Y4R8-60E."
     },
     {
       "id": "corpus:id-max:N|60|Tmb = 25 °C; VGS = 5 V",
@@ -579,9 +799,43 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 19,
       "expected": "PSMN5R6-60YL | BUK9Y4R8-60E | BUK9Y6R0-60E",
-      "got": "Of the 13 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 100 A: BUK9Y4R8-60E."
+      "got": "Of the 14 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 100 A: BUK9Y4R8-60E."
+    },
+    {
+      "id": "corpus:id-max:N|60|VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK7D36-60E",
+      "got": "Of the 4 parts in this corpus, specified at VGS = 10 V, the highest I_D is 14 A: BUK7D36-60E."
+    },
+    {
+      "id": "corpus:id-max:N|80|Tmb = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 42,
+      "expected": "PSMNR90-80CSF | PSMNR90-80ASF",
+      "got": "Of the 20 parts in this corpus, specified at Tmb = 100 °C; VGS = 10 V, the highest I_D is 495 A: PSMN1R0-80CSE."
+    },
+    {
+      "id": "corpus:id-max:N|80|Tmb = 100 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 9,
+      "expected": "BUK9Y11-80E | PSMN010-80YL",
+      "got": "Of the 2 parts in this corpus, specified at Tmb = 100 °C; VGS = 5 V, the highest I_D is 26 A: BUK9M23-80E."
     },
     {
       "id": "corpus:id-max:N|80|Tmb = 25 °C; VGS = 10 V",
@@ -589,9 +843,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 42,
       "expected": "PSMNR90-80CSF | PSMNR90-80ASF",
-      "got": "Of the 41 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 505 A: PSMNR90-80CSF and PSMNR90-80ASF."
+      "got": "Of the 40 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 505 A: PSMNR90-80CSF and PSMNR90-80ASF."
     },
     {
       "id": "corpus:id-max:N|80|Tmb = 25 °C; VGS = 5 V",
@@ -599,9 +854,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 10,
       "expected": "BUK9Y11-80E | PSMN010-80YL",
-      "got": "Of the 7 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 84 A: PSMN010-80YL."
+      "got": "Of the 8 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 84 A: PSMN010-80YL."
+    },
+    {
+      "id": "corpus:id-max:P|12|Tamb = 100 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 6,
+      "expected": "PMPB08R4VP",
+      "got": "Of the 1 parts in this corpus, specified at Tamb = 100 °C; VGS = -4.5 V, the highest I_D is 5.2 A: PMPB15XPA."
     },
     {
       "id": "corpus:id-max:P|12|Tamb = 25 °C; VGS = -4.5 V",
@@ -609,19 +876,43 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 6,
       "expected": "PMPB08R4VP",
       "got": "Of the 6 parts in this corpus, specified at Tamb = 25 °C; VGS = -4.5 V, the highest I_D is 12 A: PMPB08R4VP."
     },
     {
-      "id": "corpus:id-max:P|20|Tamb = 25 °C; VGS = -4.5 V",
+      "id": "corpus:id-max:P|20|Tamb = 100 °C; VGS = -4.5 V",
       "kind": "superlative-part",
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 28,
+      "expected": "PMPB12R5UPE",
+      "got": "Of the 14 parts in this corpus, specified at Tamb = 100 °C; VGS = -4.5 V, the highest I_D is 3.4 A: PMN30XPEA."
+    },
+    {
+      "id": "corpus:id-max:P|20|Tamb = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 30,
       "expected": "PMPB12R5UPE",
-      "got": "Of the 27 parts in this corpus, specified at Tamb = 25 °C; VGS = -4.5 V, the highest I_D is 10.3 A: PMPB20XPE."
+      "got": "Of the 21 parts in this corpus, specified at Tamb = 25 °C; VGS = -4.5 V, the highest I_D is 9.4 A: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:id-max:P|30|Tamb = 100 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 10,
+      "expected": "PMPB12R5EP",
+      "got": "Of the 1 parts in this corpus, specified at Tamb = 100 °C; VGS = -10 V, the highest I_D is 3.9 A: PMPB27EPA."
     },
     {
       "id": "corpus:id-max:P|30|Tamb = 25 °C; VGS = -10 V",
@@ -629,9 +920,76 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 10,
       "expected": "PMPB14R0EP",
-      "got": "Of the 10 parts in this corpus, specified at Tamb = 25 °C; VGS = -10 V, the highest I_D is 9 A: PMPB14R0EP."
+      "got": "Of the 9 parts in this corpus, specified at Tamb = 25 °C; VGS = -10 V, the highest I_D is 9 A: PMPB14R0EP."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 39,
+      "expected": "1.6mΩ",
+      "got": "Of the 39 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.6 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "27.2mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 125 °C; VGS = 10 V, the lowest R_DS(on) is 27.2 mΩ: BUK9M16-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "41mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 125 °C; VGS = 4.5 V, the lowest R_DS(on) is 41 mΩ: BUK9M16-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 51,
+      "expected": "2.3mΩ",
+      "got": "Of the 50 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 2.3 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "52.6mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 52.6 mΩ: BUK9M16-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "33.1mΩ",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 33.1 mΩ: BUK9Y12-100E and PSMN012-100YL."
     },
     {
       "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 10 V",
@@ -639,9 +997,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 46,
+      "winnerInPool": true,
+      "candidates": 69,
       "expected": "0.99mΩ",
-      "got": "Of the 63 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.99 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+      "got": "Of the 69 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.99 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 7,
+      "expected": "23mΩ",
+      "got": "Of the 7 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 23 mΩ: BUK9M16-100L."
     },
     {
       "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 5 V",
@@ -649,9 +1019,54 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 15,
+      "winnerInPool": true,
+      "candidates": 18,
       "expected": "12mΩ",
-      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 12 mΩ: BUK9Y12-100E."
+      "got": "Of the 17 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 12 mΩ: BUK9Y12-100E and PSMN012-100YL."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 17,
+      "expected": "1.35mΩ",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 25 °C; VGS = 7 V, the lowest R_DS(on) is 1.35 mΩ: BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "21mΩ",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 150 °C; VGS = 4.5 V, the lowest R_DS(on) is 21 mΩ: PMPB10XNE."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 1.8 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "25mΩ",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 25 °C; VGS = 1.8 V, the lowest R_DS(on) is 25 mΩ: PMPB10XNE."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 12,
+      "expected": "18mΩ",
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = 2.5 V, the lowest R_DS(on) is 18 mΩ: PMPB10XNE."
     },
     {
       "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 4.5 V",
@@ -659,9 +1074,54 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 12,
       "expected": "14mΩ",
-      "got": "Of the 11 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB10XNE."
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB10XNE."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 10,
+      "expected": "1.01mΩ",
+      "got": "Of the 8 parts in this corpus, specified at Tj = 150 °C; VGS = 10 V, the lowest R_DS(on) is 1.01 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "1.46mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 150 °C; VGS = 4.5 V, the lowest R_DS(on) is 1.46 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 8,
+      "expected": "1.45mΩ",
+      "got": "Of the 8 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 1.45 mΩ: PSMN0R9-25YLD."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 8,
+      "expected": "2.04mΩ",
+      "got": "Of the 7 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 2.04 mΩ: PSMN0R9-25YLD."
     },
     {
       "id": "corpus:rdson-min-value:N|25|Tj = 25 °C; VGS = 10 V",
@@ -669,9 +1129,98 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 12,
+      "winnerInPool": true,
+      "candidates": 18,
       "expected": "0.57mΩ",
       "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.57 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|25|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "0.82mΩ",
+      "got": "Of the 15 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.82 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "1.5mΩ",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.5 mΩ: PSMNR90-30BL."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 58,
+      "expected": "1.23mΩ",
+      "got": "Of the 53 parts in this corpus, specified at Tj = 150 °C; VGS = 10 V, the lowest R_DS(on) is 1.23 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 39,
+      "expected": "1.65mΩ",
+      "got": "Of the 35 parts in this corpus, specified at Tj = 150 °C; VGS = 4.5 V, the lowest R_DS(on) is 1.65 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 150 °C; VGS = 7 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "1.9mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 150 °C; VGS = 7 V, the lowest R_DS(on) is 1.9 mΩ: PSMNR67-30YLE."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 18,
+      "expected": "2mΩ",
+      "got": "Of the 18 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 2 mΩ: PSMNR90-30BL."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "9.8mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 9.8 mΩ: BUK9M5R2-30E."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 1.8 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "20.1mΩ",
+      "got": "Of the 15 parts in this corpus, specified at Tj = 25 °C; VGS = 1.8 V, the lowest R_DS(on) is 20.1 mΩ: PMPB09R1XN."
     },
     {
       "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 10 V",
@@ -679,19 +1228,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 51,
+      "winnerInPool": true,
+      "candidates": 82,
       "expected": "0.67mΩ",
-      "got": "Of the 74 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
+      "got": "Of the 81 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "12.1mΩ",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 25 °C; VGS = 2.5 V, the lowest R_DS(on) is 12.1 mΩ: PMPB06R3XN."
     },
     {
       "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-value",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
-      "candidates": 18,
-      "expected": "1.6mΩ",
-      "got": "Of the 72 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
+      "winnerInPool": true,
+      "candidates": 86,
+      "expected": "0.9mΩ",
+      "got": "Of the 80 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
     },
     {
       "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 5 V",
@@ -699,19 +1261,153 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 6,
       "expected": "5.2mΩ",
       "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 5.2 mΩ: BUK9M5R2-30E."
     },
     {
-      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 10 V",
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "1mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = 7 V, the lowest R_DS(on) is 1 mΩ: PSMNR67-30YLE."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|VGS = 10 V",
       "kind": "superlative-value",
       "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
-      "candidates": 89,
+      "winnerInPool": false,
+      "candidates": 14,
+      "expected": "1.25mΩ",
+      "got": "Of the 81 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|30|VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 4,
+      "expected": "1.65mΩ",
+      "got": "Of the 80 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "2mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.68 mΩ: PSMN1R1-40BS."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 37,
+      "expected": "1.11mΩ",
+      "got": "Of the 37 parts in this corpus, specified at Tj = 105 °C; VGS = 10 V, the lowest R_DS(on) is 1.11 mΩ: BUK7S0R7-40H."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 105 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "1.9mΩ",
+      "got": "Of the 13 parts in this corpus, specified at Tj = 105 °C; VGS = 4.5 V, the lowest R_DS(on) is 1.9 mΩ: BUK9J0R9-40H."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 37,
+      "expected": "1.23mΩ",
+      "got": "Of the 37 parts in this corpus, specified at Tj = 125 °C; VGS = 10 V, the lowest R_DS(on) is 1.23 mΩ: BUK7S0R7-40H."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "2.1mΩ",
+      "got": "Of the 14 parts in this corpus, specified at Tj = 125 °C; VGS = 4.5 V, the lowest R_DS(on) is 2.1 mΩ: BUK9J0R9-40H."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 92,
+      "expected": "1.53mΩ",
+      "got": "Of the 91 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 1.53 mΩ: BUK7S0R7-40H."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 28,
+      "expected": "2.6mΩ",
+      "got": "Of the 24 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 2.6 mΩ: PSMNR90-40YLH and BUK9J0R9-40H."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "3.1mΩ",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 3.1 mΩ: BUK961R6-40E."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 110,
       "expected": "0.7mΩ",
-      "got": "Of the 91 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.43 mΩ: BUK7S0R7-40H."
+      "got": "Of the 110 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.7 mΩ: BUK7S0R7-40H and PSMNR70-40SSH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 38,
+      "expected": "1.2mΩ",
+      "got": "Of the 34 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.97 mΩ: BUK9J0R9-40H."
     },
     {
       "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 5 V",
@@ -719,9 +1415,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 16,
       "expected": "1.6mΩ",
-      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 1.6 mΩ: BUK961R6-40E."
+      "got": "Of the 16 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 1.6 mΩ: BUK961R6-40E."
     },
     {
       "id": "corpus:rdson-min-value:N|55|Tj = 25 °C; VGS = 10 V",
@@ -729,29 +1426,186 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 4,
+      "winnerInPool": true,
+      "candidates": 5,
       "expected": "1.03mΩ",
-      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 1.03 mΩ: PSMN1R2-55SLH."
+      "got": "Of the 5 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 1.03 mΩ: PSMN1R2-55SLH."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "5.1mΩ",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 5.1 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "106mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 150 °C; VGS = 10 V, the lowest R_DS(on) is 106 mΩ: PMPB55ENEA."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 45,
+      "expected": "7.3mΩ",
+      "got": "Of the 44 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 7.3 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "28.8mΩ",
+      "got": "Of the 3 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 28.8 mΩ: PSMN011-60ML."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 19,
+      "expected": "10.8mΩ",
+      "got": "Of the 19 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 10.8 mΩ: BUK9Y4R8-60E."
     },
     {
       "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
-      "candidates": 41,
-      "expected": "4mΩ",
-      "got": "Of the 64 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
+      "winnerInPool": true,
+      "candidates": 68,
+      "expected": "3.2mΩ",
+      "got": "Of the 68 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 17,
+      "expected": "13.1mΩ",
+      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 13.1 mΩ: PSMN011-60ML."
     },
     {
       "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 19,
       "expected": "4.8mΩ",
-      "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 3.3 mΩ: BUK9Y4R8-60E."
+      "got": "Of the 19 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 4.8 mΩ: BUK9Y4R8-60E."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|60|VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 5,
+      "expected": "8.3mΩ",
+      "got": "Of the 68 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 28,
+      "expected": "1.3mΩ",
+      "got": "Of the 27 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.3 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "3.8mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 105 °C; VGS = 10 V, the lowest R_DS(on) is 3.8 mΩ: BUK7J2R4-80M."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "4.3mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 125 °C; VGS = 10 V, the lowest R_DS(on) is 4.3 mΩ: BUK7J2R4-80M."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "30.2mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 125 °C; VGS = 4.5 V, the lowest R_DS(on) is 30.2 mΩ: BUK9K12-80L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 42,
+      "expected": "2mΩ",
+      "got": "Of the 42 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 2 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "39mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 39 mΩ: BUK9K12-80L."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 11,
+      "expected": "27.6mΩ",
+      "got": "Of the 11 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 27.6 mΩ: BUK9Y11-80E and PSMN010-80YL."
     },
     {
       "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 10 V",
@@ -759,19 +1613,87 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 31,
+      "winnerInPool": true,
+      "candidates": 54,
       "expected": "0.85mΩ",
-      "got": "Of the 52 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
+      "got": "Of the 54 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "17mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 17 mΩ: BUK9K12-80L."
     },
     {
       "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
       "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 11,
+      "expected": "11mΩ",
+      "got": "Of the 11 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 11 mΩ: BUK9Y11-80E and PSMN010-80YL."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "1.22mΩ",
+      "got": "Of the 5 parts in this corpus, specified at Tj = 25 °C; VGS = 7 V, the lowest R_DS(on) is 1.22 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min-value:N|80|VGS = 10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
       "outcome": "wrong",
       "sawWinner": null,
-      "candidates": 10,
-      "expected": "11mΩ",
-      "got": "Of the 9 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 8.1 mΩ: PSMN010-80YL."
+      "winnerInPool": false,
+      "candidates": 5,
+      "expected": "13.4mΩ",
+      "got": "Of the 54 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "14mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 150 °C; VGS = -4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB08R4VP."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "20mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -1.8 V, the lowest R_DS(on) is 20 mΩ: PMPB08R4VP."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "14mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -2.5 V, the lowest R_DS(on) is 14 mΩ: PMPB08R4VP."
     },
     {
       "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -4.5 V",
@@ -779,9 +1701,65 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 6,
       "expected": "9.6mΩ",
       "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 9.6 mΩ: PMPB08R4VP."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 22,
+      "expected": "22mΩ",
+      "got": "Of the 23 parts in this corpus, specified at Tj = 150 °C; VGS = -4.5 V, the lowest R_DS(on) is 22 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 175 °C; VGS = -8 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "50mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 175 °C; VGS = -8 V, the lowest R_DS(on) is 50 mΩ: BUK4D38-20P and PMN30XPEA."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -1.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "75mΩ",
+      "got": "Of the 2 parts in this corpus, specified at Tj = 25 °C; VGS = -1.5 V, the lowest R_DS(on) is 75 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "35mΩ",
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -1.8 V, the lowest R_DS(on) is 35 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 28,
+      "expected": "21mΩ",
+      "got": "Of the 27 parts in this corpus, specified at Tj = 25 °C; VGS = -2.5 V, the lowest R_DS(on) is 21 mΩ: PMPB12R5UPE."
     },
     {
       "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -4.5 V",
@@ -789,9 +1767,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 26,
+      "winnerInPool": true,
+      "candidates": 29,
       "expected": "14.4mΩ",
       "got": "Of the 30 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 14.4 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -8 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "33mΩ",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -8 V, the lowest R_DS(on) is 33 mΩ: BUK4D38-20P, PMV30XPA and PMN30XPEA."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|30|Tj = 150 °C; VGS = -10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 10,
+      "expected": "24mΩ",
+      "got": "Of the 10 parts in this corpus, specified at Tj = 150 °C; VGS = -10 V, the lowest R_DS(on) is 24 mΩ: PMPB12R5EP."
     },
     {
       "id": "corpus:rdson-min-value:P|30|Tj = 25 °C; VGS = -10 V",
@@ -799,9 +1800,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 12,
       "expected": "10mΩ",
       "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 10 mΩ: BUK6Y10-30P."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|30|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 13,
+      "expected": "21mΩ",
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 21 mΩ: PMPB12R5EP."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|60|Tj = 175 °C; VGS = -10 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "69mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 175 °C; VGS = -10 V, the lowest R_DS(on) is 69 mΩ: BUK6Y33-60P."
     },
     {
       "id": "corpus:rdson-min-value:P|60|Tj = 25 °C; VGS = -10 V",
@@ -809,9 +1833,87 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 4,
       "expected": "33mΩ",
       "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 33 mΩ: BUK6Y33-60P."
+    },
+    {
+      "id": "corpus:rdson-min-value:P|60|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-value",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "36mΩ",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 36 mΩ: BUK6Y33-60P."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 39,
+      "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
+      "got": "Of the 39 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.6 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK9M16-100L",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 125 °C; VGS = 10 V, the lowest R_DS(on) is 27.2 mΩ: BUK9M16-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK9M16-100L",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 125 °C; VGS = 4.5 V, the lowest R_DS(on) is 41 mΩ: BUK9M16-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 51,
+      "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
+      "got": "Of the 50 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 2.3 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK9M16-100L",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 52.6 mΩ: BUK9M16-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "BUK9Y12-100E | PSMN012-100YL",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 33.1 mΩ: BUK9Y12-100E and PSMN012-100YL."
     },
     {
       "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 10 V",
@@ -819,9 +1921,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 46,
+      "winnerInPool": true,
+      "candidates": 69,
       "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
-      "got": "Of the 63 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.99 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+      "got": "Of the 69 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.99 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 7,
+      "expected": "BUK9M16-100L",
+      "got": "Of the 7 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 23 mΩ: BUK9M16-100L."
     },
     {
       "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 5 V",
@@ -829,9 +1943,54 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 15,
+      "winnerInPool": true,
+      "candidates": 18,
       "expected": "BUK9Y12-100E | PSMN012-100YL",
-      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 12 mΩ: BUK9Y12-100E."
+      "got": "Of the 17 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 12 mΩ: BUK9Y12-100E and PSMN012-100YL."
+    },
+    {
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 17,
+      "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 25 °C; VGS = 7 V, the lowest R_DS(on) is 1.35 mΩ: BUK7A1R0-100L."
+    },
+    {
+      "id": "corpus:rdson-min:N|20|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "PMPB10XNE",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 150 °C; VGS = 4.5 V, the lowest R_DS(on) is 21 mΩ: PMPB10XNE."
+    },
+    {
+      "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 1.8 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "PMPB10XNE",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 25 °C; VGS = 1.8 V, the lowest R_DS(on) is 25 mΩ: PMPB10XNE."
+    },
+    {
+      "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 12,
+      "expected": "PMPB10XNE",
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = 2.5 V, the lowest R_DS(on) is 18 mΩ: PMPB10XNE."
     },
     {
       "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 4.5 V",
@@ -839,9 +1998,54 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 12,
       "expected": "PMPB10XNE",
-      "got": "Of the 11 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB10XNE."
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB10XNE."
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 10,
+      "expected": "PSMNR51-25YLH",
+      "got": "Of the 8 parts in this corpus, specified at Tj = 150 °C; VGS = 10 V, the lowest R_DS(on) is 1.01 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "PSMNR51-25YLH",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 150 °C; VGS = 4.5 V, the lowest R_DS(on) is 1.46 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 8,
+      "expected": "PSMN0R9-25YLD",
+      "got": "Of the 8 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 1.45 mΩ: PSMN0R9-25YLD."
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 8,
+      "expected": "PSMN0R9-25YLD",
+      "got": "Of the 7 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 2.04 mΩ: PSMN0R9-25YLD."
     },
     {
       "id": "corpus:rdson-min:N|25|Tj = 25 °C; VGS = 10 V",
@@ -849,9 +2053,98 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 12,
+      "winnerInPool": true,
+      "candidates": 18,
       "expected": "PSMNR51-25YLH",
       "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.57 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|25|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "PSMNR51-25YLH",
+      "got": "Of the 15 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.82 mΩ: PSMNR51-25YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "PSMNR90-30BL",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.5 mΩ: PSMNR90-30BL."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 58,
+      "expected": "PSMNR58-30YLH",
+      "got": "Of the 53 parts in this corpus, specified at Tj = 150 °C; VGS = 10 V, the lowest R_DS(on) is 1.23 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 150 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 39,
+      "expected": "PSMNR58-30YLH",
+      "got": "Of the 35 parts in this corpus, specified at Tj = 150 °C; VGS = 4.5 V, the lowest R_DS(on) is 1.65 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 150 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "PSMNR67-30YLE",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 150 °C; VGS = 7 V, the lowest R_DS(on) is 1.9 mΩ: PSMNR67-30YLE."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 18,
+      "expected": "PSMNR90-30BL",
+      "got": "Of the 18 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 2 mΩ: PSMNR90-30BL."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "BUK9M5R2-30E",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 9.8 mΩ: BUK9M5R2-30E."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 1.8 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "PMPB09R1XN",
+      "got": "Of the 15 parts in this corpus, specified at Tj = 25 °C; VGS = 1.8 V, the lowest R_DS(on) is 20.1 mΩ: PMPB09R1XN."
     },
     {
       "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 10 V",
@@ -859,19 +2152,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 51,
+      "winnerInPool": true,
+      "candidates": 82,
       "expected": "PSMNR58-30YLH",
-      "got": "Of the 74 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
+      "got": "Of the 81 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 2.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "PMPB06R3XN",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 25 °C; VGS = 2.5 V, the lowest R_DS(on) is 12.1 mΩ: PMPB06R3XN."
     },
     {
       "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
-      "candidates": 18,
-      "expected": "PSMN1R2-30YLD",
-      "got": "Of the 72 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
+      "winnerInPool": true,
+      "candidates": 86,
+      "expected": "PSMNR58-30YLH",
+      "got": "Of the 80 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
     },
     {
       "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 5 V",
@@ -879,9 +2185,131 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 6,
       "expected": "BUK9M5R2-30E",
       "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 5.2 mΩ: BUK9M5R2-30E."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "PSMNR67-30YLE",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = 7 V, the lowest R_DS(on) is 1 mΩ: PSMNR67-30YLE."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 14,
+      "expected": "PSMN1R2-30YLC",
+      "got": "Of the 81 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|30|VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 4,
+      "expected": "PSMN1R2-30YLC",
+      "got": "Of the 80 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "PSMN1R1-40BS",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.68 mΩ: PSMN1R1-40BS."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 37,
+      "expected": "BUK7S0R7-40H",
+      "got": "Of the 37 parts in this corpus, specified at Tj = 105 °C; VGS = 10 V, the lowest R_DS(on) is 1.11 mΩ: BUK7S0R7-40H."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 105 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "BUK9J0R9-40H",
+      "got": "Of the 13 parts in this corpus, specified at Tj = 105 °C; VGS = 4.5 V, the lowest R_DS(on) is 1.9 mΩ: BUK9J0R9-40H."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 37,
+      "expected": "BUK7S0R7-40H",
+      "got": "Of the 37 parts in this corpus, specified at Tj = 125 °C; VGS = 10 V, the lowest R_DS(on) is 1.23 mΩ: BUK7S0R7-40H."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "BUK9J0R9-40H",
+      "got": "Of the 14 parts in this corpus, specified at Tj = 125 °C; VGS = 4.5 V, the lowest R_DS(on) is 2.1 mΩ: BUK9J0R9-40H."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 92,
+      "expected": "BUK7S0R7-40H",
+      "got": "Of the 91 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 1.53 mΩ: BUK7S0R7-40H."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 28,
+      "expected": "PSMNR90-40YLH | BUK9J0R9-40H",
+      "got": "Of the 24 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 2.6 mΩ: PSMNR90-40YLH and BUK9J0R9-40H."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 16,
+      "expected": "BUK961R6-40E",
+      "got": "Of the 16 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 3.1 mΩ: BUK961R6-40E."
     },
     {
       "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 10 V",
@@ -889,9 +2317,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 89,
+      "winnerInPool": true,
+      "candidates": 110,
       "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
-      "got": "Of the 91 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.43 mΩ: BUK7S0R7-40H."
+      "got": "Of the 110 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.7 mΩ: BUK7S0R7-40H and PSMNR70-40SSH."
+    },
+    {
+      "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 38,
+      "expected": "PSMNR90-40YLH | BUK9J0R9-40H",
+      "got": "Of the 34 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.97 mΩ: BUK9J0R9-40H."
     },
     {
       "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 5 V",
@@ -899,9 +2339,10 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 16,
       "expected": "BUK961R6-40E",
-      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 1.6 mΩ: BUK961R6-40E."
+      "got": "Of the 16 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 1.6 mΩ: BUK961R6-40E."
     },
     {
       "id": "corpus:rdson-min:N|55|Tj = 25 °C; VGS = 10 V",
@@ -909,19 +2350,87 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 4,
+      "winnerInPool": true,
+      "candidates": 5,
       "expected": "PSMN1R2-55SLH",
-      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 1.03 mΩ: PSMN1R2-55SLH."
+      "got": "Of the 5 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 1.03 mΩ: PSMN1R2-55SLH."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 9,
+      "expected": "PSMN3R0-60BS",
+      "got": "Of the 9 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 5.1 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 150 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "PMPB55ENEA",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 150 °C; VGS = 10 V, the lowest R_DS(on) is 106 mΩ: PMPB55ENEA."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 45,
+      "expected": "PSMN3R0-60BS",
+      "got": "Of the 44 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 7.3 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "PSMN011-60ML",
+      "got": "Of the 3 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 28.8 mΩ: PSMN011-60ML."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 19,
+      "expected": "BUK9Y4R8-60E",
+      "got": "Of the 19 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 10.8 mΩ: BUK9Y4R8-60E."
     },
     {
       "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
       "route": "catalog",
-      "outcome": "wrong",
+      "outcome": "correct",
       "sawWinner": null,
-      "candidates": 41,
-      "expected": "PSMN4R0-60YS",
-      "got": "Of the 64 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
+      "winnerInPool": true,
+      "candidates": 68,
+      "expected": "PSMN3R0-60BS",
+      "got": "Of the 68 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 17,
+      "expected": "PSMN011-60ML",
+      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 13.1 mΩ: PSMN011-60ML."
     },
     {
       "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 5 V",
@@ -929,9 +2438,98 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 19,
       "expected": "BUK9Y4R8-60E",
-      "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 3.3 mΩ: BUK9Y4R8-60E."
+      "got": "Of the 19 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 4.8 mΩ: BUK9Y4R8-60E."
+    },
+    {
+      "id": "corpus:rdson-min:N|60|VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 5,
+      "expected": "PSMN5R5-60YS",
+      "got": "Of the 68 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 100 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 28,
+      "expected": "PSMNR90-80ASF",
+      "got": "Of the 27 parts in this corpus, specified at Tj = 100 °C; VGS = 10 V, the lowest R_DS(on) is 1.3 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 105 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK7J2R4-80M",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 105 °C; VGS = 10 V, the lowest R_DS(on) is 3.8 mΩ: BUK7J2R4-80M."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 125 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "BUK7J2R4-80M",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 125 °C; VGS = 10 V, the lowest R_DS(on) is 4.3 mΩ: BUK7J2R4-80M."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 125 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK9K12-80L",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 125 °C; VGS = 4.5 V, the lowest R_DS(on) is 30.2 mΩ: BUK9K12-80L."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 175 °C; VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 42,
+      "expected": "PSMNR90-80ASF",
+      "got": "Of the 42 parts in this corpus, specified at Tj = 175 °C; VGS = 10 V, the lowest R_DS(on) is 2 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 175 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK9K12-80L",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 175 °C; VGS = 4.5 V, the lowest R_DS(on) is 39 mΩ: BUK9K12-80L."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 175 °C; VGS = 5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 11,
+      "expected": "BUK9Y11-80E | PSMN010-80YL",
+      "got": "Of the 11 parts in this corpus, specified at Tj = 175 °C; VGS = 5 V, the lowest R_DS(on) is 27.6 mΩ: BUK9Y11-80E and PSMN010-80YL."
     },
     {
       "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 10 V",
@@ -939,9 +2537,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 31,
+      "winnerInPool": true,
+      "candidates": 54,
       "expected": "PSMNR90-80ASF",
-      "got": "Of the 52 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
+      "got": "Of the 54 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "BUK9K12-80L",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 17 mΩ: BUK9K12-80L."
     },
     {
       "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 5 V",
@@ -949,9 +2559,65 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 10,
+      "winnerInPool": true,
+      "candidates": 11,
       "expected": "BUK9Y11-80E | PSMN010-80YL",
-      "got": "Of the 9 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 8.1 mΩ: PSMN010-80YL."
+      "got": "Of the 11 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 11 mΩ: BUK9Y11-80E and PSMN010-80YL."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 7 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "PSMNR90-80ASF",
+      "got": "Of the 5 parts in this corpus, specified at Tj = 25 °C; VGS = 7 V, the lowest R_DS(on) is 1.22 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min:N|80|VGS = 10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
+      "winnerInPool": false,
+      "candidates": 5,
+      "expected": "PSMN8R2-80YS",
+      "got": "Of the 54 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
+    },
+    {
+      "id": "corpus:rdson-min:P|12|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "PMPB08R4VP",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 150 °C; VGS = -4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB08R4VP."
+    },
+    {
+      "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "PMPB08R4VP",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -1.8 V, the lowest R_DS(on) is 20 mΩ: PMPB08R4VP."
+    },
+    {
+      "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "PMPB08R4VP",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -2.5 V, the lowest R_DS(on) is 14 mΩ: PMPB08R4VP."
     },
     {
       "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -4.5 V",
@@ -959,9 +2625,65 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 6,
       "expected": "PMPB08R4VP",
       "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 9.6 mΩ: PMPB08R4VP."
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 150 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 22,
+      "expected": "PMPB12R5UPE",
+      "got": "Of the 23 parts in this corpus, specified at Tj = 150 °C; VGS = -4.5 V, the lowest R_DS(on) is 22 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 175 °C; VGS = -8 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "BUK4D38-20P | PMN30XPEA",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 175 °C; VGS = -8 V, the lowest R_DS(on) is 50 mΩ: BUK4D38-20P and PMN30XPEA."
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -1.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "PMPB12R5UPE",
+      "got": "Of the 2 parts in this corpus, specified at Tj = 25 °C; VGS = -1.5 V, the lowest R_DS(on) is 75 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -1.8 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 15,
+      "expected": "PMPB12R5UPE",
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -1.8 V, the lowest R_DS(on) is 35 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -2.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 28,
+      "expected": "PMPB12R5UPE",
+      "got": "Of the 27 parts in this corpus, specified at Tj = 25 °C; VGS = -2.5 V, the lowest R_DS(on) is 21 mΩ: PMPB12R5UPE."
     },
     {
       "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -4.5 V",
@@ -969,9 +2691,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
-      "candidates": 26,
+      "winnerInPool": true,
+      "candidates": 29,
       "expected": "PMPB12R5UPE",
       "got": "Of the 30 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 14.4 mΩ: PMPB12R5UPE."
+    },
+    {
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -8 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 6,
+      "expected": "BUK4D38-20P | PMV30XPA | PMN30XPEA",
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -8 V, the lowest R_DS(on) is 33 mΩ: BUK4D38-20P, PMV30XPA and PMN30XPEA."
+    },
+    {
+      "id": "corpus:rdson-min:P|30|Tj = 150 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 10,
+      "expected": "PMPB12R5EP",
+      "got": "Of the 10 parts in this corpus, specified at Tj = 150 °C; VGS = -10 V, the lowest R_DS(on) is 24 mΩ: PMPB12R5EP."
     },
     {
       "id": "corpus:rdson-min:P|30|Tj = 25 °C; VGS = -10 V",
@@ -979,9 +2724,32 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 12,
       "expected": "BUK6Y10-30P",
       "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 10 mΩ: BUK6Y10-30P."
+    },
+    {
+      "id": "corpus:rdson-min:P|30|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 13,
+      "expected": "PMPB12R5EP",
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 21 mΩ: PMPB12R5EP."
+    },
+    {
+      "id": "corpus:rdson-min:P|60|Tj = 175 °C; VGS = -10 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK6Y33-60P",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 175 °C; VGS = -10 V, the lowest R_DS(on) is 69 mΩ: BUK6Y33-60P."
     },
     {
       "id": "corpus:rdson-min:P|60|Tj = 25 °C; VGS = -10 V",
@@ -989,9 +2757,21 @@
       "route": "catalog",
       "outcome": "correct",
       "sawWinner": null,
+      "winnerInPool": true,
       "candidates": 4,
       "expected": "BUK6Y33-60P",
       "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 33 mΩ: BUK6Y33-60P."
+    },
+    {
+      "id": "corpus:rdson-min:P|60|Tj = 25 °C; VGS = -4.5 V",
+      "kind": "superlative-part",
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
+      "winnerInPool": true,
+      "candidates": 4,
+      "expected": "BUK6Y33-60P",
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 36 mΩ: BUK6Y33-60P."
     }
   ]
 }

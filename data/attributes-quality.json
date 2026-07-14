@@ -1,21 +1,15 @@
 {
-  "generatedAt": "2026-07-14T16:00:37.739Z",
+  "generatedAt": "2026-07-14T18:02:57.779Z",
   "parts": 497,
   "agreementWithLabel": {
-    "vds": 0.9135,
-    "rdson": 0.9136,
-    "id": 0.8431,
-    "package": 0.9073,
-    "rdsonConditions": 0.9977,
-    "idConditions": 0.8753
+    "vds": 1,
+    "rdson": 0.992,
+    "id": 0.8491,
+    "package": 0.998,
+    "rdsonConditions": 0.996,
+    "idConditions": 0.8491
   },
   "disagreements": [
-    {
-      "part": "PSMN011-60ML",
-      "field": "vds",
-      "catalogue": "-60",
-      "label": "60"
-    },
     {
       "part": "PSMN028-100YS",
       "field": "id",
@@ -29,52 +23,16 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PMPB50ENE",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "PMPB50ENE",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
       "part": "PMV50UPE",
       "field": "id",
-      "catalogue": "-3.7 @ VGS = -4.5 V; Tamb = 25 °C",
+      "catalogue": "-3.7 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "-3.2 @ VGS = -4.5 V; Tamb = 25 °C"
     },
     {
-      "part": "PMPB06R2EN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PMPB12R7EP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "BUK9Y22-60EL",
-      "field": "vds",
-      "catalogue": "-60",
-      "label": "60"
-    },
-    {
-      "part": "PMN25ENE",
-      "field": "id",
-      "catalogue": "8 @ VGS = 10 V; Tamb = 25 °C",
-      "label": "6.1 @ VGS = 10 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK7880-55A",
-      "field": "vds",
-      "catalogue": "-55",
-      "label": "55"
+      "part": "PMV50UPE",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
       "part": "PSMN2R4-30MLD",
@@ -89,12 +47,6 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK7K5R6-30E",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
       "part": "BUK9D23-40E",
       "field": "id",
       "catalogue": "19 @ VGS = 10 V",
@@ -107,52 +59,52 @@
       "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK9M52-40E",
-      "field": "rdson",
-      "catalogue": "52 @ VGS = 10 V; ID = 5 A; Tj = 25 °C | 40.7 @ VGS = 5 V; ID = 5 A; Tj = 25 °C | 101 @ VGS = 5 V; ID = 5 A; Tj = 175 °C",
-      "label": "52 @ VGS = 5 V; ID = 5 A; Tj = 25 °C"
-    },
-    {
       "part": "PMPB47XP",
       "field": "id",
-      "catalogue": "-5 @ VGS = -4.5 V; Tamb = 25 °C",
+      "catalogue": "-5 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "-4 @ VGS = -4.5 V; Tamb = 25 °C"
     },
     {
-      "part": "BUK764R0-40E",
-      "field": "rdson",
-      "catalogue": "3.3 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 7.6 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "4 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
+      "part": "PMPB47XP",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
-      "part": "BUK9M3R3-40H",
+      "part": "PSMN1R5-30YL",
       "field": "rdson",
-      "catalogue": "2.7 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 2.8 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 3.1 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 3.9 @ VGS = 10 V; ID = 25 A; Tj = 175 °C | 3.4 @ VGS = 4.5 V; ID = 25 A; Tj = 25 °C | 3.5 @ VGS = 4.5 V; ID = 25 A; Tj = 105 °C | 3.9 @ VGS = 4.5 V; ID = 25 A; Tj = 125 °C | 5 @ VGS = 4.5 V; ID = 25 A; Tj = 175 °C",
-      "label": "3.3 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
+      "catalogue": "1.9 @ VGS = 4.5 V; ID = 15 A; Tj = 25 °C | 2.4 @ VGS = 10 V; ID = 15 A; Tj = 100 °C | 2.8 @ VGS = 10 V; ID = 15 A; Tj = 150 °C",
+      "label": "1.5 @ VGS = 10 V; ID = 15 A; Tj = 25 °C"
+    },
+    {
+      "part": "PSMN1R5-30YL",
+      "field": "rdsonConditions",
+      "catalogue": "Tj = 25 °C; VGS = 4.5 V | Tj = 100 °C; VGS = 10 V | Tj = 150 °C; VGS = 10 V",
+      "label": "Tj = 25 °C; VGS = 10 V"
     },
     {
       "part": "PMV75UP",
       "field": "id",
-      "catalogue": "-3.2 @ VGS = -4.5 V; Tamb = 25 °C",
+      "catalogue": "-3.2 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "-2.5 @ VGS = -4.5 V; Tamb = 25 °C"
+    },
+    {
+      "part": "PMV75UP",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
       "part": "PSMN1R4-30YLD",
       "field": "id",
-      "catalogue": "80 @ Tj = 25 °C | 40 @ Tj = 150 °C",
+      "catalogue": "80 @ VGS = 3 V; Tj = 25 °C | 40 @ VGS = 3 V; Tj = 100 °C | 40 @ VGS = 4.5 V; Tj = 25 °C | 20 @ VGS = 4.5 V; Tj = 150 °C",
       "label": "100 @ Tmb = 25 °C; VGS = 10 V"
     },
     {
       "part": "PSMN1R4-30YLD",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 150 °C",
+      "catalogue": "Tj = 25 °C; VGS = 3 V | Tj = 100 °C; VGS = 3 V | Tj = 25 °C; VGS = 4.5 V | Tj = 150 °C; VGS = 4.5 V",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "PXN7R7-25QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
     },
     {
       "part": "BUK4D110-20P",
@@ -162,51 +114,21 @@
     },
     {
       "part": "BUK4D110-20P",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK4D110-20P",
       "field": "idConditions",
       "catalogue": "VGS = -4.5 V",
       "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
-      "part": "BUK9K52-60E",
+      "part": "PMV48XP",
       "field": "rdson",
-      "catalogue": "41.4 @ VGS = 10 V; ID = 5 A; Tj = 25 °C | 47.3 @ VGS = 5 V; ID = 5 A; Tj = 25 °C | 106.9 @ VGS = 5 V; ID = 5 A; Tj = 175 °C",
-      "label": "55 @ VGS = 5 V; ID = 5 A; Tj = 25 °C"
+      "catalogue": "55 @ VGS = -4.5 V; ID = -2.4 A; Tj = 25 °C | 80 @ VGS = -4.5 V; ID = -2.4 A; Tj = 150 °C | 81 @ VGS = -2.5 V; ID = -2 A; Tj = 25 °C",
+      "label": "55 @ VGS = -4.5 V; ID = -2.4 A"
     },
     {
-      "part": "PSMN1R7-40YLD",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "BUK9M11-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "PMPB14XN",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK7S0R7-40H",
-      "field": "rdson",
-      "catalogue": "0.43 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 0.61 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 0.68 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 0.85 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "0.7 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "PSMN2R5-40YLB",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
+      "part": "PMV48XP",
+      "field": "rdsonConditions",
+      "catalogue": "Tj = 25 °C; VGS = -4.5 V | Tj = 150 °C; VGS = -4.5 V | Tj = 25 °C; VGS = -2.5 V",
+      "label": "VGS = -4.5 V"
     },
     {
       "part": "PSMN017-60YS",
@@ -223,49 +145,49 @@
     {
       "part": "PSMN5R6-60YL",
       "field": "id",
-      "catalogue": "96 @ Tj = 25°C | 72 @ Tj = 175°C",
+      "catalogue": "167 @ Tmb = 25 °C",
       "label": "100 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "PSMN5R6-60YL",
       "field": "idConditions",
-      "catalogue": "Tj = 25°C | Tj = 175°C",
+      "catalogue": "Tmb = 25 °C",
       "label": "Tmb = 25 °C; VGS = 5 V"
     },
     {
       "part": "BUK7K6R2-40E",
       "field": "id",
-      "catalogue": "20 @ Tj = 25 °C | 14 @ Tj = 100 °C | 10 @ Tj = 150 °C",
+      "catalogue": "20 @ Tj = 25 °C | 14 @ Tj = 100 °C; VGS = 10 V | 10 @ Tj = 150 °C; VGS = 10 V",
       "label": "40 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "BUK7K6R2-40E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 150 °C",
+      "catalogue": "Tj = 25 °C | Tj = 100 °C; VGS = 10 V | Tj = 150 °C; VGS = 10 V",
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK9K13-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
+      "part": "PSMN3R3-80BS",
+      "field": "id",
+      "catalogue": "120 @ VGS = 10 V; Tmb = 100 °C",
+      "label": "120 @ Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PSMNR90-30BL",
-      "field": "rdson",
-      "catalogue": "0.89 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 1.4 @ VGS = 4.5 V; ID = 25 A; Tj = 25 °C | 1.5 @ VGS = 10 V; ID = 25 A; Tj = 100 °C | 2 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "1 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
+      "part": "PSMN3R3-80BS",
+      "field": "idConditions",
+      "catalogue": "Tmb = 100 °C; VGS = 10 V",
+      "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
       "part": "PSMNR90-30BL",
       "field": "id",
-      "catalogue": "75 @ Tj = 25 °C | 60 @ Tj = 175 °C",
+      "catalogue": "75 @ Tj = 25 °C | 60 @ Tj = 100 °C | 45 @ Tj = 175 °C",
       "label": "120 @ Tmb = 25 °C; VGS = 10 V"
     },
     {
       "part": "PSMNR90-30BL",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 175 °C",
+      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 175 °C",
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
@@ -281,21 +203,9 @@
       "label": "Tmb = 25 °C"
     },
     {
-      "part": "PSMN3R3-40MLH",
-      "field": "id",
-      "catalogue": "118 @ Tmb = 25 °C",
-      "label": "118 @ VGS = 10 V; Tmb = 25 °C"
-    },
-    {
-      "part": "PSMN3R3-40MLH",
-      "field": "idConditions",
-      "catalogue": "Tmb = 25 °C",
-      "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
       "part": "BUK9K12-60E",
       "field": "id",
-      "catalogue": "16 @ Tj = 25 °C | 8 @ Tj = 175 °C",
+      "catalogue": "11.5 @ Tj = 25 °C | 8 @ Tj = 175 °C",
       "label": "35 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
@@ -305,21 +215,15 @@
       "label": "Tmb = 25 °C; VGS = 5 V"
     },
     {
-      "part": "PMPB12R5UPE",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
       "part": "BUK9Y3R5-40E",
       "field": "id",
-      "catalogue": "60 @ Tj = 25 °C | 40 @ Tj = 100 °C | 25 @ Tj = 25 °C; VGS = 5 V | 20 @ Tj = 25 °C; VGS = 10 V",
+      "catalogue": "25 @ Tj = 25 °C; VGS = 5 V; VDS = 32 V",
       "label": "100 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9Y3R5-40E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 25 °C; VGS = 5 V | Tj = 25 °C; VGS = 10 V",
+      "catalogue": "Tj = 25 °C; VDS = 32 V; VGS = 5 V",
       "label": "Tmb = 25 °C; VGS = 5 V"
     },
     {
@@ -337,44 +241,26 @@
     {
       "part": "BUK7K12-60E",
       "field": "id",
-      "catalogue": "10 @ Tj = 25 °C | 6.9 @ Tj = 100 °C | 4.8 @ Tj = 125 °C",
+      "catalogue": "1 @ VDS = 60 V; VGS = 0 V; Tj = 25 °C | 500 @ VDS = 60 V; VGS = 0 V; Tj = 175 °C",
       "label": "40 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "BUK7K12-60E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 125 °C",
+      "catalogue": "Tj = 25 °C; VDS = 60 V; VGS = 0 V | Tj = 175 °C; VDS = 60 V; VGS = 0 V",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "BUK9M10-30E",
-      "field": "rdson",
-      "catalogue": "8.1 @ VGS = 5 V; ID = 15 A; Tj = 25 °C | 7.8 @ VGS = 10 V; ID = 15 A; Tj = 25 °C | 18.7 @ VGS = 5 V; ID = 15 A; Tj = 175 °C",
-      "label": "10 @ VGS = 5 V; ID = 15 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK9K61-100L",
-      "field": "vds",
-      "catalogue": "-100",
-      "label": "100"
     },
     {
       "part": "BUK7T1R0-100L",
       "field": "id",
-      "catalogue": "460 @ Tmb = 25 °C",
+      "catalogue": "25 @ Tmb = 25 °C | 460 @ ",
       "label": "460 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "BUK7T1R0-100L",
       "field": "idConditions",
-      "catalogue": "Tmb = 25 °C",
+      "catalogue": "Tmb = 25 °C | ",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "BUK7Y3R5-40H",
-      "field": "rdson",
-      "catalogue": "2.9 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 4.1 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 4.5 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 5.4 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "3.5 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "PSMN7R0-60YS",
@@ -403,20 +289,14 @@
     {
       "part": "BUK9Y43-60E",
       "field": "id",
-      "catalogue": "43 @ Tj = 25 °C | 29 @ Tj = 100 °C | 17 @ Tj = 150 °C",
+      "catalogue": "",
       "label": "22 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9Y43-60E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 150 °C",
+      "catalogue": "",
       "label": "Tmb = 25 °C; VGS = 5 V"
-    },
-    {
-      "part": "PMPB16EP",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK7T1R4-100L",
@@ -433,62 +313,44 @@
     {
       "part": "PSMN4R2-40VSH",
       "field": "id",
-      "catalogue": "82.6 @ Tj = 25 °C | 98 @ ",
+      "catalogue": "82.6 @ Tj = 25 °C; VGS = 10 V",
       "label": "98 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "PSMN4R2-40VSH",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | ",
+      "catalogue": "Tj = 25 °C; VGS = 10 V",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "PMPB08R5XN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
     },
     {
       "part": "PMPB95ENEA",
       "field": "id",
-      "catalogue": "2.8 @ VGS = 10 V; Tj = 25 °C | 2.6 @ VGS = 4.5 V; Tj = 25 °C",
+      "catalogue": "4.1 @ VGS = 10 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "2.8 @ VGS = 10 V; Tamb = 25 °C"
     },
     {
       "part": "PMPB95ENEA",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C; VGS = 10 V | Tj = 25 °C; VGS = 4.5 V",
+      "catalogue": "Tamb = 25 °C; VGS = 10 V; t ≤ 5 s",
       "label": "Tamb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "PSMN7R5-30YLD",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
     },
     {
       "part": "PMN42XPEA",
       "field": "id",
-      "catalogue": "-5.7 @ VGS = -4.5 V; Tamb = 25 °C",
+      "catalogue": "-5.7 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "-4 @ VGS = -4.5 V; Tamb = 25 °C"
     },
     {
-      "part": "BUK9Y25-60E",
-      "field": "rdson",
-      "catalogue": "20.8 @ VGS = 5 V; ID = 10 A; Tj = 25 °C | 18.3 @ VGS = 10 V; ID = 10 A; Tj = 25 °C | 56.5 @ VGS = 5 V; ID = 10 A; Tj = 175 °C",
-      "label": "25 @ VGS = 5 V; ID = 10 A; Tj = 25 °C"
+      "part": "PMN42XPEA",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
       "part": "BUK4D38-20P",
       "field": "id",
       "catalogue": "18 @ VGS = -4.5 V",
       "label": "-6 @ VGS = -4.5 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK4D38-20P",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK4D38-20P",
@@ -504,12 +366,6 @@
     },
     {
       "part": "BUK6D38-30E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK6D38-30E",
       "field": "idConditions",
       "catalogue": "VGS = 10 V",
       "label": "Tamb = 25 °C; VGS = 10 V"
@@ -517,43 +373,37 @@
     {
       "part": "PMN40ENE",
       "field": "id",
-      "catalogue": "5.7 @ VGS = 10 V; Tamb = 25 °C",
+      "catalogue": "5.7 @ VGS = 10 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "4.5 @ VGS = 10 V; Tamb = 25 °C"
     },
     {
-      "part": "PMPB10XN",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
+      "part": "PMN40ENE",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = 10 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
       "part": "BUK9K13-60E",
       "field": "id",
-      "catalogue": "10 @ Tj = 25 °C | 6.5 @ Tj = 100 °C | 4 @ Tj = 150 °C",
+      "catalogue": "",
       "label": "40 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9K13-60E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 150 °C",
+      "catalogue": "",
       "label": "Tmb = 25 °C; VGS = 5 V"
-    },
-    {
-      "part": "PMPB19R0UPE",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
     },
     {
       "part": "PSMN0R9-30YLD",
       "field": "id",
-      "catalogue": "300 @ ",
+      "catalogue": "300 @ Tj = 25 °C",
       "label": "300 @ Tmb = 25 °C; VGS = 10 V"
     },
     {
       "part": "PSMN0R9-30YLD",
       "field": "idConditions",
-      "catalogue": "",
+      "catalogue": "Tj = 25 °C",
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
@@ -569,58 +419,16 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PMPB09R1XN",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "PMPB09R1XN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "BUK9K18-40E",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
       "part": "PMPB10XNE",
       "field": "id",
-      "catalogue": "9 @ Tj = 25 °C | 9 @ Tj = 150 °C",
+      "catalogue": "12.9 @ VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "9 @ VGS = 4.5 V; Tamb = 25 °C"
     },
     {
       "part": "PMPB10XNE",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 150 °C",
+      "catalogue": "Tamb = 25 °C; VGS = 4.5 V; t ≤ 5 s",
       "label": "Tamb = 25 °C; VGS = 4.5 V"
-    },
-    {
-      "part": "BUK9M35-80E",
-      "field": "rdson",
-      "catalogue": "35 @ VGS = 10 V; ID = 5 A; Tj = 25 °C | 28 @ VGS = 5 V; ID = 5 A; Tj = 25 °C | 88 @ VGS = 5 V; ID = 5 A; Tj = 175 °C",
-      "label": "35 @ VGS = 5 V; ID = 5 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK9Y3R0-40E",
-      "field": "rdson",
-      "catalogue": "2.47 @ VGS = 5 V; ID = 25 A; Tj = 25 °C | 1.98 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 6 @ VGS = 5 V; ID = 25 A; Tj = 175 °C",
-      "label": "3 @ VGS = 5 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "PMPB06R3XN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-4",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PSMN041-80YL",
-      "field": "vds",
-      "catalogue": "-80",
-      "label": "80"
     },
     {
       "part": "PSMN041-80YL",
@@ -635,30 +443,6 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PXN9R0-30QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
-    },
-    {
-      "part": "PSMN3R0-30YLD",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "BUK7Y3R0-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "BUK7Y3R0-40H",
-      "field": "rdson",
-      "catalogue": "2.55 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 3.6 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 4 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 5 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "3 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
       "part": "PSMN012-100YS",
       "field": "id",
       "catalogue": "43 @ Tmb = 100 °C",
@@ -669,12 +453,6 @@
       "field": "idConditions",
       "catalogue": "Tmb = 100 °C",
       "label": "Tmb = 25 °C"
-    },
-    {
-      "part": "BUK7Y2R0-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
     },
     {
       "part": "PSMN1R2-55SLH",
@@ -689,39 +467,21 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK9Y4R8-60E",
-      "field": "rdson",
-      "catalogue": "4.8 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 3.3 @ VGS = 5 V; ID = 25 A; Tj = 25 °C | 10.8 @ VGS = 5 V; ID = 25 A; Tj = 175 °C",
-      "label": "4.8 @ VGS = 5 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK7S1R2-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "BUK7S1R2-40H",
-      "field": "rdson",
-      "catalogue": "1.06 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 1.59 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 1.76 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 2.21 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "1.2 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
       "part": "PMPB20XPE",
       "field": "id",
-      "catalogue": "-7.1 @ Tj = 25 °C | -10.3 @ VGS = -4.5 V; Tamb = 25 °C",
+      "catalogue": "10.3 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "-7.2 @ VGS = -4.5 V; Tamb = 25 °C"
     },
     {
-      "part": "PSMN047-100NSE",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
+      "part": "PMPB20XPE",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
       "part": "PMV65XP",
       "field": "id",
-      "catalogue": "-4.3 @ VGS = -4.5 V",
+      "catalogue": "4.3 @ VGS = -4.5 V",
       "label": "-2.8 @ VGS = -4.5 V; Tamb = 25 °C"
     },
     {
@@ -733,8 +493,14 @@
     {
       "part": "PMPB33XP",
       "field": "id",
-      "catalogue": "-5.5 @ Tj = 25 °C | -7.9 @ VGS = -4.5 V; Tamb = 25 °C",
+      "catalogue": "-7.9 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "-5.5 @ VGS = -4.5 V; Tamb = 25 °C"
+    },
+    {
+      "part": "PMPB33XP",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
       "part": "BUK7D25-40E",
@@ -747,18 +513,6 @@
       "field": "idConditions",
       "catalogue": "VGS = 10 V",
       "label": "Tamb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "PXN5R4-30QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
-    },
-    {
-      "part": "PMPB05R4EN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-4",
-      "label": "DFN2020M-6|SOT1220"
     },
     {
       "part": "BUK7K89-100E",
@@ -775,25 +529,19 @@
     {
       "part": "PMPB85ENEA",
       "field": "id",
-      "catalogue": "4.4 @ VGS = 10 V; Tamb = 25 °C",
+      "catalogue": "4.4 @ VGS = 10 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "3 @ VGS = 10 V; Tamb = 25 °C"
     },
     {
-      "part": "PSMN6R0-30YLB",
-      "field": "package",
-      "catalogue": "LFPAK33|LFPAK56|D2PAK|Power-SO8|TO-236AB|SOT1210|SOT404|SOT669|SOT1220|SOT23",
-      "label": "LFPAK|Power-SO8|SOT669"
-    },
-    {
-      "part": "BUK9Y15-100E",
-      "field": "rdson",
-      "catalogue": "12.1 @ VGS = 5 V; ID = 20 A; Tj = 25 °C | 14.7 @ VGS = 10 V; ID = 20 A; Tj = 25 °C | 41.4 @ VGS = 5 V; ID = 20 A; Tj = 175 °C | 15 @ VGS = -10 V; VDS = 0 V; Tj = 25 °C",
-      "label": "15 @ VGS = 5 V; ID = 20 A; Tj = 25 °C"
+      "part": "PMPB85ENEA",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = 10 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
       "part": "BUK9Y15-100E",
       "field": "id",
-      "catalogue": "69 @ Tmb = 25 °C",
+      "catalogue": "274 @ Tmb = 25 °C",
       "label": "69 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
@@ -803,22 +551,10 @@
       "label": "Tmb = 25 °C; VGS = 5 V"
     },
     {
-      "part": "BUK7Y1R7-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
       "part": "BUK6D22-30E",
       "field": "id",
       "catalogue": "22 @ VGS = 10 V",
       "label": "7.2 @ VGS = 10 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK6D22-30E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK6D22-30E",
@@ -827,22 +563,10 @@
       "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PSMNR90-40YLH",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
       "part": "BUK6D120-40E",
       "field": "id",
       "catalogue": "5.7 @ VGS = 10 V",
       "label": "2.9 @ VGS = 10 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK6D120-40E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK6D120-40E",
@@ -870,12 +594,6 @@
     },
     {
       "part": "BUK6D125-60E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK6D125-60E",
       "field": "idConditions",
       "catalogue": "VGS = 10 V",
       "label": "Tamb = 25 °C; VGS = 10 V"
@@ -883,20 +601,14 @@
     {
       "part": "PMV45EN2",
       "field": "id",
-      "catalogue": "3.8 @ Tj = 25 °C | 5.1 @ VGS = 10 V; Tamb = 25 °C",
+      "catalogue": "5.1 @ VGS = 10 V; Tamb = 25 °C; t ≤ 5 s | 3.8 @ Tj = 25 °C",
       "label": "4.1 @ VGS = 10 V; Tamb = 25 °C"
     },
     {
-      "part": "BUK9Y14-80E",
-      "field": "vds",
-      "catalogue": "-80",
-      "label": "80"
-    },
-    {
-      "part": "BUK9Y14-80E",
-      "field": "rdson",
-      "catalogue": "12.2 @ VGS = 5 V; ID = 15 A; Tj = 25 °C | 11.3 @ VGS = 10 V; ID = 15 A; Tj = 25 °C | 37.65 @ VGS = 5 V; ID = 15 A; Tj = 175 °C",
-      "label": "15 @ VGS = 5 V; ID = 15 A; Tj = 25 °C"
+      "part": "PMV45EN2",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = 10 V; t ≤ 5 s | Tj = 25 °C",
+      "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
       "part": "PSMN039-100YS",
@@ -911,46 +623,28 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PMPB100ENE",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "BUK9M85-60E",
-      "field": "rdson",
-      "catalogue": "85 @ VGS = 10 V; ID = 5 A; Tj = 25 °C | 68 @ VGS = 5 V; ID = 5 A; Tj = 25 °C | 192 @ VGS = 5 V; ID = 5 A; Tj = 175 °C",
-      "label": "85 @ VGS = 5 V; ID = 5 A; Tj = 25 °C"
-    },
-    {
       "part": "PMPB15XN",
       "field": "id",
-      "catalogue": "10.4 @ VGS = 4.5 V; Tamb = 25 °C",
+      "catalogue": "10.4 @ VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "7.3 @ VGS = 4.5 V; Tamb = 25 °C"
     },
     {
-      "part": "PSMN1R8-40YLC",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
+      "part": "PMPB15XN",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = 4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = 4.5 V"
     },
     {
       "part": "PSMN019-100YL",
       "field": "id",
-      "catalogue": "15 @ Tj = 25 °C | 15 @ Tj = 100 °C is not listed, but 25 °C and 175 °C are, 100 is likely the same as 25 | 15 @ Tj = 175 °C",
+      "catalogue": "15 @ Tj = 25 °C | 15 @ Tj = 100 °C; VDS = 80 V; VGS = 10 V",
       "label": "56 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "PSMN019-100YL",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C is not listed, but 25 °C and 175 °C are, 100 is likely the same as 25 | Tj = 175 °C",
+      "catalogue": "Tj = 25 °C | Tj = 100 °C; VDS = 80 V; VGS = 10 V",
       "label": "Tmb = 25 °C; VGS = 5 V"
-    },
-    {
-      "part": "PSMN1R0-25YLD",
-      "field": "rdson",
-      "catalogue": "0.89 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 1.7 @ VGS = 10 V; ID = 25 A; Tj = 175 °C | 1.43 @ VGS = 4.5 V; ID = 25 A; Tj = 25 °C | 2.43 @ VGS = 4.5 V; ID = 25 A; Tj = 175 °C",
-      "label": "1 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "BUK9J0R9-40H",
@@ -965,34 +659,16 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PMPB11R2VP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PSMN8R5-40HS",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "PMPB17EP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PSMN038-100HS",
-      "field": "vds",
-      "catalogue": "-100",
-      "label": "100"
+      "part": "PMPB48EP",
+      "field": "id",
+      "catalogue": "6.8 @ VGS = -10 V; Tamb = 25 °C; t ≤ 5 s",
+      "label": "-4.7 @ VGS = -10 V; Tamb = 25 °C"
     },
     {
       "part": "PMPB48EP",
-      "field": "id",
-      "catalogue": "-6.8 @ VGS = -10 V; Tamb = 25 °C",
-      "label": "-4.7 @ VGS = -10 V; Tamb = 25 °C"
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -10 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -10 V"
     },
     {
       "part": "BUK6D210-60E",
@@ -1002,81 +678,39 @@
     },
     {
       "part": "BUK6D210-60E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK6D210-60E",
       "field": "idConditions",
       "catalogue": "VGS = 10 V",
       "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PSMN071-100NSE",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PSMN6R0-25YLB",
-      "field": "package",
-      "catalogue": "LFPAK33|LFPAK56|D2PAK|Power-SO8|TO-236AB|SOT1210|SOT404|SOT669|SOT1220|SOT23",
-      "label": "LFPAK|Power-SO8|SOT669"
-    },
-    {
       "part": "BUK9Y65-100E",
       "field": "id",
-      "catalogue": "65 @ Tj = 25 °C | 40 @ Tj = 100 °C | 29 @ Tj = 125 °C",
+      "catalogue": "1 @ VDS = 100 V; VGS = 0 V; Tj = 25 °C | 500 @ VDS = 100 V; VGS = 0 V; Tj = 175 °C",
       "label": "19 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9Y65-100E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 125 °C",
+      "catalogue": "Tj = 25 °C; VDS = 100 V; VGS = 0 V | Tj = 175 °C; VDS = 100 V; VGS = 0 V",
       "label": "Tmb = 25 °C; VGS = 5 V"
+    },
+    {
+      "part": "PSMN2R2-40BS",
+      "field": "rdson",
+      "catalogue": "3.2 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 3.2 @ VGS = 10 V; ID = 25 A; Tj = 100 °C | 4.4 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
+      "label": "2.2 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "PSMN1R5-30BLE",
       "field": "id",
-      "catalogue": "120 @ Tj = 25 °C | 50 @ Tj = 175 °C",
+      "catalogue": "25 @ Tj = 25 °C | 25 @ Tj = 100 °C | 25 @ Tj = 175 °C",
       "label": "120 @ Tmb = 25 °C; VGS = 10 V"
     },
     {
       "part": "PSMN1R5-30BLE",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 175 °C",
+      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 175 °C",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "BUK9M13-80L",
-      "field": "rdson",
-      "catalogue": "10.6 @ VGS = 10 V; ID = 15 A; Tj = 25 °C | 16.3 @ VGS = 10 V; ID = 15 A; Tj = 105 °C | 18 @ VGS = 10 V; ID = 15 A; Tj = 125 °C | 22 @ VGS = 10 V; ID = 15 A; Tj = 175 °C | 14.7 @ VGS = 4.5 V; ID = 15 A; Tj = 25 °C | 22.6 @ VGS = 4.5 V; ID = 15 A; Tj = 105 °C | 24.9 @ VGS = 4.5 V; ID = 15 A; Tj = 125 °C | 31.2 @ VGS = 4.5 V; ID = 15 A; Tj = 175 °C",
-      "label": "12.5 @ VGS = 10 V; ID = 15 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK9M9R5-40H",
-      "field": "rdson",
-      "catalogue": "5.4 @ VGS = 10 V; ID = 15 A; Tj = 25 °C | 7.4 @ VGS = 10 V; ID = 15 A; Tj = 105 °C | 8.1 @ VGS = 10 V; ID = 15 A; Tj = 125 °C | 9.8 @ VGS = 10 V; ID = 15 A; Tj = 175 °C | 6.7 @ VGS = 4.5 V; ID = 10 A; Tj = 25 °C | 9.1 @ VGS = 4.5 V; ID = 10 A; Tj = 105 °C | 10.1 @ VGS = 4.5 V; ID = 10 A; Tj = 125 °C | 12.2 @ VGS = 4.5 V; ID = 10 A; Tj = 175 °C",
-      "label": "9.5 @ VGS = 10 V; ID = 15 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK9M15-60E",
-      "field": "vds",
-      "catalogue": "-60",
-      "label": "60"
-    },
-    {
-      "part": "BUK7S2R0-40H",
-      "field": "rdson",
-      "catalogue": "1.7 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 3.18 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 3.5 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 4.36 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "2 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "PMPB07R3EN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
     },
     {
       "part": "PSMNR90-50SLH",
@@ -1091,136 +725,46 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK7M4R3-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
       "part": "PMN16XNE",
       "field": "id",
-      "catalogue": "6.9 @ VGS = 4.5 V; Tj = 25 °C | 6.9 @ Tj = 25 °C | 6.2 @ VGS = 2.5 V; Tj = 25 °C | 1.9 @ VGS = 1.8 V; Tj = 25 °C",
+      "catalogue": "9.1 @ VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "6.9 @ VGS = 4.5 V; Tamb = 25 °C"
     },
     {
       "part": "PMN16XNE",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C; VGS = 4.5 V | Tj = 25 °C | Tj = 25 °C; VGS = 2.5 V | Tj = 25 °C; VGS = 1.8 V",
+      "catalogue": "Tamb = 25 °C; VGS = 4.5 V; t ≤ 5 s",
       "label": "Tamb = 25 °C; VGS = 4.5 V"
-    },
-    {
-      "part": "PSMN1R0-40SSH",
-      "field": "rdson",
-      "catalogue": "0.88 @ VGS = 10 V; ID = 25 A; Tj = 25 °C",
-      "label": "1 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "PSMN1R0-40SSH",
-      "field": "id",
-      "catalogue": "350 @ VGS = 10 V; Tmb = 25 °C",
-      "label": "325 @ VGS = 10 V; Tmb = 25 °C"
-    },
-    {
-      "part": "PMPB12R5EP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
     },
     {
       "part": "BUK9Y11-80E",
       "field": "id",
-      "catalogue": "25 @ Tj = 25 °C | 11 @ Tj = 175 °C",
+      "catalogue": "",
       "label": "84 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9Y11-80E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 175 °C",
+      "catalogue": "",
       "label": "Tmb = 25 °C; VGS = 5 V"
     },
     {
-      "part": "PSMN2R0-40YLD",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
       "part": "BUK7K25-40E",
       "field": "rdson",
-      "catalogue": "",
+      "catalogue": "50 @ VGS = 10 V; ID = 20 A; Tj = 25 °C",
       "label": "25 @ VGS = 10 V; ID = 5 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK7K25-40E",
-      "field": "rdsonConditions",
-      "catalogue": "",
-      "label": "Tj = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "BUK7S2R5-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "BUK7S2R5-40H",
-      "field": "rdson",
-      "catalogue": "2.16 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 3.32 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 3.64 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 4.52 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "2.51 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "BUK7S2R5-40H",
       "field": "id",
-      "catalogue": "82 @ Tj = 25 °C | 49 @ Tj = 100 °C | 25 @ Tj = 125 °C",
+      "catalogue": "500 @ VDS = 40 V; VGS = 0 V; Tj = 175 °C | 1 @ VDS = 40 V; VGS = 0 V; Tj = 25 °C | 10 @ VDS = 16 V; VGS = 0 V; Tj = 125 °C",
       "label": "140 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "BUK7S2R5-40H",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 125 °C",
+      "catalogue": "Tj = 175 °C; VDS = 40 V; VGS = 0 V | Tj = 25 °C; VDS = 40 V; VGS = 0 V | Tj = 125 °C; VDS = 16 V; VGS = 0 V",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "PMPB14R8XN",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "PMPB14R8XN",
-      "field": "id",
-      "catalogue": "10 @ VGS = 4.5 V; Tamb = 25 °C",
-      "label": "7.3 @ VGS = 4.5 V; Tamb = 25 °C"
-    },
-    {
-      "part": "PMPB14R8XN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "BUK9M4R3-40H",
-      "field": "rdson",
-      "catalogue": "3.4 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 5.2 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 5.8 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 7.1 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "4.3 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "PXN010-30QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
-    },
-    {
-      "part": "PMPB14R0EP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PSMN1R8-80SSF",
-      "field": "rdson",
-      "catalogue": "1.35 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 1.7 @ VGS = 7 V; ID = 25 A; Tj = 25 °C | 2 @ VGS = 10 V; ID = 25 A; Tj = 100 °C | 2.8 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "1.8 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "BUK7A1R3-100L",
@@ -1235,64 +779,28 @@
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK98150-55A",
-      "field": "rdson",
-      "catalogue": "161 @ VGS = 4.5 V; ID = 5 A; Tj = 25 °C | 276 @ VGS = 5 V; ID = 5 A; Tj = 150 °C | 116 @ VGS = 10 V; ID = 5 A; Tj = 25 °C",
-      "label": "137 @ VGS = 10 V; ID = 5 A; Tj = 25 °C"
+      "part": "PMV27UPE",
+      "field": "id",
+      "catalogue": "-5.6 @ VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s",
+      "label": "-4.5 @ VGS = -4.5 V; Tamb = 25 °C"
     },
     {
-      "part": "PSMN5R8-40YS",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "PSMN4R0-60YS",
-      "field": "vds",
-      "catalogue": "-60",
-      "label": "60"
-    },
-    {
-      "part": "PSMN4R0-60YS",
-      "field": "rdson",
-      "catalogue": "3.6 @ VGS = 10 V; ID = 15 A; Tj = 25 °C | 7.6 @ VGS = 10 V; ID = 15 A; Tj = 175 °C | 8.3 @ VGS = 10 V; ID = 15 A; Tj = 100 °C",
-      "label": "4 @ VGS = 10 V; ID = 15 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK9Y6R0-60E",
-      "field": "rdson",
-      "catalogue": "4.6 @ VGS = 5 V; ID = 25 A; Tj = 25 °C | 5.2 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 13.6 @ VGS = 5 V; ID = 25 A; Tj = 175 °C",
-      "label": "6 @ VGS = 5 V; ID = 25 A; Tj = 25 °C"
+      "part": "PMV27UPE",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = -4.5 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = -4.5 V"
     },
     {
       "part": "BUK9Y6R0-60E",
       "field": "id",
-      "catalogue": "60 @ Tj = 25 °C | 40 @ Tj = 100 °C | 25 @ Tj = 150 °C",
+      "catalogue": "",
       "label": "100 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9Y6R0-60E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 150 °C",
+      "catalogue": "",
       "label": "Tmb = 25 °C; VGS = 5 V"
-    },
-    {
-      "part": "PXN4R7-30QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
-    },
-    {
-      "part": "BUK7Y2R5-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "BUK7Y2R5-40H",
-      "field": "rdson",
-      "catalogue": "1.5 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 2.12 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 2.34 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 2.94 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "2.5 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "BUK6D81-80E",
@@ -1302,21 +810,9 @@
     },
     {
       "part": "BUK6D81-80E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK6D81-80E",
       "field": "idConditions",
       "catalogue": "VGS = 10 V",
       "label": "Tamb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "BUK9Y2R8-40H",
-      "field": "rdson",
-      "catalogue": "2.4 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 2.5 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 2.7 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 3 @ VGS = 4.5 V; ID = 25 A; Tj = 25 °C | 3.1 @ VGS = 4.5 V; ID = 25 A; Tj = 105 °C | 6.8 @ VGS = 4.5 V; ID = 25 A; Tj = 125 °C | 6.2 @ VGS = 10 V; ID = 25 A; Tj = 175 °C | 8.6 @ VGS = 4.5 V; ID = 25 A; Tj = 175 °C",
-      "label": "2.8 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "BUK6D23-40E",
@@ -1331,106 +827,52 @@
       "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK9M43-100E",
-      "field": "vds",
-      "catalogue": "-100",
-      "label": "100"
-    },
-    {
-      "part": "PMPB20XNEA",
-      "field": "vds",
-      "catalogue": "-20",
-      "label": "20"
-    },
-    {
-      "part": "PSMN6R0-30YLD",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "PMPB10R3XN",
-      "field": "id",
-      "catalogue": "13 @ VGS = 4.5 V; Tamb = 25 °C",
-      "label": "8.9 @ VGS = 4.5 V; Tamb = 25 °C"
-    },
-    {
-      "part": "PMPB10R3XN",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PSMN033-100HL",
-      "field": "vds",
-      "catalogue": "-100",
-      "label": "100"
-    },
-    {
       "part": "PMV90ENE",
       "field": "id",
-      "catalogue": "3.7 @ VGS = 10 V; Tamb = 25 °C",
+      "catalogue": "3.7 @ VGS = 10 V; Tamb = 25 °C; t ≤ 5 s",
       "label": "3 @ VGS = 10 V; Tamb = 25 °C"
     },
     {
-      "part": "PSMN8R0-40HL",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
+      "part": "PMV90ENE",
+      "field": "idConditions",
+      "catalogue": "Tamb = 25 °C; VGS = 10 V; t ≤ 5 s",
+      "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "BUK9Y15-60E",
-      "field": "rdson",
-      "catalogue": "12.1 @ VGS = 5 V; ID = 15 A; Tj = 25 °C | 10.8 @ VGS = 10 V; ID = 15 A; Tj = 25 °C | 33.9 @ VGS = 5 V; ID = 15 A; Tj = 175 °C",
-      "label": "15 @ VGS = 5 V; ID = 15 A; Tj = 25 °C"
+      "part": "PSMNR90-40YSN",
+      "field": "package",
+      "catalogue": "LFPAK56E|SOT669|Power-SO8",
+      "label": "LFPAK56|Power-SO8|SOT669"
     },
     {
       "part": "BUK961R6-40E",
       "field": "id",
-      "catalogue": "100 @ Tj = 25 °C | 60 @ Tj = 100 °C | 40 @ Tj = 175 °C",
+      "catalogue": "",
       "label": "120 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK961R6-40E",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 175 °C",
+      "catalogue": "",
       "label": "Tmb = 25 °C; VGS = 5 V"
-    },
-    {
-      "part": "BUK7J1R0-40H",
-      "field": "rdson",
-      "catalogue": "0.6 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 0.84 @ VGS = 10 V; ID = 25 A; Tj = 105 °C | 0.93 @ VGS = 10 V; ID = 25 A; Tj = 125 °C | 1.17 @ VGS = 10 V; ID = 25 A; Tj = 175 °C",
-      "label": "1 @ VGS = 10 V; ID = 25 A; Tj = 25 °C"
     },
     {
       "part": "BUK9Y153-100E",
       "field": "id",
-      "catalogue": "",
+      "catalogue": "32 @ Tj = 25 °C | 24 @ Tj = 175 °C",
       "label": "9.4 @ VGS = 5 V; Tmb = 25 °C"
     },
     {
       "part": "BUK9Y153-100E",
       "field": "idConditions",
-      "catalogue": "",
+      "catalogue": "Tj = 25 °C | Tj = 175 °C",
       "label": "Tmb = 25 °C; VGS = 5 V"
-    },
-    {
-      "part": "PMPB08R4VP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
     },
     {
       "part": "BUK6D72-30E",
       "field": "id",
       "catalogue": "11 @ VGS = 10 V",
       "label": "4 @ VGS = 10 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK6D72-30E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK6D72-30E",
@@ -1439,57 +881,27 @@
       "label": "Tamb = 25 °C; VGS = 10 V"
     },
     {
-      "part": "PMPB16R5XNE",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
-      "part": "PMPB09R5VP",
-      "field": "package",
-      "catalogue": "DFN2020M-6|SOT1220-2",
-      "label": "DFN2020M-6|SOT1220"
-    },
-    {
       "part": "BUK7V4R2-40H",
       "field": "id",
-      "catalogue": "20 @ Tj = 25 °C | 20 @ Tj = 105 °C | 20 @ Tj = 125 °C | 20 @ Tj = 175 °C",
+      "catalogue": "85 @ Tmb = 25 °C",
       "label": "98 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "BUK7V4R2-40H",
       "field": "idConditions",
-      "catalogue": "Tj = 25 °C | Tj = 105 °C | Tj = 125 °C | Tj = 175 °C",
+      "catalogue": "Tmb = 25 °C",
       "label": "Tmb = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "BUK7M11-40H",
-      "field": "vds",
-      "catalogue": "-40",
-      "label": "40"
-    },
-    {
-      "part": "BUK7M11-40H",
-      "field": "rdson",
-      "catalogue": "6.5 @ VGS = 10 V; ID = 10 A; Tj = 25 °C | 8.9 @ VGS = 10 V; ID = 10 A; Tj = 105 °C | 9.8 @ VGS = 10 V; ID = 10 A; Tj = 125 °C | 11.9 @ VGS = 10 V; ID = 10 A; Tj = 175 °C",
-      "label": "11 @ VGS = 10 V; ID = 10 A; Tj = 25 °C"
-    },
-    {
-      "part": "BUK9K32-100E",
-      "field": "rdson",
-      "catalogue": "25.6 @ VGS = 10 V; ID = 5 A; Tj = 25 °C | 26.6 @ VGS = 5 V; ID = 5 A; Tj = 25 °C | 73.4 @ VGS = 5 V; ID = 5 A; Tj = 175 °C",
-      "label": "33 @ VGS = 5 V; ID = 5 A; Tj = 25 °C"
     },
     {
       "part": "PSMN1R5-50YLH",
       "field": "id",
-      "catalogue": "200 @ Tmb = 25 °C | 200 @ ",
+      "catalogue": "200 @ Tj = 25 °C | 200 @ Tmb = 25 °C",
       "label": "200 @ VGS = 10 V; Tmb = 25 °C"
     },
     {
       "part": "PSMN1R5-50YLH",
       "field": "idConditions",
-      "catalogue": "Tmb = 25 °C | ",
+      "catalogue": "Tj = 25 °C | Tmb = 25 °C",
       "label": "Tmb = 25 °C; VGS = 10 V"
     },
     {
@@ -1497,12 +909,6 @@
       "field": "id",
       "catalogue": "11 @ VGS = 10 V",
       "label": "4 @ VGS = 10 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK6D56-60E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK6D56-60E",
@@ -1518,39 +924,15 @@
     },
     {
       "part": "BUK4D16-20",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
-    },
-    {
-      "part": "BUK4D16-20",
       "field": "idConditions",
       "catalogue": "VGS = 4.5 V",
       "label": "Tamb = 25 °C; VGS = 4.5 V"
-    },
-    {
-      "part": "BUK7K29-100E",
-      "field": "vds",
-      "catalogue": "-100",
-      "label": "100"
-    },
-    {
-      "part": "PXN8R3-30QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
     },
     {
       "part": "BUK7D36-60E",
       "field": "id",
       "catalogue": "14 @ VGS = 10 V",
       "label": "5.5 @ VGS = 10 V; Tamb = 25 °C"
-    },
-    {
-      "part": "BUK7D36-60E",
-      "field": "package",
-      "catalogue": "DFN2020MD-6|SOT1220",
-      "label": "DFN2020MD‑6|SOT1220"
     },
     {
       "part": "BUK7D36-60E",
@@ -1569,48 +951,6 @@
       "field": "idConditions",
       "catalogue": "Tj = 25 °C | Tj = 100 °C | Tj = 175 °C",
       "label": "Tj = 25 °C; VGS = 10 V"
-    },
-    {
-      "part": "PSMN059-150Y",
-      "field": "vds",
-      "catalogue": "-150",
-      "label": "150"
-    },
-    {
-      "part": "PSMN0R9-30ULD",
-      "field": "package",
-      "catalogue": "LFPAK56|SOT1023A",
-      "label": "LFPAK56-UL|SOT1023A"
-    },
-    {
-      "part": "PMPB20EN",
-      "field": "vds",
-      "catalogue": "-30",
-      "label": "30"
-    },
-    {
-      "part": "PSMN012-100YL",
-      "field": "vds",
-      "catalogue": "-100",
-      "label": "100"
-    },
-    {
-      "part": "PSMN012-100YL",
-      "field": "rdson",
-      "catalogue": "9.5 @ VGS = 5 V; ID = 25 A; Tj = 25 °C | 11.9 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 33.1 @ VGS = 5 V; ID = 25 A; Tj = 175 °C",
-      "label": "12 @ VGS = 5 V; ID = 25 A; Tj = 25 °C"
-    },
-    {
-      "part": "PXN018-30QL",
-      "field": "package",
-      "catalogue": "MLPAK33|SOT8002-1",
-      "label": "MLPAK33|SOT8002"
-    },
-    {
-      "part": "PSMN010-80YL",
-      "field": "rdson",
-      "catalogue": "8.1 @ VGS = 5 V; ID = 25 A; Tj = 25 °C | 7.4 @ VGS = 10 V; ID = 25 A; Tj = 25 °C | 27.6 @ VGS = 5 V; ID = 25 A; Tj = 175 °C",
-      "label": "11 @ VGS = 5 V; ID = 25 A; Tj = 25 °C"
     }
   ]
 }

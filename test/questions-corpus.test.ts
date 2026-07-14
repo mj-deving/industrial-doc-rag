@@ -33,13 +33,26 @@ function candidatesOf(q: CorpusQuestion): GroundTruth[] {
     return indexed.filter((l) => cleanPackages(l.package ?? []).includes(pkg as string));
   if (channel === undefined) return indexed.filter((l) => l.vds_v !== null && rating(l.vds_v) === vds);
 
+  // EVERY row, not the one row the parser kept. A part whose singular label sits in the
+  // VGS = 10 V class still publishes a VGS = 4.5 V row, and it belongs in the 4.5 V
+  // comparison — PSMNR58-30YLH is not merely a member of that pool, it WINS it. A check
+  // that recomputes the truth from one row per part re-derives the bug it should catch.
   const measure = q.id.startsWith("corpus:id-") ? "id" : "rdson";
   return indexed.filter((l) => {
     if (l.channel !== channel || l.vds_v === null || rating(l.vds_v) !== vds) return false;
-    const m = measure === "id" ? l.id_a : l.rdson_mohm;
-    if (!m) return false;
-    return (measure === "id" ? idClass(m) : rdsonClass(m)) === conditions;
+    const rows = measure === "id" ? l.id_all : l.rdson_all;
+    return rows.some((m) => (measure === "id" ? idClass(m) : rdsonClass(m)) === conditions);
   });
+}
+
+/** The figure a part enters a comparison with: its own row in THAT condition class, and
+ *  the most conservative one if the datasheet prints the class twice. */
+function valueIn(label: GroundTruth, q: CorpusQuestion): number {
+  const isId = q.id.startsWith("corpus:id-");
+  const rows = (isId ? label.id_all : label.rdson_all).filter(
+    (m) => (isId ? idClass(m) : rdsonClass(m)) === q.filter.conditions
+  );
+  return Math.max(...rows.map((m) => Math.abs(m.value)));
 }
 
 describe("the question set is derived, never authored", () => {
@@ -52,9 +65,7 @@ describe("the question set is derived, never authored", () => {
   test("every answer is recomputable from the labels alone", () => {
     for (const q of superlatives) {
       const candidates = candidatesOf(q);
-      const values = candidates.map((c) =>
-        q.id.startsWith("corpus:id-") ? Math.abs(c.id_a!.value) : c.rdson_mohm!.value
-      );
+      const values = candidates.map((c) => valueIn(c, q));
       const expected = q.id.startsWith("corpus:id-") ? Math.max(...values) : Math.min(...values);
       expect(q.truthValue).toBe(expected);
     }
@@ -68,23 +79,33 @@ describe("a comparison across condition classes is not a comparison", () => {
   // The defect this pins: RDS(on) at VGS = 4.5 V reads higher than the same die at
   // VGS = 10 V, so ranking across gate drives ranks the test bench. ID is worse:
   // Tmb holds the mounting base at 25 C (a heatsink), Tamb is free air.
-  test("every candidate in a superlative publishes under the SAME condition string", () => {
+  test("every candidate in a superlative publishes a row IN the class it competes in", () => {
+    // The claim moved with the truth. It used to read the ONE row the parser kept and
+    // assert that every candidate's class was identical — which tests the parser's
+    // choice, not the comparison. A part now enters a pool because it publishes a row in
+    // that pool's class, and this asserts exactly that, over every row it has.
     for (const q of superlatives) {
-      const classes = new Set(
-        candidatesOf(q).map((c) =>
-          q.id.startsWith("corpus:id-") ? idClass(c.id_a!) : rdsonClass(c.rdson_mohm!)
-        )
-      );
-      expect(classes.size).toBe(1);
+      const isId = q.id.startsWith("corpus:id-");
+      for (const c of candidatesOf(q)) {
+        const rows = isId ? c.id_all : c.rdson_all;
+        expect(rows.some((m) => (isId ? idClass(m) : rdsonClass(m)) === q.filter.conditions)).toBe(true);
+      }
     }
   });
 
   test("no candidate set mixes a mounting-base rating with an ambient one", () => {
+    // Tmb holds the mounting base at 25 C, which is a heatsink. Tamb is free air. The
+    // class string carries the distinction, so this now asserts it on the class the pool
+    // is keyed by rather than on whichever row a part happened to be labelled with.
     for (const q of superlatives.filter((x) => x.id.startsWith("corpus:id-"))) {
-      const references = new Set(
-        candidatesOf(q).map((c) => (/\bTmb\b/.test(c.id_a!.conditions) ? "Tmb" : "Tamb-or-other"))
-      );
-      expect(references.size).toBe(1);
+      const conditions = String(q.filter.conditions);
+      const reference = /\bTmb\b/.test(conditions) ? "Tmb" : "Tamb-or-other";
+      for (const c of candidatesOf(q)) {
+        const rows = c.id_all.filter((m) => idClass(m) === conditions);
+        for (const m of rows) {
+          expect(/\bTmb\b/.test(m.conditions) ? "Tmb" : "Tamb-or-other").toBe(reference);
+        }
+      }
     }
   });
 
@@ -125,9 +146,7 @@ describe("a tie is a fact about the corpus, not a defect in it", () => {
   test("every part tied at the extremum is accepted", () => {
     for (const q of superlatives) {
       const candidates = candidatesOf(q);
-      const valueOf = (c: GroundTruth) =>
-        q.id.startsWith("corpus:id-") ? Math.abs(c.id_a!.value) : c.rdson_mohm!.value;
-      const tied = candidates.filter((c) => valueOf(c) === q.truthValue).map((c) => c.part);
+      const tied = candidates.filter((c) => valueIn(c, q) === q.truthValue).map((c) => c.part);
       expect([...q.truthParts].sort()).toEqual([...tied].sort());
     }
   });

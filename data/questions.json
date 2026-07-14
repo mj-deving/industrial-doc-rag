@@ -439,6 +439,19 @@
     }
   },
   {
+    "id": "PSMN1R3-30YL:rdson",
+    "part": "PSMN1R3-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R3-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN1R3-30YL:id",
     "part": "PSMN1R3-30YL",
     "dimension": "id",
@@ -475,6 +488,19 @@
       "kind": "numeric",
       "value": 60,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN3R0-60BS:rdson",
+    "part": "PSMN3R0-60BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R0-60BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3.2,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -566,6 +592,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN028-100YS:rdson",
+    "part": "PSMN028-100YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN028-100YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 27.5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -828,10 +867,10 @@
     "part": "BUK9Y7R2-60E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y7R2-60E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y7R2-60E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.2,
+      "value": 5.6,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -936,10 +975,10 @@
     "part": "BUK4D60-30",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D60-30 at VGS = 4.5 V; ID = 4.2 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D60-30 at VGS = 8 V; ID = 4.2 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": 57,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -1092,6 +1131,19 @@
     }
   },
   {
+    "id": "PSMN3R9-25MLC:rdson",
+    "part": "PSMN3R9-25MLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R9-25MLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.15,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN3R9-25MLC:id",
     "part": "PSMN3R9-25MLC",
     "dimension": "id",
@@ -1136,10 +1188,10 @@
     "part": "BUK9M7R2-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M7R2-40E at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M7R2-40E at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.2,
+      "value": 5.8,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -1664,6 +1716,19 @@
     }
   },
   {
+    "id": "PMV33UPE:rdson",
+    "part": "PMV33UPE",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV33UPE at VGS = -4.5 V; ID = -3 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 36,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PMV33UPE:id",
     "part": "PMV33UPE",
     "dimension": "id",
@@ -1762,10 +1827,10 @@
     "part": "BUK9Y29-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y29-40E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y29-40E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 29,
+      "value": 25,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -1865,6 +1930,19 @@
     }
   },
   {
+    "id": "PSMN4R0-25YLC:rdson",
+    "part": "PSMN4R0-25YLC",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R0-25YLC at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN4R0-25YLC:id",
     "part": "PSMN4R0-25YLC",
     "dimension": "id",
@@ -1901,6 +1979,19 @@
       "kind": "numeric",
       "value": 25,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R8-25MLC:rdson",
+    "part": "PSMN2R8-25MLC",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R8-25MLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2.8,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -2159,6 +2250,19 @@
     }
   },
   {
+    "id": "PSMN7R0-100BS:rdson",
+    "part": "PSMN7R0-100BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN7R0-100BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 6.8,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN7R0-100BS:id",
     "part": "PSMN7R0-100BS",
     "dimension": "id",
@@ -2195,6 +2299,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN016-100YS:rdson",
+    "part": "PSMN016-100YS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN016-100YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 16.3,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -2347,6 +2464,19 @@
     }
   },
   {
+    "id": "PSMN3R8-100BS:rdson",
+    "part": "PSMN3R8-100BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R8-100BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3.9,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN3R8-100BS:id",
     "part": "PSMN3R8-100BS",
     "dimension": "id",
@@ -2493,6 +2623,19 @@
     }
   },
   {
+    "id": "PSMN013-30YLC:rdson",
+    "part": "PSMN013-30YLC",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN013-30YLC at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 13.6,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN013-30YLC:id",
     "part": "PSMN013-30YLC",
     "dimension": "id",
@@ -2591,10 +2734,10 @@
     "part": "BUK9K6R8-40E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K6R8-40E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K6R8-40E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.2,
+      "value": 6.1,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -2644,10 +2787,10 @@
     "part": "BUK9M52-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M52-40E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M52-40E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 52,
+      "value": 40,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -2697,10 +2840,10 @@
     "part": "BUK9Y59-60E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y59-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y59-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 59,
+      "value": 52,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -3390,10 +3533,10 @@
     "part": "PMV48XPA2",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMV48XPA2 at VGS = -4.5 V; ID = -4 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV48XPA2 at VGS = -8 V; ID = -4 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 55,
+      "value": 49,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -3433,6 +3576,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R5-30YL:rdson",
+    "part": "PSMN1R5-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R5-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -3587,10 +3743,10 @@
     "part": "PSMN5R2-60YL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R2-60YL at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R2-60YL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6,
+      "value": 5.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -3747,10 +3903,10 @@
     "part": "BUK9Y19-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y19-100E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y19-100E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 19,
+      "value": 18,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -4064,6 +4220,19 @@
     }
   },
   {
+    "id": "PSMN016-100BS:rdson",
+    "part": "PSMN016-100BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN016-100BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 16,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN016-100BS:id",
     "part": "PSMN016-100BS",
     "dimension": "id",
@@ -4161,10 +4330,10 @@
     "part": "BUK9M14-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M14-40E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M14-40E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 14,
+      "value": 11,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -4267,10 +4436,10 @@
     "part": "PMV50XNEA",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMV50XNEA at VGS = 4.5 V; ID = 3.4 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV50XNEA at VGS = 8 V; ID = 3.4 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 60,
+      "value": 57,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -4477,10 +4646,10 @@
     "part": "BUK4D110-20P",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D110-20P at VGS = -4.5 V; ID = -3.4 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D110-20P at VGS = -8 V; ID = -3.4 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 110,
+      "value": 96,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -4583,10 +4752,10 @@
     "part": "BUK9K52-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K52-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K52-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 55,
+      "value": 49,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -4686,6 +4855,19 @@
     }
   },
   {
+    "id": "PSMN030-60YS:rdson",
+    "part": "PSMN030-60YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN030-60YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 24.7,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN030-60YS:id",
     "part": "PSMN030-60YS",
     "dimension": "id",
@@ -4722,6 +4904,19 @@
       "kind": "numeric",
       "value": -20,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMV48XP:rdson",
+    "part": "PMV48XP",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV48XP at VGS = -4.5 V; ID = -2.4 A?",
+    "expected": {
+      "kind": "numeric",
+      "value": 55,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -4823,10 +5018,10 @@
     "part": "PSMN0R7-25YLD",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN0R7-25YLD at VGS = 4.5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN0R7-25YLD at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 0.92,
+      "value": 0.72,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -5029,6 +5224,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN8R2-80YS:rdson",
+    "part": "PSMN8R2-80YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN8R2-80YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 8.5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -5553,6 +5761,19 @@
     }
   },
   {
+    "id": "PSMN017-60YS:rdson",
+    "part": "PSMN017-60YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN017-60YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 15.7,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN017-60YS:id",
     "part": "PSMN017-60YS",
     "dimension": "id",
@@ -5696,6 +5917,19 @@
       "kind": "numeric",
       "value": -20,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PMN48XP:rdson",
+    "part": "PMN48XP",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMN48XP at VGS = -4.5 V; ID = -2.4 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 55,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -5903,10 +6137,10 @@
     "part": "PSMN5R6-60YL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R6-60YL at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R6-60YL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.2,
+      "value": 5.6,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -6159,6 +6393,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN5R0-30YL:rdson",
+    "part": "PSMN5R0-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R0-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -6520,6 +6767,19 @@
     }
   },
   {
+    "id": "PSMN5R6-100BS:rdson",
+    "part": "PSMN5R6-100BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R6-100BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 5.6,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN5R6-100BS:id",
     "part": "PSMN5R6-100BS",
     "dimension": "id",
@@ -6564,10 +6824,10 @@
     "part": "BUK9K13-40H",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K13-40H at VGS = 4.5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K13-40H at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 16.9,
+      "value": 13.6,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -6617,10 +6877,10 @@
     "part": "PMV28XPEA",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMV28XPEA at VGS = -4.5 V; ID = -5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV28XPEA at VGS = -8 V; ID = -5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 33,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -6722,10 +6982,10 @@
     "part": "BUK9K5R1-30E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K5R1-30E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K5R1-30E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.3,
+      "value": 4.4,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -6820,6 +7080,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN3R3-80BS:rdson",
+    "part": "PSMN3R3-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R3-80BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3.5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -6970,6 +7243,19 @@
     }
   },
   {
+    "id": "PSMN5R5-60YS:rdson",
+    "part": "PSMN5R5-60YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R5-60YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 5.2,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN5R5-60YS:id",
     "part": "PSMN5R5-60YS",
     "dimension": "id",
@@ -7014,10 +7300,10 @@
     "part": "BUK9M12-60E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M12-60E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M12-60E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": 11,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -7120,10 +7406,10 @@
     "part": "BUK9K12-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K12-60E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K12-60E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11.5,
+      "value": 10.7,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -7279,10 +7565,10 @@
     "part": "BUK9Y107-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y107-80E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y107-80E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 107,
+      "value": 98,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -7598,10 +7884,10 @@
     "part": "BUK9Y3R5-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y3R5-40E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y3R5-40E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3.8,
+      "value": 3.6,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -7759,10 +8045,10 @@
     "part": "BUK9M6R6-30E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M6R6-30E at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M6R6-30E at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6.6,
+      "value": 5.3,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -8275,6 +8561,19 @@
     }
   },
   {
+    "id": "PSMN9R5-30YLC:rdson",
+    "part": "PSMN9R5-30YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN9R5-30YLC at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 9.8,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN9R5-30YLC:id",
     "part": "PSMN9R5-30YLC",
     "dimension": "id",
@@ -8419,6 +8718,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN069-100YS:rdson",
+    "part": "PSMN069-100YS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN069-100YS at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 72.4,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -8573,10 +8885,10 @@
     "part": "BUK9K89-100E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K89-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K89-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 89,
+      "value": 85,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -8841,10 +9153,10 @@
     "part": "PSMN014-80YL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN014-80YL at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN014-80YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 14,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -9267,10 +9579,10 @@
     "part": "BUK9M10-30E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M10-30E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M10-30E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 10,
+      "value": 7.8,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -9365,6 +9677,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN012-80BS:rdson",
+    "part": "PSMN012-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-80BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 11,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -9520,10 +9845,10 @@
     "part": "BUK9M120-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M120-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M120-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 120,
+      "value": 119,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -9676,6 +10001,19 @@
     }
   },
   {
+    "id": "PSMN2R2-30YLC:rdson",
+    "part": "PSMN2R2-30YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R2-30YLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2.15,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN2R2-30YLC:id",
     "part": "PSMN2R2-30YLC",
     "dimension": "id",
@@ -9770,6 +10108,19 @@
     }
   },
   {
+    "id": "PSMN7R0-60YS:rdson",
+    "part": "PSMN7R0-60YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN7R0-60YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 6.4,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN7R0-60YS:id",
     "part": "PSMN7R0-60YS",
     "dimension": "id",
@@ -9806,6 +10157,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN8R7-80BS:rdson",
+    "part": "PSMN8R7-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN8R7-80BS at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 8.7,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -9854,10 +10218,10 @@
     "part": "BUK9M24-40E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M24-40E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M24-40E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 24,
+      "value": 20,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -10009,6 +10373,19 @@
     }
   },
   {
+    "id": "PSMN9R8-30MLC:rdson",
+    "part": "PSMN9R8-30MLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN9R8-30MLC at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 9.8,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN9R8-30MLC:id",
     "part": "PSMN9R8-30MLC",
     "dimension": "id",
@@ -10107,10 +10484,10 @@
     "part": "BUK9Y12-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y12-40E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y12-40E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": 10,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -10161,10 +10538,10 @@
     "part": "PSMN045-100HL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN045-100HL at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN045-100HL at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 45,
+      "value": 42,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -10214,10 +10591,10 @@
     "part": "BUK9Y41-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y41-80E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y41-80E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 45,
+      "value": 41,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -10322,10 +10699,10 @@
     "part": "BUK9Y43-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y43-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y43-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 43,
+      "value": 38,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -10802,10 +11179,10 @@
     "part": "BUK9Y8R7-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y8R7-60E at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y8R7-60E at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 8.7,
+      "value": 7.5,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -11069,10 +11446,10 @@
     "part": "BUK9Y25-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y25-60E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y25-60E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 25,
+      "value": 21.5,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -11284,10 +11661,10 @@
     "part": "PSMN013-60HL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN013-60HL at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN013-60HL at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.5,
+      "value": 11.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -11329,6 +11706,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R7-30BL:rdson",
+    "part": "PSMN2R7-30BL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R7-30BL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -11430,10 +11820,10 @@
     "part": "BUK4D38-20P",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D38-20P at VGS = -4.5 V; ID = -6 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D38-20P at VGS = -8 V; ID = -6 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 33,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -11853,6 +12243,19 @@
     }
   },
   {
+    "id": "PSMN4R5-30YLC:rdson",
+    "part": "PSMN4R5-30YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R5-30YLC at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.8,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN4R5-30YLC:id",
     "part": "PSMN4R5-30YLC",
     "dimension": "id",
@@ -11951,10 +12354,10 @@
     "part": "BUK9K13-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K13-60E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K13-60E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.5,
+      "value": 11.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -12057,10 +12460,10 @@
     "part": "BUK9K29-100E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K29-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K29-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 29,
+      "value": 27,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -12163,10 +12566,10 @@
     "part": "BUK9Y4R4-40E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y4R4-40E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y4R4-40E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.4,
+      "value": 3.7,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -12479,6 +12882,19 @@
     }
   },
   {
+    "id": "PSMN011-30YLC:rdson",
+    "part": "PSMN011-30YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN011-30YLC at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 11.6,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN011-30YLC:id",
     "part": "PSMN011-30YLC",
     "dimension": "id",
@@ -12524,10 +12940,10 @@
     "part": "PMN48XPA2",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMN48XPA2 at VGS = -4.5 V; ID = -4.4 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMN48XPA2 at VGS = -8 V; ID = -4.4 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 55,
+      "value": 49,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -12627,6 +13043,19 @@
     }
   },
   {
+    "id": "PSMN7R6-60BS:rdson",
+    "part": "PSMN7R6-60BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN7R6-60BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 7.8,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN7R6-60BS:id",
     "part": "PSMN7R6-60BS",
     "dimension": "id",
@@ -12667,6 +13096,19 @@
     }
   },
   {
+    "id": "PSMN017-80BS:rdson",
+    "part": "PSMN017-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN017-80BS at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 17,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN017-80BS:id",
     "part": "PSMN017-80BS",
     "dimension": "id",
@@ -12703,6 +13145,19 @@
       "kind": "numeric",
       "value": 55,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK78150-55A:rdson",
+    "part": "BUK78150-55A",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK78150-55A at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 150,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -12797,6 +13252,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN027-100BS:rdson",
+    "part": "PSMN027-100BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN027-100BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 26.8,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -13108,6 +13576,19 @@
     }
   },
   {
+    "id": "PSMN2R8-80BS:rdson",
+    "part": "PSMN2R8-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R8-80BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN2R8-80BS:id",
     "part": "PSMN2R8-80BS",
     "dimension": "id",
@@ -13205,10 +13686,10 @@
     "part": "BUK9M9R1-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M9R1-40E at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M9R1-40E at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 9.1,
+      "value": 7.3,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -13417,10 +13898,10 @@
     "part": "BUK9M35-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M35-80E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M35-80E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 35,
+      "value": 31,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -13629,10 +14110,10 @@
     "part": "BUK9Y3R0-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y3R0-40E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y3R0-40E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 3,
+      "value": 2.5,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -13675,6 +14156,19 @@
       "kind": "numeric",
       "value": 55,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "BUK9832-55A:rdson",
+    "part": "BUK9832-55A",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9832-55A at VGS = 10 V; ID = 8 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 29,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -13928,6 +14422,19 @@
       "kind": "numeric",
       "value": 60,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN015-60BS:rdson",
+    "part": "PSMN015-60BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN015-60BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 14.8,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -14293,6 +14800,19 @@
     }
   },
   {
+    "id": "PMV160UP:rdson",
+    "part": "PMV160UP",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV160UP at VGS = -4.5 V; ID = -1.2 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 210,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PMV160UP:id",
     "part": "PMV160UP",
     "dimension": "id",
@@ -14489,6 +15009,19 @@
       "kind": "numeric",
       "value": 25,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R2-25YL:rdson",
+    "part": "PSMN1R2-25YL",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-25YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.2,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -14798,6 +15331,19 @@
     }
   },
   {
+    "id": "PSMN1R1-25YLC:rdson",
+    "part": "PSMN1R1-25YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R1-25YLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.15,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN1R1-25YLC:id",
     "part": "PSMN1R1-25YLC",
     "dimension": "id",
@@ -14835,6 +15381,19 @@
       "kind": "numeric",
       "value": 25,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R9-25YLC:rdson",
+    "part": "PSMN2R9-25YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R9-25YLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3.15,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -15037,6 +15596,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN012-100YS:rdson",
+    "part": "PSMN012-100YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-100YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 12,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -15348,6 +15920,19 @@
     }
   },
   {
+    "id": "PSMN4R6-60BS:rdson",
+    "part": "PSMN4R6-60BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R6-60BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.4,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN4R6-60BS:id",
     "part": "PSMN4R6-60BS",
     "dimension": "id",
@@ -15500,10 +16085,10 @@
     "part": "BUK9Y4R8-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y4R8-60E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y4R8-60E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.8,
+      "value": 4.1,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -16133,6 +16718,19 @@
     }
   },
   {
+    "id": "PSMN7R0-30YL:rdson",
+    "part": "PSMN7R0-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN7R0-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 7,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN7R0-30YL:id",
     "part": "PSMN7R0-30YL",
     "dimension": "id",
@@ -16651,6 +17249,19 @@
     }
   },
   {
+    "id": "PSMN102-200Y:rdson",
+    "part": "PSMN102-200Y",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN102-200Y at VGS = 10 V; ID = 12 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 102,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN102-200Y:id",
     "part": "PSMN102-200Y",
     "dimension": "id",
@@ -16695,10 +17306,10 @@
     "part": "BUK9K45-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K45-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K45-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 45,
+      "value": 42,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -17063,6 +17674,19 @@
     }
   },
   {
+    "id": "PSMN6R0-30YLB:rdson",
+    "part": "PSMN6R0-30YLB",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN6R0-30YLB at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 6.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN6R0-30YLB:id",
     "part": "PSMN6R0-30YLB",
     "dimension": "id",
@@ -17108,10 +17732,10 @@
     "part": "BUK9Y15-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y15-100E at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y15-100E at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 14.7,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -17586,6 +18210,19 @@
     }
   },
   {
+    "id": "PSMN012-60YS:rdson",
+    "part": "PSMN012-60YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-60YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 11.1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN012-60YS:id",
     "part": "PSMN012-60YS",
     "dimension": "id",
@@ -17622,6 +18259,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN5R0-80BS:rdson",
+    "part": "PSMN5R0-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R0-80BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 5.1,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -18128,6 +18778,19 @@
     }
   },
   {
+    "id": "PMV32UP:rdson",
+    "part": "PMV32UP",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV32UP at VGS = -4.5 V; ID = -2.4 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 36,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PMV32UP:id",
     "part": "PMV32UP",
     "dimension": "id",
@@ -18280,10 +18943,10 @@
     "part": "PSMN021-100YL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN021-100YL at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN021-100YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 22,
+      "value": 21.5,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -18440,10 +19103,10 @@
     "part": "BUK9M42-60E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M42-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M42-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 42,
+      "value": 37,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -18600,10 +19263,10 @@
     "part": "BUK9M156-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M156-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M156-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 156,
+      "value": 150,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -18867,10 +19530,10 @@
     "part": "BUK9Y14-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y14-80E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y14-80E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 14,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -18913,6 +19576,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN039-100YS:rdson",
+    "part": "PSMN039-100YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN039-100YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 39.5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -19121,10 +19797,10 @@
     "part": "BUK9M85-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M85-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M85-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 85,
+      "value": 73,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -19174,10 +19850,10 @@
     "part": "PMV30XPA",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMV30XPA at VGS = -4.5 V; ID = -4.9 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV30XPA at VGS = -8 V; ID = -4.9 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 33,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -19385,10 +20061,10 @@
     "part": "PSMN012-60HL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-60HL at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-60HL at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.5,
+      "value": 11.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -19491,10 +20167,10 @@
     "part": "PSMN019-100YL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN019-100YL at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN019-100YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 19,
+      "value": 18,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -19653,10 +20329,10 @@
     "part": "PSMN015-100YL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN015-100YL at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN015-100YL at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 14.7,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -19920,10 +20596,10 @@
     "part": "PSMN1R2-30YLD",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-30YLD at VGS = 4.5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-30YLD at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 1.6,
+      "value": 1.24,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -20186,10 +20862,10 @@
     "part": "PSMN029-100HL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN029-100HL at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN029-100HL at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 29,
+      "value": 27,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -20239,10 +20915,10 @@
     "part": "PSMN057-200B",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN057-200B at VGS = 10 V; ID = 17 A; Tj = 175 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN057-200B at VGS = 10 V; ID = 17 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 165,
+      "value": 57,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -20501,6 +21177,19 @@
     }
   },
   {
+    "id": "PSMN8R0-40BS:rdson",
+    "part": "PSMN8R0-40BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN8R0-40BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 7.6,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN8R0-40BS:id",
     "part": "PSMN8R0-40BS",
     "dimension": "id",
@@ -20652,10 +21341,10 @@
     "part": "BUK9M11-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M11-40E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M11-40E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11,
+      "value": 9,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -20914,6 +21603,19 @@
     }
   },
   {
+    "id": "PSMN6R0-25YLB:rdson",
+    "part": "PSMN6R0-25YLB",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN6R0-25YLB at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 6.1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN6R0-25YLB:id",
     "part": "PSMN6R0-25YLB",
     "dimension": "id",
@@ -20955,6 +21657,19 @@
     }
   },
   {
+    "id": "PSMN7R0-30MLC:rdson",
+    "part": "PSMN7R0-30MLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN7R0-30MLC at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 7,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN7R0-30MLC:id",
     "part": "PSMN7R0-30MLC",
     "dimension": "id",
@@ -20991,6 +21706,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R7-30YL:rdson",
+    "part": "PSMN1R7-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R7-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.7,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -21147,10 +21875,10 @@
     "part": "BUK9Y65-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y65-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y65-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 65,
+      "value": 63.3,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -21201,10 +21929,10 @@
     "part": "PSMN013-60YL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN013-60YL at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN013-60YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 13,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -21308,10 +22036,10 @@
     "part": "BUK9Y8R5-80E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y8R5-80E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y8R5-80E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 8.5,
+      "value": 8,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -21354,6 +22082,19 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R2-40BS:rdson",
+    "part": "PSMN2R2-40BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R2-40BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2.2,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -21666,6 +22407,19 @@
     }
   },
   {
+    "id": "PSMN026-80YS:rdson",
+    "part": "PSMN026-80YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN026-80YS at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 27.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN026-80YS:id",
     "part": "PSMN026-80YS",
     "dimension": "id",
@@ -21816,10 +22570,10 @@
     "part": "BUK9M15-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M15-60E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M15-60E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 13,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -22025,6 +22779,19 @@
     }
   },
   {
+    "id": "PSMN6R0-30YL:rdson",
+    "part": "PSMN6R0-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN6R0-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 6,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN6R0-30YL:id",
     "part": "PSMN6R0-30YL",
     "dimension": "id",
@@ -22123,10 +22890,10 @@
     "part": "BUK9K35-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K35-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K35-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 35,
+      "value": 32,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -22176,10 +22943,10 @@
     "part": "BUK9K25-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K25-40E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K25-40E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 29,
+      "value": 24,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -22229,10 +22996,10 @@
     "part": "BUK9M53-60E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M53-60E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M53-60E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 53,
+      "value": 46,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -22862,6 +23629,19 @@
     }
   },
   {
+    "id": "PSMN2R0-30YL:rdson",
+    "part": "PSMN2R0-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R0-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN2R0-30YL:id",
     "part": "PSMN2R0-30YL",
     "dimension": "id",
@@ -23121,10 +23901,10 @@
     "part": "BUK9Y38-100E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y38-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y38-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 37.5,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -23491,6 +24271,19 @@
     }
   },
   {
+    "id": "PSMN3R0-30MLC:rdson",
+    "part": "PSMN3R0-30MLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R0-30MLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3.15,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN3R0-30MLC:id",
     "part": "PSMN3R0-30MLC",
     "dimension": "id",
@@ -23535,10 +24328,10 @@
     "part": "BUK9Y11-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y11-80E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y11-80E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11,
+      "value": 10,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -23589,10 +24382,10 @@
     "part": "BUK9K22-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K22-80E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K22-80E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 21.7,
+      "value": 19,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -23741,6 +24534,19 @@
       "kind": "numeric",
       "value": 25,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN9R0-25MLC:rdson",
+    "part": "PSMN9R0-25MLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN9R0-25MLC at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 8.65,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -24318,6 +25124,19 @@
     }
   },
   {
+    "id": "PSMN4R0-30YL:rdson",
+    "part": "PSMN4R0-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R0-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN4R0-30YL:id",
     "part": "PSMN4R0-30YL",
     "dimension": "id",
@@ -24517,6 +25336,19 @@
     }
   },
   {
+    "id": "PSMN3R4-30BL:rdson",
+    "part": "PSMN3R4-30BL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R4-30BL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3.3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN3R4-30BL:id",
     "part": "PSMN3R4-30BL",
     "dimension": "id",
@@ -24553,6 +25385,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN6R5-80BS:rdson",
+    "part": "PSMN6R5-80BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN6R5-80BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 6.9,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -24650,6 +25495,19 @@
     }
   },
   {
+    "id": "PSMN045-80YS:rdson",
+    "part": "PSMN045-80YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN045-80YS at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 45,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN045-80YS:id",
     "part": "PSMN045-80YS",
     "dimension": "id",
@@ -24686,6 +25544,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN013-80YS:rdson",
+    "part": "PSMN013-80YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN013-80YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 12.9,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -25051,6 +25922,19 @@
     }
   },
   {
+    "id": "PSMN4R4-30MLC:rdson",
+    "part": "PSMN4R4-30MLC",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R4-30MLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.65,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN4R4-30MLC:id",
     "part": "PSMN4R4-30MLC",
     "dimension": "id",
@@ -25144,6 +26028,19 @@
     }
   },
   {
+    "id": "PSMN5R8-40YS:rdson",
+    "part": "PSMN5R8-40YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN5R8-40YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 5.7,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN5R8-40YS:id",
     "part": "PSMN5R8-40YS",
     "dimension": "id",
@@ -25188,10 +26085,10 @@
     "part": "BUK9Y72-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y72-80E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y72-80E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 78,
+      "value": 72,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -25295,10 +26192,10 @@
     "part": "PSMN011-60HL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN011-60HL at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN011-60HL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11.5,
+      "value": 10.7,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -25394,6 +26291,19 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R8-40BS:rdson",
+    "part": "PSMN2R8-40BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R8-40BS at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2.9,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -25495,10 +26405,10 @@
     "part": "BUK9Y7R6-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y7R6-40E at VGS = 5 V; ID = 20 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y7R6-40E at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 7.6,
+      "value": 6,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -25541,6 +26451,19 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R1-40BS:rdson",
+    "part": "PSMN1R1-40BS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R1-40BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.3,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -25643,10 +26566,10 @@
     "part": "BUK9K8R7-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K8R7-40E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K8R7-40E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 9.4,
+      "value": 8,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -25794,6 +26717,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN1R2-30YLC:rdson",
+    "part": "PSMN1R2-30YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-30YLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.25,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -26164,10 +27100,10 @@
     "part": "BUK9K5R6-30E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K5R6-30E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K5R6-30E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.8,
+      "value": 4.7,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -26377,10 +27313,10 @@
     "part": "BUK9M24-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M24-60E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M24-60E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 24,
+      "value": 21,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -26430,10 +27366,10 @@
     "part": "BUK9Y21-40E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y21-40E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y21-40E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 21,
+      "value": 17,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -26590,10 +27526,10 @@
     "part": "PSMN6R4-30MLD",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN6R4-30MLD at VGS = 4.5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN6R4-30MLD at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 8.3,
+      "value": 6.3,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -26803,10 +27739,10 @@
     "part": "BUK9Y6R0-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y6R0-60E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y6R0-60E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 6,
+      "value": 5.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -26853,6 +27789,19 @@
     }
   },
   {
+    "id": "PSMN7R0-30YLC:rdson",
+    "part": "PSMN7R0-30YLC",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN7R0-30YLC at VGS = 10 V; ID = 20 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 7.1,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN7R0-30YLC:id",
     "part": "PSMN7R0-30YLC",
     "dimension": "id",
@@ -26894,6 +27843,19 @@
     }
   },
   {
+    "id": "PSMN3R0-30YL:rdson",
+    "part": "PSMN3R0-30YL",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN3R0-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN3R0-30YL:id",
     "part": "PSMN3R0-30YL",
     "dimension": "id",
@@ -26930,6 +27892,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN011-80YS:rdson",
+    "part": "PSMN011-80YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN011-80YS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 11,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -27085,10 +28060,10 @@
     "part": "PSMN4R1-60YL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R1-60YL at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R1-60YL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 4.8,
+      "value": 4.1,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -27512,10 +28487,10 @@
     "part": "BUK9Y113-100E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y113-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y113-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 113,
+      "value": 110,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -27620,10 +28595,10 @@
     "part": "BUK9K13-60RA",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K13-60RA at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K13-60RA at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12.5,
+      "value": 11.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -27780,10 +28755,10 @@
     "part": "BUK9Y25-80E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y25-80E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y25-80E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 27,
+      "value": 25,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -27993,10 +28968,10 @@
     "part": "BUK9M19-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M19-60E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M19-60E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 19,
+      "value": 17,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -28095,6 +29070,19 @@
     }
   },
   {
+    "id": "PSMN2R5-30YL:rdson",
+    "part": "PSMN2R5-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R5-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2.4,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN2R5-30YL:id",
     "part": "PSMN2R5-30YL",
     "dimension": "id",
@@ -28131,6 +29119,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN9R1-30YL:rdson",
+    "part": "PSMN9R1-30YL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN9R1-30YL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 9.1,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -28172,6 +29173,19 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN014-40YS:rdson",
+    "part": "PSMN014-40YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN014-40YS at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 14,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -28377,6 +29391,19 @@
     }
   },
   {
+    "id": "PSMN034-100BS:rdson",
+    "part": "PSMN034-100BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN034-100BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 34.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN034-100BS:id",
     "part": "PSMN034-100BS",
     "dimension": "id",
@@ -28413,6 +29440,19 @@
       "kind": "numeric",
       "value": 100,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN9R5-100BS:rdson",
+    "part": "PSMN9R5-100BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN9R5-100BS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 9.6,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -28568,10 +29608,10 @@
     "part": "BUK9Y12-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y12-100E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y12-100E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": 11.9,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -28622,10 +29662,10 @@
     "part": "PMV13XNEA",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMV13XNEA at VGS = 4.5 V; ID = 7.3 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMV13XNEA at VGS = 8 V; ID = 7.3 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 17,
+      "value": 15,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -28727,10 +29767,10 @@
     "part": "BUK9K134-100E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K134-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K134-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 159,
+      "value": 154,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -28780,7 +29820,7 @@
     "part": "BUK9M43-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M43-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M43-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
       "value": 43,
@@ -29043,6 +30083,19 @@
     }
   },
   {
+    "id": "PSMN018-80YS:rdson",
+    "part": "PSMN018-80YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN018-80YS at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 18,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN018-80YS:id",
     "part": "PSMN018-80YS",
     "dimension": "id",
@@ -29194,10 +30247,10 @@
     "part": "BUK9M17-30E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M17-30E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M17-30E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 17,
+      "value": 14,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -29455,6 +30508,19 @@
     }
   },
   {
+    "id": "PSMN4R5-40BS:rdson",
+    "part": "PSMN4R5-40BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R5-40BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.5,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN4R5-40BS:id",
     "part": "PSMN4R5-40BS",
     "dimension": "id",
@@ -29499,10 +30565,10 @@
     "part": "BUK9M23-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M23-80E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M23-80E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 23,
+      "value": 20,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -29658,10 +30724,10 @@
     "part": "BUK9K30-80E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K30-80E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K30-80E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 30,
+      "value": 26,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -29809,6 +30875,19 @@
       "kind": "numeric",
       "value": 80,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN4R4-80BS:rdson",
+    "part": "PSMN4R4-80BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R4-80BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.5,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -30015,10 +31094,10 @@
     "part": "PSMN8R0-40HL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN8R0-40HL at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN8R0-40HL at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 9.4,
+      "value": 8,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -30122,10 +31201,10 @@
     "part": "BUK9Y15-60E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y15-60E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y15-60E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 15,
+      "value": 13,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -30176,10 +31255,10 @@
     "part": "BUK961R6-40E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK961R6-40E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK961R6-40E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 1.6,
+      "value": 1.4,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -30337,10 +31416,10 @@
     "part": "BUK9Y153-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y153-100E at VGS = 5 V; ID = 2 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y153-100E at VGS = 10 V; ID = 2 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 153,
+      "value": 146,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -30498,10 +31577,10 @@
     "part": "BUK9Y22-100E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y22-100E at VGS = 5 V; ID = 15 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9Y22-100E at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 22,
+      "value": 21.5,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -30764,10 +31843,10 @@
     "part": "PSMN1R2-25YLD",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-25YLD at VGS = 4.5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-25YLD at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 1.69,
+      "value": 1.2,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -31021,6 +32100,19 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN4R0-40YS:rdson",
+    "part": "PSMN4R0-40YS",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R0-40YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.2,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -31599,10 +32691,10 @@
     "part": "BUK9K32-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K32-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K32-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 33,
+      "value": 31,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -31866,10 +32958,10 @@
     "part": "BUK9M5R2-30E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M5R2-30E at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M5R2-30E at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 5.2,
+      "value": 4.1,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -31919,10 +33011,10 @@
     "part": "PMN30XPA",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMN30XPA at VGS = -4.5 V; ID = -5.2 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMN30XPA at VGS = -8 V; ID = -5.2 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 33,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -32026,10 +33118,10 @@
     "part": "BUK4D16-20",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D16-20 at VGS = 4.5 V; ID = 8.5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK4D16-20 at VGS = 8 V; ID = 9 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 16,
+      "value": 14,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -32124,6 +33216,19 @@
       "kind": "numeric",
       "value": 40,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN8R3-40YS:rdson",
+    "part": "PSMN8R3-40YS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN8R3-40YS at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 8.6,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -32226,10 +33331,10 @@
     "part": "PMN30XPEA",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMN30XPEA at VGS = -4.5 V; ID = -5.4 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMN30XPEA at VGS = -8 V; ID = -5.4 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 38,
+      "value": 33,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -32280,7 +33385,7 @@
     "part": "BUK9M34-100E",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M34-100E at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M34-100E at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
       "value": 34,
@@ -32483,6 +33588,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN2R6-30YLC:rdson",
+    "part": "PSMN2R6-30YLC",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN2R6-30YLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2.8,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -32797,10 +33915,10 @@
     "part": "PSMN025-80YL",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN025-80YL at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN025-80YL at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 27,
+      "value": 25,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -32957,10 +34075,10 @@
     "part": "BUK9K25-40RA",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K25-40RA at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K25-40RA at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 29,
+      "value": 24,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -33219,6 +34337,19 @@
     }
   },
   {
+    "id": "PSMN1R2-25YLC:rdson",
+    "part": "PSMN1R2-25YLC",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R2-25YLC at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 1.3,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN1R2-25YLC:id",
     "part": "PSMN1R2-25YLC",
     "dimension": "id",
@@ -33424,10 +34555,10 @@
     "part": "BUK9K35-60RA",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K35-60RA at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K35-60RA at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 35,
+      "value": 32,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -33743,10 +34874,10 @@
     "part": "PSMN012-100YL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-100YL at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN012-100YL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 12,
+      "value": 11.9,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -33850,10 +34981,10 @@
     "part": "BUK9K52-60RA",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K52-60RA at VGS = 5 V; ID = 5 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K52-60RA at VGS = 10 V; ID = 5 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 55,
+      "value": 49,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -34003,6 +35134,19 @@
       "kind": "numeric",
       "value": 30,
       "unit": "V",
+      "tolerance": 0.01
+    }
+  },
+  {
+    "id": "PSMN4R3-30BL:rdson",
+    "part": "PSMN4R3-30BL",
+    "dimension": "rdson",
+    "split": "indexed",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN4R3-30BL at VGS = 10 V; ID = 15 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 4.1,
+      "unit": "mΩ",
       "tolerance": 0.01
     }
   },
@@ -34259,6 +35403,19 @@
     }
   },
   {
+    "id": "PSMN1R7-60BS:rdson",
+    "part": "PSMN1R7-60BS",
+    "dimension": "rdson",
+    "split": "holdout",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R7-60BS at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
+    "expected": {
+      "kind": "numeric",
+      "value": 2,
+      "unit": "mΩ",
+      "tolerance": 0.01
+    }
+  },
+  {
     "id": "PSMN1R7-60BS:id",
     "part": "PSMN1R7-60BS",
     "dimension": "id",
@@ -34409,10 +35566,10 @@
     "part": "BUK9K20-80E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K20-80E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9K20-80E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 19.4,
+      "value": 17,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -34462,10 +35619,10 @@
     "part": "PSMN1R0-30YLD",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R0-30YLD at VGS = 4.5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN1R0-30YLD at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 1.3,
+      "value": 1.02,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -34516,10 +35673,10 @@
     "part": "PSMN010-80YL",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PSMN010-80YL at VGS = 5 V; ID = 25 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PSMN010-80YL at VGS = 10 V; ID = 25 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 11,
+      "value": 10,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -34570,10 +35727,10 @@
     "part": "BUK9M28-80E",
     "dimension": "rdson",
     "split": "holdout",
-    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M28-80E at VGS = 5 V; ID = 10 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the BUK9M28-80E at VGS = 10 V; ID = 10 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 28,
+      "value": 25,
       "unit": "mΩ",
       "tolerance": 0.01
     }
@@ -34996,10 +36153,10 @@
     "part": "PMN40XPEA",
     "dimension": "rdson",
     "split": "indexed",
-    "question": "What is the maximum on-state resistance RDS(on) of the PMN40XPEA at VGS = -4.5 V; ID = -4.7 A; Tj = 25 °C?",
+    "question": "What is the maximum on-state resistance RDS(on) of the PMN40XPEA at VGS = -8 V; ID = -4.7 A; Tj = 25 °C?",
     "expected": {
       "kind": "numeric",
-      "value": 50,
+      "value": 46,
       "unit": "mΩ",
       "tolerance": 0.01
     }

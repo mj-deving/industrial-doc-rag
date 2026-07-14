@@ -32,7 +32,7 @@
 
 import { namedParts } from "../packages/doc-rag/src/answer";
 import { measures } from "../packages/doc-rag/src/grade";
-import { matches, vocabulary } from "../src/api/catalog";
+import { pool, vocabulary } from "../src/api/catalog";
 import { withoutNames } from "../packages/doc-rag/src/text";
 import type { Attributes } from "../src/api/contracts";
 import type { CorpusQuestion } from "./questions-corpus";
@@ -208,8 +208,13 @@ const cases: Case[] = answers.map((got) => {
   const winnerInPool =
     onCatalog && q.kind !== "count"
       ? (() => {
-          const pool = catalog.filter((row) => matches(row, q.filter as never));
-          return q.truthParts.some((part) => pool.some((row) => row.part === part));
+          const spec = {
+            op: q.id.startsWith("corpus:id-") ? ("max" as const) : ("min" as const),
+            field: q.id.startsWith("corpus:id-") ? ("id" as const) : ("rdson" as const),
+            filters: q.filter as never
+          };
+          const competed = new Set(pool(spec, catalog));
+          return q.truthParts.some((part) => competed.has(part));
         })()
       : null;
 

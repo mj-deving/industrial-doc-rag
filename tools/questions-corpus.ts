@@ -81,28 +81,53 @@ const channelName = (channel: "N" | "P") => (channel === "N" ? "N-channel" : "P-
 /** A P-channel part quotes -30 V. "Rated 30 V" is how an engineer says it. */
 const ratingOf = (vds: number) => Math.abs(vds);
 
-type Group = { key: string; filter: Record<string, string | number>; parts: GroundTruth[] };
+/** One part's figure in one condition class. A part appears in as many entries as its
+ *  datasheet has rows, which is the whole correction. */
+type Entry = { part: string; value: number };
+type Group = { key: string; filter: Record<string, string | number>; parts: Entry[] };
 
-/** Parts that publish the same measurement under the same conditions, so that the
- *  extremum among them is a fact about the parts and not about the test bench. */
+/**
+ * Parts that publish the same measurement under the same conditions, so that the
+ * extremum among them is a fact about the parts and not about the test bench.
+ *
+ * This grouped by ONE measurement per part — `l.rdson_mohm`, the row the parser picked —
+ * and that quietly decided which comparison each part was entered into. PSMNR58-30YLH
+ * quotes RDS(on) at both 10 V and 4.5 V; the parser kept the 10 V row; so the part was
+ * absent from the 4.5 V pool, and it is the part that WINS the 4.5 V pool. The catalogue,
+ * which stores every row, answered 0.9 mOhm and was marked wrong against a truth that had
+ * never looked at the row it answered from.
+ *
+ * A truth that keeps one row per part cannot state a truth about a comparison across
+ * condition classes, because which class a part lands in is then an artifact of the
+ * parser's choice rather than a fact about the datasheet. It reads every row now.
+ */
 function groupBy(
   labels: GroundTruth[],
-  measurementOf: (label: GroundTruth) => Measurement | null,
+  measurementsOf: (label: GroundTruth) => Measurement[],
   classOf: (m: Measurement) => string
 ): Group[] {
   const groups = new Map<string, Group>();
   for (const label of labels) {
-    const m = measurementOf(label);
-    if (!m || label.vds_v === null) continue;
-    const condition = classOf(m);
-    const key = `${label.channel}|${ratingOf(label.vds_v)}|${condition}`;
-    const group = groups.get(key) ?? {
-      key,
-      filter: { channel: label.channel, vds: ratingOf(label.vds_v), conditions: condition },
-      parts: []
-    };
-    group.parts.push(label);
-    groups.set(key, group);
+    if (label.vds_v === null) continue;
+    // A datasheet can print the same class twice (a duplicated row, a continuation).
+    // Keep the most conservative figure per class per part — the larger maximum — so a
+    // part enters each comparison exactly once, with the rating a buyer is held to.
+    const best = new Map<string, number>();
+    for (const m of measurementsOf(label)) {
+      const condition = classOf(m);
+      const have = best.get(condition);
+      if (have === undefined || Math.abs(m.value) > Math.abs(have)) best.set(condition, m.value);
+    }
+    for (const [condition, value] of best) {
+      const key = `${label.channel}|${ratingOf(label.vds_v)}|${condition}`;
+      const group = groups.get(key) ?? {
+        key,
+        filter: { channel: label.channel, vds: ratingOf(label.vds_v), conditions: condition },
+        parts: []
+      };
+      group.parts.push({ part: label.part, value });
+      groups.set(key, group);
+    }
   }
   return [...groups.values()];
 }
@@ -111,13 +136,12 @@ function groupBy(
  *  fact about it, and a question graded against one arbitrary winner would mark a
  *  correct answer wrong. */
 function extremum(
-  parts: GroundTruth[],
-  valueOf: (p: GroundTruth) => number,
+  parts: Entry[],
   direction: "min" | "max"
-): { value: number; winners: GroundTruth[] } {
-  const values = parts.map(valueOf);
+): { value: number; winners: Entry[] } {
+  const values = parts.map((p) => Math.abs(p.value));
   const best = direction === "min" ? Math.min(...values) : Math.max(...values);
-  return { value: best, winners: parts.filter((p) => valueOf(p) === best) };
+  return { value: best, winners: parts.filter((p) => Math.abs(p.value) === best) };
 }
 
 /** A superlative over two parts is a coin flip dressed as a query. */
@@ -132,9 +156,9 @@ export function corpusQuestions(all: GroundTruth[]): CorpusQuestion[] {
   const questions: CorpusQuestion[] = [];
 
   // ── RDS(on): the lowest on-resistance under a fixed gate drive ──────────────
-  for (const group of groupBy(indexed, (l) => l.rdson_mohm, rdsonClass)) {
+  for (const group of groupBy(indexed, (l) => l.rdson_all, rdsonClass)) {
     if (group.parts.length < MIN_CANDIDATES) continue;
-    const { value, winners } = extremum(group.parts, (p) => p.rdson_mohm!.value, "min");
+    const { value, winners } = extremum(group.parts, "min");
     const { channel, vds, conditions } = group.filter;
     const ask =
       `In this corpus, among the ${channelName(channel as "N" | "P")} parts rated ${vds} V ` +
@@ -164,9 +188,9 @@ export function corpusQuestions(all: GroundTruth[]): CorpusQuestion[] {
   }
 
   // ── ID: the highest continuous current under a fixed thermal assumption ─────
-  for (const group of groupBy(indexed, (l) => l.id_a, idClass)) {
+  for (const group of groupBy(indexed, (l) => l.id_all, idClass)) {
     if (group.parts.length < MIN_CANDIDATES) continue;
-    const { value, winners } = extremum(group.parts, (p) => Math.abs(p.id_a!.value), "max");
+    const { value, winners } = extremum(group.parts, "max");
     const { channel, vds, conditions } = group.filter;
 
     questions.push({

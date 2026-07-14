@@ -81,6 +81,32 @@ export type CatalogResult =
  */
 type Candidate = { part: string; value: number; conditions: string | null };
 
+/**
+ * The parts a query actually COMPETES: filtered, and holding a row in the condition
+ * class the question names.
+ *
+ * Exported so the eval can ask that question with the query's own code. It asked it with
+ * `matches()` instead — and `matches` filters on channel, voltage and package, because
+ * the condition class is applied here, one level down. So the eval's "was the winner in
+ * the pool" read "is the winner in the corpus", which is true of every part, and the
+ * metric printed 0.00 while the thing it was built to detect was the entire remaining
+ * failure. PMPB10XNE holds only its `t <= 5 s` row in the catalogue: it is in the corpus,
+ * and it is absent from every continuous-current comparison it should win.
+ */
+export function pool(spec: QuerySpec, rows: Attributes[]): string[] {
+  const filtered = rows.filter((row) => matches(row, spec.filters));
+  if (spec.op === "count") return filtered.map((row) => row.part);
+  const wanted = spec.filters.conditions;
+  const candidates = candidatesOf(filtered, spec.field ?? "rdson");
+  return [
+    ...new Set(
+      candidates
+        .filter((c) => wanted === undefined || c.conditions === classOf(wanted))
+        .map((c) => c.part)
+    )
+  ];
+}
+
 function candidatesOf(rows: Attributes[], field: Field): Candidate[] {
   if (field === "vds") {
     return rows

@@ -1,17 +1,13 @@
 [
   {
     "part": "PSMN011-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
         "value": 10.9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 25 °C"
-      },
-      {
-        "value": 10.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 20 A; Tj = 25 °C"
       },
       {
         "value": 17.7,
@@ -22,6 +18,11 @@
         "value": 25.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 175 °C"
+      },
+      {
+        "value": 15.2,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 20 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -44,6 +45,7 @@
   },
   {
     "part": "PSMN2R1-30YLE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -82,6 +84,7 @@
   },
   {
     "part": "PMV100XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -114,6 +117,7 @@
   },
   {
     "part": "PSMN013-60HS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -141,17 +145,24 @@
     ],
     "package": [
       "LFPAK56D",
-      "SOT1205"
+      "SOT1205",
+      "13RS60H"
     ]
   },
   {
     "part": "PMV52ENEA",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
         "value": 70,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 3.2 A; Tj = 25 °C"
+      },
+      {
+        "value": 70,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 2.7 A; Tj = 25 °C"
       },
       {
         "value": 124,
@@ -173,7 +184,8 @@
   },
   {
     "part": "PSMN011-60ML",
-    "vds": -60,
+    "channel": "N",
+    "vds": 60,
     "rdson": [
       {
         "value": 11.3,
@@ -210,6 +222,7 @@
   },
   {
     "part": "PSMN1R3-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -247,6 +260,7 @@
   },
   {
     "part": "PSMN3R0-60BS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -284,6 +298,7 @@
   },
   {
     "part": "PSMN028-100YS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -292,14 +307,14 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 74.3,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
-      },
-      {
         "value": 52,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
+      },
+      {
+        "value": 74.3,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -316,6 +331,7 @@
   },
   {
     "part": "PSMN1R7-25YLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -344,6 +360,11 @@
         "value": 200,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 25 °C"
+      },
+      {
+        "value": 200,
+        "unit": "A",
+        "conditions": ""
       }
     ],
     "package": [
@@ -354,6 +375,7 @@
   },
   {
     "part": "BUK7Y3R5-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -382,7 +404,8 @@
   },
   {
     "part": "PMPB50ENE",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 43,
@@ -405,6 +428,11 @@
         "value": 5.1,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 6.9,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -414,6 +442,7 @@
   },
   {
     "part": "BUK7Y65-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -442,6 +471,7 @@
   },
   {
     "part": "BUK6Y19-30P",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -462,12 +492,12 @@
     ],
     "id": [
       {
-        "value": -45,
+        "value": 45,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 25 °C"
       },
       {
-        "value": -32,
+        "value": 32,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 100 °C"
       }
@@ -480,6 +510,7 @@
   },
   {
     "part": "PMV48XPA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -500,7 +531,7 @@
     ],
     "id": [
       {
-        "value": -3.5,
+        "value": 3.5,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       }
@@ -512,6 +543,7 @@
   },
   {
     "part": "PSMN3R9-25MLC",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -544,6 +576,7 @@
   },
   {
     "part": "BUK9M7R2-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -581,6 +614,7 @@
   },
   {
     "part": "PMV50UPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -608,7 +642,7 @@
       {
         "value": -3.7,
         "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -618,6 +652,7 @@
   },
   {
     "part": "PMPB10EN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -641,6 +676,11 @@
         "value": 10,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 14,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -650,6 +690,7 @@
   },
   {
     "part": "PMPB06R2EN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -673,15 +714,22 @@
         "value": 13,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 18,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PMPB12R7EP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -709,11 +757,13 @@
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN1R9-80SSJ",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -722,7 +772,7 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.4,
+        "value": 4.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -741,12 +791,18 @@
   },
   {
     "part": "BUK9Y22-60EL",
-    "vds": -60,
+    "channel": "N",
+    "vds": 60,
     "rdson": [
       {
         "value": 14.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
+      },
+      {
+        "value": 23,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 25 °C"
       },
       {
         "value": 24,
@@ -759,9 +815,9 @@
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 125 °C"
       },
       {
-        "value": 23,
+        "value": 33.9,
         "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 10 A; Tj = 175 °C"
       },
       {
         "value": 36.6,
@@ -772,11 +828,6 @@
         "value": 40.5,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 125 °C"
-      },
-      {
-        "value": 33.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 10 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -794,6 +845,7 @@
   },
   {
     "part": "PMN25ENE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -809,7 +861,7 @@
     ],
     "id": [
       {
-        "value": 8,
+        "value": 6.1,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
       }
@@ -821,6 +873,7 @@
   },
   {
     "part": "PMV33UPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -849,11 +902,6 @@
         "value": -4.4,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
-      },
-      {
-        "value": -4.4,
-        "unit": "A",
-        "conditions": "Tj = 25 °C; VDS = -3 V"
       }
     ],
     "package": [
@@ -863,6 +911,7 @@
   },
   {
     "part": "BUK9Y29-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -896,6 +945,7 @@
   },
   {
     "part": "PMV20XNE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -938,6 +988,7 @@
   },
   {
     "part": "PSMN5R3-25MLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -946,14 +997,14 @@
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 5.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
-      {
         "value": 14.43,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 175 °C"
+      },
+      {
+        "value": 5.9,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
         "value": 10.03,
@@ -980,7 +1031,8 @@
   },
   {
     "part": "BUK7880-55A",
-    "vds": -55,
+    "channel": "N",
+    "vds": 55,
     "rdson": [
       {
         "value": 80,
@@ -1007,6 +1059,7 @@
   },
   {
     "part": "BUK7Y59-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -1035,6 +1088,7 @@
   },
   {
     "part": "BUK6Y24-40P",
+    "channel": "P",
     "vds": -40,
     "rdson": [
       {
@@ -1073,6 +1127,7 @@
   },
   {
     "part": "PSMN7R0-100BS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -1110,6 +1165,7 @@
   },
   {
     "part": "PSMN2R4-30MLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -1147,6 +1203,7 @@
   },
   {
     "part": "BUK7Y7R2-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -1164,7 +1221,7 @@
       {
         "value": 100,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -1175,12 +1232,13 @@
   },
   {
     "part": "PSMN3R8-100BS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
-        "value": 3.9,
+        "value": 10.6,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
       {
         "value": 6.9,
@@ -1188,9 +1246,9 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 10.6,
+        "value": 3.9,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -1212,7 +1270,8 @@
   },
   {
     "part": "BUK7K5R6-30E",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 5.6,
@@ -1244,6 +1303,7 @@
   },
   {
     "part": "BUK9D23-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -1276,6 +1336,7 @@
   },
   {
     "part": "PSMNR90-80CSF",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -1308,17 +1369,18 @@
   },
   {
     "part": "BUK9M52-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
         "value": 52,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 40.7,
+        "value": 40,
         "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
         "value": 101,
@@ -1345,6 +1407,7 @@
   },
   {
     "part": "PMPB47XP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -1372,7 +1435,7 @@
       {
         "value": -5,
         "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -1382,10 +1445,11 @@
   },
   {
     "part": "BUK764R0-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 3.3,
+        "value": 4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
@@ -1409,6 +1473,7 @@
   },
   {
     "part": "PSMN3R9-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -1452,6 +1517,7 @@
   },
   {
     "part": "PMN230ENE",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -1475,6 +1541,11 @@
         "value": 1.6,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 2,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -1484,6 +1555,7 @@
   },
   {
     "part": "PSMN2R0-30YLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -1495,11 +1567,6 @@
         "value": 2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 4.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
       },
       {
         "value": 3.3,
@@ -1527,45 +1594,46 @@
   },
   {
     "part": "BUK9M3R3-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 2.7,
+        "value": 3.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.8,
+        "value": 5.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 3.1,
+        "value": 5.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 3.9,
+        "value": 7.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
       {
-        "value": 3.4,
+        "value": 4.2,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.5,
+        "value": 6.6,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 3.9,
+        "value": 7.3,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 5,
+        "value": 9.2,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
       }
@@ -1589,6 +1657,7 @@
   },
   {
     "part": "BUK7M15-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -1631,6 +1700,7 @@
   },
   {
     "part": "PSMN8R5-60YS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -1664,6 +1734,7 @@
   },
   {
     "part": "PMV48XPA2",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -1700,12 +1771,12 @@
       }
     ],
     "package": [
-      "SOT23",
-      "TO-236AB"
+      "SOT23"
     ]
   },
   {
     "part": "PSMN1R5-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -1728,12 +1799,12 @@
       {
         "value": 100,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 25 °C"
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       },
       {
         "value": 100,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 100 °C"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -1743,6 +1814,7 @@
   },
   {
     "part": "PMV75UP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -1765,7 +1837,7 @@
       {
         "value": -3.2,
         "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -1775,6 +1847,7 @@
   },
   {
     "part": "BUK7M42-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -1802,6 +1875,7 @@
   },
   {
     "part": "BUK9Y19-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -1825,16 +1899,6 @@
         "value": 56,
         "unit": "A",
         "conditions": "VGS = 5 V; Tmb = 25 °C"
-      },
-      {
-        "value": 15,
-        "unit": "A",
-        "conditions": "VGS = 5 V; Tj = 25 °C"
-      },
-      {
-        "value": 15,
-        "unit": "A",
-        "conditions": "VGS = 5 V; Tj = 175 °C"
       }
     ],
     "package": [
@@ -1845,6 +1909,7 @@
   },
   {
     "part": "PSMN040-100MSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -1877,6 +1942,7 @@
   },
   {
     "part": "PSMN1R4-30YLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -1885,14 +1951,14 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.42,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
         "value": 3.05,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
+      },
+      {
+        "value": 1.42,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 2.34,
@@ -1904,12 +1970,22 @@
       {
         "value": 80,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
+        "conditions": "VGS = 3 V; Tj = 25 °C"
       },
       {
         "value": 40,
         "unit": "A",
-        "conditions": "Tj = 150 °C"
+        "conditions": "VGS = 3 V; Tj = 100 °C"
+      },
+      {
+        "value": 40,
+        "unit": "A",
+        "conditions": "VGS = 4.5 V; Tj = 25 °C"
+      },
+      {
+        "value": 20,
+        "unit": "A",
+        "conditions": "VGS = 4.5 V; Tj = 150 °C"
       }
     ],
     "package": [
@@ -1920,17 +1996,18 @@
   },
   {
     "part": "PMV15ENEA",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
         "value": 20,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5.8 A; Tj = 25 °C"
+        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 21,
+        "value": 20,
         "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 5.8 A; Tj = 25 °C"
       },
       {
         "value": 34,
@@ -1957,6 +2034,7 @@
   },
   {
     "part": "PXN7R7-25QL",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -1965,14 +2043,14 @@
         "conditions": "VGS = 10 V; ID = 11.8 A; Tj = 25 °C"
       },
       {
-        "value": 11.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 11.8 A; Tj = 150 °C"
-      },
-      {
         "value": 11.1,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 9.8 A; Tj = 25 °C"
+      },
+      {
+        "value": 11.9,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 11.8 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -1980,15 +2058,22 @@
         "value": 11.8,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 19,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "PSMN016-100BS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -2009,14 +2094,14 @@
     ],
     "id": [
       {
-        "value": 40,
-        "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 100 °C"
-      },
-      {
         "value": 57,
         "unit": "A",
         "conditions": "Tj = 25 °C; VGS = 10 V"
+      },
+      {
+        "value": 40,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       }
     ],
     "package": [
@@ -2026,6 +2111,7 @@
   },
   {
     "part": "PSMN1R0-100ASF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -2058,10 +2144,11 @@
   },
   {
     "part": "BUK9M14-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 14,
+        "value": 11,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 15 A; Tj = 25 °C"
       },
@@ -2095,6 +2182,7 @@
   },
   {
     "part": "PSMN1R2-80ASE",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -2132,6 +2220,7 @@
   },
   {
     "part": "BUK7M12-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -2159,6 +2248,7 @@
   },
   {
     "part": "PSMN1R4-100CSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -2196,6 +2286,7 @@
   },
   {
     "part": "PSMN5R0-40MLH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -2233,6 +2324,7 @@
   },
   {
     "part": "BUK4D110-20P",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -2270,6 +2362,7 @@
   },
   {
     "part": "PSMN1R0-100CSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -2278,12 +2371,12 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.2,
+        "value": 1.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 1.7,
+        "value": 2.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
@@ -2307,22 +2400,23 @@
   },
   {
     "part": "BUK9K52-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
-        "value": 41.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
-      },
-      {
-        "value": 47.3,
+        "value": 55,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 106.9,
+        "value": 124.3,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 175 °C"
+      },
+      {
+        "value": 49,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -2344,7 +2438,8 @@
   },
   {
     "part": "PSMN1R7-40YLD",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 1.8,
@@ -2387,17 +2482,18 @@
   },
   {
     "part": "PSMN030-60YS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
-      {
-        "value": 24.7,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
       {
         "value": 39.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
+      },
+      {
+        "value": 24.7,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
         "value": 56.8,
@@ -2424,6 +2520,7 @@
   },
   {
     "part": "PMV48XP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -2455,12 +2552,13 @@
       }
     ],
     "package": [
-      "TO-236AB",
-      "SOT23"
+      "SOT23",
+      "TO-236AB"
     ]
   },
   {
     "part": "PMPB15XPA",
+    "channel": "P",
     "vds": -12,
     "rdson": [
       {
@@ -2503,6 +2601,7 @@
   },
   {
     "part": "PSMN5R0-40MSH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -2530,17 +2629,18 @@
   },
   {
     "part": "PSMN8R2-80YS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
-      {
-        "value": 13.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
-      },
       {
         "value": 20,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
+      },
+      {
+        "value": 13.4,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
       },
       {
         "value": 8.5,
@@ -2567,6 +2667,7 @@
   },
   {
     "part": "BUK7Y113-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -2595,6 +2696,7 @@
   },
   {
     "part": "PMV28ENEA",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -2632,7 +2734,8 @@
   },
   {
     "part": "BUK9M11-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 11,
@@ -2670,7 +2773,7 @@
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 125 °C"
       },
       {
-        "value": 14.4,
+        "value": 27.2,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 175 °C"
       }
@@ -2694,6 +2797,7 @@
   },
   {
     "part": "BUK768R1-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -2721,6 +2825,7 @@
   },
   {
     "part": "PMPB14XN",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -2754,6 +2859,11 @@
         "value": 8.1,
         "unit": "A",
         "conditions": "VGS = 4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": 11.5,
+        "unit": "A",
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -2763,25 +2873,26 @@
   },
   {
     "part": "BUK7S0R7-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 0.43,
+        "value": 0.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 0.61,
+        "value": 1.11,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 0.68,
+        "value": 1.23,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 0.85,
+        "value": 1.53,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -2800,7 +2911,8 @@
   },
   {
     "part": "PSMN2R5-40YLB",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 2.6,
@@ -2838,6 +2950,7 @@
   },
   {
     "part": "PSMN017-60YS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -2846,14 +2959,14 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 36.1,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
-      },
-      {
         "value": 25,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
+      },
+      {
+        "value": 36.1,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -2870,6 +2983,7 @@
   },
   {
     "part": "PSMN2R3-100SSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -2902,6 +3016,7 @@
   },
   {
     "part": "PMN48XP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -2922,12 +3037,12 @@
     ],
     "id": [
       {
-        "value": -4.1,
+        "value": 4.1,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": -2.5,
+        "value": 2.5,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }
@@ -2939,6 +3054,7 @@
   },
   {
     "part": "PSMN014-60HS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -2966,11 +3082,13 @@
     ],
     "package": [
       "LFPAK56D",
-      "SOT1205"
+      "SOT1205",
+      "14RS60H"
     ]
   },
   {
     "part": "PMV16XN",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -2999,11 +3117,6 @@
         "value": 6.8,
         "unit": "A",
         "conditions": "VGS = 4.5 V; Tamb = 25 °C"
-      },
-      {
-        "value": 6.8,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
       }
     ],
     "package": [
@@ -3013,6 +3126,7 @@
   },
   {
     "part": "PSMN1R0-80CSE",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -3050,6 +3164,7 @@
   },
   {
     "part": "PSMN5R6-60YL",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -3070,14 +3185,9 @@
     ],
     "id": [
       {
-        "value": 96,
+        "value": 167,
         "unit": "A",
-        "conditions": "Tj = 25°C"
-      },
-      {
-        "value": 72,
-        "unit": "A",
-        "conditions": "Tj = 175°C"
+        "conditions": "Tmb = 25 °C"
       }
     ],
     "package": [
@@ -3088,6 +3198,7 @@
   },
   {
     "part": "PMPB14XP",
+    "channel": "P",
     "vds": -12,
     "rdson": [
       {
@@ -3116,6 +3227,11 @@
         "value": 8.6,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": 12.7,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -3125,6 +3241,7 @@
   },
   {
     "part": "PMV74EPE",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -3145,7 +3262,7 @@
     ],
     "id": [
       {
-        "value": -2.8,
+        "value": 2.8,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
       }
@@ -3157,6 +3274,7 @@
   },
   {
     "part": "PSMN5R0-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -3189,6 +3307,7 @@
   },
   {
     "part": "BUK9875-100A",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -3221,6 +3340,7 @@
   },
   {
     "part": "BUK7K6R2-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -3243,12 +3363,12 @@
       {
         "value": 14,
         "unit": "A",
-        "conditions": "Tj = 100 °C"
+        "conditions": "Tj = 100 °C; VGS = 10 V"
       },
       {
         "value": 10,
         "unit": "A",
-        "conditions": "Tj = 150 °C"
+        "conditions": "Tj = 150 °C; VGS = 10 V"
       }
     ],
     "package": [
@@ -3258,6 +3378,7 @@
   },
   {
     "part": "PMV100EPA",
+    "channel": "P",
     "vds": -60,
     "rdson": [
       {
@@ -3278,12 +3399,12 @@
     ],
     "id": [
       {
-        "value": -2.2,
+        "value": 2.2,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
       },
       {
-        "value": -1.4,
+        "value": 1.4,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 100 °C"
       }
@@ -3295,6 +3416,7 @@
   },
   {
     "part": "PMN120ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -3332,13 +3454,9 @@
   },
   {
     "part": "PSMN5R6-100BS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
-      {
-        "value": 5.6,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
       {
         "value": 10,
         "unit": "mΩ",
@@ -3348,6 +3466,11 @@
         "value": 15.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 5.6,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -3359,7 +3482,7 @@
       {
         "value": 100,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -3369,7 +3492,8 @@
   },
   {
     "part": "BUK9K13-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 13.6,
@@ -3426,6 +3550,7 @@
   },
   {
     "part": "BUK9K5R1-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -3434,14 +3559,14 @@
         "conditions": "VGS = 5 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 4.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
-      },
-      {
         "value": 10,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 10 A; Tj = 175 °C"
+      },
+      {
+        "value": 4.4,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -3463,6 +3588,7 @@
   },
   {
     "part": "PSMN025-100HS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -3491,12 +3617,12 @@
     "package": [
       "LFPAK56D",
       "SOT1205",
-      "LFPAK56",
-      "LFPAK"
+      "25RS10H"
     ]
   },
   {
     "part": "PSMN3R3-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -3520,11 +3646,6 @@
         "value": 120,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 100 °C"
-      },
-      {
-        "value": 120,
-        "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -3534,10 +3655,11 @@
   },
   {
     "part": "PSMNR90-30BL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
-        "value": 0.89,
+        "value": 1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
@@ -3566,6 +3688,11 @@
       {
         "value": 60,
         "unit": "A",
+        "conditions": "Tj = 100 °C"
+      },
+      {
+        "value": 45,
+        "unit": "A",
         "conditions": "Tj = 175 °C"
       }
     ],
@@ -3576,10 +3703,11 @@
   },
   {
     "part": "PSMN5R5-60YS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
-        "value": 7.6,
+        "value": 12,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       },
@@ -3608,6 +3736,7 @@
   },
   {
     "part": "PSMN3R3-40MLH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -3635,7 +3764,7 @@
       {
         "value": 118,
         "unit": "A",
-        "conditions": "Tmb = 25 °C"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -3645,6 +3774,7 @@
   },
   {
     "part": "BUK9K12-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -3665,7 +3795,7 @@
     ],
     "id": [
       {
-        "value": 16,
+        "value": 11.5,
         "unit": "A",
         "conditions": "Tj = 25 °C"
       },
@@ -3682,6 +3812,7 @@
   },
   {
     "part": "PMV19XNEA",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -3724,6 +3855,7 @@
   },
   {
     "part": "BUK9Y107-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -3757,6 +3889,7 @@
   },
   {
     "part": "BUK7M27-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -3784,6 +3917,7 @@
   },
   {
     "part": "PMPB12R5UPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -3817,15 +3951,22 @@
         "value": -9.4,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": -13,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK7M19-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -3853,6 +3994,7 @@
   },
   {
     "part": "BUK7K45-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -3885,6 +4027,7 @@
   },
   {
     "part": "BUK7M12-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -3912,6 +4055,7 @@
   },
   {
     "part": "BUK9Y3R5-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -3932,24 +4076,9 @@
     ],
     "id": [
       {
-        "value": 60,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 40,
-        "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
         "value": 25,
         "unit": "A",
-        "conditions": "Tj = 25 °C; VGS = 5 V"
-      },
-      {
-        "value": 20,
-        "unit": "A",
-        "conditions": "Tj = 25 °C; VGS = 10 V"
+        "conditions": "Tj = 25 °C; VGS = 5 V; VDS = 32 V"
       }
     ],
     "package": [
@@ -3960,6 +4089,7 @@
   },
   {
     "part": "PMN70EPE",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -3980,9 +4110,14 @@
     ],
     "id": [
       {
-        "value": -3.3,
+        "value": 3.3,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 4.4,
+        "unit": "A",
+        "conditions": "VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -3992,6 +4127,7 @@
   },
   {
     "part": "BUK9M6R6-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -4029,6 +4165,7 @@
   },
   {
     "part": "PSMN8R5-40MLD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -4057,11 +4194,6 @@
         "value": 60,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 25 °C"
-      },
-      {
-        "value": 60,
-        "unit": "A",
-        "conditions": ""
       }
     ],
     "package": [
@@ -4071,6 +4203,7 @@
   },
   {
     "part": "PMV40UN2",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -4113,6 +4246,7 @@
   },
   {
     "part": "PSMNR58-30YLH",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -4156,6 +4290,7 @@
   },
   {
     "part": "PSMNR70-40YSN",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -4194,6 +4329,7 @@
   },
   {
     "part": "PSMN1R2-80CSE",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -4231,17 +4367,13 @@
   },
   {
     "part": "PSMN1R1-80ASF",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
         "value": 1.11,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 1.16,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 1.7,
@@ -4252,6 +4384,11 @@
         "value": 2.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 1.74,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -4268,6 +4405,7 @@
   },
   {
     "part": "PSMN9R5-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -4299,21 +4437,14 @@
       }
     ],
     "package": [
-      "LFPAK33",
-      "LFPAK56",
-      "D2PAK",
+      "LFPAK",
       "Power-SO8",
-      "TO-236AB",
-      "SOT1210",
-      "SOT404",
-      "SOT669",
-      "SOT1220",
-      "SOT23",
-      "LFPAK"
+      "SOT669"
     ]
   },
   {
     "part": "BUK9Y6R5-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -4322,19 +4453,29 @@
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 25 °C"
       },
       {
-        "value": 8.1,
+        "value": 8.6,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
+      },
+      {
+        "value": 9.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 105 °C"
       },
       {
-        "value": 8.8,
+        "value": 10.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 125 °C"
       },
       {
-        "value": 10.6,
+        "value": 12.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 175 °C"
+      },
+      {
+        "value": 12.9,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 105 °C"
       },
       {
         "value": 13.9,
@@ -4345,11 +4486,6 @@
         "value": 16.7,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 175 °C"
-      },
-      {
-        "value": 12.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 105 °C"
       }
     ],
     "id": [
@@ -4367,17 +4503,13 @@
   },
   {
     "part": "BUK7A1R0-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
         "value": 0.99,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 0.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 1.6,
@@ -4388,6 +4520,11 @@
         "value": 2.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 1.35,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -4404,6 +4541,7 @@
   },
   {
     "part": "BUK98180-100A",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -4436,6 +4574,7 @@
   },
   {
     "part": "BUK7Y8R7-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -4464,6 +4603,7 @@
   },
   {
     "part": "PSMN2R0-40YLB",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -4472,14 +4612,14 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.7,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
         "value": 4.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 2.7,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 5.2,
@@ -4502,6 +4642,7 @@
   },
   {
     "part": "PSMN2R8-40YSD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -4535,6 +4676,7 @@
   },
   {
     "part": "BUK7K12-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -4550,19 +4692,14 @@
     ],
     "id": [
       {
-        "value": 10,
+        "value": 1,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
+        "conditions": "VDS = 60 V; VGS = 0 V; Tj = 25 °C"
       },
       {
-        "value": 6.9,
+        "value": 500,
         "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
-        "value": 4.8,
-        "unit": "A",
-        "conditions": "Tj = 125 °C"
+        "conditions": "VDS = 60 V; VGS = 0 V; Tj = 175 °C"
       }
     ],
     "package": [
@@ -4572,6 +4709,7 @@
   },
   {
     "part": "BUK7S1R0-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -4580,7 +4718,7 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.3,
+        "value": 1.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
@@ -4609,6 +4747,7 @@
   },
   {
     "part": "PMV42ENE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -4641,6 +4780,7 @@
   },
   {
     "part": "BUK7Y3R1-80M",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -4649,12 +4789,12 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 4,
+        "value": 5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 5,
+        "value": 5.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
@@ -4684,6 +4824,7 @@
   },
   {
     "part": "PMV20EN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -4707,6 +4848,11 @@
         "value": 6,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 7.6,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -4716,6 +4862,7 @@
   },
   {
     "part": "PMV50XP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -4724,14 +4871,14 @@
         "conditions": "VGS = -4.5 V; ID = -3.6 A; Tj = 25 °C"
       },
       {
-        "value": 86,
-        "unit": "mΩ",
-        "conditions": "VGS = -4.5 V; ID = -3.6 A; Tj = 150 °C"
-      },
-      {
         "value": 80,
         "unit": "mΩ",
         "conditions": "VGS = -2.5 V; ID = -3.1 A; Tj = 25 °C"
+      },
+      {
+        "value": 86,
+        "unit": "mΩ",
+        "conditions": "VGS = -4.5 V; ID = -3.6 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -4753,10 +4900,11 @@
   },
   {
     "part": "BUK9M10-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
-        "value": 8.1,
+        "value": 10,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 15 A; Tj = 25 °C"
       },
@@ -4790,7 +4938,8 @@
   },
   {
     "part": "BUK9K61-100L",
-    "vds": -100,
+    "channel": "N",
+    "vds": 100,
     "rdson": [
       {
         "value": 60.1,
@@ -4825,11 +4974,6 @@
       {
         "value": 137.5,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 175 °C"
-      },
-      {
-        "value": 207,
-        "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 175 °C"
       }
     ],
@@ -4847,6 +4991,7 @@
   },
   {
     "part": "PSMN012-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -4869,7 +5014,7 @@
       {
         "value": 74,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -4879,6 +5024,7 @@
   },
   {
     "part": "BUK7T1R0-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -4887,12 +5033,12 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.2,
+        "value": 1.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 1.7,
+        "value": 2.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
@@ -4904,9 +5050,14 @@
     ],
     "id": [
       {
-        "value": 460,
+        "value": 25,
         "unit": "A",
         "conditions": "Tmb = 25 °C"
+      },
+      {
+        "value": 460,
+        "unit": "A",
+        "conditions": ""
       }
     ],
     "package": [
@@ -4916,25 +5067,26 @@
   },
   {
     "part": "BUK7Y3R5-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 2.9,
+        "value": 3.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 4.1,
+        "value": 5.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 4.5,
+        "value": 5.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 5.4,
+        "value": 6.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -4954,6 +5106,7 @@
   },
   {
     "part": "BUK9M120-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -4991,6 +5144,7 @@
   },
   {
     "part": "PSMN6R8-40HS",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -5023,6 +5177,7 @@
   },
   {
     "part": "PSMN1R4-40YLD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -5036,14 +5191,14 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.65,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
-      },
-      {
         "value": 3.4,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 2.65,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -5066,6 +5221,7 @@
   },
   {
     "part": "PSMN2R2-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -5104,6 +5260,7 @@
   },
   {
     "part": "BUK7K15-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -5122,11 +5279,6 @@
         "value": 23,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 25 °C"
-      },
-      {
-        "value": 10,
-        "unit": "A",
-        "conditions": "ID = 10 A; VDS = 64 V; VGS = 10 V; Tj = 25 °C"
       }
     ],
     "package": [
@@ -5136,13 +5288,9 @@
   },
   {
     "part": "PSMN7R0-60YS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
-      {
-        "value": 6.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
       {
         "value": 14.7,
         "unit": "mΩ",
@@ -5152,6 +5300,11 @@
         "value": 10.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
+      },
+      {
+        "value": 6.4,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -5168,6 +5321,7 @@
   },
   {
     "part": "PSMN8R7-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -5205,6 +5359,7 @@
   },
   {
     "part": "PMV65UNEA",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -5247,6 +5402,7 @@
   },
   {
     "part": "PSMN9R8-30MLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -5279,6 +5435,7 @@
   },
   {
     "part": "BUK9Y12-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -5312,6 +5469,7 @@
   },
   {
     "part": "PSMN045-100HL",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -5320,14 +5478,14 @@
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 42,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
-      },
-      {
         "value": 124,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 175 °C"
+      },
+      {
+        "value": 42,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -5339,11 +5497,13 @@
     ],
     "package": [
       "LFPAK56D",
-      "SOT1205"
+      "SOT1205",
+      "45RL10H"
     ]
   },
   {
     "part": "BUK9Y41-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -5371,6 +5531,7 @@
   },
   {
     "part": "BUK7Y6R0-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -5399,6 +5560,7 @@
   },
   {
     "part": "BUK9Y43-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -5417,23 +5579,7 @@
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 175 °C"
       }
     ],
-    "id": [
-      {
-        "value": 43,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 29,
-        "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
-        "value": 17,
-        "unit": "A",
-        "conditions": "Tj = 150 °C"
-      }
-    ],
+    "id": [],
     "package": [
       "LFPAK56",
       "Power-SO8",
@@ -5442,6 +5588,7 @@
   },
   {
     "part": "PMPB16EP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -5470,6 +5617,11 @@
         "value": -7.5,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
+      },
+      {
+        "value": -10.6,
+        "unit": "A",
+        "conditions": "VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -5479,6 +5631,7 @@
   },
   {
     "part": "BUK6Y10-30P",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -5499,12 +5652,12 @@
     ],
     "id": [
       {
-        "value": -80,
+        "value": 80,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 25 °C"
       },
       {
-        "value": -57,
+        "value": 57,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 100 °C"
       }
@@ -5517,17 +5670,13 @@
   },
   {
     "part": "BUK7T1R4-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
         "value": 1.35,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 2.04,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 2.2,
@@ -5538,6 +5687,11 @@
         "value": 3.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 2.04,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -5554,6 +5708,7 @@
   },
   {
     "part": "PSMN4R2-40VSH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -5571,12 +5726,7 @@
       {
         "value": 82.6,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 98,
-        "unit": "A",
-        "conditions": ""
+        "conditions": "Tj = 25 °C; VGS = 10 V"
       }
     ],
     "package": [
@@ -5586,6 +5736,7 @@
   },
   {
     "part": "PMPB08R5XN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -5618,11 +5769,13 @@
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK9K12-80L",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -5680,6 +5833,7 @@
   },
   {
     "part": "PMPB95ENEA",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -5700,14 +5854,9 @@
     ],
     "id": [
       {
-        "value": 2.8,
+        "value": 4.1,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tj = 25 °C"
-      },
-      {
-        "value": 2.6,
-        "unit": "A",
-        "conditions": "VGS = 4.5 V; Tj = 25 °C"
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -5717,6 +5866,7 @@
   },
   {
     "part": "BUK9Y8R7-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -5750,6 +5900,7 @@
   },
   {
     "part": "BUK7K8R7-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -5782,7 +5933,8 @@
   },
   {
     "part": "PSMN7R5-30YLD",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 10.2,
@@ -5790,14 +5942,14 @@
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 7.5,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
-      {
         "value": 16.9,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 150 °C"
+      },
+      {
+        "value": 7.5,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
         "value": 12.4,
@@ -5825,6 +5977,7 @@
   },
   {
     "part": "PMN42XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -5842,7 +5995,7 @@
       {
         "value": -5.7,
         "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -5852,15 +6005,16 @@
   },
   {
     "part": "BUK9Y25-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
-        "value": 20.8,
+        "value": 25,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 18.3,
+        "value": 21.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
       },
@@ -5885,6 +6039,7 @@
   },
   {
     "part": "PSMNR89-25YLE",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -5893,14 +6048,14 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.35,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
         "value": 1.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 150 °C"
+      },
+      {
+        "value": 1.35,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 2.4,
@@ -5923,6 +6078,7 @@
   },
   {
     "part": "BUK7Y153-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -5951,6 +6107,7 @@
   },
   {
     "part": "PSMN013-60HL",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -5983,27 +6140,28 @@
   },
   {
     "part": "PSMN2R7-30BL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
-        "value": 2.57,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 3.6,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
-      },
-      {
-        "value": 3.16,
+        "value": 3.7,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 4.88,
+        "value": 5.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 4.2,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
+      },
+      {
+        "value": 3,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -6025,6 +6183,7 @@
   },
   {
     "part": "PSMN7R5-30MLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6052,12 +6211,12 @@
       {
         "value": 57,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       },
       {
         "value": 40,
         "unit": "A",
-        "conditions": "Tmb = 100 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       }
     ],
     "package": [
@@ -6067,6 +6226,7 @@
   },
   {
     "part": "BUK4D38-20P",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -6075,14 +6235,14 @@
         "conditions": "VGS = -8 V; ID = -6 A; Tj = 25 °C"
       },
       {
-        "value": 38,
-        "unit": "mΩ",
-        "conditions": "VGS = -4.5 V; ID = -6 A; Tj = 25 °C"
-      },
-      {
         "value": 50,
         "unit": "mΩ",
         "conditions": "VGS = -8 V; ID = -6 A; Tj = 175 °C"
+      },
+      {
+        "value": 38,
+        "unit": "mΩ",
+        "conditions": "VGS = -4.5 V; ID = -6 A; Tj = 25 °C"
       },
       {
         "value": 64,
@@ -6104,6 +6264,7 @@
   },
   {
     "part": "BUK6D38-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6136,6 +6297,7 @@
   },
   {
     "part": "BUK6Y61-60P",
+    "channel": "P",
     "vds": -60,
     "rdson": [
       {
@@ -6174,6 +6336,7 @@
   },
   {
     "part": "PMN40ENE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6196,7 +6359,7 @@
       {
         "value": 5.7,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tamb = 25 °C"
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -6206,6 +6369,7 @@
   },
   {
     "part": "BUK7Y19-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -6234,6 +6398,7 @@
   },
   {
     "part": "BUK9K31-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -6250,11 +6415,6 @@
         "value": 56.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 125 °C"
-      },
-      {
-        "value": 107.6,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 175 °C"
       },
       {
         "value": 72.5,
@@ -6275,6 +6435,11 @@
         "value": 83.5,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 125 °C"
+      },
+      {
+        "value": 107.6,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -6291,6 +6456,7 @@
   },
   {
     "part": "PSMN4R5-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6327,21 +6493,14 @@
       }
     ],
     "package": [
-      "LFPAK33",
-      "LFPAK56",
-      "D2PAK",
+      "LFPAK",
       "Power-SO8",
-      "TO-236AB",
-      "SOT1210",
-      "SOT404",
-      "SOT669",
-      "SOT1220",
-      "SOT23",
-      "LFPAK"
+      "SOT669"
     ]
   },
   {
     "part": "PMPB10XN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6377,9 +6536,9 @@
         "conditions": "VGS = 4.5 V; Tamb = 25 °C"
       },
       {
-        "value": 9.5,
+        "value": 13.5,
         "unit": "A",
-        "conditions": "VGS = 4.5 V; Tamb = 25 °C; Tj = 25 °C"
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -6389,6 +6548,7 @@
   },
   {
     "part": "BUK9K13-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -6407,23 +6567,7 @@
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
       }
     ],
-    "id": [
-      {
-        "value": 10,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 6.5,
-        "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
-        "value": 4,
-        "unit": "A",
-        "conditions": "Tj = 150 °C"
-      }
-    ],
+    "id": [],
     "package": [
       "LFPAK56D",
       "SOT1205"
@@ -6431,12 +6575,18 @@
   },
   {
     "part": "PMPB19R0UPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
         "value": 21,
         "unit": "mΩ",
         "conditions": "VGS = -4.5 V; ID = -7.6 A; Tj = 25 °C"
+      },
+      {
+        "value": 31,
+        "unit": "mΩ",
+        "conditions": "VGS = -4.5 V; ID = -7.6 A; Tj = 150 °C"
       },
       {
         "value": 30,
@@ -6452,11 +6602,6 @@
         "value": 110,
         "unit": "mΩ",
         "conditions": "VGS = -1.5 V; ID = -0.1 A; Tj = 25 °C"
-      },
-      {
-        "value": 31,
-        "unit": "mΩ",
-        "conditions": "VGS = -4.5 V; ID = -7.6 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -6464,15 +6609,22 @@
         "value": -7.6,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": -11,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PMN30UN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6515,6 +6667,7 @@
   },
   {
     "part": "PSMN0R9-30YLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6542,7 +6695,7 @@
       {
         "value": 300,
         "unit": "A",
-        "conditions": ""
+        "conditions": "Tj = 25 °C"
       }
     ],
     "package": [
@@ -6553,6 +6706,7 @@
   },
   {
     "part": "PSMN3R4-30BLE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6600,6 +6754,7 @@
   },
   {
     "part": "PSMN011-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -6638,6 +6793,7 @@
   },
   {
     "part": "PMN28UNE",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -6675,6 +6831,7 @@
   },
   {
     "part": "PSMN7R6-60BS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -6707,12 +6864,13 @@
   },
   {
     "part": "PSMN017-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 17,
+        "value": 40.8,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 10 A; Tj = 175 °C"
       },
       {
         "value": 29,
@@ -6720,9 +6878,9 @@
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 100 °C"
       },
       {
-        "value": 40.8,
+        "value": 17,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 10 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -6744,6 +6902,7 @@
   },
   {
     "part": "BUK78150-55A",
+    "channel": "N",
     "vds": 55,
     "rdson": [
       {
@@ -6762,20 +6921,16 @@
         "value": 5.5,
         "unit": "A",
         "conditions": "VGS = 10 V"
-      },
-      {
-        "value": 5.5,
-        "unit": "A",
-        "conditions": ""
       }
     ],
     "package": [
-      "SC-73",
-      "SOT223"
+      "SOT223",
+      "SC-73"
     ]
   },
   {
     "part": "PSMN5R5-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -6784,14 +6939,14 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 8.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
-      },
-      {
         "value": 8.4,
         "unit": "mΩ",
         "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
+      },
+      {
+        "value": 8.9,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
         "value": 12.7,
@@ -6819,6 +6974,7 @@
   },
   {
     "part": "PSMN027-100BS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -6856,7 +7012,8 @@
   },
   {
     "part": "PMPB09R1XN",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 11.2,
@@ -6888,12 +7045,14 @@
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK9K18-40E",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 19.5,
@@ -6925,6 +7084,7 @@
   },
   {
     "part": "PSMNR51-25YLH",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -6968,20 +7128,21 @@
   },
   {
     "part": "PSMN2R8-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 2.55,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 4.21,
+        "value": 5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 6.12,
+        "value": 3,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
+      },
+      {
+        "value": 7.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -6990,12 +7151,12 @@
       {
         "value": 120,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 25 °C"
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       },
       {
         "value": 120,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 100 °C"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -7005,6 +7166,7 @@
   },
   {
     "part": "BUK7K35-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -7022,12 +7184,12 @@
       {
         "value": 20.7,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 25 °C"
+        "conditions": "Tmb = 25 °C; VGS = 10 V"
       },
       {
         "value": 17,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 100 °C"
+        "conditions": "Tmb = 100 °C; VGS = 10 V"
       }
     ],
     "package": [
@@ -7037,6 +7199,7 @@
   },
   {
     "part": "BUK9M9R1-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -7074,6 +7237,7 @@
   },
   {
     "part": "PMPB10XNE",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -7099,14 +7263,9 @@
     ],
     "id": [
       {
-        "value": 9,
+        "value": 12.9,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 9,
-        "unit": "A",
-        "conditions": "Tj = 150 °C"
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -7116,6 +7275,7 @@
   },
   {
     "part": "BUK9880-55A",
+    "channel": "N",
     "vds": 55,
     "rdson": [
       {
@@ -7148,17 +7308,18 @@
   },
   {
     "part": "BUK9M35-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
         "value": 35,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 28,
+        "value": 31,
         "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
         "value": 88,
@@ -7185,17 +7346,13 @@
   },
   {
     "part": "PSMNR90-80ASF",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
         "value": 0.85,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 0.81,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 1.3,
@@ -7206,6 +7363,11 @@
         "value": 2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 1.22,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -7222,6 +7384,7 @@
   },
   {
     "part": "BUK7K17-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -7254,15 +7417,16 @@
   },
   {
     "part": "BUK9Y3R0-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 2.47,
+        "value": 3,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.98,
+        "value": 2.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
@@ -7287,6 +7451,7 @@
   },
   {
     "part": "BUK7J2R4-80M",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -7330,6 +7495,7 @@
   },
   {
     "part": "PMPB06R3XN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -7362,17 +7528,19 @@
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-4"
+      "SOT1220-4",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN015-60BS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
-        "value": 14.8,
+        "value": 34,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       },
       {
         "value": 23.7,
@@ -7380,9 +7548,9 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
       },
       {
-        "value": 28.9,
+        "value": 14.8,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -7404,6 +7572,7 @@
   },
   {
     "part": "BUK7Y4R4-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -7432,6 +7601,7 @@
   },
   {
     "part": "BUK7M8R5-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -7440,7 +7610,7 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 10.7,
+        "value": 12.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 105 °C"
       },
@@ -7474,6 +7644,7 @@
   },
   {
     "part": "BUK7Y38-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -7502,6 +7673,7 @@
   },
   {
     "part": "BUK9M20-60EL",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -7515,16 +7687,6 @@
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 32,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 105 °C"
-      },
-      {
-        "value": 35.3,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 125 °C"
-      },
-      {
         "value": 21,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 105 °C"
@@ -7533,6 +7695,16 @@
         "value": 23.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 125 °C"
+      },
+      {
+        "value": 32,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 105 °C"
+      },
+      {
+        "value": 35.3,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 125 °C"
       },
       {
         "value": 44.4,
@@ -7554,7 +7726,8 @@
   },
   {
     "part": "PSMN041-80YL",
-    "vds": -80,
+    "channel": "N",
+    "vds": 80,
     "rdson": [
       {
         "value": 41,
@@ -7592,6 +7765,7 @@
   },
   {
     "part": "PXN9R0-30QL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -7615,16 +7789,23 @@
         "value": 11.4,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 17.3,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "PSMN3R0-30YLD",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 4,
@@ -7667,25 +7848,26 @@
   },
   {
     "part": "BUK7Y3R0-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
-        "value": 2.55,
+        "value": 3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.6,
+        "value": 4.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 4,
+        "value": 5.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 5,
+        "value": 6.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -7705,6 +7887,7 @@
   },
   {
     "part": "PMV52ENE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -7732,6 +7915,7 @@
   },
   {
     "part": "BUK7M8R0-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -7764,6 +7948,7 @@
   },
   {
     "part": "PSMN1R1-25YLC",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -7802,6 +7987,7 @@
   },
   {
     "part": "PSMN2R9-25YLC",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -7810,14 +7996,14 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
+        "value": 4.1,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
+      },
+      {
         "value": 5.05,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 150 °C"
-      },
-      {
-        "value": 3.45,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 6.6,
@@ -7840,17 +8026,18 @@
   },
   {
     "part": "PSMN3R5-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
-      {
-        "value": 4.61,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
-      },
       {
         "value": 3.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      },
+      {
+        "value": 4.61,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
       },
       {
         "value": 6,
@@ -7878,17 +8065,18 @@
   },
   {
     "part": "PSMN012-100YS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
-      {
-        "value": 23,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
-      },
       {
         "value": 12,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      },
+      {
+        "value": 23,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
       },
       {
         "value": 35.8,
@@ -7910,7 +8098,8 @@
   },
   {
     "part": "BUK7Y2R0-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 2,
@@ -7918,7 +8107,7 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.33,
+        "value": 3.18,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
@@ -7948,6 +8137,7 @@
   },
   {
     "part": "BUK9Y1R9-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8006,6 +8196,7 @@
   },
   {
     "part": "PSMN1R0-40ULD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8014,9 +8205,9 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.93,
+        "value": 2.45,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 150 °C"
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
       },
       {
         "value": 1.1,
@@ -8024,9 +8215,9 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.45,
+        "value": 1.93,
         "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -8042,12 +8233,13 @@
       }
     ],
     "package": [
-      "LFPAK56-UL",
-      "SOT1023A"
+      "SOT1023A",
+      "LFPAK56-UL"
     ]
   },
   {
     "part": "PSMN1R2-55SLH",
+    "channel": "N",
     "vds": 55,
     "rdson": [
       {
@@ -8085,6 +8277,7 @@
   },
   {
     "part": "PSMN2R2-40YSB",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8118,6 +8311,7 @@
   },
   {
     "part": "PSMN1R5-40YSD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8151,17 +8345,18 @@
   },
   {
     "part": "BUK9Y4R8-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
         "value": 4.8,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
+        "conditions": "VGS = 5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.3,
+        "value": 4.1,
         "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 25 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 10.8,
@@ -8184,6 +8379,7 @@
   },
   {
     "part": "PMN70XP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -8204,12 +8400,17 @@
     ],
     "id": [
       {
-        "value": -3.1,
+        "value": 3.9,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
+      },
+      {
+        "value": 3.1,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": -2,
+        "value": 2,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }
@@ -8221,6 +8422,7 @@
   },
   {
     "part": "PSMNR70-40SSH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8243,25 +8445,26 @@
   },
   {
     "part": "BUK7S1R2-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
-        "value": 1.06,
+        "value": 1.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.59,
+        "value": 1.9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 1.76,
+        "value": 2.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 2.21,
+        "value": 2.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -8280,6 +8483,7 @@
   },
   {
     "part": "PMPB29XPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -8317,6 +8521,7 @@
   },
   {
     "part": "PMPB20XPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -8342,14 +8547,9 @@
     ],
     "id": [
       {
-        "value": -7.1,
+        "value": 10.3,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": -10.3,
-        "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -8359,6 +8559,7 @@
   },
   {
     "part": "BUK7M6R0-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8401,6 +8602,7 @@
   },
   {
     "part": "PSMN047-100NSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -8428,11 +8630,13 @@
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN2R3-80SSF",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -8470,6 +8674,7 @@
   },
   {
     "part": "BUK761R6-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8497,6 +8702,7 @@
   },
   {
     "part": "PMPB27EPA",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -8517,12 +8723,12 @@
     ],
     "id": [
       {
-        "value": -6.1,
+        "value": 6.1,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
       },
       {
-        "value": -3.9,
+        "value": 3.9,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 100 °C"
       }
@@ -8534,6 +8740,7 @@
   },
   {
     "part": "PSMN7R0-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -8566,6 +8773,7 @@
   },
   {
     "part": "PMV65XP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -8591,7 +8799,7 @@
     ],
     "id": [
       {
-        "value": -4.3,
+        "value": 4.3,
         "unit": "A",
         "conditions": "VGS = -4.5 V"
       }
@@ -8603,6 +8811,7 @@
   },
   {
     "part": "PMPB33XP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -8628,14 +8837,9 @@
     ],
     "id": [
       {
-        "value": -5.5,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
         "value": -7.9,
         "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -8645,6 +8849,7 @@
   },
   {
     "part": "BUK7D25-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8672,17 +8877,13 @@
   },
   {
     "part": "PSMN8R7-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
         "value": 9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 8.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 20 A; Tj = 25 °C"
       },
       {
         "value": 14,
@@ -8693,6 +8894,11 @@
         "value": 19.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 13.2,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 20 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -8710,6 +8916,7 @@
   },
   {
     "part": "BUK9K49-80L",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -8767,6 +8974,7 @@
   },
   {
     "part": "PXN5R4-30QL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -8794,11 +9002,13 @@
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "PSMN4R3-40MSH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -8826,6 +9036,7 @@
   },
   {
     "part": "BUK9M48-80L",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -8883,6 +9094,7 @@
   },
   {
     "part": "PSMN102-200Y",
+    "channel": "N",
     "vds": 200,
     "rdson": [
       {
@@ -8910,6 +9122,7 @@
   },
   {
     "part": "BUK9K45-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -8947,6 +9160,7 @@
   },
   {
     "part": "PMPB05R4EN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -8970,15 +9184,22 @@
         "value": 13,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 19,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-4"
+      "SOT1220-4",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK7Y7R8-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -9007,6 +9228,7 @@
   },
   {
     "part": "BUK7K89-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -9039,6 +9261,7 @@
   },
   {
     "part": "PMPB85ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -9061,7 +9284,7 @@
       {
         "value": 4.4,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tamb = 25 °C"
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -9071,6 +9294,7 @@
   },
   {
     "part": "PMV88ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -9108,6 +9332,7 @@
   },
   {
     "part": "PSMN6R0-30YLB",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -9139,24 +9364,18 @@
       }
     ],
     "package": [
-      "LFPAK33",
-      "LFPAK56",
-      "D2PAK",
+      "LFPAK",
       "Power-SO8",
-      "TO-236AB",
-      "SOT1210",
-      "SOT404",
-      "SOT669",
-      "SOT1220",
-      "SOT23"
+      "SOT669"
     ]
   },
   {
     "part": "BUK9Y15-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
-        "value": 12.1,
+        "value": 15,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 20 A; Tj = 25 °C"
       },
@@ -9169,16 +9388,11 @@
         "value": 41.4,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 20 A; Tj = 175 °C"
-      },
-      {
-        "value": 15,
-        "unit": "mΩ",
-        "conditions": "VGS = -10 V; VDS = 0 V; Tj = 25 °C"
       }
     ],
     "id": [
       {
-        "value": 69,
+        "value": 274,
         "unit": "A",
         "conditions": "Tmb = 25 °C"
       }
@@ -9191,6 +9405,7 @@
   },
   {
     "part": "PMN230ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -9223,7 +9438,8 @@
   },
   {
     "part": "BUK7Y1R7-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 1.7,
@@ -9261,6 +9477,7 @@
   },
   {
     "part": "PMN48XPA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -9298,6 +9515,7 @@
   },
   {
     "part": "BUK6D22-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -9330,6 +9548,7 @@
   },
   {
     "part": "BUK7M45-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -9357,6 +9576,7 @@
   },
   {
     "part": "PSMN3R2-40YLD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -9400,20 +9620,21 @@
   },
   {
     "part": "PSMN012-60YS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
-      {
-        "value": 11.1,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
       {
         "value": 17.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
       },
       {
-        "value": 25.5,
+        "value": 11.1,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      },
+      {
+        "value": 17,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
@@ -9437,20 +9658,21 @@
   },
   {
     "part": "PSMN5R0-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 4.36,
+        "value": 5.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 7.19,
+        "value": 8.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 10.46,
+        "value": 12.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -9474,6 +9696,7 @@
   },
   {
     "part": "PSMN2R0-25MLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -9482,14 +9705,14 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 5.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
-      },
-      {
         "value": 2.27,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
+      },
+      {
+        "value": 5.2,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
       },
       {
         "value": 3.86,
@@ -9516,7 +9739,8 @@
   },
   {
     "part": "PSMNR90-40YLH",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 0.94,
@@ -9559,6 +9783,7 @@
   },
   {
     "part": "PSMN3R3-100SSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -9567,7 +9792,7 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.1,
+        "value": 5,
         "unit": "mΩ",
         "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
@@ -9596,6 +9821,7 @@
   },
   {
     "part": "PMV28ENE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -9622,12 +9848,12 @@
       }
     ],
     "package": [
-      "SOT23",
-      "TO-236AB"
+      "SOT23"
     ]
   },
   {
     "part": "BUK6D120-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -9660,6 +9886,7 @@
   },
   {
     "part": "PMV32UP",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -9685,23 +9912,24 @@
     ],
     "id": [
       {
-        "value": 4,
+        "value": -4,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": 2.5,
+        "value": -2.5,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }
     ],
     "package": [
-      "TO-236AB",
-      "SOT23"
+      "SOT23",
+      "TO-236AB"
     ]
   },
   {
     "part": "BUK7Y15-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -9730,6 +9958,7 @@
   },
   {
     "part": "PSMN021-100YL",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -9768,6 +9997,7 @@
   },
   {
     "part": "PMV450ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -9805,6 +10035,7 @@
   },
   {
     "part": "BUK6D125-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -9837,6 +10068,7 @@
   },
   {
     "part": "PMV45EN2",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -9857,14 +10089,14 @@
     ],
     "id": [
       {
+        "value": 5.1,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
+      },
+      {
         "value": 3.8,
         "unit": "A",
         "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 5.1,
-        "unit": "A",
-        "conditions": "VGS = 10 V; Tamb = 25 °C"
       }
     ],
     "package": [
@@ -9874,6 +10106,7 @@
   },
   {
     "part": "BUK9M156-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -9911,6 +10144,7 @@
   },
   {
     "part": "PMPB12UNEA",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -9953,6 +10187,7 @@
   },
   {
     "part": "PSMN1R9-40YSD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -9986,15 +10221,16 @@
   },
   {
     "part": "BUK9Y14-80E",
-    "vds": -80,
+    "channel": "N",
+    "vds": 80,
     "rdson": [
       {
-        "value": 12.2,
+        "value": 15,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 11.3,
+        "value": 14,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
@@ -10019,6 +10255,7 @@
   },
   {
     "part": "PSMN039-100YS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -10051,6 +10288,7 @@
   },
   {
     "part": "PMPB29XNEA",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -10093,7 +10331,8 @@
   },
   {
     "part": "PMPB100ENE",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 72,
@@ -10113,9 +10352,9 @@
         "conditions": "VGS = 10 V; Tamb = 25 °C"
       },
       {
-        "value": 3.9,
+        "value": 5.1,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -10125,6 +10364,7 @@
   },
   {
     "part": "BUK7Y72-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -10153,17 +10393,18 @@
   },
   {
     "part": "BUK9M85-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
         "value": 85,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 68,
+        "value": 73,
         "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
         "value": 192,
@@ -10190,12 +10431,13 @@
   },
   {
     "part": "PMV30XPA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
-        "value": 33,
+        "value": 38,
         "unit": "mΩ",
-        "conditions": "VGS = -8 V; ID = -4.9 A; Tj = 25 °C"
+        "conditions": "VGS = -4.5 V; ID = -4.9 A; Tj = 25 °C"
       },
       {
         "value": 53,
@@ -10203,9 +10445,9 @@
         "conditions": "VGS = -8 V; ID = -4.9 A; Tj = 175 °C"
       },
       {
-        "value": 38,
+        "value": 33,
         "unit": "mΩ",
-        "conditions": "VGS = -4.5 V; ID = -4.9 A; Tj = 25 °C"
+        "conditions": "VGS = -8 V; ID = -4.9 A; Tj = 25 °C"
       },
       {
         "value": 62,
@@ -10215,12 +10457,12 @@
     ],
     "id": [
       {
-        "value": -4.9,
+        "value": 4.9,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": -3.1,
+        "value": 3.1,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }
@@ -10232,6 +10474,7 @@
   },
   {
     "part": "PMPB15XN",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -10259,7 +10502,7 @@
       {
         "value": 10.4,
         "unit": "A",
-        "conditions": "VGS = 4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -10269,7 +10512,8 @@
   },
   {
     "part": "PSMN1R8-40YLC",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 2.1,
@@ -10312,6 +10556,7 @@
   },
   {
     "part": "PSMN012-60HL",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -10339,11 +10584,13 @@
     ],
     "package": [
       "LFPAK56D",
-      "SOT1205"
+      "SOT1205",
+      "12RL60H"
     ]
   },
   {
     "part": "PMV30ENEA",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -10376,6 +10623,7 @@
   },
   {
     "part": "PSMN019-100YL",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -10403,12 +10651,7 @@
       {
         "value": 15,
         "unit": "A",
-        "conditions": "Tj = 100 °C is not listed, but 25 °C and 175 °C are, 100 is likely the same as 25"
-      },
-      {
-        "value": 15,
-        "unit": "A",
-        "conditions": "Tj = 175 °C"
+        "conditions": "Tj = 100 °C; VDS = 80 V; VGS = 10 V"
       }
     ],
     "package": [
@@ -10419,17 +10662,13 @@
   },
   {
     "part": "PSMN1R0-25YLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
-        "value": 0.89,
+        "value": 1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 1.7,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
       {
         "value": 1.43,
@@ -10437,17 +10676,12 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.43,
+        "value": 1.7,
         "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
     ],
     "id": [
-      {
-        "value": 240,
-        "unit": "A",
-        "conditions": "Tmb = 25 °C"
-      },
       {
         "value": 240,
         "unit": "A",
@@ -10462,6 +10696,7 @@
   },
   {
     "part": "BUK9J0R9-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -10485,7 +10720,7 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
       {
-        "value": 1.2,
+        "value": 0.97,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
@@ -10514,12 +10749,13 @@
     ],
     "package": [
       "LFPAK56E",
-      "Power-SO8",
-      "SOT1023"
+      "SOT1023",
+      "Power-SO8"
     ]
   },
   {
     "part": "PMPB11R2VP",
+    "channel": "P",
     "vds": -12,
     "rdson": [
       {
@@ -10553,15 +10789,22 @@
         "value": -9.7,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": -14,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN1R6-30MLH",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -10604,6 +10847,7 @@
   },
   {
     "part": "PSMN028-100HS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -10636,6 +10880,7 @@
   },
   {
     "part": "PSMN1R2-30YLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -10644,14 +10889,14 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.24,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
         "value": 2.64,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
+      },
+      {
+        "value": 1.24,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 2.05,
@@ -10674,7 +10919,8 @@
   },
   {
     "part": "PSMN8R5-40HS",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 8.5,
@@ -10706,6 +10952,7 @@
   },
   {
     "part": "PMPB17EP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -10729,16 +10976,23 @@
         "value": -7.7,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
+      },
+      {
+        "value": -11,
+        "unit": "A",
+        "conditions": "VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN038-100HS",
-    "vds": -100,
+    "channel": "N",
+    "vds": 100,
     "rdson": [
       {
         "value": 37.6,
@@ -10770,6 +11024,7 @@
   },
   {
     "part": "PMPB48EP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -10790,9 +11045,9 @@
     ],
     "id": [
       {
-        "value": -6.8,
+        "value": 6.8,
         "unit": "A",
-        "conditions": "VGS = -10 V; Tamb = 25 °C"
+        "conditions": "VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -10802,6 +11057,7 @@
   },
   {
     "part": "PSMN057-200B",
+    "channel": "N",
     "vds": 200,
     "rdson": [
       {
@@ -10834,6 +11090,7 @@
   },
   {
     "part": "BUK7Y9R9-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -10862,6 +11119,7 @@
   },
   {
     "part": "BUK6D210-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -10894,6 +11152,7 @@
   },
   {
     "part": "BUK7K5R1-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -10926,6 +11185,7 @@
   },
   {
     "part": "BUK7K18-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -10943,12 +11203,12 @@
       {
         "value": 24.2,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       },
       {
         "value": 22,
         "unit": "A",
-        "conditions": "Tmb = 100 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       }
     ],
     "package": [
@@ -10958,6 +11218,7 @@
   },
   {
     "part": "PSMN071-100NSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -10985,11 +11246,13 @@
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PMN40SNA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -11023,6 +11286,7 @@
   },
   {
     "part": "BUK9M11-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -11031,7 +11295,7 @@
         "conditions": "VGS = 5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 9.3,
+        "value": 9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
@@ -11060,6 +11324,7 @@
   },
   {
     "part": "PSMN1R9-80SSE",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -11092,6 +11357,7 @@
   },
   {
     "part": "PSMN2R6-100SSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -11120,11 +11386,6 @@
         "value": 200,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 25 °C"
-      },
-      {
-        "value": 200,
-        "unit": "A",
-        "conditions": "Tmb = 25 °C"
       }
     ],
     "package": [
@@ -11134,6 +11395,7 @@
   },
   {
     "part": "PMV30XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -11171,6 +11433,7 @@
   },
   {
     "part": "PSMN6R0-25YLB",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -11202,20 +11465,14 @@
       }
     ],
     "package": [
-      "LFPAK33",
-      "LFPAK56",
-      "D2PAK",
+      "LFPAK",
       "Power-SO8",
-      "TO-236AB",
-      "SOT1210",
-      "SOT404",
-      "SOT669",
-      "SOT1220",
-      "SOT23"
+      "SOT669"
     ]
   },
   {
     "part": "PSMN7R0-30MLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -11248,15 +11505,16 @@
   },
   {
     "part": "PSMN1R7-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
-        "value": 1.8,
+        "value": 2.1,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 2.1,
+        "value": 2.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 150 °C"
       },
@@ -11286,6 +11544,7 @@
   },
   {
     "part": "PSMN1R4-100CSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -11323,6 +11582,7 @@
   },
   {
     "part": "BUK9Y65-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -11343,19 +11603,14 @@
     ],
     "id": [
       {
-        "value": 65,
+        "value": 1,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
+        "conditions": "VDS = 100 V; VGS = 0 V; Tj = 25 °C"
       },
       {
-        "value": 40,
+        "value": 500,
         "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
-        "value": 29,
-        "unit": "A",
-        "conditions": "Tj = 125 °C"
+        "conditions": "VDS = 100 V; VGS = 0 V; Tj = 175 °C"
       }
     ],
     "package": [
@@ -11366,10 +11621,11 @@
   },
   {
     "part": "PSMN2R2-40BS",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 2.2,
+        "value": 3.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
@@ -11388,12 +11644,12 @@
       {
         "value": 100,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       },
       {
         "value": 100,
         "unit": "A",
-        "conditions": "Tmb = 100 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       }
     ],
     "package": [
@@ -11403,6 +11659,7 @@
   },
   {
     "part": "PSMN1R5-30BLE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -11428,12 +11685,17 @@
     ],
     "id": [
       {
-        "value": 120,
+        "value": 25,
         "unit": "A",
         "conditions": "Tj = 25 °C"
       },
       {
-        "value": 50,
+        "value": 25,
+        "unit": "A",
+        "conditions": "Tj = 100 °C"
+      },
+      {
+        "value": 25,
         "unit": "A",
         "conditions": "Tj = 175 °C"
       }
@@ -11445,6 +11707,7 @@
   },
   {
     "part": "BUK9Y2R4-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -11503,6 +11766,7 @@
   },
   {
     "part": "BUK7Y4R8-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -11531,45 +11795,46 @@
   },
   {
     "part": "BUK9M13-80L",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 10.6,
+        "value": 12.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 16.3,
+        "value": 20.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 105 °C"
       },
       {
-        "value": 18,
+        "value": 22.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 125 °C"
       },
       {
-        "value": 22,
+        "value": 28.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       },
       {
-        "value": 14.7,
+        "value": 18.8,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 22.6,
+        "value": 25.7,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 105 °C"
       },
       {
-        "value": 24.9,
+        "value": 33.4,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 125 °C"
       },
       {
-        "value": 31.2,
+        "value": 43,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 175 °C"
       }
@@ -11588,6 +11853,7 @@
   },
   {
     "part": "PSMN026-80YS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -11625,47 +11891,43 @@
   },
   {
     "part": "BUK9M9R5-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 5.4,
+        "value": 9.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 7.4,
+        "value": 14.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 105 °C"
       },
       {
-        "value": 8.1,
+        "value": 15.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 125 °C"
       },
       {
-        "value": 9.8,
+        "value": 18.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       },
       {
-        "value": 6.7,
+        "value": 12,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 9.1,
+        "value": 18,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 105 °C"
       },
       {
-        "value": 10.1,
+        "value": 19.3,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 125 °C"
-      },
-      {
-        "value": 12.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -11687,6 +11949,7 @@
   },
   {
     "part": "PSMN6R7-40MSD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -11719,7 +11982,8 @@
   },
   {
     "part": "BUK9M15-60E",
-    "vds": -60,
+    "channel": "N",
+    "vds": 60,
     "rdson": [
       {
         "value": 15,
@@ -11756,10 +12020,11 @@
   },
   {
     "part": "BUK7S2R0-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 1.7,
+        "value": 2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
@@ -11793,6 +12058,7 @@
   },
   {
     "part": "PMPB07R3EN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -11816,15 +12082,22 @@
         "value": 12,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 17,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN6R0-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -11857,6 +12130,7 @@
   },
   {
     "part": "PSMN020-100YS",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -11870,7 +12144,7 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
       },
       {
-        "value": 39,
+        "value": 57.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
@@ -11890,6 +12164,7 @@
   },
   {
     "part": "BUK9K35-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -11927,6 +12202,7 @@
   },
   {
     "part": "BUK9K25-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -11949,12 +12225,12 @@
       {
         "value": 18.2,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 5 V"
+        "conditions": "VGS = 5 V; Tmb = 25 °C"
       },
       {
         "value": 16.6,
         "unit": "A",
-        "conditions": "Tmb = 100 °C; VGS = 5 V"
+        "conditions": "VGS = 5 V; Tmb = 100 °C"
       }
     ],
     "package": [
@@ -11964,6 +12240,7 @@
   },
   {
     "part": "PSMNR90-50SLH",
+    "channel": "N",
     "vds": 50,
     "rdson": [
       {
@@ -12001,7 +12278,8 @@
   },
   {
     "part": "BUK7M4R3-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 4.3,
@@ -12026,14 +12304,14 @@
     ],
     "id": [
       {
-        "value": 69,
-        "unit": "A",
-        "conditions": "VGS = 10 V; Tmb = 100 °C"
-      },
-      {
         "value": 95,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 25 °C"
+      },
+      {
+        "value": 69,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tmb = 100 °C"
       }
     ],
     "package": [
@@ -12043,6 +12321,7 @@
   },
   {
     "part": "PSMN2R9-100SSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -12075,6 +12354,7 @@
   },
   {
     "part": "BUK9K35-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -12083,7 +12363,7 @@
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 37,
+        "value": 56,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 100 °C"
       },
@@ -12091,11 +12371,6 @@
         "value": 62,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 125 °C"
-      },
-      {
-        "value": 119,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 175 °C"
       },
       {
         "value": 80,
@@ -12108,14 +12383,19 @@
         "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 25 °C"
       },
       {
+        "value": 84,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 100 °C"
+      },
+      {
         "value": 92,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 125 °C"
       },
       {
-        "value": 84,
+        "value": 119,
         "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 100 °C"
+        "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -12132,6 +12412,7 @@
   },
   {
     "part": "PMV50EPEA",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -12159,6 +12440,7 @@
   },
   {
     "part": "BUK7Y14-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -12187,6 +12469,7 @@
   },
   {
     "part": "PMN16XNE",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -12195,46 +12478,31 @@
         "conditions": "VGS = 4.5 V; ID = 6.9 A; Tj = 25 °C"
       },
       {
-        "value": 23,
+        "value": 29,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 6.9 A; Tj = 150 °C"
       },
       {
-        "value": 19,
+        "value": 24,
         "unit": "mΩ",
         "conditions": "VGS = 2.5 V; ID = 6.2 A; Tj = 25 °C"
       },
       {
-        "value": 22,
+        "value": 30,
         "unit": "mΩ",
         "conditions": "VGS = 1.8 V; ID = 1.9 A; Tj = 25 °C"
       },
       {
-        "value": 30,
+        "value": 70,
         "unit": "mΩ",
         "conditions": "VGS = 1.5 V; ID = 0.1 A; Tj = 25 °C"
       }
     ],
     "id": [
       {
-        "value": 6.9,
+        "value": 9.1,
         "unit": "A",
-        "conditions": "VGS = 4.5 V; Tj = 25 °C"
-      },
-      {
-        "value": 6.9,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 6.2,
-        "unit": "A",
-        "conditions": "VGS = 2.5 V; Tj = 25 °C"
-      },
-      {
-        "value": 1.9,
-        "unit": "A",
-        "conditions": "VGS = 1.8 V; Tj = 25 °C"
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -12244,6 +12512,7 @@
   },
   {
     "part": "PSMN2R0-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -12281,6 +12550,7 @@
   },
   {
     "part": "PSMN9R8-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -12289,14 +12559,14 @@
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 25 °C"
       },
       {
-        "value": 9.7,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 20 A; Tj = 25 °C"
-      },
-      {
         "value": 16.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 100 °C"
+      },
+      {
+        "value": 15,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 20 A; Tj = 25 °C"
       },
       {
         "value": 23.2,
@@ -12319,17 +12589,18 @@
   },
   {
     "part": "PSMN1R0-40SSH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 0.88,
+        "value": 1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
       {
-        "value": 350,
+        "value": 325,
         "unit": "A",
         "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
@@ -12341,6 +12612,7 @@
   },
   {
     "part": "PMPB12R5EP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -12364,15 +12636,22 @@
         "value": -8.8,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
+      },
+      {
+        "value": -12.5,
+        "unit": "A",
+        "conditions": "VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN3R0-30MLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -12405,6 +12684,7 @@
   },
   {
     "part": "BUK9Y11-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -12423,18 +12703,7 @@
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 175 °C"
       }
     ],
-    "id": [
-      {
-        "value": 25,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 11,
-        "unit": "A",
-        "conditions": "Tj = 175 °C"
-      }
-    ],
+    "id": [],
     "package": [
       "LFPAK56",
       "Power-SO8",
@@ -12443,6 +12712,7 @@
   },
   {
     "part": "BUK9K22-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -12475,6 +12745,7 @@
   },
   {
     "part": "BUK7M15-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -12502,6 +12773,7 @@
   },
   {
     "part": "PSMN5R4-25YLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -12510,14 +12782,14 @@
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 14.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 175 °C"
-      },
-      {
         "value": 5.69,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      },
+      {
+        "value": 14.2,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 175 °C"
       },
       {
         "value": 9.67,
@@ -12545,6 +12817,7 @@
   },
   {
     "part": "PSMN9R0-25MLC",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -12556,16 +12829,6 @@
         "value": 8.65,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
-      {
-        "value": 3,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V"
-      },
-      {
-        "value": 1.5,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V"
       }
     ],
     "id": [
@@ -12587,7 +12850,8 @@
   },
   {
     "part": "PSMN2R0-40YLD",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 2.1,
@@ -12630,8 +12894,15 @@
   },
   {
     "part": "BUK7K25-40E",
+    "channel": "N",
     "vds": 40,
-    "rdson": [],
+    "rdson": [
+      {
+        "value": 50,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 20 A; Tj = 25 °C"
+      }
+    ],
     "id": [
       {
         "value": 27,
@@ -12651,44 +12922,45 @@
   },
   {
     "part": "BUK7S2R5-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
-        "value": 2.16,
+        "value": 2.51,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.32,
+        "value": 3.99,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 3.64,
+        "value": 4.39,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 4.52,
+        "value": 5.47,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
     ],
     "id": [
       {
-        "value": 82,
+        "value": 500,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
+        "conditions": "VDS = 40 V; VGS = 0 V; Tj = 175 °C"
       },
       {
-        "value": 49,
+        "value": 1,
         "unit": "A",
-        "conditions": "Tj = 100 °C"
+        "conditions": "VDS = 40 V; VGS = 0 V; Tj = 25 °C"
       },
       {
-        "value": 25,
+        "value": 10,
         "unit": "A",
-        "conditions": "Tj = 125 °C"
+        "conditions": "VDS = 16 V; VGS = 0 V; Tj = 125 °C"
       }
     ],
     "package": [
@@ -12698,6 +12970,7 @@
   },
   {
     "part": "PSMN1R1-80CSF",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -12735,6 +13008,7 @@
   },
   {
     "part": "PSMN3R5-40YSB",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -12763,7 +13037,8 @@
   },
   {
     "part": "PMPB14R8XN",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 18.4,
@@ -12788,18 +13063,20 @@
     ],
     "id": [
       {
-        "value": 10,
+        "value": 7.3,
         "unit": "A",
         "conditions": "VGS = 4.5 V; Tamb = 25 °C"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PMPB29XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -12825,12 +13102,12 @@
     ],
     "id": [
       {
-        "value": -5,
+        "value": 5,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": -3.2,
+        "value": 3.2,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }
@@ -12842,6 +13119,7 @@
   },
   {
     "part": "PSMN4R8-100YSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -12875,25 +13153,26 @@
   },
   {
     "part": "BUK9M4R3-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 3.4,
+        "value": 4.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 5.2,
+        "value": 6.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 5.8,
+        "value": 7.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 7.1,
+        "value": 9.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -12917,6 +13196,7 @@
   },
   {
     "part": "PSMN4R0-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -12943,13 +13223,13 @@
       }
     ],
     "package": [
-      "LFPAK33",
       "LFPAK",
       "SOT669"
     ]
   },
   {
     "part": "PXN010-30QL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -12982,11 +13262,13 @@
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "PMPB14R0EP",
+    "channel": "P",
     "vds": -30,
     "rdson": [
       {
@@ -12995,14 +13277,14 @@
         "conditions": "VGS = -10 V; ID = -8.5 A; Tj = 25 °C"
       },
       {
-        "value": 24,
-        "unit": "mΩ",
-        "conditions": "VGS = -4.5 V; ID = -6.9 A; Tj = 25 °C"
-      },
-      {
         "value": 26,
         "unit": "mΩ",
         "conditions": "VGS = -10 V; ID = -8.5 A; Tj = 150 °C"
+      },
+      {
+        "value": 24,
+        "unit": "mΩ",
+        "conditions": "VGS = -4.5 V; ID = -6.9 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -13010,34 +13292,41 @@
         "value": -9,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
+      },
+      {
+        "value": -12,
+        "unit": "A",
+        "conditions": "VGS = -10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN3R4-30BL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
-        "value": 5.3,
+        "value": 6.2,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
       {
-        "value": 3.27,
+        "value": 3.8,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.91,
+        "value": 4.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 2.79,
+        "value": 3.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       }
@@ -13061,6 +13350,7 @@
   },
   {
     "part": "PSMN6R5-80BS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -13098,12 +13388,13 @@
   },
   {
     "part": "PSMN045-80YS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 103,
+        "value": 45,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
         "value": 72,
@@ -13111,9 +13402,9 @@
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 100 °C"
       },
       {
-        "value": 45,
+        "value": 103,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -13135,12 +13426,13 @@
   },
   {
     "part": "PSMN013-80YS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 12.9,
+        "value": 31,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       },
       {
         "value": 19.8,
@@ -13148,16 +13440,16 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
       },
       {
-        "value": 31,
+        "value": 12.9,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       }
     ],
     "id": [
       {
         "value": 60,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       },
       {
         "value": 42,
@@ -13172,25 +13464,26 @@
   },
   {
     "part": "PSMN1R8-80SSF",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 1.35,
+        "value": 1.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 1.7,
+        "value": 2.5,
         "unit": "mΩ",
         "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2,
+        "value": 2.9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 2.8,
+        "value": 4.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -13214,6 +13507,7 @@
   },
   {
     "part": "PSMN4R2-80YSE",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -13247,17 +13541,13 @@
   },
   {
     "part": "BUK7A1R3-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
         "value": 1.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 1.92,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 2.1,
@@ -13268,6 +13558,11 @@
         "value": 3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 1.92,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -13294,6 +13589,7 @@
   },
   {
     "part": "BUK98150-55A",
+    "channel": "N",
     "vds": 55,
     "rdson": [
       {
@@ -13302,14 +13598,14 @@
         "conditions": "VGS = 4.5 V; ID = 5 A; Tj = 25 °C"
       },
       {
+        "value": 137,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
+      },
+      {
         "value": 276,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 150 °C"
-      },
-      {
-        "value": 116,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -13326,6 +13622,7 @@
   },
   {
     "part": "PSMNR82-30YLE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -13364,6 +13661,7 @@
   },
   {
     "part": "BUK9M6R0-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13372,7 +13670,7 @@
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 25 °C"
       },
       {
-        "value": 7,
+        "value": 9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 20 A; Tj = 105 °C"
       },
@@ -13421,7 +13719,8 @@
   },
   {
     "part": "PSMN5R8-40YS",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 5.7,
@@ -13458,6 +13757,7 @@
   },
   {
     "part": "BUK9Y72-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -13491,6 +13791,7 @@
   },
   {
     "part": "BUK9M67-60EL",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -13548,6 +13849,7 @@
   },
   {
     "part": "PSMN011-60HL",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -13575,11 +13877,13 @@
     ],
     "package": [
       "LFPAK56D",
-      "SOT1205"
+      "SOT1205",
+      "LFPAK"
     ]
   },
   {
     "part": "PSMN2R8-40BS",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13617,6 +13921,7 @@
   },
   {
     "part": "PMPB13XNEA",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -13659,6 +13964,7 @@
   },
   {
     "part": "BUK9Y7R6-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13692,6 +13998,7 @@
   },
   {
     "part": "PSMN1R1-40BS",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13700,7 +14007,7 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2,
+        "value": 1.68,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
@@ -13729,6 +14036,7 @@
   },
   {
     "part": "PSMN1R1-30YLE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -13767,6 +14075,7 @@
   },
   {
     "part": "BUK9K8R7-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13804,6 +14113,7 @@
   },
   {
     "part": "PMV130ENEA",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13841,6 +14151,7 @@
   },
   {
     "part": "BUK7M3R3-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -13883,6 +14194,7 @@
   },
   {
     "part": "PSMN1R2-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -13921,6 +14233,7 @@
   },
   {
     "part": "PMV27UPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -13946,9 +14259,9 @@
     ],
     "id": [
       {
-        "value": -4.5,
+        "value": -5.6,
         "unit": "A",
-        "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -13958,6 +14271,7 @@
   },
   {
     "part": "PSMNR90-80ASE",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -13990,17 +14304,13 @@
   },
   {
     "part": "PSMN7R2-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
         "value": 6.9,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 6.8,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 11,
@@ -14011,6 +14321,11 @@
         "value": 15.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 10.4,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -14028,6 +14343,7 @@
   },
   {
     "part": "BUK6Y33-60P",
+    "channel": "P",
     "vds": -60,
     "rdson": [
       {
@@ -14048,12 +14364,12 @@
     ],
     "id": [
       {
-        "value": -30,
+        "value": 30,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 25 °C"
       },
       {
-        "value": -21,
+        "value": 21,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 100 °C"
       }
@@ -14066,6 +14382,7 @@
   },
   {
     "part": "BUK9K5R6-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14103,22 +14420,23 @@
   },
   {
     "part": "PSMN4R0-60YS",
-    "vds": -60,
+    "channel": "N",
+    "vds": 60,
     "rdson": [
       {
-        "value": 3.6,
+        "value": 4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
-      },
-      {
-        "value": 7.6,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       },
       {
         "value": 8.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
+      },
+      {
+        "value": 12,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -14141,6 +14459,7 @@
   },
   {
     "part": "BUK9M6R7-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -14203,17 +14522,18 @@
   },
   {
     "part": "BUK9M24-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
         "value": 24,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
+        "conditions": "VGS = 5 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 24,
+        "value": 21,
         "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 10 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
       },
       {
         "value": 54,
@@ -14240,6 +14560,7 @@
   },
   {
     "part": "PSMN6R4-30MLD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14256,11 +14577,6 @@
         "value": 13.7,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 150 °C"
-      },
-      {
-        "value": 10.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -14277,6 +14593,7 @@
   },
   {
     "part": "PSMN1R3-100ASF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -14314,6 +14631,7 @@
   },
   {
     "part": "PSMNR67-30YLE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14357,10 +14675,11 @@
   },
   {
     "part": "BUK9Y6R0-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
-        "value": 4.6,
+        "value": 6,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 25 °C"
       },
@@ -14375,23 +14694,7 @@
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 175 °C"
       }
     ],
-    "id": [
-      {
-        "value": 60,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 40,
-        "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
-        "value": 25,
-        "unit": "A",
-        "conditions": "Tj = 150 °C"
-      }
-    ],
+    "id": [],
     "package": [
       "LFPAK56",
       "Power-SO8",
@@ -14400,12 +14703,13 @@
   },
   {
     "part": "PSMN011-80YS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 11,
+        "value": 26,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       },
       {
         "value": 18,
@@ -14413,9 +14717,9 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 100 °C"
       },
       {
-        "value": 26,
+        "value": 11,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -14427,7 +14731,7 @@
       {
         "value": 67,
         "unit": "A",
-        "conditions": "Tmb = 25 °C; VGS = 10 V"
+        "conditions": "VGS = 10 V; Tmb = 25 °C"
       }
     ],
     "package": [
@@ -14437,6 +14741,7 @@
   },
   {
     "part": "BUK7M33-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -14464,6 +14769,7 @@
   },
   {
     "part": "PXN4R7-30QL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14487,34 +14793,41 @@
         "value": 15,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 25,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "BUK7Y2R5-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
-        "value": 1.5,
+        "value": 2.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.12,
+        "value": 3.98,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 2.34,
+        "value": 4.38,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 2.94,
+        "value": 5.45,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -14534,6 +14847,7 @@
   },
   {
     "part": "PMPB11EN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14566,6 +14880,7 @@
   },
   {
     "part": "BUK6D81-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -14598,6 +14913,7 @@
   },
   {
     "part": "BUK7Y1R4-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -14636,6 +14952,7 @@
   },
   {
     "part": "PMPB43XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -14678,6 +14995,7 @@
   },
   {
     "part": "BUK9Y1R3-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -14699,6 +15017,16 @@
         "value": 2.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 3.1,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 125 °C"
+      },
+      {
+        "value": 3.9,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -14721,30 +15049,31 @@
   },
   {
     "part": "BUK9Y2R8-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 2.4,
+        "value": 2.8,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.5,
+        "value": 4.4,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 2.7,
+        "value": 5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 3,
+        "value": 3.9,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 3.1,
+        "value": 6.1,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 105 °C"
       },
@@ -14754,14 +15083,14 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 6.2,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
-      },
-      {
         "value": 8.6,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 6.2,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -14779,6 +15108,7 @@
   },
   {
     "part": "PSMN1R4-100ASE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -14816,6 +15146,7 @@
   },
   {
     "part": "PMN30ENEA",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -14843,12 +15174,12 @@
     ],
     "package": [
       "TSOP6",
-      "SOT457",
-      "SC-74"
+      "SOT457"
     ]
   },
   {
     "part": "BUK9M19-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -14886,6 +15217,7 @@
   },
   {
     "part": "BUK6D23-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -14918,6 +15250,7 @@
   },
   {
     "part": "PSMN2R5-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14950,6 +15283,7 @@
   },
   {
     "part": "PSMN9R1-30YL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -14983,6 +15317,7 @@
   },
   {
     "part": "PSMN014-40YS",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15020,6 +15355,7 @@
   },
   {
     "part": "BUK7Y25-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -15048,6 +15384,7 @@
   },
   {
     "part": "PSMN1R7-40YLB",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15056,14 +15393,14 @@
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 2.3,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
         "value": 3.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 2.3,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 4.5,
@@ -15086,6 +15423,7 @@
   },
   {
     "part": "PSMN4R3-40MLH",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15123,6 +15461,7 @@
   },
   {
     "part": "BUK9Y12-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -15156,6 +15495,7 @@
   },
   {
     "part": "PMV13XNEA",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -15198,7 +15538,8 @@
   },
   {
     "part": "BUK9M43-100E",
-    "vds": -100,
+    "channel": "N",
+    "vds": 100,
     "rdson": [
       {
         "value": 43,
@@ -15230,7 +15571,8 @@
   },
   {
     "part": "PMPB20XNEA",
-    "vds": -20,
+    "channel": "N",
+    "vds": 20,
     "rdson": [
       {
         "value": 20,
@@ -15267,7 +15609,8 @@
   },
   {
     "part": "PSMN6R0-30YLD",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 8.35,
@@ -15280,14 +15623,14 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 9.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 150 °C"
-      },
-      {
         "value": 13.8,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 150 °C"
+      },
+      {
+        "value": 9.9,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -15310,6 +15653,7 @@
   },
   {
     "part": "BUK7Y98-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -15338,12 +15682,13 @@
   },
   {
     "part": "PSMN018-80YS",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 43,
+        "value": 18,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
         "value": 28,
@@ -15351,9 +15696,9 @@
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 100 °C"
       },
       {
-        "value": 18,
+        "value": 43,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
+        "conditions": "VGS = 10 V; ID = 5 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -15375,6 +15720,7 @@
   },
   {
     "part": "PSMN015-100YSF",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -15383,14 +15729,14 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 15.7,
-        "unit": "mΩ",
-        "conditions": "VGS = 7 V; ID = 15 A; Tj = 25 °C"
-      },
-      {
         "value": 24.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 100 °C"
+      },
+      {
+        "value": 23,
+        "unit": "mΩ",
+        "conditions": "VGS = 7 V; ID = 15 A; Tj = 25 °C"
       },
       {
         "value": 35.2,
@@ -15413,17 +15759,18 @@
   },
   {
     "part": "BUK9M17-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
-      {
-        "value": 17,
-        "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 10 A; Tj = 25 °C"
-      },
       {
         "value": 14,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
+      },
+      {
+        "value": 17,
+        "unit": "mΩ",
+        "conditions": "VGS = 5 V; ID = 10 A; Tj = 25 °C"
       },
       {
         "value": 32,
@@ -15450,6 +15797,7 @@
   },
   {
     "part": "BUK9K6R2-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15482,6 +15830,7 @@
   },
   {
     "part": "PSMN014-40HLD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15539,6 +15888,7 @@
   },
   {
     "part": "BUK9M23-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -15576,6 +15926,7 @@
   },
   {
     "part": "PMPB10R3XN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -15601,18 +15952,25 @@
     ],
     "id": [
       {
-        "value": 13,
+        "value": 8.9,
         "unit": "A",
         "conditions": "VGS = 4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": 13,
+        "unit": "A",
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK9K30-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -15645,7 +16003,8 @@
   },
   {
     "part": "PSMN033-100HL",
-    "vds": -100,
+    "channel": "N",
+    "vds": 100,
     "rdson": [
       {
         "value": 91,
@@ -15677,6 +16036,7 @@
   },
   {
     "part": "PMV90ENE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -15694,7 +16054,7 @@
       {
         "value": 3.7,
         "unit": "A",
-        "conditions": "VGS = 10 V; Tamb = 25 °C"
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -15704,6 +16064,7 @@
   },
   {
     "part": "PMV88ENE",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -15735,12 +16096,12 @@
       }
     ],
     "package": [
-      "SOT23",
-      "TO-236AB"
+      "SOT23"
     ]
   },
   {
     "part": "PMPB29XNE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -15783,6 +16144,7 @@
   },
   {
     "part": "PSMNR90-40YSN",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15814,14 +16176,15 @@
       }
     ],
     "package": [
-      "LFPAK56",
-      "Power-SO8",
-      "SOT669"
+      "LFPAK56E",
+      "SOT669",
+      "Power-SO8"
     ]
   },
   {
     "part": "PSMN8R0-40HL",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
         "value": 9.4,
@@ -15853,15 +16216,16 @@
   },
   {
     "part": "BUK9Y15-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
-        "value": 12.1,
+        "value": 15,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 15 A; Tj = 25 °C"
       },
       {
-        "value": 10.8,
+        "value": 13,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
       },
@@ -15886,6 +16250,7 @@
   },
   {
     "part": "BUK961R6-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -15904,23 +16269,7 @@
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 175 °C"
       }
     ],
-    "id": [
-      {
-        "value": 100,
-        "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 60,
-        "unit": "A",
-        "conditions": "Tj = 100 °C"
-      },
-      {
-        "value": 40,
-        "unit": "A",
-        "conditions": "Tj = 175 °C"
-      }
-    ],
+    "id": [],
     "package": [
       "D2PAK",
       "SOT404"
@@ -15928,25 +16277,26 @@
   },
   {
     "part": "BUK7J1R0-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
-        "value": 0.6,
+        "value": 1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 0.84,
+        "value": 1.6,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 105 °C"
       },
       {
-        "value": 0.93,
+        "value": 1.75,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 125 °C"
       },
       {
-        "value": 1.17,
+        "value": 2.18,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
@@ -15966,6 +16316,7 @@
   },
   {
     "part": "PMN20ENA",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -16004,6 +16355,7 @@
   },
   {
     "part": "BUK9Y153-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -16022,7 +16374,18 @@
         "conditions": "VGS = 5 V; ID = 2 A; Tj = 175 °C"
       }
     ],
-    "id": [],
+    "id": [
+      {
+        "value": 32,
+        "unit": "A",
+        "conditions": "Tj = 25 °C"
+      },
+      {
+        "value": 24,
+        "unit": "A",
+        "conditions": "Tj = 175 °C"
+      }
+    ],
     "package": [
       "LFPAK56",
       "Power-SO8",
@@ -16031,6 +16394,7 @@
   },
   {
     "part": "BUK9M16-100L",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -16049,9 +16413,9 @@
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 125 °C"
       },
       {
-        "value": 35,
+        "value": 52.6,
         "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
+        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 175 °C"
       },
       {
         "value": 23,
@@ -16069,9 +16433,9 @@
         "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 125 °C"
       },
       {
-        "value": 52.6,
+        "value": 35,
         "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 15 A; Tj = 175 °C"
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -16088,6 +16452,7 @@
   },
   {
     "part": "PSMN2R5-40YLD",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -16131,6 +16496,7 @@
   },
   {
     "part": "PMPB08R4VP",
+    "channel": "P",
     "vds": -12,
     "rdson": [
       {
@@ -16156,23 +16522,25 @@
     ],
     "id": [
       {
-        "value": -12,
+        "value": 12,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": -12,
+        "value": 16.7,
         "unit": "A",
-        "conditions": "Tj = 25 °C; VGS = -4.5 V"
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK6D72-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -16205,6 +16573,7 @@
   },
   {
     "part": "PMPB16R5XNE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -16238,15 +16607,22 @@
         "value": 7,
         "unit": "A",
         "conditions": "VGS = 4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": 10,
+        "unit": "A",
+        "conditions": "VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "PSMN1R2-25YLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -16285,27 +16661,28 @@
   },
   {
     "part": "PSMN1R0-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
-      {
-        "value": 1.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
-        "value": 2.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
-      },
       {
         "value": 1.15,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
+        "value": 1.4,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
+      },
+      {
         "value": 1.85,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 150 °C"
+      },
+      {
+        "value": 2.4,
+        "unit": "mΩ",
+        "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 150 °C"
       }
     ],
     "id": [
@@ -16323,6 +16700,7 @@
   },
   {
     "part": "PMPB09R5VP",
+    "channel": "P",
     "vds": -12,
     "rdson": [
       {
@@ -16356,15 +16734,22 @@
         "value": 10.5,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": 15,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "DFN2020M-6",
-      "SOT1220-2"
+      "SOT1220-2",
+      "SOT1220"
     ]
   },
   {
     "part": "BUK7M22-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -16392,6 +16777,7 @@
   },
   {
     "part": "PMV164ENE",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -16423,12 +16809,12 @@
       }
     ],
     "package": [
-      "SOT23",
-      "TO-236AB"
+      "SOT23"
     ]
   },
   {
     "part": "PSMN4R0-40YS",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -16466,6 +16852,7 @@
   },
   {
     "part": "BUK7V4R2-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -16491,24 +16878,9 @@
     ],
     "id": [
       {
-        "value": 20,
+        "value": 85,
         "unit": "A",
-        "conditions": "Tj = 25 °C"
-      },
-      {
-        "value": 20,
-        "unit": "A",
-        "conditions": "Tj = 105 °C"
-      },
-      {
-        "value": 20,
-        "unit": "A",
-        "conditions": "Tj = 125 °C"
-      },
-      {
-        "value": 20,
-        "unit": "A",
-        "conditions": "Tj = 175 °C"
+        "conditions": "Tmb = 25 °C"
       }
     ],
     "package": [
@@ -16518,25 +16890,26 @@
   },
   {
     "part": "BUK7M11-40H",
-    "vds": -40,
+    "channel": "N",
+    "vds": 40,
     "rdson": [
       {
-        "value": 6.5,
+        "value": 11,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 25 °C"
       },
       {
-        "value": 8.9,
+        "value": 16.5,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 105 °C"
       },
       {
-        "value": 9.8,
+        "value": 17.7,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 125 °C"
       },
       {
-        "value": 11.9,
+        "value": 21.3,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 10 A; Tj = 175 °C"
       }
@@ -16560,6 +16933,7 @@
   },
   {
     "part": "PMPB30XPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -16597,6 +16971,7 @@
   },
   {
     "part": "BUK9M15-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -16633,11 +17008,6 @@
         "value": 30.6,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 125 °C"
-      },
-      {
-        "value": 36.9,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 10 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -16659,22 +17029,23 @@
   },
   {
     "part": "BUK9K32-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
-        "value": 25.6,
+        "value": 91,
+        "unit": "mΩ",
+        "conditions": "VGS = 5 V; ID = 5 A; Tj = 175 °C"
+      },
+      {
+        "value": 31,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 5 A; Tj = 25 °C"
       },
       {
-        "value": 26.6,
+        "value": 33,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 5 A; Tj = 25 °C"
-      },
-      {
-        "value": 73.4,
-        "unit": "mΩ",
-        "conditions": "VGS = 5 V; ID = 5 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -16696,6 +17067,7 @@
   },
   {
     "part": "PMPB13UP",
+    "channel": "P",
     "vds": -12,
     "rdson": [
       {
@@ -16726,9 +17098,14 @@
     ],
     "id": [
       {
-        "value": -9.1,
+        "value": 9.1,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
+      },
+      {
+        "value": 13,
+        "unit": "A",
+        "conditions": "VGS = -4.5 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -16738,6 +17115,7 @@
   },
   {
     "part": "BUK7Y21-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -16766,6 +17144,7 @@
   },
   {
     "part": "PSMN1R5-50YLH",
+    "channel": "N",
     "vds": 50,
     "rdson": [
       {
@@ -16793,12 +17172,12 @@
       {
         "value": 200,
         "unit": "A",
-        "conditions": "Tmb = 25 °C"
+        "conditions": "Tj = 25 °C"
       },
       {
         "value": 200,
         "unit": "A",
-        "conditions": ""
+        "conditions": "Tmb = 25 °C"
       }
     ],
     "package": [
@@ -16809,6 +17188,7 @@
   },
   {
     "part": "PMPB13XNE",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -16851,6 +17231,7 @@
   },
   {
     "part": "BUK9M5R2-30E",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -16888,6 +17269,7 @@
   },
   {
     "part": "BUK6D56-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -16920,6 +17302,7 @@
   },
   {
     "part": "BUK4D16-20",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -16957,6 +17340,7 @@
   },
   {
     "part": "PSMNR56-25YLE",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -17000,6 +17384,7 @@
   },
   {
     "part": "PMN30XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -17025,12 +17410,12 @@
     ],
     "id": [
       {
-        "value": -5.4,
+        "value": 5.4,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": -3.4,
+        "value": 3.4,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }
@@ -17043,6 +17428,7 @@
   },
   {
     "part": "BUK9M34-100E",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -17080,6 +17466,7 @@
   },
   {
     "part": "PMN55ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17091,11 +17478,6 @@
         "value": 130,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 3.6 A; Tj = 175 °C"
-      },
-      {
-        "value": 70,
-        "unit": "mΩ",
-        "conditions": "VGS = 4.5 V; ID = 3.3 A; Tj = 25 °C"
       }
     ],
     "id": [
@@ -17118,6 +17500,7 @@
   },
   {
     "part": "BUK7M6R3-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -17145,6 +17528,7 @@
   },
   {
     "part": "PMV15UNEA",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -17181,12 +17565,12 @@
       }
     ],
     "package": [
-      "SOT23",
-      "TO-236AB"
+      "SOT23"
     ]
   },
   {
     "part": "PSMN2R6-30YLC",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -17225,6 +17609,7 @@
   },
   {
     "part": "PSMN9R3-60HS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17257,6 +17642,7 @@
   },
   {
     "part": "PMPB12UNE",
+    "channel": "N",
     "vds": 20,
     "rdson": [
       {
@@ -17299,6 +17685,7 @@
   },
   {
     "part": "BUK7M10-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -17326,6 +17713,7 @@
   },
   {
     "part": "PMN30XPE",
+    "channel": "P",
     "vds": -20,
     "rdson": [
       {
@@ -17358,7 +17746,8 @@
   },
   {
     "part": "BUK7K29-100E",
-    "vds": -100,
+    "channel": "N",
+    "vds": 100,
     "rdson": [
       {
         "value": 24.5,
@@ -17390,6 +17779,7 @@
   },
   {
     "part": "PMPB33XN",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -17427,6 +17817,7 @@
   },
   {
     "part": "PSMN2R8-40YSB",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -17455,6 +17846,7 @@
   },
   {
     "part": "PXN8R3-30QL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -17478,15 +17870,22 @@
         "value": 11.4,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 18.3,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "BUK7D36-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17514,6 +17913,7 @@
   },
   {
     "part": "PMPB55ENEA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17546,6 +17946,7 @@
   },
   {
     "part": "PSMN4R8-100BSE",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -17588,7 +17989,8 @@
   },
   {
     "part": "PSMN059-150Y",
-    "vds": -150,
+    "channel": "N",
+    "vds": 150,
     "rdson": [
       {
         "value": 59,
@@ -17616,6 +18018,7 @@
   },
   {
     "part": "PSMN0R9-30ULD",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -17647,13 +18050,14 @@
       }
     ],
     "package": [
-      "LFPAK56",
-      "SOT1023A"
+      "SOT1023A",
+      "LFPAK56-UL"
     ]
   },
   {
     "part": "PMPB20EN",
-    "vds": -30,
+    "channel": "N",
+    "vds": 30,
     "rdson": [
       {
         "value": 19.5,
@@ -17676,6 +18080,11 @@
         "value": 7.2,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 10.4,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -17685,6 +18094,7 @@
   },
   {
     "part": "PSMN011-60MS",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17717,10 +18127,11 @@
   },
   {
     "part": "PSMN012-100YL",
-    "vds": -100,
+    "channel": "N",
+    "vds": 100,
     "rdson": [
       {
-        "value": 9.5,
+        "value": 12,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 25 °C"
       },
@@ -17755,6 +18166,7 @@
   },
   {
     "part": "BUK7M9R9-60E",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17782,6 +18194,7 @@
   },
   {
     "part": "BUK9K52-60RA",
+    "channel": "N",
     "vds": 60,
     "rdson": [
       {
@@ -17814,22 +18227,28 @@
   },
   {
     "part": "PSMN2R0-25YLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
-      {
-        "value": 2.09,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
       {
         "value": 2.91,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
+        "value": 2.09,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
+      },
+      {
         "value": 4.95,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 3.52,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -17847,6 +18266,7 @@
   },
   {
     "part": "PMN100EPA",
+    "channel": "P",
     "vds": -60,
     "rdson": [
       {
@@ -17867,12 +18287,12 @@
     ],
     "id": [
       {
-        "value": -2.5,
+        "value": 2.5,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 25 °C"
       },
       {
-        "value": -1.6,
+        "value": 1.6,
         "unit": "A",
         "conditions": "VGS = -10 V; Tamb = 100 °C"
       }
@@ -17885,13 +18305,9 @@
   },
   {
     "part": "PSMN4R3-30BL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
-      {
-        "value": 7.8,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
-      },
       {
         "value": 5.2,
         "unit": "mΩ",
@@ -17906,6 +18322,11 @@
         "value": 4.1,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      },
+      {
+        "value": 7.8,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 15 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -17927,6 +18348,7 @@
   },
   {
     "part": "PMV37EN2",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -17950,6 +18372,11 @@
         "value": 4.5,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 5.6,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
@@ -17959,6 +18386,7 @@
   },
   {
     "part": "BUK6Y14-40P",
+    "channel": "P",
     "vds": -40,
     "rdson": [
       {
@@ -17979,12 +18407,12 @@
     ],
     "id": [
       {
-        "value": -64,
+        "value": 64,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 25 °C"
       },
       {
-        "value": -46,
+        "value": 46,
         "unit": "A",
         "conditions": "VGS = -10 V; Tmb = 100 °C"
       }
@@ -17997,6 +18425,7 @@
   },
   {
     "part": "BUK7Y41-80E",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
@@ -18025,6 +18454,7 @@
   },
   {
     "part": "PXN018-30QL",
+    "channel": "N",
     "vds": 30,
     "rdson": [
       {
@@ -18048,24 +18478,31 @@
         "value": 7.5,
         "unit": "A",
         "conditions": "VGS = 10 V; Tamb = 25 °C"
+      },
+      {
+        "value": 11.3,
+        "unit": "A",
+        "conditions": "VGS = 10 V; Tamb = 25 °C; t ≤ 5 s"
       }
     ],
     "package": [
       "MLPAK33",
-      "SOT8002-1"
+      "SOT8002-1",
+      "SOT8002"
     ]
   },
   {
     "part": "PSMN010-80YL",
+    "channel": "N",
     "vds": 80,
     "rdson": [
       {
-        "value": 8.1,
+        "value": 11,
         "unit": "mΩ",
         "conditions": "VGS = 5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 7.4,
+        "value": 10,
         "unit": "mΩ",
         "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
@@ -18090,6 +18527,7 @@
   },
   {
     "part": "PSMN1R6-25YLE",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -18128,6 +18566,7 @@
   },
   {
     "part": "BUK7Y29-40E",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -18156,6 +18595,7 @@
   },
   {
     "part": "PMN280ENEA",
+    "channel": "N",
     "vds": 100,
     "rdson": [
       {
@@ -18164,14 +18604,14 @@
         "conditions": "VGS = 10 V; ID = 1.2 A; Tj = 25 °C"
       },
       {
-        "value": 1078,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 1.2 A; Tj = 175 °C"
-      },
-      {
         "value": 432,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 1.2 A; Tj = 25 °C"
+      },
+      {
+        "value": 1078,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 1.2 A; Tj = 175 °C"
       }
     ],
     "id": [
@@ -18194,6 +18634,7 @@
   },
   {
     "part": "BUK7M20-40H",
+    "channel": "N",
     "vds": 40,
     "rdson": [
       {
@@ -18236,6 +18677,7 @@
   },
   {
     "part": "PSMN0R9-25YLD",
+    "channel": "N",
     "vds": 25,
     "rdson": [
       {
@@ -18244,14 +18686,14 @@
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 25 °C"
       },
       {
-        "value": 0.85,
-        "unit": "mΩ",
-        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
-      },
-      {
         "value": 2.04,
         "unit": "mΩ",
         "conditions": "VGS = 4.5 V; ID = 25 A; Tj = 175 °C"
+      },
+      {
+        "value": 0.85,
+        "unit": "mΩ",
+        "conditions": "VGS = 10 V; ID = 25 A; Tj = 25 °C"
       },
       {
         "value": 1.45,
@@ -18279,37 +18721,38 @@
   },
   {
     "part": "PMN40XPEA",
+    "channel": "P",
     "vds": -20,
     "rdson": [
-      {
-        "value": 46,
-        "unit": "mΩ",
-        "conditions": "VGS = -8 V; ID = -4.7 A; Tj = 25 °C"
-      },
       {
         "value": 50,
         "unit": "mΩ",
         "conditions": "VGS = -4.5 V; ID = -4.7 A; Tj = 25 °C"
       },
       {
-        "value": 70,
-        "unit": "mΩ",
-        "conditions": "VGS = -8 V; ID = -4.7 A; Tj = 175 °C"
-      },
-      {
         "value": 78,
         "unit": "mΩ",
         "conditions": "VGS = -2.5 V; ID = -2 A; Tj = 25 °C"
+      },
+      {
+        "value": 46,
+        "unit": "mΩ",
+        "conditions": "VGS = -8 V; ID = -4.7 A; Tj = 25 °C"
+      },
+      {
+        "value": 70,
+        "unit": "mΩ",
+        "conditions": "VGS = -8 V; ID = -4.7 A; Tj = 175 °C"
       }
     ],
     "id": [
       {
-        "value": 4.7,
+        "value": -4.7,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 25 °C"
       },
       {
-        "value": 3,
+        "value": -3,
         "unit": "A",
         "conditions": "VGS = -4.5 V; Tamb = 100 °C"
       }

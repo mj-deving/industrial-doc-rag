@@ -62,6 +62,26 @@ export type GroundTruth = {
   id_a: Measurement | null;
   /** Max on-state resistance in mOhm at the standard Tj = 25 C reference condition. */
   rdson_mohm: Measurement | null;
+  /**
+   * EVERY row the table states, not the one row a question about this part would quote.
+   *
+   * The two fields above are the label for an identifier question — "what is the RDS(on)
+   * of PSMN1R0-30YLD at VGS = 10 V" — and one measurement answers it. They are the wrong
+   * label for a question about the SET, and the way they are wrong is invisible:
+   *
+   * PSMNR58-30YLH's datasheet quotes RDS(on) twice, 0.67 mOhm at VGS = 10 V and 0.9 mOhm
+   * at VGS = 4.5 V. The singular label keeps the 10 V row. So when the question generator
+   * built "among the 30 V parts specified at VGS = 4.5 V, which has the lowest", it did
+   * not put this part in the pool — and the part is not merely absent, it is the WINNER.
+   * The catalogue, which stores every row, competed it and answered 0.9 mOhm. The eval
+   * marked that wrong against a truth computed over a pool the part belonged in.
+   *
+   * A truth that holds one row per part cannot state the truth about a comparison across
+   * condition classes, because which class a part lands in is then decided by which row
+   * the parser picked. These carry all of them.
+   */
+  rdson_all: Measurement[];
+  id_all: Measurement[];
 };
 
 /**
@@ -262,7 +282,25 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
   if (start === -1) return null;
 
   const head = text.slice(0, 4000);
-  const table = text.slice(start, start + 8000).split("\n");
+
+  /**
+   * The tables end where the mechanical drawings begin, and that is a boundary the
+   * document states. It used to be `start + 8000` — a character count, and a wrong one.
+   *
+   * PSMN1R3-30YL anchors at character 1,187 and prints its RDS(on) table at 15,113. The
+   * window closed at 9,187, so the part came back with NO on-resistance at all, and 89
+   * parts came back the same way: no label, therefore no question, therefore not tested.
+   * Worse than absent — a part whose static table fell outside the window but whose Quick
+   * reference summary fell inside it got its label from the summary, which is the exact
+   * defect this parser already has three of on the record.
+   *
+   * `Package outline` is a section heading in every datasheet in this corpus and it comes
+   * after the characteristics. Nothing between the anchor and it holds another part's
+   * numbers, and `rowsFor` needs a min/typ/max tail to accept a line at all, so a figure
+   * caption cannot become a data point.
+   */
+  const outline = text.indexOf("Package outline", start);
+  const table = text.slice(start, outline > start ? outline : text.length).split("\n");
 
   const channel: "N" | "P" | null = /N-channel/i.test(head)
     ? "N"
@@ -273,7 +311,20 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
 
   const vdsRows = rowsFor(table, "VDS").filter((r) => r.unit === "V");
   const idRows = rowsFor(table, "ID").filter((r) => r.unit === "A");
-  const rdsonRows = rowsFor(table, "RDSon").filter((r) => /^m?[ΩΩ]/.test(r.unit) || r.unit === "mΩ");
+  /**
+   * Unicode has two ohm signs and this corpus uses BOTH.
+   *
+   * U+2126 OHM SIGN and U+03A9 GREEK CAPITAL LETTER OMEGA render identically and are not
+   * equal. This filter was written as a character class holding "both" of them — and it
+   * held U+03A9 twice, because the two are indistinguishable in an editor. Every datasheet
+   * whose PDF encodes the sign as U+2126 therefore lost EVERY on-state resistance row it
+   * had: 89 parts came back with no RDS(on) label, so no RDS(on) question, so no test.
+   * PSMN1R3-30YL prints three of them and the parser saw none.
+   *
+   * Written as escapes now, because a bug made of invisible characters cannot be fixed
+   * with a character you have to look at.
+   */
+  const rdsonRows = rowsFor(table, "RDSon").filter((r) => /^m?[\u03A9\u2126]/.test(r.unit));
 
   // Select RDSon by condition, never by position: see the header note.
   // Select the RDSon row by CONDITION, never by position. Two things vary
@@ -318,6 +369,36 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
     idRows[0];
   const idMax = idRow ? num(idRow.max) : null;
 
+  // Every row, for the questions that compare parts against each other rather than
+  // asking about one. Built from the same parsed rows the singular labels are picked
+  // from, so the two cannot disagree about what the table says — only about how much
+  // of it they keep.
+  const rdsonAll: Measurement[] = [];
+  for (const r of rdsonRows) {
+    const max = num(r.max);
+    if (max === null) continue;
+    const scale = r.unit.startsWith("m") ? 1 : 1000;
+    const typ = num(r.typ);
+    rdsonAll.push({
+      value: max * scale,
+      typ: typ === null ? null : typ * scale,
+      unit: "mΩ",
+      conditions: conditions(r.text)
+    });
+  }
+
+  const idAll: Measurement[] = [];
+  for (const r of idRows) {
+    const max = num(r.max);
+    if (max === null) continue;
+    // A time-limited rating stays OUT of the continuous label, and it stays out here
+    // by the same rule rather than by a second one. Its conditions carry the duration,
+    // so it would land in a class of its own anyway; dropping it says plainly that the
+    // corpus question is about the current a part can carry indefinitely.
+    if (!isContinuous(r.text)) continue;
+    idAll.push({ value: max, typ: null, unit: "A", conditions: conditions(r.text) });
+  }
+
   return {
     part,
     channel,
@@ -336,7 +417,9 @@ export function parseDatasheet(part: string, text: string): GroundTruth | null {
             // question about a row that is not the row being graded.
             conditions: conditions(idRow.text)
           },
-    rdson_mohm: rdson
+    rdson_mohm: rdson,
+    rdson_all: rdsonAll,
+    id_all: idAll
   };
 }
 
