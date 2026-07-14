@@ -32,7 +32,8 @@
 
 import { namedParts } from "../packages/doc-rag/src/answer";
 import { measures } from "../packages/doc-rag/src/grade";
-import { vocabulary } from "../src/api/catalog";
+import { matches, vocabulary } from "../src/api/catalog";
+import { withoutNames } from "../packages/doc-rag/src/text";
 import type { Attributes } from "../src/api/contracts";
 import type { CorpusQuestion } from "./questions-corpus";
 
@@ -76,6 +77,8 @@ type Case = {
    *  guard refused before retrieval could matter. This is the column that turns
    *  "it got it wrong" into "it could not have got it right". */
   sawWinner: boolean | null;
+  /** Catalogue-side twin of sawWinner: was the true winner in the pool the query competed? */
+  winnerInPool: boolean | null;
   candidates: number;
   expected: string;
   got: string;
@@ -178,12 +181,37 @@ const cases: Case[] = answers.map((got) => {
   // that matched no rows is a different failure from a guard that mistook a package
   // for a part, and both are different from a model that honestly declined.
   const onCatalog = got.route === "catalog";
+  // The router's own expression, imported rather than retyped. This line held a third
+  // copy of "subtract the package names" — the guard had one, the router had one, and
+  // this one attributed refusals by a rule that no longer matched either.
   const refusedByGuard =
-    got.refused &&
-    !onCatalog &&
-    namedParts(q.question).filter((token) => !NOT_PARTS.has(token)).length > 0;
+    got.refused && !onCatalog && namedParts(withoutNames(q.question, NOT_PARTS)).length > 0;
   const sawWinner =
     refusedByGuard || onCatalog ? null : q.truthParts.some((p) => got.retrieved.includes(p));
+
+  /**
+   * Did the catalogue COMPETE the true winner?
+   *
+   * The structural twin of `sawWinner`, and the number that says which half of the
+   * system a wrong superlative belongs to. The arithmetic over the pool is exact by
+   * construction — it is a `for` loop — so a wrong winner means the right part was not
+   * in the pool. It is absent because the model, reading that datasheet, did not record
+   * a row in the condition class the question asks about, and a part missing from a
+   * comparison does not produce a visible error: the query returns the best of what is
+   * left, with an exact number, and nothing looks broken.
+   *
+   * So this splits "the catalogue answered wrong" into "the query is wrong" (which
+   * would be a bug in code, and is not what happens) and "the reading is incomplete"
+   * (which is the extraction's condition-class recall, measured separately at 0.88 for
+   * I_D). Reported, not corrected.
+   */
+  const winnerInPool =
+    onCatalog && q.kind !== "count"
+      ? (() => {
+          const pool = catalog.filter((row) => matches(row, q.filter as never));
+          return q.truthParts.some((part) => pool.some((row) => row.part === part));
+        })()
+      : null;
 
   // Every superlative in this set NAMES its condition class. A catalogue answer that
   // reports one winner per class did not use it, and the honest grade is neither
@@ -217,6 +245,7 @@ const cases: Case[] = answers.map((got) => {
     route: got.route ?? "retrieval",
     outcome,
     sawWinner,
+    winnerInPool,
     candidates: q.candidates,
     expected: q.kind === "superlative-part" ? q.truthParts.join(" | ") : `${q.truthValue}${q.unit ?? ""}`,
     got: got.text.replace(/\s+/g, " ").slice(0, 160)
@@ -266,7 +295,23 @@ const summary = {
   wrongWithoutSeeingWinner: rate(
     cases.filter((c) => c.outcome === "wrong" && c.sawWinner !== null),
     (c) => c.sawWinner === false
-  )
+  ),
+  /**
+   * Which half of the catalogue a wrong superlative belongs to.
+   *
+   * The query is a `for` loop over the pool, so its arithmetic is exact by construction.
+   * A wrong winner therefore means the winner was not in the pool, and it is not in the
+   * pool because the model, reading that datasheet, recorded no row in the condition
+   * class the question asks about. `wrongWinnerNotInPool` near 1.0 says the query engine
+   * is not the problem and the reading is: every point left on the table is extraction
+   * recall, not set logic. Below 1.0 would mean the loop itself is wrong, which would be
+   * a bug in code and is the thing to be alarmed by.
+   */
+  wrongWinnerNotInPool: rate(
+    cases.filter((c) => c.outcome === "wrong" && c.winnerInPool !== null),
+    (c) => c.winnerInPool === false
+  ),
+  catalogSuperlativesGraded: cases.filter((c) => c.winnerInPool !== null).length
 };
 
 await Bun.write("data/eval-corpus.json", JSON.stringify({ ...summary, cases }, null, 2));
@@ -282,4 +327,8 @@ console.error("");
 console.error(`accuracy               ${summary.accuracy}`);
 console.error(`precision when answered ${summary.precisionWhenAnswered}`);
 console.error(`wrong without ever retrieving the winner ${summary.wrongWithoutSeeingWinner}`);
+console.error(
+  `wrong because the winner was never in the pool ${summary.wrongWinnerNotInPool}   ` +
+    `(the query is exact; what is missing is the reading)`
+);
 console.error("\nwrote data/eval-corpus.json");

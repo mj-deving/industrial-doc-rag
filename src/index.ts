@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { api } from "./api/routes";
 import { ingest } from "./api/ingest";
 import { evalApi } from "./api/eval";
+import { extract } from "./api/extract";
 import { jsonError } from "./api/errors";
 import { renderConsole } from "./console/page";
 import { renderEval } from "./console/eval-page";
@@ -15,6 +16,7 @@ const app = new Hono<{ Bindings: Env }>();
 app.route("/", api);
 app.route("/", ingest);
 app.route("/", evalApi);
+app.route("/", extract);
 
 app.get("/", (c) => {
   return c.html(renderConsole());

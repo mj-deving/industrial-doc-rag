@@ -35,7 +35,7 @@
  * Usage: bun tools/questions-corpus.ts data/groundtruth.json > data/questions-corpus.json
  */
 
-import { classOf } from "../src/api/contracts";
+import { classOf, cleanPackages } from "../src/api/contracts";
 import { isHoldout } from "./split";
 import type { GroundTruth, Measurement } from "./groundtruth";
 
@@ -184,9 +184,15 @@ export function corpusQuestions(all: GroundTruth[]): CorpusQuestion[] {
   }
 
   // ── Counts: no condition class, because a package is not a measurement ──────
+  //
+  // The label's package names go through the SAME normaliser the catalogue's do. Not a
+  // convenience: the parser copies the PDF's non-breaking hyphen, so the raw label holds
+  // `DFN2020MD‑6` for 16 parts and `DFN2020MD-6` for 32, and asks two questions about one
+  // package, neither of which has the right answer. Both sides normalise or neither can be
+  // compared — the same seam, and the same reasoning, as `classOf` for conditions.
   const byPackage = new Map<string, string[]>();
   for (const label of indexed) {
-    for (const name of label.package ?? []) {
+    for (const name of cleanPackages(label.package ?? [])) {
       byPackage.set(name, [...(byPackage.get(name) ?? []), label.part]);
     }
   }

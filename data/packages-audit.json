@@ -1,0 +1,3927 @@
+{
+  "generatedAt": "2026-07-14T16:18:35.458Z",
+  "partsAudited": 497,
+  "catalogueFabricated": {
+    "parts": 6,
+    "names": [
+      [
+        "LFPAK56",
+        5
+      ],
+      [
+        "LFPAK33",
+        5
+      ],
+      [
+        "D2PAK",
+        4
+      ],
+      [
+        "TO-236AB",
+        4
+      ],
+      [
+        "SOT1210",
+        4
+      ],
+      [
+        "SOT404",
+        4
+      ],
+      [
+        "SOT1220",
+        4
+      ],
+      [
+        "SOT23",
+        4
+      ]
+    ]
+  },
+  "labelMissed": {
+    "parts": 187,
+    "names": [
+      [
+        "LFPAK",
+        100
+      ],
+      [
+        "Power-SO8",
+        44
+      ],
+      [
+        "SOT1220-2",
+        18
+      ],
+      [
+        "SC-74",
+        15
+      ],
+      [
+        "LFPAK56",
+        14
+      ],
+      [
+        "TO-236AB",
+        10
+      ],
+      [
+        "SOT8002-1",
+        7
+      ],
+      [
+        "D2PAK",
+        6
+      ],
+      [
+        "LFPAK33",
+        3
+      ],
+      [
+        "SOT1220-4",
+        2
+      ],
+      [
+        "LFPAK56E",
+        2
+      ],
+      [
+        "CCPAK1212",
+        1
+      ],
+      [
+        "SOT1210",
+        1
+      ]
+    ]
+  },
+  "catalogueMissed": {
+    "parts": 159,
+    "names": [
+      [
+        "LFPAK",
+        101
+      ],
+      [
+        "Power-SO8",
+        44
+      ],
+      [
+        "SC-74",
+        14
+      ],
+      [
+        "LFPAK56",
+        13
+      ],
+      [
+        "SOT8002",
+        7
+      ],
+      [
+        "D2PAK",
+        6
+      ],
+      [
+        "LFPAK33",
+        2
+      ],
+      [
+        "LFPAK56E",
+        2
+      ],
+      [
+        "CCPAK1212",
+        1
+      ],
+      [
+        "LFPAK56-UL",
+        1
+      ]
+    ]
+  },
+  "rows": [
+    {
+      "part": "PSMN011-100YSF",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R1-30YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV100XPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN013-60HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV52ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN011-60ML",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R3-30YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN3R0-60BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN028-100YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R7-25YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y3R5-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB50ENE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y65-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6Y19-30P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV48XPA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R9-25MLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M7R2-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV50UPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB10EN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB06R2EN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB12R7EP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R9-80SSJ",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y22-60EL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMN25ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PMV33UPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y29-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV20XNE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R3-25MLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7880-55A",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y59-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6Y24-40P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN7R0-100BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R4-30MLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y7R2-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R8-100BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K5R6-30E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK9D23-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR90-80CSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M52-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB47XP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK764R0-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R9-100YSF",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56"
+      ]
+    },
+    {
+      "part": "PMN230ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMN2R0-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M3R3-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7M15-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN8R5-60YS",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV48XPA2",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R5-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV75UP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M42-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y19-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN040-100MSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R4-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV15ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PXN7R7-25QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "PSMN016-100BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R0-100ASF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M14-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R2-80ASE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M12-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R4-100CSE",
+      "fabricated": [],
+      "missedByLabel": [
+        "CCPAK1212"
+      ],
+      "missedByCatalogue": [
+        "CCPAK1212"
+      ]
+    },
+    {
+      "part": "PSMN5R0-40MLH",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK4D110-20P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R0-100CSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K52-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN1R7-40YLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN030-60YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV48XP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB15XPA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R0-40MSH",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN8R2-80YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y113-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV28ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M11-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK768R1-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB14XN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7S0R7-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R5-40YLB",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN017-60YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R3-100SSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN48XP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMN014-60HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV16XN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R0-80CSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R6-60YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB14XP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV74EPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R0-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9875-100A",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K6R2-40E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMV100EPA",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN120ENEA",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMN5R6-100BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K13-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9K5R1-30E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN025-100HS",
+      "fabricated": [
+        "LFPAK56"
+      ],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN3R3-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR90-30BL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R5-60YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R3-40MLH",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K12-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMV19XNEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y107-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M27-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB12R5UPE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M19-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K45-100E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK7M12-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y3R5-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN70EPE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "BUK9M6R6-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN8R5-40MLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK33",
+        "SOT1210"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV40UN2",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR58-30YLH",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMNR70-40YSN",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R2-80CSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R1-80ASF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN9R5-30YLC",
+      "fabricated": [
+        "LFPAK33",
+        "LFPAK56",
+        "D2PAK",
+        "TO-236AB",
+        "SOT1210",
+        "SOT404",
+        "SOT1220",
+        "SOT23"
+      ],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y6R5-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7A1R0-100L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK98180-100A",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y8R7-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R0-40YLB",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R8-40YSD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7K12-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK7S1R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV42ENE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y3R1-80M",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV20EN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV50XP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M10-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K61-100L",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN012-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7T1R0-100L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y3R5-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9M120-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R8-40HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R4-40YLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R2-30YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K15-80E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN7R0-60YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN8R7-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV65UNEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN9R8-30MLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y12-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN045-100HL",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y41-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y6R0-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y43-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB16EP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6Y10-30P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7T1R4-100L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN4R2-40VSH",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB08R5XN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K12-80L",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB95ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y8R7-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K8R7-40E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN7R5-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN42XPEA",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "BUK9Y25-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR89-25YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7Y153-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN013-60HL",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R7-30BL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN7R5-30MLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK4D38-20P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D38-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6Y61-60P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN40ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "BUK7Y19-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K31-100L",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN4R5-30YLC",
+      "fabricated": [
+        "LFPAK33",
+        "LFPAK56",
+        "D2PAK",
+        "TO-236AB",
+        "SOT1210",
+        "SOT404",
+        "SOT1220",
+        "SOT23"
+      ],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB10XN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K13-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMPB19R0UPE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN30UN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMN0R9-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R4-30BLE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN011-30YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN28UNE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMN7R6-60BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN017-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK78150-55A",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R5-100YSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN027-100BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB09R1XN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K18-40E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMNR51-25YLH",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R8-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K35-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK9M9R1-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB10XNE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9880-55A",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M35-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR90-80ASF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K17-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK9Y3R0-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7J2R4-80M",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB06R3XN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-4"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN015-60BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y4R4-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M8R5-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7Y38-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M20-60EL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN041-80YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PXN9R0-30QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "PSMN3R0-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y3R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV52ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M8R0-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R1-25YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R9-25YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R5-30YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN012-100YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y2R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y1R9-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R0-40ULD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R2-55SLH",
+      "fabricated": [],
+      "missedByLabel": [
+        "D2PAK"
+      ],
+      "missedByCatalogue": [
+        "D2PAK"
+      ]
+    },
+    {
+      "part": "PSMN2R2-40YSB",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R5-40YSD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y4R8-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN70XP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMNR70-40SSH",
+      "fabricated": [],
+      "missedByLabel": [
+        "D2PAK"
+      ],
+      "missedByCatalogue": [
+        "D2PAK"
+      ]
+    },
+    {
+      "part": "BUK7S1R2-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB29XPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB20XPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M6R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN047-100NSE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2",
+        "LFPAK33"
+      ],
+      "missedByCatalogue": [
+        "LFPAK33"
+      ]
+    },
+    {
+      "part": "PSMN2R3-80SSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK761R6-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB27EPA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN7R0-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV65XP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB33XP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7D25-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN8R7-100YSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K49-80L",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PXN5R4-30QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "PSMN4R3-40MSH",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M48-80L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN102-200Y",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K45-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB05R4EN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-4"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y7R8-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K89-100E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMPB85ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV88ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R0-30YLB",
+      "fabricated": [
+        "LFPAK33",
+        "LFPAK56",
+        "D2PAK",
+        "TO-236AB",
+        "SOT1210",
+        "SOT404",
+        "SOT1220",
+        "SOT23"
+      ],
+      "missedByLabel": [],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y15-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN230ENEA",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "BUK7Y1R7-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMN48XPA",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "BUK6D22-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M45-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R2-40YLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN012-60YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R0-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R0-25MLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR90-40YLH",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN3R3-100SSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV28ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D120-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV32UP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y15-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN021-100YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV450ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D125-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV45EN2",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M156-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB12UNEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R9-40YSD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y14-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN039-100YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB29XNEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB100ENE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y72-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M85-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV30XPA",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB15XN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R8-40YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN012-60HL",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV30ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN019-100YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R0-25YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9J0R9-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB11R2VP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R6-30MLH",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN028-100HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R2-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN8R5-40HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB17EP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN038-100HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB48EP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN057-200B",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y9R9-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D210-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7K5R1-30E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK7K18-40E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN071-100NSE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2",
+        "LFPAK33"
+      ],
+      "missedByCatalogue": [
+        "LFPAK33"
+      ]
+    },
+    {
+      "part": "PMN40SNA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M11-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R9-80SSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R6-100SSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV30XPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R0-25YLB",
+      "fabricated": [
+        "LFPAK33",
+        "LFPAK56",
+        "D2PAK",
+        "TO-236AB",
+        "SOT1210",
+        "SOT404",
+        "SOT1220",
+        "SOT23"
+      ],
+      "missedByLabel": [],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN7R0-30MLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R7-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R4-100CSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y65-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R2-40BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R5-30BLE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y2R4-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7Y4R8-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M13-80L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN026-80YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M9R5-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN6R7-40MSD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M15-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7S2R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB07R3EN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R0-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN020-100YS",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9K35-60E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK9K25-40E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMNR90-50SLH",
+      "fabricated": [],
+      "missedByLabel": [
+        "D2PAK"
+      ],
+      "missedByCatalogue": [
+        "D2PAK"
+      ]
+    },
+    {
+      "part": "BUK7M4R3-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R9-100SSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K35-100L",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV50EPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y14-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN16XNE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "PSMN2R0-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN9R8-100YSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R0-40SSH",
+      "fabricated": [],
+      "missedByLabel": [
+        "D2PAK"
+      ],
+      "missedByCatalogue": [
+        "D2PAK"
+      ]
+    },
+    {
+      "part": "PMPB12R5EP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R0-30MLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y11-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K22-80E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "BUK7M15-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN5R4-25YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN9R0-25MLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R0-40YLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7K25-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7S2R5-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R1-80CSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R5-40YSB",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB14R8XN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB29XPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN4R8-100YSE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "D2PAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "D2PAK"
+      ]
+    },
+    {
+      "part": "BUK9M4R3-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN4R0-30YL",
+      "fabricated": [
+        "LFPAK33"
+      ],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PXN010-30QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "PMPB14R0EP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN3R4-30BL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R5-80BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN045-80YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN013-80YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R8-80SSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN4R2-80YSE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "D2PAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "D2PAK"
+      ]
+    },
+    {
+      "part": "BUK7A1R3-100L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK98150-55A",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR82-30YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56E",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56E",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9M6R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN5R8-40YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y72-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M67-60EL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN011-60HL",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R8-40BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB13XNEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y7R6-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R1-40BS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R1-30YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9K8R7-40E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMV130ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M3R3-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R2-30YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV27UPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR90-80ASE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN7R2-100YSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6Y33-60P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K5R6-30E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN4R0-60YS",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9M6R7-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9M24-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R4-30MLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R3-100ASF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR67-30YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y6R0-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN011-80YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M33-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PXN4R7-30QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "BUK7Y2R5-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB11EN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D81-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y1R4-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB43XPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y1R3-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y2R8-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R4-100ASE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN30ENEA",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M19-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D23-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R5-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN9R1-30YL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN014-40YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y25-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R7-40YLB",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN4R3-40MLH",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y12-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV13XNEA",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M43-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB20XNEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN6R0-30YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y98-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN018-80YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN015-100YSF",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M17-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K6R2-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN014-40HLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9M23-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB10R3XN",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K30-80E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PSMN033-100HL",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMV90ENE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV88ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB29XNE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR90-40YSN",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56E",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56E",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN8R0-40HL",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9Y15-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK961R6-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7J1R0-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMN20ENA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9Y153-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M16-100L",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R5-40YLD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB08R4VP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D72-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB16R5XNE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R2-25YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R0-30YLC",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB09R5VP",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT1220-2"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M22-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV164ENE",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN4R0-40YS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7V4R2-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7M11-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB30XPE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M15-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK9K32-100E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMPB13UP",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y21-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN1R5-50YLH",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56"
+      ]
+    },
+    {
+      "part": "PMPB13XNE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M5R2-30E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6D56-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK4D16-20",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMNR56-25YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMN30XPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9M34-100E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN55ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M6R3-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV15UNEA",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R6-30YLC",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN9R3-60HS",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8",
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8",
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PMPB12UNE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M10-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN30XPE",
+      "fabricated": [],
+      "missedByLabel": [
+        "SC-74"
+      ],
+      "missedByCatalogue": [
+        "SC-74"
+      ]
+    },
+    {
+      "part": "BUK7K29-100E",
+      "fabricated": [],
+      "missedByLabel": [
+        "Power-SO8"
+      ],
+      "missedByCatalogue": [
+        "Power-SO8"
+      ]
+    },
+    {
+      "part": "PMPB33XN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN2R8-40YSB",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PXN8R3-30QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "BUK7D36-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMPB55ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN4R8-100BSE",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN059-150Y",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN0R9-30ULD",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK56"
+      ],
+      "missedByCatalogue": [
+        "LFPAK56-UL"
+      ]
+    },
+    {
+      "part": "PMPB20EN",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN011-60MS",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN012-100YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7M9R9-60E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK9K52-60RA",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN2R0-25YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN100EPA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PSMN4R3-30BL",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMV37EN2",
+      "fabricated": [],
+      "missedByLabel": [
+        "TO-236AB"
+      ],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK6Y14-40P",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7Y41-80E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PXN018-30QL",
+      "fabricated": [],
+      "missedByLabel": [
+        "SOT8002-1"
+      ],
+      "missedByCatalogue": [
+        "SOT8002"
+      ]
+    },
+    {
+      "part": "PSMN010-80YL",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN1R6-25YLE",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "BUK7Y29-40E",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN280ENEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "BUK7M20-40H",
+      "fabricated": [],
+      "missedByLabel": [
+        "LFPAK"
+      ],
+      "missedByCatalogue": [
+        "LFPAK"
+      ]
+    },
+    {
+      "part": "PSMN0R9-25YLD",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    },
+    {
+      "part": "PMN40XPEA",
+      "fabricated": [],
+      "missedByLabel": [],
+      "missedByCatalogue": []
+    }
+  ]
+}

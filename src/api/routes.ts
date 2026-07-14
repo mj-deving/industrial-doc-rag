@@ -10,6 +10,7 @@
 
 import { Hono } from "hono";
 import { answer, namedParts, REFUSAL_TOKEN } from "../../packages/doc-rag/src/answer";
+import { withoutNames } from "../../packages/doc-rag/src/text";
 import { consoleQuestions } from "../console/questions";
 import { retriever } from "../engine/cloudflare";
 import { explain, runQuery, vocabulary } from "./catalog";
@@ -98,8 +99,16 @@ api.post("/query", async (c) => {
    *
    * Package names are subtracted first: `LFPAK33` is identifier-shaped and is not a
    * document, so a question naming one is not a lookup.
+   *
+   * They are subtracted from the TEXT, through the same `withoutNames` the guard uses,
+   * and the router and the guard call it because they had a copy each. The copy here
+   * subtracted TOKENS: `namedParts` turns `Power-SO8` into `SO8`, the package vocabulary
+   * holds `Power-SO8`, and the two spellings never met — so the router saw an identifier
+   * that was not a part, decided the question was a document lookup, and sent a question
+   * about 139 datasheets down a path that reads ten. Fixing one copy of a normaliser and
+   * leaving the other is the same bug this project has now shipped four times.
    */
-  const identifiers = namedParts(question).filter((token) => !NOT_PARTS.has(token));
+  const identifiers = namedParts(withoutNames(question, NOT_PARTS));
 
   if (identifiers.length === 0) {
     const plan = parsePlan(await generate(plannerPrompt(question, VOCAB), 200), VOCAB);

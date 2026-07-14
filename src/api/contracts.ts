@@ -136,13 +136,37 @@ function isPackageName(name: string): boolean {
   return name.length >= 2 && name.length <= 24 && !/\s/.test(name) && /[A-Z0-9]/.test(name);
 }
 
+/** Every dash a datasheet prints, folded to the one a buyer types.
+ *
+ *  The label preserves the PDF's non-breaking hyphen (U+2011); the model writes an ASCII
+ *  one. So `DFN2020MD‑6` and `DFN2020MD-6` were two packages holding 16 and 32 parts.
+ *  Neither number is 48, and neither side is wrong about anything except typography. */
+const DASHES = /[‐-―−]/g;
+
+/** A SOT code with a numeric version suffix is a variant of that SOT code, and a buyer
+ *  asking for SOT1220 means all of them.
+ *
+ *  Confirmed against the label rather than assumed: all 18 parts the model filed under
+ *  `SOT1220-2`, both under `SOT1220-4`, and all 7 under `SOT8002-1` are labelled
+ *  `SOT1220` / `SOT8002` by a parser that read the ordering table's own columns. The
+ *  version is a column in that table, not a different package.
+ *
+ *  Deliberately narrow. `DFN2020MD-6` is a six-lead DFN2020MD and the label never writes
+ *  `DFN2020MD` alone, so a general strip-the-trailing-number rule would invent a package
+ *  nobody sells. Only a SOT code takes a version suffix. */
+const SOT_VERSION = /^(SOT\d{3,})-\d+$/;
+
 export function cleanPackages(names: string[]): string[] {
   const out = new Set<string>();
   for (const raw of names) {
-    for (const piece of raw.split(/[;,]|\s{2,}/)) {
+    for (const piece of raw.replace(DASHES, "-").split(/[;,]|\s{2,}/)) {
       // A parenthesised alternative is a name, not a gloss: `TO-236AB (SOT23)`.
-      for (const name of piece.split(/[()]/)) {
-        if (isPackageName(name.trim())) out.add(name.trim());
+      for (const candidate of piece.split(/[()]/)) {
+        const name = candidate.trim();
+        if (!isPackageName(name)) continue;
+        out.add(name);
+        const base = name.match(SOT_VERSION);
+        if (base?.[1]) out.add(base[1]);
       }
     }
   }

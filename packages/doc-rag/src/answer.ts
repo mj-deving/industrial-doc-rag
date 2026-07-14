@@ -21,6 +21,7 @@
  *      new way.
  */
 
+import { withoutNames } from "./text";
 import { MAX_CHARS } from "./chunk";
 import { retrieve, type Retriever, type Strategy } from "./retrieve";
 import type { Answer } from "./types";
@@ -126,8 +127,34 @@ export function namedParts(question: string): string[] {
  *
  * A deterministic check cannot be talked out of the rule by a convincing sibling.
  */
-export function guardRefuses(question: string, retrievedParts: string[]): boolean {
-  const named = namedParts(question);
+/**
+ * `ignore` is the corpus saying "these identifier-shaped tokens are not documents".
+ *
+ * The guard's adversary is a part number that is not in the index, and a package
+ * name looks exactly like one: `LFPAK33`, `SOT669` and `SO8` all match the
+ * identifier pattern, none of them is a part, and none of them can ever be
+ * retrieved. So the guard refused "how many parts come in an LFPAK33 package?" —
+ * 25 of 40 count questions, refused for a reason that has nothing to do with the
+ * question. That is the false-positive class that gets guards switched off, and it
+ * is worse than a miss, because a guard nobody trusts guards nothing.
+ *
+ * The names are STRIPPED FROM THE TEXT, not subtracted from the tokens the regex
+ * returns, and the difference is three more refusals that survived the first fix.
+ * `Power-SO8` goes into the identifier regex and `SO8` comes out — the regex does not
+ * tokenise a package name the way the vocabulary spells it. The vocabulary holds
+ * `Power-SO8`; the token was `SO8`; the set-membership test compared two spellings of
+ * one name and refused a question about a package the catalogue holds 139 parts of.
+ * A name that has been removed from the text cannot be tokenised into a disagreement.
+ *
+ * The list is derived from the corpus (the catalogue's own package vocabulary), not
+ * hand-written, so it cannot go stale as the corpus grows.
+ */
+export function guardRefuses(
+  question: string,
+  retrievedParts: string[],
+  ignore: ReadonlySet<string> = new Set()
+): boolean {
+  const named = namedParts(withoutNames(question, ignore));
   if (named.length === 0) return false; // No identifier to check: the model decides.
   const have = new Set(retrievedParts);
   return !named.some((part) => have.has(part));
@@ -140,7 +167,10 @@ export async function answer(
   strategy: Strategy,
   k = 10,
   /** Off only in the eval, which measures what the MODEL does without the guarantee. */
-  guard = true
+  guard = true,
+  /** Identifier-shaped tokens the corpus says are not documents (package names).
+   *  See `guardRefuses`. */
+  ignore: ReadonlySet<string> = new Set()
 ): Promise<Answer & { timings: { retrieveMs: number; generateMs: number } }> {
   const startRetrieve = performance.now();
   const ranking = await retrieve(retriever, question, strategy, k);
@@ -153,7 +183,7 @@ export async function answer(
   // finds the asked document at rank 1 in every one of the 1918 indexed questions
   // (hybrid-rrf, recall@1 = 1.0), so a part missing from the results is a part
   // missing from the corpus, and there is nothing to answer from but a lookalike.
-  if (ranking.chunks.length === 0 || (guard && guardRefuses(question, ranking.documents))) {
+  if (ranking.chunks.length === 0 || (guard && guardRefuses(question, ranking.documents, ignore))) {
     return {
       text: REFUSAL_TOKEN,
       refused: true,

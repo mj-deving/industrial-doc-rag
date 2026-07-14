@@ -28,7 +28,7 @@
  * Usage: bun tools/grade-attributes.ts
  */
 
-import { classOf, type Attributes, type Measured } from "../src/api/contracts";
+import { classOf, cleanPackages, type Attributes, type Measured } from "../src/api/contracts";
 import type { GroundTruth, Measurement } from "./groundtruth";
 
 const TOLERANCE = 0.01;
@@ -141,12 +141,17 @@ export function grade(catalogue: Attributes[], labels: GroundTruth[]): Quality {
      * the names that were NOT captured, so the metric has to be recall over the whole
      * set. Measured that way: 0.786 of names, and 0.525 of parts with a complete list.
      */
+    //
+    // The label is normalised through the catalogue's own `cleanPackages` before the
+    // compare. The parser copies the PDF's non-breaking hyphen and the model writes an
+    // ASCII one, so an un-normalised compare scores a perfect reading as a miss.
+    const labelPackages = cleanPackages(label.package ?? []);
     check(
       "package",
-      (label.package ?? []).length > 0,
-      () => (label.package ?? []).every((name) => got.package.includes(name)),
+      labelPackages.length > 0,
+      () => labelPackages.every((name) => got.package.includes(name)),
       () => got.package.join("|"),
-      () => (label.package ?? []).join("|")
+      () => labelPackages.join("|")
     );
     check(
       "rdsonConditions",

@@ -207,3 +207,34 @@ describe("the vocabulary comes from the table, never from a hand-written list", 
     expect(vocab.rdsonConditions).toEqual(["Tj = 25 °C; VGS = 10 V"]);
   });
 });
+
+/**
+ * Three ways a package name can be spelled apart from itself, and each one cost a
+ * question in the run of 2026-07-14. They are the same bug wearing three coats: the
+ * name a buyer types, the name the datasheet prints, and the name the model writes
+ * are compared as exact strings, so any disagreement about where the name ENDS
+ * silently removes parts from a count or removes a count from the system entirely.
+ */
+describe("a package name is not an exact string", () => {
+  test("a typographic hyphen is typography, not a different package", () => {
+    // The label carries the datasheet's non-breaking hyphen (U+2011) on 16 parts and
+    // an ASCII hyphen on 32. One package, two counts, and neither is 48.
+    expect(cleanPackages(["DFN2020MD‑6"])).toEqual(["DFN2020MD-6"]);
+    expect(cleanPackages(["TO–236AB"])).toEqual(["TO-236AB"]);
+  });
+
+  test("a SOT version suffix is a variant of the SOT package, and counts as one", () => {
+    // Confirmed against the label, not asserted: all 18 parts the model filed under
+    // SOT1220-2, and all 7 under SOT8002-1, are labelled SOT1220 and SOT8002 by a
+    // parser that read the ordering table. The version is a column, not a package.
+    expect(cleanPackages(["SOT1220-2"]).sort()).toEqual(["SOT1220", "SOT1220-2"]);
+    expect(cleanPackages(["SOT8002-1"]).sort()).toEqual(["SOT8002", "SOT8002-1"]);
+  });
+
+  test("a lead count is part of the name and keeps its own identity", () => {
+    // The narrow rule earns its narrowness: DFN2020MD-6 is a six-lead DFN2020MD and
+    // the label never writes DFN2020MD alone. Only a SOT code takes a version suffix.
+    expect(cleanPackages(["DFN2020MD-6"])).toEqual(["DFN2020MD-6"]);
+    expect(cleanPackages(["TO-236AB"])).toEqual(["TO-236AB"]);
+  });
+});

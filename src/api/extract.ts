@@ -73,6 +73,21 @@ const K = { ratings: 12, ordering: 6 } as const;
  * test knowledge. A buyer asking for drain current means the current the part can
  * carry indefinitely; the 5-second figure answers a question nobody asked. The
  * prompt names no part, no dimension of the test set, and no expected value.
+ *
+ * ── And it names no package either, now ─────────────────────────────────────
+ *
+ * It used to. To fix a recall problem — the model captured the trade name and dropped
+ * the industry code — the prompt listed ten real examples of both kinds. Recall went
+ * from 0.786 to 0.959, and the examples became an answer: PSMN9R5-30YLC came back with
+ * ELEVEN packages, which is every name in that list, on a datasheet that prints three.
+ * The model could not find the ordering table, so it recited the prompt.
+ *
+ * Measured against the PDF text itself, which is neither the model nor the label: the
+ * catalogue named a package the document never prints on 6 of 497 parts. Small, and the
+ * single failure this system exists to refuse — a name written from memory is
+ * indistinguishable from a name that was read, which is the same argument the refusal
+ * guard makes about a whole datasheet. An example in a prompt is a value the model can
+ * emit, so a prompt that names the answers is a prompt that will sometimes be one.
  */
 function prompt(part: string, excerpts: string[]): string {
   return `You are reading excerpts from ONE MOSFET datasheet. Extract its ratings and answer with JSON only.
@@ -85,12 +100,14 @@ Fields:
   "id"      an ARRAY of every maximum CONTINUOUS drain current, one entry per set of conditions, same shape.
             Continuous means it carries this indefinitely. A rating that holds only for a limited time is a DIFFERENT figure and must not be listed.
             The same current is quoted at more than one temperature (25 °C and 100 °C are both common). List EVERY temperature, not the first one.
-  "package" EVERY name this part's package goes by, as an array of strings. [] if none is stated.
-            A package has TWO kinds of name and the ordering table prints both, in different columns:
-              the trade name        LFPAK33, LFPAK56, D2PAK, Power-SO8, TO-236AB
-              the industry code     SOT1210, SOT404, SOT669, SOT1220, SOT23   (often headed "Version")
-            Both name the same physical package and a buyer searches by either, so BOTH must be listed.
-            Listing only the trade name is the most common way to get this wrong.
+  "package" EVERY name this part's package goes by, as an array of strings, and ONLY names PRINTED IN THE EXCERPTS ABOVE. [] if none is printed.
+            A package has two kinds of name and a datasheet prints both, in different places:
+              a trade name, used in the title and the general description
+              an industry code, usually in the ordering table's column headed "Version"
+            Both name the same physical package and a buyer searches by either, so list both WHEN BOTH APPEAR.
+            Do NOT write a name you know from experience and cannot point to in the excerpts. If the
+            excerpts print only one name for this package, list exactly that one. A name you supply
+            from memory is indistinguishable from one you read, and it is wrong.
 
 Copy each conditions string exactly as printed, including the gate voltage and the temperature symbol (Tj, Tmb and Tamb are different things and must not be confused).
 
@@ -197,7 +214,13 @@ extract.post("/harness/extract", async (c) => {
 
     const response = (await c.env.AI.run(GENERATOR as keyof AiModels, {
       messages: [{ role: "user", content: prompt(part, chunks.map((r) => r.chunk.text)) }],
-      max_tokens: 800,
+      // 800 was set when a row held ONE on-resistance and ONE current. The schema now
+      // asks for every row a datasheet quotes, and a part with five gate drives and
+      // two temperatures runs past 800 tokens mid-string. The JSON then ends in the
+      // middle of a conditions value, fails to parse, and the part is dropped from the
+      // catalogue — so it is missing from every count it belongs in, and the count is
+      // an undercount that looks like an answer. 20 of 497 parts died this way.
+      max_tokens: 1500,
       temperature: 0
     } as never)) as unknown as { response?: string };
 
@@ -206,7 +229,10 @@ extract.post("/harness/extract", async (c) => {
     results.push({
       part,
       attributes,
-      ...(attributes ? {} : { reason: "unparseable", raw: text.slice(0, 200) })
+      // The whole answer, not a 200-character excerpt of it. The excerpt was cut at
+      // exactly the length that makes a truncated JSON document and a complete one
+      // look identical, so the failure could not be told apart from my own slice.
+      ...(attributes ? {} : { reason: "unparseable", raw: text })
     });
   }
 

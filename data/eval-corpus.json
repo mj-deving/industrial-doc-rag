@@ -1,87 +1,102 @@
 {
-  "generatedAt": "2026-07-14T13:01:36.996Z",
+  "generatedAt": "2026-07-14T16:07:26.668Z",
   "questions": 95,
-  "outcomes": {
-    "correct": 2,
-    "wrong": 23,
-    "guardRefused": 25,
-    "modelRefused": 45
+  "routes": {
+    "catalog": 92,
+    "retrieval": 3
   },
-  "accuracy": 0.0211,
-  "precisionWhenAnswered": 0.08,
+  "outcomes": {
+    "correct": 68,
+    "wrong": 24,
+    "hedged": 0,
+    "guardRefused": 3,
+    "modelRefused": 0,
+    "catalogEmpty": 0
+  },
+  "accuracy": 0.7158,
+  "precisionWhenAnswered": 0.7391,
   "byKind": {
     "superlative-part": {
       "n": 37,
-      "correct": 0.0541,
-      "wrong": 0.1892,
+      "correct": 0.7838,
+      "wrong": 0.2162,
+      "hedged": 0,
       "guardRefused": 0,
-      "modelRefused": 0.7568
+      "modelRefused": 0
     },
     "superlative-value": {
       "n": 18,
-      "correct": 0,
-      "wrong": 0.1667,
+      "correct": 0.7222,
+      "wrong": 0.2778,
+      "hedged": 0,
       "guardRefused": 0,
-      "modelRefused": 0.8333
+      "modelRefused": 0
     },
     "count": {
       "n": 40,
-      "correct": 0,
-      "wrong": 0.325,
-      "guardRefused": 0.625,
-      "modelRefused": 0.05
+      "correct": 0.65,
+      "wrong": 0.275,
+      "hedged": 0,
+      "guardRefused": 0.075,
+      "modelRefused": 0
     }
   },
-  "wrongWithoutSeeingWinner": 0.4783,
+  "wrongWithoutSeeingWinner": 0,
   "cases": [
     {
       "id": "corpus:count-package:CCPAK1212",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 9,
       "expected": "9",
-      "got": "NOT_IN_CORPUS"
+      "got": "9 parts in this corpus in a CCPAK1212 package."
     },
     {
       "id": "corpus:count-package:CCPAK1212i",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 9,
       "expected": "9",
-      "got": "There are 3 parts offered in a CCPAK1212i package: 1. PSMN1R4-100CSF 2. BUK7T1R0-100L 3. PSMNR90-80CSF"
+      "got": "9 parts in this corpus in a CCPAK1212i package."
     },
     {
       "id": "corpus:count-package:D2PAK",
       "kind": "count",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": true,
+      "sawWinner": null,
       "candidates": 30,
       "expected": "30",
-      "got": "There are 11 parts offered in a D2PAK package."
+      "got": "34 parts in this corpus in a D2PAK package."
     },
     {
       "id": "corpus:count-package:DFN2020M-6",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 20,
       "expected": "20",
-      "got": "NOT_IN_CORPUS"
+      "got": "20 parts in this corpus in a DFN2020M-6 package."
     },
     {
       "id": "corpus:count-package:DFN2020MD-6",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 32,
       "expected": "32",
-      "got": "NOT_IN_CORPUS"
+      "got": "48 parts in this corpus in a DFN2020MD-6 package."
     },
     {
       "id": "corpus:count-package:DFN2020MD‑6",
       "kind": "count",
+      "route": "retrieval",
       "outcome": "guard-refused",
       "sawWinner": null,
       "candidates": 16,
@@ -91,69 +106,77 @@
     {
       "id": "corpus:count-package:LFPAK",
       "kind": "count",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": true,
+      "sawWinner": null,
       "candidates": 38,
       "expected": "38",
-      "got": "All 9 parts are offered in a LFPAK package."
+      "got": "37 parts in this corpus in a LFPAK package."
     },
     {
       "id": "corpus:count-package:LFPAK33",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 71,
       "expected": "71",
-      "got": "NOT_IN_CORPUS"
+      "got": "77 parts in this corpus in a LFPAK33 package."
     },
     {
       "id": "corpus:count-package:LFPAK56",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 113,
       "expected": "113",
-      "got": "NOT_IN_CORPUS"
+      "got": "119 parts in this corpus in a LFPAK56 package."
     },
     {
       "id": "corpus:count-package:LFPAK56D",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 51,
       "expected": "51",
-      "got": "NOT_IN_CORPUS"
+      "got": "51 parts in this corpus in a LFPAK56D package."
     },
     {
       "id": "corpus:count-package:LFPAK56E",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 13,
       "expected": "13",
-      "got": "NOT_IN_CORPUS"
+      "got": "13 parts in this corpus in a LFPAK56E package."
     },
     {
       "id": "corpus:count-package:LFPAK88",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 17,
       "expected": "17",
-      "got": "NOT_IN_CORPUS"
+      "got": "17 parts in this corpus in a LFPAK88 package."
     },
     {
       "id": "corpus:count-package:MLPAK33",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 7,
       "expected": "7",
-      "got": "NOT_IN_CORPUS"
+      "got": "7 parts in this corpus in a MLPAK33 package."
     },
     {
       "id": "corpus:count-package:Power-SO8",
       "kind": "count",
+      "route": "retrieval",
       "outcome": "guard-refused",
       "sawWinner": null,
       "candidates": 139,
@@ -163,123 +186,137 @@
     {
       "id": "corpus:count-package:SC-73",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "6",
-      "got": "There are 5 parts offered in a SC-73 package: 1. BUK9875-100A 2. BUK78150-55A 3. BUK98150-55A 4. BUK7880-55A 5. BUK9880-55A and also BUK98180-100A."
+      "got": "6 parts in this corpus in a SC-73 package."
     },
     {
       "id": "corpus:count-package:SC-74",
       "kind": "count",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": true,
+      "sawWinner": null,
       "candidates": 7,
       "expected": "7",
-      "got": "1 part, the PMN40SNA, is offered in a SC-74 package."
+      "got": "8 parts in this corpus in a SC-74 package."
     },
     {
       "id": "corpus:count-package:SOT1023",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 15,
       "expected": "15",
-      "got": "NOT_IN_CORPUS"
+      "got": "15 parts in this corpus in a SOT1023 package."
     },
     {
       "id": "corpus:count-package:SOT1205",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 51,
       "expected": "51",
-      "got": "NOT_IN_CORPUS"
+      "got": "51 parts in this corpus in a SOT1205 package."
     },
     {
       "id": "corpus:count-package:SOT1210",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 71,
       "expected": "71",
-      "got": "NOT_IN_CORPUS"
+      "got": "76 parts in this corpus in a SOT1210 package."
     },
     {
       "id": "corpus:count-package:SOT1220",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 68,
       "expected": "68",
-      "got": "NOT_IN_CORPUS"
+      "got": "52 parts in this corpus in a SOT1220 package."
     },
     {
       "id": "corpus:count-package:SOT1235",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 17,
       "expected": "17",
-      "got": "NOT_IN_CORPUS"
+      "got": "17 parts in this corpus in a SOT1235 package."
     },
     {
       "id": "corpus:count-package:SOT223",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 6,
       "expected": "6",
-      "got": "NOT_IN_CORPUS"
+      "got": "6 parts in this corpus in a SOT223 package."
     },
     {
       "id": "corpus:count-package:SOT23",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 39,
       "expected": "39",
-      "got": "NOT_IN_CORPUS"
+      "got": "43 parts in this corpus in a SOT23 package."
     },
     {
       "id": "corpus:count-package:SOT404",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "wrong",
       "sawWinner": null,
       "candidates": 29,
       "expected": "29",
-      "got": "NOT_IN_CORPUS"
+      "got": "33 parts in this corpus in a SOT404 package."
     },
     {
       "id": "corpus:count-package:SOT457",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 22,
       "expected": "22",
-      "got": "NOT_IN_CORPUS"
+      "got": "22 parts in this corpus in a SOT457 package."
     },
     {
       "id": "corpus:count-package:SOT669",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 150,
       "expected": "150",
-      "got": "NOT_IN_CORPUS"
+      "got": "150 parts in this corpus in a SOT669 package."
     },
     {
       "id": "corpus:count-package:SOT8000A",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 9,
       "expected": "9",
-      "got": "NOT_IN_CORPUS"
+      "got": "9 parts in this corpus in a SOT8000A package."
     },
     {
       "id": "corpus:count-package:SOT8002",
       "kind": "count",
+      "route": "retrieval",
       "outcome": "guard-refused",
       "sawWinner": null,
       "candidates": 7,
@@ -289,605 +326,672 @@
     {
       "id": "corpus:count-package:SOT8005A",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 9,
       "expected": "9",
-      "got": "NOT_IN_CORPUS"
+      "got": "9 parts in this corpus in a SOT8005A package."
     },
     {
       "id": "corpus:count-package:TO-236AB",
       "kind": "count",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": true,
+      "sawWinner": null,
       "candidates": 29,
       "expected": "29",
-      "got": "All 11 parts are offered in a TO-236AB package."
+      "got": "43 parts in this corpus in a TO-236AB package."
     },
     {
       "id": "corpus:count-package:TSOP6",
       "kind": "count",
-      "outcome": "guard-refused",
+      "route": "catalog",
+      "outcome": "correct",
       "sawWinner": null,
       "candidates": 22,
       "expected": "22",
-      "got": "NOT_IN_CORPUS"
+      "got": "22 parts in this corpus in a TSOP6 package."
     },
     {
       "id": "corpus:count-vds:100",
       "kind": "count",
-      "outcome": "model-refused",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 69,
       "expected": "69",
-      "got": "NOT_IN_CORPUS"
+      "got": "69 parts in this corpus rated 100 V."
     },
     {
       "id": "corpus:count-vds:12",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "6",
-      "got": "Only 1 part is rated 12 V: PSMN5R5-60YS."
+      "got": "6 parts in this corpus rated 12 V."
     },
     {
       "id": "corpus:count-vds:20",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 42,
       "expected": "42",
-      "got": "There are 5 parts rated 20 V: PSMN027-100BS, PSMN028-100YS, PSMN5R6-100BS, PMN20ENA, and PMPB30XPE, and also PMV50XP."
+      "got": "42 parts in this corpus rated 20 V."
     },
     {
       "id": "corpus:count-vds:25",
       "kind": "count",
-      "outcome": "model-refused",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 18,
       "expected": "18",
-      "got": "NOT_IN_CORPUS"
+      "got": "18 parts in this corpus rated 25 V."
     },
     {
       "id": "corpus:count-vds:30",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 111,
       "expected": "111",
-      "got": "There are at least 4 parts rated 30 V: PSMN011-30YLC, PSMN7R5-30YLD, PSMN7R0-30MLC, PSMN9R8-30MLC, and PSMN6R0-30YLD."
+      "got": "111 parts in this corpus rated 30 V."
     },
     {
       "id": "corpus:count-vds:40",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 115,
       "expected": "115",
-      "got": "To answer the question, we need to look for the parameter VDS and find the parts that have a rating of 40 V. From the excerpts, we can see that the following pa"
+      "got": "115 parts in this corpus rated 40 V."
     },
     {
       "id": "corpus:count-vds:55",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 5,
       "expected": "5",
-      "got": "Based on the provided excerpts, the parts rated 55 V are PMPB55ENEA and PSMN1R2-55SLH. Therefore, there are 2 parts rated 55 V."
+      "got": "5 parts in this corpus rated 55 V."
     },
     {
       "id": "corpus:count-vds:60",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 72,
       "expected": "72",
-      "got": "There are at least 3 parts rated 60 V: PSMN014-60HS, PSMN011-60HL, PSMN7R0-60YS, and PSMN5R5-60YS."
+      "got": "72 parts in this corpus rated 60 V."
     },
     {
       "id": "corpus:count-vds:80",
       "kind": "count",
-      "outcome": "wrong",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 54,
       "expected": "54",
-      "got": "There are at least 3 parts rated 80 V: PSMN018-80YS, PSMN012-100YS, PSMN2R8-80BS."
+      "got": "54 parts in this corpus rated 80 V."
     },
     {
       "id": "corpus:id-max:N|100|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 46,
       "expected": "PSMN1R0-100ASF | PSMN1R0-100CSF | BUK7A1R0-100L | BUK7T1R0-100L",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 36 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 460 A: PSMN1R0-100ASF and PSMN1R0-100CSF."
     },
     {
       "id": "corpus:id-max:N|100|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 16,
       "expected": "BUK9Y12-100E | PSMN012-100YL",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 8 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 85 A: BUK9Y12-100E."
     },
     {
       "id": "corpus:id-max:N|20|Tamb = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": false,
+      "sawWinner": null,
       "candidates": 12,
       "expected": "PMPB10XNE",
-      "got": "The part PMV20XNE has a continuous drain current of 7.5 A at VGS = 4.5 V; Tamb = 25 °C and the part PMV20XNE is rated 20 V (as inferred from the part number and"
+      "got": "Of the 8 parts in this corpus, specified at Tamb = 25 °C; VGS = 4.5 V, the highest I_D is 10.4 A: PMPB15XN."
     },
     {
       "id": "corpus:id-max:N|25|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 17,
       "expected": "PSMNR51-25YLH",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 17 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 380 A: PSMNR51-25YLH."
     },
     {
       "id": "corpus:id-max:N|30|Tamb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 29,
       "expected": "PXN4R7-30QL",
-      "got": "ID: 10 A, at VGS = 10 V; Tamb = 25 °C, for part PMPB10EN and also for part PMPB20EN and also for part PXN010-30QL."
+      "got": "Of the 23 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 15 A: PXN4R7-30QL."
     },
     {
       "id": "corpus:id-max:N|30|Tamb = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": false,
+      "sawWinner": null,
       "candidates": 16,
       "expected": "PMPB08R5XN | PMPB06R3XN",
-      "got": "9.5 A at VGS = 4.5 V; Tamb = 25 °C, part PMPB10XN."
+      "got": "Of the 14 parts in this corpus, specified at Tamb = 25 °C; VGS = 4.5 V, the highest I_D is 13 A: PMPB10R3XN."
     },
     {
       "id": "corpus:id-max:N|30|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 47,
       "expected": "PSMNR58-30YLH",
-      "got": "The part PMPB05R4EN carries the highest I_D of 13 A at VGS = 10 V; Tamb = 25 °C."
+      "got": "Of the 37 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 380 A: PSMNR58-30YLH."
     },
     {
       "id": "corpus:id-max:N|30|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "BUK9M6R6-30E | BUK9M5R2-30E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 6 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 70 A: BUK9M6R6-30E and BUK9M5R2-30E."
     },
     {
       "id": "corpus:id-max:N|40|Tamb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 8,
       "expected": "BUK9D23-40E | BUK7D25-40E | BUK6D23-40E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 4 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 6.2 A: PMN20ENA."
     },
     {
       "id": "corpus:id-max:N|40|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 88,
       "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 66 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 425 A: BUK7S0R7-40H and PSMNR70-40SSH."
     },
     {
       "id": "corpus:id-max:N|40|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 16,
       "expected": "BUK961R6-40E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 12 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 100 A: BUK9Y3R0-40E."
     },
     {
       "id": "corpus:id-max:N|60|Tamb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 15,
       "expected": "BUK7D36-60E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 11 parts in this corpus, specified at Tamb = 25 °C; VGS = 10 V, the highest I_D is 4.7 A: PMN40SNA."
     },
     {
       "id": "corpus:id-max:N|60|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 32,
       "expected": "PSMN3R0-60BS | BUK7Y7R2-60E | BUK7Y6R0-60E | BUK7Y4R8-60E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 27 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 100 A: PSMN3R0-60BS, BUK7Y7R2-60E, BUK7Y6R0-60E and BUK7Y4R8-60E."
     },
     {
       "id": "corpus:id-max:N|60|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 19,
       "expected": "PSMN5R6-60YL | BUK9Y4R8-60E | BUK9Y6R0-60E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 13 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 100 A: BUK9Y4R8-60E."
     },
     {
       "id": "corpus:id-max:N|80|Tmb = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 42,
       "expected": "PSMNR90-80CSF | PSMNR90-80ASF",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 41 parts in this corpus, specified at Tmb = 25 °C; VGS = 10 V, the highest I_D is 505 A: PSMNR90-80CSF and PSMNR90-80ASF."
     },
     {
       "id": "corpus:id-max:N|80|Tmb = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 10,
       "expected": "BUK9Y11-80E | PSMN010-80YL",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 7 parts in this corpus, specified at Tmb = 25 °C; VGS = 5 V, the highest I_D is 84 A: PSMN010-80YL."
     },
     {
       "id": "corpus:id-max:P|12|Tamb = 25 °C; VGS = -4.5 V",
       "kind": "superlative-part",
+      "route": "catalog",
       "outcome": "correct",
-      "sawWinner": true,
+      "sawWinner": null,
       "candidates": 6,
       "expected": "PMPB08R4VP",
-      "got": "The part PMPB08R4VP carries a continuous I_D of -12 A at Tamb = 25 °C; VGS = -4.5 V. The part PMPB11R2VP carries a continuous I_D of -9.7 A at Tamb = 25 °C; VGS"
+      "got": "Of the 6 parts in this corpus, specified at Tamb = 25 °C; VGS = -4.5 V, the highest I_D is 12 A: PMPB08R4VP."
     },
     {
       "id": "corpus:id-max:P|20|Tamb = 25 °C; VGS = -4.5 V",
       "kind": "superlative-part",
-      "outcome": "correct",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 30,
       "expected": "PMPB12R5UPE",
-      "got": "The part that carries the highest I_D is PMPB12R5UPE, with a drain current of -9.4 A at VGS = -4.5 V; Tamb = 25 °C."
+      "got": "Of the 27 parts in this corpus, specified at Tamb = 25 °C; VGS = -4.5 V, the highest I_D is 10.3 A: PMPB20XPE."
     },
     {
       "id": "corpus:id-max:P|30|Tamb = 25 °C; VGS = -10 V",
       "kind": "superlative-part",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 10,
       "expected": "PMPB14R0EP",
-      "got": "The part that carries the highest I_D is PMPB12R5EP, with a drain current of -8.8 A at VGS = -10 V; Tamb = 25 °C."
+      "got": "Of the 10 parts in this corpus, specified at Tamb = 25 °C; VGS = -10 V, the highest I_D is 9 A: PMPB14R0EP."
     },
     {
-      "id": "corpus:rdson-min-value:N|100|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 46,
       "expected": "0.99mΩ",
-      "got": "10.2 mΩ at VGS = 10 V; ID = 20 A; Tj = 25 °C."
+      "got": "Of the 63 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.99 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
     },
     {
-      "id": "corpus:rdson-min-value:N|100|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|100|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 15,
       "expected": "12mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 12 mΩ: BUK9Y12-100E."
     },
     {
-      "id": "corpus:rdson-min-value:N|20|VGS = 4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|20|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 12,
       "expected": "14mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 11 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB10XNE."
     },
     {
-      "id": "corpus:rdson-min-value:N|25|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|25|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 12,
       "expected": "0.57mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.57 mΩ: PSMNR51-25YLH."
     },
     {
-      "id": "corpus:rdson-min-value:N|30|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 51,
       "expected": "0.67mΩ",
-      "got": "6.3 mΩ at VGS = 10 V; ID = 15 A; Tj = 25 °C"
+      "got": "Of the 74 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
     },
     {
-      "id": "corpus:rdson-min-value:N|30|VGS = 4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-value",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": false,
+      "sawWinner": null,
       "candidates": 18,
       "expected": "1.6mΩ",
-      "got": "6.3 mΩ at VGS = 4.5 V; Tj = 25 °C"
+      "got": "Of the 72 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
     },
     {
-      "id": "corpus:rdson-min-value:N|30|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|30|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "5.2mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 5.2 mΩ: BUK9M5R2-30E."
     },
     {
-      "id": "corpus:rdson-min-value:N|40|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 89,
       "expected": "0.7mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 91 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.43 mΩ: BUK7S0R7-40H."
     },
     {
-      "id": "corpus:rdson-min-value:N|40|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|40|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 16,
       "expected": "1.6mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 1.6 mΩ: BUK961R6-40E."
     },
     {
-      "id": "corpus:rdson-min-value:N|55|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|55|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 4,
       "expected": "1.03mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 1.03 mΩ: PSMN1R2-55SLH."
     },
     {
-      "id": "corpus:rdson-min-value:N|60|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 41,
       "expected": "4mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 64 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
     },
     {
-      "id": "corpus:rdson-min-value:N|60|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|60|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 19,
       "expected": "4.8mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 3.3 mΩ: BUK9Y4R8-60E."
     },
     {
-      "id": "corpus:rdson-min-value:N|80|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 31,
       "expected": "0.85mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 52 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
     },
     {
-      "id": "corpus:rdson-min-value:N|80|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:N|80|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 10,
       "expected": "11mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 9 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 8.1 mΩ: PSMN010-80YL."
     },
     {
-      "id": "corpus:rdson-min-value:P|12|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|12|Tj = 25 °C; VGS = -4.5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "9.6mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 9.6 mΩ: PMPB08R4VP."
     },
     {
-      "id": "corpus:rdson-min-value:P|20|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|20|Tj = 25 °C; VGS = -4.5 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 26,
       "expected": "14.4mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 30 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 14.4 mΩ: PMPB12R5UPE."
     },
     {
-      "id": "corpus:rdson-min-value:P|30|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|30|Tj = 25 °C; VGS = -10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 12,
       "expected": "10mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 10 mΩ: BUK6Y10-30P."
     },
     {
-      "id": "corpus:rdson-min-value:P|60|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min-value:P|60|Tj = 25 °C; VGS = -10 V",
       "kind": "superlative-value",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 4,
       "expected": "33mΩ",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 33 mΩ: BUK6Y33-60P."
     },
     {
-      "id": "corpus:rdson-min:N|100|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "wrong",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 46,
       "expected": "PSMN1R0-100ASF | BUK7A1R0-100L",
-      "got": "The part PSMN9R8-100YSF has the lowest maximum R_DS(on) of 10.2 mΩ at VGS = 10 V; Tj = 25 °C."
+      "got": "Of the 63 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.99 mΩ: PSMN1R0-100ASF and BUK7A1R0-100L."
     },
     {
-      "id": "corpus:rdson-min:N|100|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|100|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 15,
       "expected": "BUK9Y12-100E | PSMN012-100YL",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 12 mΩ: BUK9Y12-100E."
     },
     {
-      "id": "corpus:rdson-min:N|20|VGS = 4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|20|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 12,
       "expected": "PMPB10XNE",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 11 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 14 mΩ: PMPB10XNE."
     },
     {
-      "id": "corpus:rdson-min:N|25|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|25|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 12,
       "expected": "PSMNR51-25YLH",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.57 mΩ: PSMNR51-25YLH."
     },
     {
-      "id": "corpus:rdson-min:N|30|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 51,
       "expected": "PSMNR58-30YLH",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 74 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.67 mΩ: PSMNR58-30YLH."
     },
     {
-      "id": "corpus:rdson-min:N|30|VGS = 4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 4.5 V",
       "kind": "superlative-part",
+      "route": "catalog",
       "outcome": "wrong",
-      "sawWinner": false,
+      "sawWinner": null,
       "candidates": 18,
       "expected": "PSMN1R2-30YLD",
-      "got": "6.3 mΩ at VGS = 4.5 V; ID = 15 A; Tj = 25 °C, [PSMN6R4-30MLD]"
+      "got": "Of the 72 parts in this corpus, specified at Tj = 25 °C; VGS = 4.5 V, the lowest R_DS(on) is 0.9 mΩ: PSMNR58-30YLH."
     },
     {
-      "id": "corpus:rdson-min:N|30|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|30|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "BUK9M5R2-30E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 5.2 mΩ: BUK9M5R2-30E."
     },
     {
-      "id": "corpus:rdson-min:N|40|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 89,
       "expected": "BUK7S0R7-40H | PSMNR70-40SSH",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 91 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.43 mΩ: BUK7S0R7-40H."
     },
     {
-      "id": "corpus:rdson-min:N|40|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|40|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 16,
       "expected": "BUK961R6-40E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 14 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 1.6 mΩ: BUK961R6-40E."
     },
     {
-      "id": "corpus:rdson-min:N|55|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|55|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 4,
       "expected": "PSMN1R2-55SLH",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 1.03 mΩ: PSMN1R2-55SLH."
     },
     {
-      "id": "corpus:rdson-min:N|60|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "wrong",
+      "sawWinner": null,
       "candidates": 41,
       "expected": "PSMN4R0-60YS",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 64 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 3.2 mΩ: PSMN3R0-60BS."
     },
     {
-      "id": "corpus:rdson-min:N|60|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|60|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 19,
       "expected": "BUK9Y4R8-60E",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 18 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 3.3 mΩ: BUK9Y4R8-60E."
     },
     {
-      "id": "corpus:rdson-min:N|80|VGS = 10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 31,
       "expected": "PSMNR90-80ASF",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 52 parts in this corpus, specified at Tj = 25 °C; VGS = 10 V, the lowest R_DS(on) is 0.85 mΩ: PSMNR90-80ASF."
     },
     {
-      "id": "corpus:rdson-min:N|80|VGS = 5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:N|80|Tj = 25 °C; VGS = 5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 10,
       "expected": "BUK9Y11-80E | PSMN010-80YL",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 9 parts in this corpus, specified at Tj = 25 °C; VGS = 5 V, the lowest R_DS(on) is 8.1 mΩ: PSMN010-80YL."
     },
     {
-      "id": "corpus:rdson-min:P|12|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|12|Tj = 25 °C; VGS = -4.5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 6,
       "expected": "PMPB08R4VP",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 6 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 9.6 mΩ: PMPB08R4VP."
     },
     {
-      "id": "corpus:rdson-min:P|20|VGS = -4.5 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|20|Tj = 25 °C; VGS = -4.5 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": true,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 26,
       "expected": "PMPB12R5UPE",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 30 parts in this corpus, specified at Tj = 25 °C; VGS = -4.5 V, the lowest R_DS(on) is 14.4 mΩ: PMPB12R5UPE."
     },
     {
-      "id": "corpus:rdson-min:P|30|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|30|Tj = 25 °C; VGS = -10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 12,
       "expected": "BUK6Y10-30P",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 12 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 10 mΩ: BUK6Y10-30P."
     },
     {
-      "id": "corpus:rdson-min:P|60|VGS = -10 V; Tj = 25 °C",
+      "id": "corpus:rdson-min:P|60|Tj = 25 °C; VGS = -10 V",
       "kind": "superlative-part",
-      "outcome": "model-refused",
-      "sawWinner": false,
+      "route": "catalog",
+      "outcome": "correct",
+      "sawWinner": null,
       "candidates": 4,
       "expected": "BUK6Y33-60P",
-      "got": "NOT_IN_CORPUS"
+      "got": "Of the 4 parts in this corpus, specified at Tj = 25 °C; VGS = -10 V, the lowest R_DS(on) is 33 mΩ: BUK6Y33-60P."
     }
   ]
 }

@@ -9,6 +9,7 @@ import { describe, expect, test } from "bun:test";
 import { corpusQuestions, idClass, rdsonClass, type CorpusQuestion } from "../tools/questions-corpus";
 import { isHoldout } from "../tools/split";
 import { namedParts } from "../packages/doc-rag/src/answer";
+import { cleanPackages } from "../src/api/contracts";
 import type { GroundTruth } from "../tools/groundtruth";
 
 const labels: GroundTruth[] = await Bun.file("data/groundtruth.json").json();
@@ -23,7 +24,13 @@ const rating = (vds: number) => Math.abs(vds);
  *  labels rather than trusted from the question. */
 function candidatesOf(q: CorpusQuestion): GroundTruth[] {
   const { channel, vds, conditions, package: pkg } = q.filter as Record<string, string | number>;
-  if (pkg !== undefined) return indexed.filter((l) => (l.package ?? []).includes(pkg as string));
+  // Through the same normaliser the question generator used. The label copies the PDF's
+  // non-breaking hyphen, so a raw `includes` finds 32 of the 48 parts in a DFN2020MD-6
+  // and calls the other 16 a different package. "Recomputable from the labels" has to
+  // mean recomputable from the labels read the same way, or the check is testing the
+  // typography of a hyphen.
+  if (pkg !== undefined)
+    return indexed.filter((l) => cleanPackages(l.package ?? []).includes(pkg as string));
   if (channel === undefined) return indexed.filter((l) => l.vds_v !== null && rating(l.vds_v) === vds);
 
   const measure = q.id.startsWith("corpus:id-") ? "id" : "rdson";
